@@ -1,0 +1,309 @@
+2014/06/03 12:16:33 [error] [exception.CException] exception 'CException' with message 'La propriété « ProductLocalization.image_id » est indéfinie.' in /var/www/vhosts/kle-en-main.com/Yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('image_id')
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/_searchview.php(13): CActiveRecord->__get('image_id')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(130): require('/var/www/vhosts...')
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, false)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(291): CBaseController->renderFile('/var/www/vhosts...', Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(135): CBaseListView->renderContent()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(36): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#15 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(103): CController->render('search', Array)
+#16 [internal function]: ProductController->actionSearch('diab??te')
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#28 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#29 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#30 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#31 {main}
+REQUEST_URI=/fr/search?q=diab%C3%A8te
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/06/03 12:18:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La page demandée n'existe pas.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php:118
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(47): ProductController->loadProductModelSlug('fr-ginseng-core...')
+#1 [internal function]: ProductController->actionView('fr-ginseng-core...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/view')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/fr/prod/fr-ginseng-coreen-rouge-60-capsules.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/search?q=diab%C3%A8te
+---
+2014/06/03 12:18:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La page demandée n'existe pas.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php:118
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(47): ProductController->loadProductModelSlug('fr-super-lipoic...')
+#1 [internal function]: ProductController->actionView('fr-super-lipoic...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/view')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/fr/prod/fr-super-lipoic-acid-60-capsules.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/search?q=diab%C3%A8te
+---
+2014/06/03 12:20:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:255
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/panier.html
+---
+2014/06/03 12:24:30 [error] [exception.CException] exception 'CException' with message 'La propriété « CartController.pageLocale » est indéfinie.' in /var/www/vhosts/kle-en-main.com/Yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/cart/checkout.php(122): CComponent->__get('pageLocale')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('checkout', Array, true)
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php(145): CController->render('checkout', Array)
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionCheckout()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('checkout')
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/checkout')
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/fr/checkout.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/panier.html
+---
+2014/06/03 12:28:47 [error] [php] Missing argument 2 for YiiBase::t(), called in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/cart/index.php on line 6 and defined (/var/www/vhosts/kle-en-main.com/Yii/framework/YiiBase.php:577)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CartController->renderInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CartController->renderFile()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CartController->renderPartial()
+#3 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php(167): CartController->render()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionIndex()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CartController->runAction()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CartController->runActionWithFilters()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CartController->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/cart.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/cart/index.php (6)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php (167)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/06/03 15:32:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/favicon.ico
+---
+2014/06/04 12:17:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/favicon.ico
+---
+2014/06/04 12:24:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('register')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/register
+---
+2014/06/04 12:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('login')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/login
+---
+2014/06/04 15:37:28 [error] [php] Trying to get property of non-object (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php:53)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/prod/en-magnesium-bisglycinate-200-mg-90-capsules.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php (53)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/06/04 15:37:43 [error] [php] Trying to get property of non-object (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php:53)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/prod/en-celadrin-super-rich-skin-therapy-cream-50-ml.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php (53)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/06/04 15:39:22 [error] [php] Trying to get property of non-object (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php:53)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/prod/en-celadrin-super-rich-skin-therapy-cream-50-ml.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php (53)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/06/04 15:39:34 [error] [php] Trying to get property of non-object (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php:53)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/prod/en-magsmart-400-g.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php (53)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/06/04 15:41:15 [error] [php] Trying to get property of non-object (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/view.php:70)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): ProductController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): ProductController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(73): ProductController->render()
+#3 unknown(0): ProductController->actionView()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/prod/en-magsmart-400-g.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/view.php (70)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php (73)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/06/04 15:41:36 [error] [php] Trying to get property of non-object (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php:53)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/prod/en-magsmart-400-g.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php (53)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/06/04 15:43:01 [error] [php] Trying to get property of non-object (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/view.php:70)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): ProductController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): ProductController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(73): ProductController->render()
+#3 unknown(0): ProductController->actionView()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/prod/en-magsmart-400-g.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/view.php (70)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php (73)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
