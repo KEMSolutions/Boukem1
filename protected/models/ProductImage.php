@@ -119,7 +119,15 @@ class ProductImage extends CActiveRecord
 	 */
 	public function getImageURL($width, $height){
 		
-		$url = "http://static.boutiquekem.com/productimg-" . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+		
+		if ($width <= 300 && $height <= 275){
+			// We can display thumbnails without the store's watermark. Cleaner for end users and easier on the server.
+			$url = "http://static.boutiquekem.com/productimg-" . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+		} else {
+			$url = "http://static.boutiquekem.com/productimg-" . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+		}
+		
+		
 		
 		return $url;
 		

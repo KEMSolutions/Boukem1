@@ -14,8 +14,7 @@ class CategoryController extends WebController
 	 */
 	public function actionView($slug)
 	{
-        //var_dump($slug);
-        //exit;
+        
 		// Retrieve the model via it's slug
 		$model_localization = $this->loadLocalizationModelSlug($slug);
 		

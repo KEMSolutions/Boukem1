@@ -60,6 +60,6 @@ return array(
 	"Ajouter au panier"=>"Add to cart",
 	"Transaction sécurisée"=>"Secure payment",
 	"Catégories"=>"Categories",
-	
+	"Plus de détails..."=>"More...",
 );
 ?>
