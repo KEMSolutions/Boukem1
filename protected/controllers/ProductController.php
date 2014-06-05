@@ -120,11 +120,12 @@ class ProductController extends WebController
 		if ($model->locale_id !== Yii::app()->language) {
 			// Current slug doesn't exist in the appropriate language. Redirect the user to the appropriate language
 			
-			$appropriate_model = ProductLocalization::model()->find('locale_id=:locale_id AND product_id=:product_id', array(":locale_id"=>Yii::app()->language, ":product_id"=>$model->product_id));
+			$appropriate_model = $model->product->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
 			
 			if ($appropriate_model){
 				// Redirect to that localized model
-				$redict_url = $this->generateUrl(Yii::app()->controller->action->id, array('slug'=>$appropriate_model->slug, 'language'=>$appropriate_model->language));
+				$redict_url = $this->createUrl(Yii::app()->controller->action->id, array('slug'=>$appropriate_model->slug, 'language'=>$appropriate_model->locale_id));
+				$this->redirect($redict_url);
 			}
 			throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
 		}

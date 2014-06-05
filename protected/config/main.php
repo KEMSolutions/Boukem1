@@ -138,10 +138,10 @@ return array(
 		// this is used in contact page
 		'elasticsearch_index' => "boutiquedemo_dev",
 		'adminEmail'=>'support@kle-en-main.com',
-		'inbound_api_user'=>'KEM_services',
-		'inbound_api_secret'=>'ilxoTlZOTwwJjp1R7IL6CiHxuPW1AxdELaLNxUX5htP12Gfp4Hi1h1hoOCRVMQ3',
-		'outbound_api_user'=>'8',
-		'outbound_api_secret'=>'DsfV1kjO0g2Qp8EGrLNQLBvg1EuyU5ZV5vCn3E4qq3lcP',
+		'inbound_api_user'=>'',
+		'inbound_api_secret'=>'',
+		'outbound_api_user'=>'',
+		'outbound_api_secret'=>'',
 	),
 	
 );

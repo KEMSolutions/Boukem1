@@ -14,12 +14,13 @@ class CategoryController extends WebController
 	 */
 	public function actionView($slug)
 	{
+        //var_dump($slug);
+        //exit;
 		// Retrieve the model via it's slug
 		$model_localization = $this->loadLocalizationModelSlug($slug);
 		
 		$model = $model_localization->category;
-		
-		
+
 		$this->pageTitle = $model_localization->name . " - " . Yii::app()->name;
 		
 		
@@ -28,9 +29,9 @@ class CategoryController extends WebController
 		$this->menu=array();
 		foreach ($model->children as $children){
 			
-			$localization = CategoryLocalization::model()->find("category_id = :category AND locale_id = :locale", array(":category"=>$children->id, ":locale"=>Yii::app()->language));
+			$localization = $children->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
 			
-			if ($localization)
+			if ($localization !== null)
 				$this->menu[] = array('label'=>$localization->name, 'url'=>array('category/view', "slug"=>$localization->slug));
 		}
 		
@@ -42,13 +43,18 @@ class CategoryController extends WebController
 			// Display breadcrumbs in the right order (home >> root category >> subcategory 1 >> subcatory 2, etc.)
 			$this->breadcrumbs = array();
 			function appendMotherCatToBreadcrumbs($cat, &$breadarray, $locale){
-				$locale_category = CategoryLocalization::model()->find("category_id = :category AND locale_id = :locale", array(":category"=>$cat->id, ":locale"=>$locale));
+
+                $locale_category = CategoryLocalization::model()->find("category_id = :category AND locale_id = :locale", array(":category"=>$cat->id, ":locale"=>$locale));
+
+
 				$breadarray[$locale_category->name] = array("category/view", "slug"=>$locale_category->slug);
 				if ($cat->parent_category){
 					appendMotherCatToBreadcrumbs($cat->parentCategory, $breadarray, $locale);
 				}
+
 			}
-			
+
+
 			if ($model->parent_category){
 				appendMotherCatToBreadcrumbs($model->parentCategory, $this->breadcrumbs, Yii::app()->language);
 				// The array returned is reversed (top category at the end) we need to reverse it.
@@ -59,10 +65,12 @@ class CategoryController extends WebController
 			
 			
 			// Retrieve the order's products (with the correct localization)
-			$current_locale = Yii::app()->language; 
-			
+			$current_locale = Yii::app()->language;
+
 			$products_data_provider = null;
-			
+
+
+
 			//////////////////////////////////////////////////////////////////////////////////////////////////
 			//////////////////////////////////////////////////////////////////////////////////////////////////
 			//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,13 +89,16 @@ class CategoryController extends WebController
 			//////////////////////////////////////////////////////////////////////////////////////////////////
 			//////////////////////////////////////////////////////////////////////////////////////////////////
 			//////////////////////////////////////////////////////////////////////////////////////////////////
-			
-			
-			
+
+
+            $product = new Product();
+            $product->unsetAttributes();
+            $product->categoryId = $model->id;
+
 			$this->render('view',array(
-				'model'=>$model,
-				'localization'=>$model_localization,
-				'products'=>$products_data_provider,
+				'model'         => $model,
+				'localization'  => $model_localization,
+				'products'      => $product->search(),
 			));
 			
 		} else {
@@ -141,11 +152,12 @@ class CategoryController extends WebController
 		if ($model->locale_id !== Yii::app()->language) {
 			// Current slug doesn't exist in the appropriate language. Redirect the user to the appropriate language (if any)
 			
-			$appropriate_model = CategoryLocalization::model()->find('locale_id=:locale_id AND category_id=:category_id', array(":locale_id"=>Yii::app()->language, ":category_id"=>$model->category_id));
+			$appropriate_model = $model->category->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
 			
 			if ($appropriate_model){
 				// Redirect to that localized model
-				$redict_url = $this->generateUrl(Yii::app()->controller->action->id, array('slug'=>$appropriate_model->slug, 'language'=>$appropriate_model->language));
+				$redict_url = $this->createUrl(Yii::app()->controller->action->id, array('slug'=>$appropriate_model->slug, 'language'=>$appropriate_model->locale_id));
+				$this->redirect($redict_url);
 			}
 			// This product doesn't have a localization in the current's site language
 			throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));

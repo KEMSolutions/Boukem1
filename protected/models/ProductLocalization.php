@@ -58,6 +58,14 @@ class ProductLocalization extends CActiveRecord
 		);
 	}
 
+    public  function scopes()
+    {
+        return array(
+            'locale'=>array(
+                'condition'=>'locale_id="' . Yii::app()->language . '"',
+            ),
+        );
+    }
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */

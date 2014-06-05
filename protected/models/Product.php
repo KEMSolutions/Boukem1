@@ -23,10 +23,12 @@
  * @property Category[] $categories
  * @property ProductImage[] $productImages
  * @property ProductLocalization[] $productLocalizations
+ * @property ProductLocalization  $productLocalization
  * @property ProductRebate[] $productRebates
  */
 class Product extends CActiveRecord
 {
+    public  $categoryId = null;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -66,8 +68,10 @@ class Product extends CActiveRecord
 			'parentProduct' => array(self::BELONGS_TO, 'Product', 'parent_product_id'),
 			'products' => array(self::HAS_MANY, 'Product', 'parent_product_id'),
 			'categories' => array(self::MANY_MANY, 'Category', 'product_has_category(product_id, category_id)'),
+			//'productHas_category' => array(self::MANY_MANY, 'Category', 'product_has_category(product_id, category_id)'),
 			'productImages' => array(self::HAS_MANY, 'ProductImage', 'product_id'),
 			'productLocalizations' => array(self::HAS_MANY, 'ProductLocalization', 'product_id'),
+            'productLocalization' => array(self::HAS_ONE, 'ProductLocalization', 'product_id', 'scopes' => array('locale'), 'joinType' => 'INNER JOIN'),
 			'productRebates' => array(self::HAS_MANY, 'ProductRebate', 'product_id'),
 		);
 	}
@@ -109,16 +113,24 @@ class Product extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+
 		$criteria->compare('id',$this->id);
 		$criteria->compare('sku',$this->sku,true);
 		$criteria->compare('barcode',$this->barcode,true);
 		$criteria->compare('brand_id',$this->brand_id);
 		$criteria->compare('discontinued',$this->discontinued);
-		$criteria->compare('visible',$this->visible);
+		$criteria->compare('t.visible',$this->visible);
 		$criteria->compare('taxable',$this->taxable);
 		$criteria->compare('price',$this->price,true);
 		$criteria->compare('weight',$this->weight,true);
 		$criteria->compare('parent_product_id',$this->parent_product_id);
+
+        if(!is_null($this->categoryId)){
+            $criteria->join='LEFT JOIN product_has_category ON product_id=t.id';
+            $criteria->compare('product_has_category.category_id' , $this->categoryId);
+        }
+
+        $criteria->with = array('productLocalization');
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
