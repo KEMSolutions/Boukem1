@@ -172,6 +172,7 @@ class CartController extends WebController
 	public function actionAdd()
 	{
 		$product = Product::model()->findByPk(Yii::app()->request->getPost('product'));
+		$quantity = Yii::app()->request->getPost('quantity', "1");
 		
 		if ($product === null){
 			throw new CHttpException(404,'Invalid product.');
@@ -182,17 +183,16 @@ class CartController extends WebController
 		
 		// Look for that existing product in the cart
 		$item = OrderHasProduct::model()->findByPk(array('order_id' => $cart->id, 'product_id' => $product->id));
-		if ($item === null){
+		if (!$item || $item === null){
 			$item = new OrderHasProduct;
 			$item->order_id = $cart->id;
 			$item->product_id = $product->id;
-			$item->quantity = Yii::app()->request->getPost('quantity', 1);
+			$item->quantity = $quantity;
 		} else {
-			$item->quantity = Yii::app()->request->getPost('quantity', 1);
+			$item->quantity = $quantity;
 		}
 		
 		$item->price_paid = $product->price;
-		
 		
 		
 		if (!$item->save()){
@@ -209,14 +209,13 @@ class CartController extends WebController
 		
 		$orderHasProduct = OrderHasProduct::model()->findByPk(array('product_id'=>$product, 'order_id'=>$cart->id));
 		
-		echo var_export($orderHasProduct);
 		
 		if ($orderHasProduct === null){
 			throw new CHttpException(400,'Your request is invalid.');
 		}
 		
 		$orderHasProduct->delete();
-		
+		var_dump($orderHasProduct->getErrors());
 	}
 	
 	public function actionUpdate()

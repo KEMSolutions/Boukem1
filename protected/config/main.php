@@ -136,7 +136,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'elasticsearch_index' => "boutiquedemo_dev",
 		'adminEmail'=>'support@kle-en-main.com',
 		'inbound_api_user'=>'KEM_services',
 		'inbound_api_secret'=>'ilxoTlZOTwwJjp1R7IL6CiHxuPW1AxdELaLNxUX5htP12Gfp4Hi1h1hoOCRVMQ3',

@@ -120,7 +120,7 @@ class ProductImage extends CActiveRecord
 	public function getImageURL($width, $height){
 		
 		
-		if ($width <= 300 && $height <= 275){
+		if ($width <= 300 && $height <= 280){
 			// We can display thumbnails without the store's watermark. Cleaner for end users and easier on the server.
 			$url = "http://static.boutiquekem.com/productimg-" . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
 		} else {

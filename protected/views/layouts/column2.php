@@ -1,12 +1,14 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
-<div class="container">
+<div class="container main-container">
 	<div class="row">
 		
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<?php
 				$this->beginWidget('zii.widgets.CPortlet', array(
-					'title'=>'Operations',
+					'title'=>$this->menuTitle,
+					'titleCssClass'=>"title",
+					'decorationCssClass'=>'no-padding',
 				));
 				$this->widget('zii.widgets.CMenu', array(
 					'items'=>$this->menu,
@@ -17,7 +19,7 @@
 			?>
 		</div>
 		
-		<div class="col-md-8">
+		<div class="col-md-9">
 				<?php echo $content; ?>
 		</div>
 	</div>

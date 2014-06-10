@@ -6,8 +6,10 @@
 
 ?>
 
+<div class="col-lg-12 col-sm-12">
+	<span class="title"><?php echo CHtml::encode($localization->name); ?></span>
+</div>
 
-<h1><?php echo $localization->name; ?></h1>
 
 <div class="row">
 
@@ -23,25 +25,33 @@
 		
 	</div>
 
-	<div class="col-md-5">
+	<div class="col-md-5  hero-feature">
 
-		<h2><?php echo $model->price; ?>$</h2>
-
-		<p><?php echo $localization->short_description; ?></p>
-
-		<p class="small"><?php echo Yii::t("app", "Livré chez vous rapidement"); ?></p>
+		<h4><?php echo CHtml::encode($localization->name); ?></h4>
+		<?php echo Yii::t("app", "Livré chez vous rapidement"); ?>
+		<hr/>
+		<p><?php echo strip_tags($localization->short_description); ?></p>
 		
-		<?php 
-		echo CHtml::ajaxButton(Yii::t("app", "Ajouter au panier"),CController::createUrl('cart/add'),array(
-						'type'=>'POST',
-						'data'=>array('product'=>$model->id, 'quantity'=>'1',
-						'success'=>'js:function(data){
-window.location = "/panier.html";
-}',
-						'async' => true,
-						),
-					), array("class"=>"btn btn-lg btn-primary")); 
-		?>
+		<hr/>
+		<h3>$<?php echo $model->price; ?></h3>
+		
+		<div class="input-qty-detail">
+			<input type="text" class="form-control input-qty text-center" id="item_quantity" value="1">
+					<?php 
+					echo CHtml::ajaxButton(Yii::t("app", "Ajouter au panier"),CController::createUrl('cart/add'),array(
+									'type'=>'POST',
+									'data'=>array('product'=>$model->id, 'quantity'=>'js: $("#item_quantity").val()',
+									'success'=>'js:function(data){
+			window.location = "/panier.html";
+			}',
+									'async' => false,
+									),
+								), array("class"=>"btn btn-primary pull-left")); 
+					?>
+			
+		</div>
+		<br/>
+		<hr/>
 		
 		<p class="small"><?php echo Yii::t("app", "Transaction sécurisée"); ?></p>
 

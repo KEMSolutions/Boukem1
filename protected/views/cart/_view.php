@@ -4,7 +4,7 @@
  */
 
 $product = $data->product;
-$localizationForProduct = $product->localizationForLanguage(Yii::app()->language);
+$localizationForProduct = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
 
 ?>
 

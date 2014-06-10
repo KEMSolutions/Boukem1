@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php if ($this->pageDescription): ?>
 		<meta name="description" content="<?php echo CHtml::encode($this->pageDescription); ?>">
 	<?php endif; ?>
@@ -23,9 +23,10 @@ $themePath = Yii::app()->theme->baseUrl;
  */
 $cs
     ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
-    ->registerCssFile($themePath.'/assets/css/bootstrap-theme.css')
 	->registerCssFile('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
-	->registerCssFile($themePath.'/assets/css/kem-theme.css');
+	->registerCssFile('/css/jquery.bxslider.css')
+	->registerCssFile('/css/style.css');
+	//->registerCssFile($themePath.'/assets/css/kem-theme.css');
 
 /**
  * JavaScripts
@@ -34,7 +35,11 @@ $cs
     ->registerCoreScript('jquery',CClientScript::POS_END)
     ->registerCoreScript('jquery.ui',CClientScript::POS_END)
     ->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js',CClientScript::POS_END)
-
+	->registerScriptFile('/js/bootstrap.touchspin.js',CClientScript::POS_END)
+	->registerScriptFile('/js/jquery.bxslider.min.js',CClientScript::POS_END)
+	->registerScriptFile('/js/jquery.blImageCenter.js',CClientScript::POS_END)
+	->registerScriptFile('/js/mimity.js',CClientScript::POS_END)
+		
     ->registerScript('tooltip',
         "$('[data-toggle=\"tooltip\"]').tooltip();
         $('[data-toggle=\"popover\"]').tooltip()"
@@ -51,98 +56,190 @@ $cs
 
 <body>
 
-<header>
-<!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only"><?php echo Yii::t('app', 'Modifier la navigation'); ?></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><?php echo CHtml::encode(Yii::app()->name); ?></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/"><?php echo Yii::t('app', 'Accueil'); ?></a></li>
-			
-			<?php
-			$top_categories_dataprovider = $this->topCategoriesDataProvider();
-			$listOfTopCategories = $top_categories_dataprovider->getData();
-			foreach ($listOfTopCategories as $topCategory) {
-				$this->renderPartial("application.views._top_categories_menu_item", array("data"=>$topCategory));
-			};
-			
-			?>
-			
-          </ul>
-		  
-		  		
-					
-					
-		  
-				  <div class="navbar-form navbar-right" role="form">
-					  
-					
+	<header>
+	    <div class="container">
+	        <div class="row">
+
+	        	<!-- Logo -->
+	            <div class="col-lg-4 col-md-3 hidden-sm hidden-xs">
+	            	<div class="well logo">
+	            		<a href="/">
+	            			<img src="//placehold.it/240x50&text=<?php echo Yii::app()->name; ?>" alt="<?php echo Yii::app()->name; ?>">
+	            		</a>
+	            	</div>
+	            </div>
+	            <!-- End Logo -->
+
+				<!-- Search Form -->
+	            <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
+	            	<div class="well">
 						
-					  <a href="<?php echo $this->createUrl('/cart/index'); ?>" class="btn btn-success"><span class="fa fa-shopping-cart"> <?php echo Yii::t('app', 'Panier'); ?></span> <span id="cart_content_badge" class="badge"></span></a>
-				  </div>
-		            
-		  
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-	
-	
-	<div class="container"  id="searchbar">
-	
-	<div class="row">
-		
-		<div class="col-md-7">
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?>
-		</div>
-		<div class="col-md-5">
-			<form method="get" action="<?php echo $this->createUrl('product/search'); ?>">
-			<div class="input-group">
-			      <input type="text" name="q" class="form-control" placeholder="<?php echo Yii::t('app', 'Rechercher'); ?>">
-			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button"><span class="fa fa-search" title="<?php echo Yii::t('app', 'Go!'); ?>"></span></button>
-			      </span>
-			    </div><!-- /input-group -->
-			</form>
-		</div>
-	<?php endif?>
-	
-	</div>
-	</div>
-</header>
+						<form  method="get" action="<?php echo $this->createUrl('product/search'); ?>">
+	                        <div class="input-group">
+	                            <input type="text" name="q" class="form-control input-search" placeholder="<?php echo Yii::t('app', 'Rechercher'); ?>"/>
+	                            <span class="input-group-btn">
+	                                <button class="btn btn-default no-border-left" type="submit" ><span title="<?php echo Yii::t('app', 'Go!'); ?>" class="fa fa-search"></span></button>
+	                            </span>
+	                        </div>
+	                    </form>
+	                </div>
+	            </div>
+	            <!-- End Search Form -->
+
+	            <!-- Shopping Cart List -->
+	            <div class="col-lg-3 col-md-4 col-sm-5">
+	                <div class="well">
+	                    <div class="btn-group btn-group-cart">
+							<a href="<?php echo $this->createUrl('/cart/index'); ?>" class="btn btn-default"><i class="fa fa-shopping-cart icon-cart"></i> <?php echo Yii::t('app', 'Panier'); ?></a>
+	                        <? /*
+							
+							// Working sample code to add a list of items in the cart
+							
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	                            <span class="pull-left"><i class="fa fa-shopping-cart icon-cart"></i></span>
+	                            <span class="pull-left"><?php echo Yii::t('app', 'Panier'); ?></span>
+	                            <?php <span class="pull-right"><i class="fa fa-caret-down"></i></span>
+	                        </button>
+	                        <?php <ul class="dropdown-menu cart-content" role="menu">
+                                <li>
+                                    <a href="detail.html">
+                                        <b>Penn State College T-Shirt</b>
+                                        <span>x1 $528.96</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="detail.html">
+                                        <b>Live Nation ACDC Gray T-Shirt</b>
+                                        <span>x1 $428.96</span>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="cart.html">Total: $957.92</a></li>
+                            </ul>
+								*/ ?>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- End Shopping Cart List -->
+	        </div>
+	    </div>
+    </header>
+
+
+	<!-- Navigation -->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only"><?php echo Yii::t('app', 'Afficher le menu'); ?></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- text logo on mobile view -->
+                <a class="navbar-brand visible-xs" href="/"><?php echo Yii::app()->name; ?></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/" <?php if ($this->uniqueid === "site" && $this->action->id === "index") {echo "class=\"active\""; } ?>><?php echo Yii::t('app', 'Accueil'); ?></a></li>
+                    <?php
+					foreach ($this->topCategoriesLocalizationsDataProvider()->getData() as $topCategory) {
+						$this->renderPartial("application.views._top_categories_menu_item", array("localization"=>$topCategory));
+					};
+					
+                    ?>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navigation -->
+
+
 
 <?php echo $content; ?>
 
-   
-      <hr>
-<div class="container">
-      <footer>
+	<footer>
+    	<div class="container">
+        	<div class="col-lg-4 col-md-4 col-sm-6">
+        		<div class="column">
+        			<h4><?php echo Yii::t('app', 'Information'); ?></h4>
+        			<ul>
+        				<li><a href="about.html"><?php echo Yii::t('app', 'À propos de la boutique'); ?></a></li>
+        				<li><a href="typography.html"><?php echo Yii::t('app', 'Politique de confidentialité'); ?></a></li>
+        				<li><a href="typography.html"><?php echo Yii::t('app', "Conditions d'utilisation"); ?></a></li>
+        				<li><a href="typography.html"><?php echo Yii::t('app', "Méthodes d'expédition"); ?></a></li>
+        			</ul>
+        		</div>
+        	</div>
+        	<div class="col-lg-4 col-md-4 col-sm-6">
+        		<div class="column">
+        			<h4><?php echo Yii::t('app', 'Accès rapide'); ?></h4>
+        			<ul>
+        				<li><a href="catalogue.html"><?php echo Yii::t('app', 'Accueil'); ?></a></li>
+						<?php
+						foreach ($this->topCategoriesLocalizationsDataProvider()->getData() as $topCategory) {
+							echo "<li>" . CHtml::link($topCategory->name, array('/category/view', 'slug'=>$topCategory->slug)) . "</li>";
+				}			?>
+        			</ul>
+        		</div>
+        	</div>
+        	<div class="col-lg-4 col-md-4 col-sm-12">
+        		<div class="column">
+        			<h4><?php echo Yii::t('app', 'Service à la clientèle'); ?></h4>
+        			<ul>
+        				<li><a href="contact.html"><?php echo Yii::t('app', 'Nous contacter'); ?></a></li>
+        				<li><a href="#"><?php echo Yii::t('app', 'Retours et échanges'); ?></a></li>
+        				<li><a href="#"><?php echo Yii::t('app', 'Signaler un problème'); ?></a></li>
+				  		  <?php if (Yii::app()->user->isGuest):?>
 		  
-		  <?php if (Yii::app()->user->isGuest):?>
+				  		  <li><a href=""><?php echo Yii::t('app', 'Devenir membre ou se connecter'); ?></a></li>
 		  
-		  <a href=""><?php echo Yii::t('app', 'Devenir membre ou se connecter'); ?></a>
+				  	  <?php else: ?>
 		  
-	  <?php else: ?>
+				  		  <li><a href="/site/logout"><?php echo Yii::t('app', 'Se déconnecter'); ?></a></li>
 		  
-		  <a href="/site/logout"><?php echo Yii::t('app', 'Se déconnecter'); ?></a>
-		  
-		  <?php endif;?>
-        <p>&copy; <?php echo date('Y'); ?>, <?php echo Yii::t('app', 'tous droits réservés'); ?>.</p>
-      </footer>
-    </div> <!-- /container -->
+				  		  <?php endif;?>
+        			</ul>
+        		</div>
+        	</div>
+        	
+        </div>
+        <div class="navbar-inverse text-center copyright">
+        	&copy; <?php echo date("Y"); ?>, <?php echo Yii::t('app', 'tous droits réservés'); ?>.
+        </div>
+    </footer>
+
+    <a href="#top" class="back-top text-center" onclick="$('body,html').animate({scrollTop:0},500); return false">
+    	<i class="fa fa-angle-double-up"></i>
+    </a>
+
+<script>
+
+// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/cD9gVxQWYW9mlPv2ssCcOg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+//
+// UserVoice Javascript SDK developer documentation:
+// https://www.uservoice.com/o/javascript-sdk
+//
+
+// Set colors
+UserVoice.push(['set', {
+  "locale": "fr",
+  accent_color: '#FF3333',
+  trigger_color: 'white',
+  trigger_background_color: '#FF3333'
+}]);
 
 
+// Add default trigger to the bottom-right corner of the window:
+UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
 
+// Or, use your own custom trigger:
+//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
+
+// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+UserVoice.push(['autoprompt', {}]);
+</script>
 </body>
 </html>

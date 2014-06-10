@@ -7,7 +7,9 @@
 
 <div class="table-responsive">
 <table class="table table-striped">
-<?php $this->widget('zii.widgets.CListView', array(
+<?php
+
+ $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
@@ -129,7 +131,7 @@
 									
 									->registerScript('update_quantity',
 						        "$('.update_cart_quantity').click( function(){
-									
+										
 										var row = $(this).closest('tr');
 										var product_id = row.attr('data-product');
 										var quantity = row.find('.quantity_field').val();

@@ -113,7 +113,7 @@ class Product extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-
+		/*
 		$criteria->compare('id',$this->id);
 		$criteria->compare('sku',$this->sku,true);
 		$criteria->compare('barcode',$this->barcode,true);
@@ -124,7 +124,8 @@ class Product extends CActiveRecord
 		$criteria->compare('price',$this->price,true);
 		$criteria->compare('weight',$this->weight,true);
 		$criteria->compare('parent_product_id',$this->parent_product_id);
-
+		*/
+		
         if(!is_null($this->categoryId)){
             $criteria->join='LEFT JOIN product_has_category ON product_id=t.id';
             $criteria->compare('product_has_category.category_id' , $this->categoryId);

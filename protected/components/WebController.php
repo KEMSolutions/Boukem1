@@ -1,4 +1,5 @@
 <?php
+
 /**
  * WebController is the customized base controller class for web pages.
  * All controller classes generating web output for this application should extend from this base class.
@@ -29,6 +30,10 @@ class WebController extends Controller
 	 */
 	public $pageDescription=null;
 	
+	/**
+	 * @var str the menu title to be inserted at the top of the sidebar
+	 */
+	public $menuTitle=null;
 	
 	
 	
@@ -63,7 +68,34 @@ class WebController extends Controller
 		$this->_topCategoriesDataProvider = $dataProvider;
 		return $this->_topCategoriesDataProvider;
 	}
-	private $_topCategoriesDataProvider = null;
+	public $_topCategoriesDataProvider = null;
+	
+	
+	/**
+	 * Returns a dataprovider with the top categories' localizations so they can be displayed in a menu on each page (if needed)
+	 * @return CArrayDataProvider the data provider for each top category's localization available.
+	 */
+	protected function topCategoriesLocalizationsDataProvider(){
+		
+		if ($this->_topCategoriesLocalizationsDataProvider !==null){
+			return $this->_topCategoriesLocalizationsDataProvider;
+		}
+		
+		$localizations = array();
+		foreach ($this->topCategoriesDataProvider()->getData() as $topCategory){
+			$localizedCat = $topCategory->localizationForLanguage(Yii::app()->language);
+			if ($localizedCat !== null)
+				$localizations[] = $localizedCat;
+		}
+		
+		$dataProvider = new CArrayDataProvider($localizations);
+		
+		
+		
+		$this->_topCategoriesLocalizationsDataProvider = $dataProvider;
+		return $this->_topCategoriesLocalizationsDataProvider;
+	}
+	public $_topCategoriesLocalizationsDataProvider = null;
 	
 	
 	/**

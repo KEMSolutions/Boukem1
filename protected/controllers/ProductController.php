@@ -96,6 +96,7 @@ class ProductController extends WebController
 		$dataProvider = new \YiiElasticSearch\DataProvider(ProductLocalization::model(), array(
 		        'search' => $search,
 		));
+		$dataProvider->setPagination(array('pageSize' => 12));
 		
 		$this->render('search',array(
 			'dataProvider'=>$dataProvider,
