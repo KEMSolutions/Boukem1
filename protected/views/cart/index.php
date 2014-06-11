@@ -531,16 +531,17 @@
 		<div class="form-group">
 			
 			<label for="country"><?php echo Yii::t('app', "Code Postal"); ?></label>
-			<input type="text" name="postcode" value="" placeholder="A1A 1A1" id="postcode" class="form-control">
+			<input type="text" name="postcode" value="<?php echo (!Yii::app()->user->isGuest && Yii::app()->user->user->postcode) ? Yii::app()->user->user->postcode : ''; ?>" placeholder="A1A 1A1" id="postcode" class="form-control">
 		</div>
 		
-		
+		<?php if (Yii::app()->user->isGuest): ?>
 		<div class="form-group">
 			
 			<label for="customer_email"><?php echo Yii::t('app', "Adresse courriel / mail"); ?></label>
 			<input type="text" name="email" id="customer_email" class="form-control" value="<?php //echo Yii::app()->user->user; ?>">
 			
 		</div>
+	<?php endif; ?>
 		
 	
 		

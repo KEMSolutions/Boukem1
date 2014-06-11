@@ -10,6 +10,8 @@ $cs->registerCssFile($themePath.'/assets/css/process.css');
 
 $pageLocale = Yii::app()->language;
 
+$cart_order_url = $this->createUrl("order");
+
 $cs
     ->registerScriptFile($themePath.'/assets/js/chosen.jquery.min.js',CClientScript::POS_END)
 
@@ -98,7 +100,7 @@ $cs
 					$.ajax({
 					  type: 'POST',
 					  dataType: 'json',
-					  url: '/cart/order',
+					  url: '$cart_order_url',
 					  data: {
 						  'firstname' : $('#fname') ? $('#fname').val() : null,
 						  'lastname' : $('#lname') ? $('#lname').val() : null,
@@ -151,7 +153,7 @@ $cs
 ?>
 
 
-<div class="container">
+<div class="col-xs-12">
 		
         
             <div class="row bs-wizard" style="border-bottom:0;">
@@ -187,18 +189,17 @@ $cs
         
         
 	</div>
-</div>
-<h1><?php echo Yii::t('app', 'Adresse et informations de commande'); ?></h1>
 
 
- <div class="row">
-    <div class="col-md-12">
+
+    <div class="col-xs-12">
       <form class="form-horizontal" role="form" method="POST">
 		  
+		  <?php if (!Yii::app()->user->user->firstname || !Yii::app()->user->user->lastname || count(Yii::app()->user->user->userPhones) > 0): ?>
           <fieldset>
 
             <!-- Form Name -->
-            <legend><?php echo Yii::t('app', 'À propos de vous'); ?></legend>
+            <legend class="title"><?php echo Yii::t('app', 'À propos de vous'); ?></legend>
 
 <?php if (!Yii::app()->user->user->firstname): ?>
             <!-- Text input-->
@@ -221,7 +222,7 @@ $cs
 <?php endif; // lastname ?>
 			
 
-<?php if (!Yii::app()->user->user->lastname): ?>
+<?php if (count(Yii::app()->user->user->userPhones) === 0): ?>
             <!-- Text input-->
             <div class="form-group">
               <label class="col-sm-2 control-label" for="phone"><?php echo Yii::t('app', 'Téléphone'); ?></label>
@@ -232,12 +233,12 @@ $cs
 <?php endif; // telephone ?>
 			
 		</fieldset>
-		  
+		  <?php endif; ?>
 		  
         <fieldset>
 
           <!-- Form Name -->
-          <legend><?php echo Yii::t('app', 'Adresse de facturation'); ?></legend>
+          <legend class="title"><?php echo Yii::t('app', 'Adresse de facturation'); ?></legend>
 
           <!-- Text input-->
           <div class="form-group">
@@ -655,7 +656,7 @@ $cs
         <fieldset>
 
           <!-- Form Name -->
-          <legend><?php echo Yii::t('app', "Adresse de livraison"); ?></legend>
+          <legend class="title"><?php echo Yii::t('app', "Adresse de livraison"); ?></legend>
 		
         <!-- Text input-->
         <div class="form-group">
@@ -1107,6 +1108,5 @@ $cs
 		  
       </form>
     </div><!-- /.col-lg-12 -->
-</div><!-- /.row -->
 
 
