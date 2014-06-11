@@ -42,7 +42,7 @@ $this->layout = "//layouts/freestyle";
 		                        <p>
 		                        	<div class="btn-group">
 			                        	<a href="/fr/prod/fr-menosmart-plus-120-capsules-vegetariennes.html" class="btn btn-default">$ 32.99</a>
-			                        	<a href="/fr/prod/fr-menosmart-plus-120-capsules-vegetariennes.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></a>
+			                        	<button class="btn btn-primary buybutton" data-product="52"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
 		                        	</div>
 		                        </p>
 		                    </div>
@@ -136,7 +136,7 @@ $this->layout = "//layouts/freestyle";
 		                        <p>
 		                        	<div class='btn-group'>
 			                        	<a href='$product_url' class='btn btn-default'>$ $product->price</a>
-			                        	<a href='$product_url' class='btn btn-primary'><i class='fa fa-shopping-cart'></i> " . Yii::t("app", "Acheter") . "</a>
+			                        	<button class='btn btn-primary buybutton' data-product='" . $product->id . "'><i class='fa fa-shopping-cart'></i> " . Yii::t("app", "Acheter") . "</button>
 		                        	</div>
 		                        </p>
 		                    </div>

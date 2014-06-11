@@ -78,28 +78,48 @@ class SiteController extends WebController
 	
 	public function actionRegister()
 	{
+		
+		if (!Yii::app()->user->isGuest){
+			$this->redirect('/');
+		}
+		
 	    $model=new User('register');
 
 	    // uncomment the following code to enable ajax-based validation
-	    /*
-	    if(isset($_POST['ajax']) && $_POST['ajax']==='user-register-form')
-	    {
-	        echo CActiveForm::validate($model);
-	        Yii::app()->end();
-	    }
-	    */
+	    
 
 	    if(isset($_POST['User']))
 	    {
-	        $model->attributes=$_POST['User'];
+			$model->attributes=$_POST['User'];
 			
 			$original_password = $model->password;
-			$model->password = CPasswordHelper::hashPassword($original_password);
+			$hashed_password = CPasswordHelper::hashPassword($original_password);
+			$model->password = $hashed_password;
 			
 			$randomManager = new CSecurityManager;
 			$randomString = $randomManager->generateRandomString(16, true);
 			$model->verification_string = $randomString; 
+			
+			$firstname = $model->firstname;
+			$lastname = $model->lastname;
+			
 			$model->locale_id = Yii::app()->language;
+			
+			// Check if we received an existing email field with a user with no password
+			$existing_user = User::model()->find("email =:email", array(":email"=>$model->email));
+			if ($existing_user !== null && $existing_user->password === null){
+				// User exists AND is currently not assigned a password. Log user in and assign the received password
+				$model = $existing_user;
+				$model->firstname = $firstname;
+				$model->lastname = $lastname;
+				$model->password = $hashed_password;
+				$model->verification_string = $randomString;
+				
+			}
+			
+	        
+			
+			
 	        if($model->validate() && $model->save())
 	        {
 	            $form=new LoginForm;
@@ -107,7 +127,7 @@ class SiteController extends WebController
 				$form->password = $original_password;
 				$form->login();
 				
-				Yii::app()->user->setFlash('registration','Congratulations, you created an account!');
+				Yii::app()->user->setFlash('success',Yii::t("app", 'Féliciations, votre compte a été créé!'));
 				$this->redirect(Yii::app()->user->returnUrl);
 	        }
 	    }

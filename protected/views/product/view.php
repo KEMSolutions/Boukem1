@@ -20,7 +20,9 @@
 		
 		$image = $localization->getMainImage();
 		
-		echo $image->getImageURL(700,500);
+		echo $image ? $image->getImageURL(700,500) : ProductImage::placehoderForSize(700,500);
+		
+		
 		?>" class="img-responsive" alt="<?php echo $localization->name; ?>">
 		
 	</div>
@@ -37,18 +39,7 @@
 		
 		<div class="input-qty-detail">
 			<input type="text" class="form-control input-qty text-center" id="item_quantity" value="1">
-					<?php 
-					echo CHtml::ajaxButton(Yii::t("app", "Ajouter au panier"),CController::createUrl('cart/add'),array(
-									'type'=>'POST',
-									'data'=>array('product'=>$model->id, 'quantity'=>'js: $("#item_quantity").val()',
-									'success'=>'js:function(data){
-			window.location = "/panier.html";
-			}',
-									'async' => false,
-									),
-								), array("class"=>"btn btn-primary pull-left")); 
-					?>
-			
+			<button class="btn btn-primary pull-left buybutton" data-product="<?php echo $model->id; ?>"><?php echo Yii::t("app", "Ajouter au panier"); ?></button>
 		</div>
 		<br/>
 		<hr/>

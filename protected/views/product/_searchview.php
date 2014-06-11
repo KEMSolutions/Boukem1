@@ -17,7 +17,7 @@ $product_link = $this->createUrl('view', array('slug'=>$data->slug));
 			$image = ProductImage::model()->findByPk($data->image_id);
 			echo $image->getImageURL(280,280);
 		} else {
-			echo "//placehold.it/300x200";
+			echo ProductImage::placehoderForSize(280,280);
 		}
 		
 		?>" alt="">

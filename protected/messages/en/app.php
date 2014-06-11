@@ -46,6 +46,7 @@ return array(
 	"Adresse ligne 1"=>"Address line 1",
 	"Adresse ligne 2"=>"Address line 2",
 	"Ville"=>"City",
+	"Courriel"=>"Email",
 	"Utiliser l'adresse de facturation pour la livraison."=>"Ship to your billing address",
 	"Livrer à une adresse différente."=>"Ship to a different address",
 	"Adresse de livraison"=>"Shipping Address",
@@ -74,5 +75,10 @@ return array(
 	"Produits"=>"Products",
 	"Nom du produit, marque ou usage" => "Product name, brand or condition",
 	"En vedette"=>"Featured",
+	"Devenir membre"=>"Sign up",
+	"Créer le compte"=>"Create account",
+	"Déjà membre?"=>"Already signed up?",
+	"Pas de compte?"=>"No account yet?",
+	"Féliciations, votre compte a été créé!"=>"Congratulations, your account has been created!",
 );
 ?>

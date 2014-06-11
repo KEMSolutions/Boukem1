@@ -13,7 +13,7 @@ $localizationForProduct = $product->localizationForLanguage(Yii::app()->language
 		
 		$image = $localizationForProduct->getMainImage();
 		
-		echo $image->getImageURL(300,300);
+		echo $image ? $image->getImageURL(300,300) : ProductImage::placehoderForSize(300,300);
 		?>" class="img-responsive"></td>
 	<td><h2><?php echo CHtml::encode($localizationForProduct->name);?></h2>
 		<small><?php echo Yii::t('app', "ID"); ?>: <?php echo CHtml::encode($product->id);?> <?php echo Yii::t('app', "SKU"); ?>: <?php echo CHtml::encode($product->sku);?></small><hr>

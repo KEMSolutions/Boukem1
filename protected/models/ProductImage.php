@@ -17,6 +17,7 @@
  */
 class ProductImage extends CActiveRecord
 {
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -111,6 +112,15 @@ class ProductImage extends CActiveRecord
 		return parent::model($className);
 	}
 	
+	
+	
+	/**
+	 *  @return str specifies the base url of static images generator.
+	 */
+	public static function getImageGeneratorBaseUrl(){
+		return "http://static.boutiquekem.com/productimg-";
+	}
+	
 	/**
 	 * Returns the appropriate url for the image with the provided width and height.
 	 * @param int $width maximum width.
@@ -119,12 +129,35 @@ class ProductImage extends CActiveRecord
 	 */
 	public function getImageURL($width, $height){
 		
+		if ($width <= 300 && $height <= 280){
+			// We can display thumbnails without the store's watermark. Cleaner for end users and easier on the server.
+			$url = ProductImage::getImageGeneratorBaseUrl() . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+		} else {
+			$url = ProductImage::getImageGeneratorBaseUrl() . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+		}
+		
+		
+		
+		return $url;
+		
+		
+	}
+	
+	
+	/**
+	 * Returns a placeholder image url with the specified size 
+	 * @param int $width maximum width.
+	 * @param int $height maximum height.
+	 * @return str the image url (eg.: http://static.boutiquekem.com/img-1-2-3-0000.png)
+	 */
+	public static function placehoderForSize($width,$height)
+	{
 		
 		if ($width <= 300 && $height <= 280){
 			// We can display thumbnails without the store's watermark. Cleaner for end users and easier on the server.
-			$url = "http://static.boutiquekem.com/productimg-" . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+			$url = ProductImage::getImageGeneratorBaseUrl() . $width . "-" . $height . "-0000.png";
 		} else {
-			$url = "http://static.boutiquekem.com/productimg-" . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+			$url = ProductImage::getImageGeneratorBaseUrl() . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-0000.png";
 		}
 		
 		

@@ -3,9 +3,7 @@
 class CartController extends WebController
 {
 	
-	private function plausibleUserForCart($cart, $email){
-		
-	}
+	
 	
 	private function taxesForProvinceCountryValue($province, $country, $value){
 		
@@ -538,6 +536,25 @@ class CartController extends WebController
 		}
 		
 		$this->render('confirm', array('model'=>$model));
+		
+	}
+	
+	public function actionOverview()
+	{
+		$cart = $this->getCart();
+		
+		$dataProvider=new CActiveDataProvider('OrderHasProduct', array(
+		    'criteria'=>array(
+		        'condition'=>'order_id=' . $cart->id,
+		        //'with'=>array('product'),
+		    ),
+		    'pagination'=>false
+		));
+		
+		
+		
+		$this->renderJSON($dataProvider->getData());
+		
 		
 	}
 	

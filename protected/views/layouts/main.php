@@ -25,7 +25,8 @@ $cs
     ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
 	->registerCssFile('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
 	->registerCssFile('/css/jquery.bxslider.css')
-	->registerCssFile('/css/style.css');
+	->registerCssFile('/css/style.css')
+	->registerCssFile('/css/animate.css');
 	//->registerCssFile($themePath.'/assets/css/kem-theme.css');
 
 /**
@@ -39,6 +40,7 @@ $cs
 	->registerScriptFile('/js/jquery.bxslider.min.js',CClientScript::POS_END)
 	->registerScriptFile('/js/jquery.blImageCenter.js',CClientScript::POS_END)
 	->registerScriptFile('/js/mimity.js',CClientScript::POS_END)
+	->registerScriptFile('/js/boukem.js',CClientScript::POS_END)
 		
     ->registerScript('tooltip',
         "$('[data-toggle=\"tooltip\"]').tooltip();
@@ -90,7 +92,7 @@ $cs
 	            <div class="col-lg-3 col-md-4 col-sm-5">
 	                <div class="well">
 	                    <div class="btn-group btn-group-cart">
-							<a href="<?php echo $this->createUrl('/cart/index'); ?>" class="btn btn-default"><i class="fa fa-shopping-cart icon-cart"></i> <?php echo Yii::t('app', 'Panier'); ?></a>
+							<a href="<?php echo $this->createUrl('/cart/index'); ?>" class="btn btn-default"><i class="fa fa-shopping-cart icon-cart"></i> <?php echo Yii::t('app', 'Panier'); ?> <span class="badge" id="cart_badge"></span></a>
 	                        <? /*
 							
 							// Working sample code to add a list of items in the cart
@@ -192,11 +194,11 @@ $cs
         				<li><a href="#"><?php echo Yii::t('app', 'Signaler un problème'); ?></a></li>
 				  		  <?php if (Yii::app()->user->isGuest):?>
 		  
-				  		  <li><a href=""><?php echo Yii::t('app', 'Devenir membre ou se connecter'); ?></a></li>
+				  		  <li><a href=""><?php echo CHtml::link(Yii::t('app', 'Devenir membre ou se connecter'), array('site/register')); ?></a></li>
 		  
 				  	  <?php else: ?>
 		  
-				  		  <li><a href="/site/logout"><?php echo Yii::t('app', 'Se déconnecter'); ?></a></li>
+				  		  <li><?php echo CHtml::link(Yii::t('app', 'Se déconnecter'), array('site/logout')); ?></li>
 		  
 				  		  <?php endif;?>
         			</ul>

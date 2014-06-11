@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1><?php echo Yii::t("app", "Connexion") ?></h1>
+<div class="col-lg-8 col-sm-12 hero-feature">
+	<span class="title"><?php echo Yii::t("app", "Connexion")?></span>
 
 <p><?php echo Yii::t("app", "Veuillez renseigner les champs avec vos informations de connexion:"); ?></p>
 
-<div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',
 	'enableClientValidation'=>true,
@@ -26,13 +26,13 @@ $this->breadcrumbs=array(
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username', array('class'=>"form-control")); ?>
-		
+		<?php echo $form->error($model,'username', array('class'=>'alert alert-danger')); ?>
 	</div>
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password', array('class'=>"form-control")); ?>
-		
+		<?php echo $form->error($model,'password', array('class'=>'alert alert-danger')); ?>
 	</div>
 
 	<div class="checkbox">
@@ -43,4 +43,12 @@ $this->breadcrumbs=array(
 		<?php echo CHtml::submitButton('Login', array('class'=>"btn btn-primary")); ?>
 
 <?php $this->endWidget(); ?>
-</div><!-- form -->
+</div>
+
+<div class="col-lg-4 col-sm-12">
+	
+	<span class="title"><?php echo Yii::t("app", "Pas de compte?")?></span>
+	
+	<a href="<?php echo $this->createUrl('register'); ?>" class="btn btn-success btn-block"><?php echo Yii::t('app', "Devenir membre"); ?></a>
+	
+</div>
