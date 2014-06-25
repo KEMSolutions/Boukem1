@@ -149,7 +149,7 @@ class Order extends CActiveRecord
 		$orderdict['billing']['firstname'] = $user->firstname;
 		$orderdict['billing']['lastname'] = $user->lastname;
 		$orderdict['billing']['street1'] = $billing->street1 ? CHtml::encode($billing->street1) : null;
-		$orderdict['billing']['street2'] = $billing->street2 ? CHtml::encode($billing->street2) : null;
+		//$orderdict['billing']['street2'] = $billing->street2 ? CHtml::encode($billing->street2) : null;
 		$orderdict['billing']['postcode'] = $billing->postcode ? CHtml::encode($billing->postcode) : null;
 		$orderdict['billing']['city'] = $billing->city ? CHtml::encode($billing->city) : null;
 		$orderdict['billing']['region'] = $billing->region ? CHtml::encode($billing->region) : null;
@@ -160,7 +160,7 @@ class Order extends CActiveRecord
 		$orderdict['shipping']['firstname'] = $user->firstname;
 		$orderdict['shipping']['lastname'] = $user->lastname;
 		$orderdict['shipping']['street1'] = $shipping->street1 ? CHtml::encode($shipping->street1) : null;
-		$orderdict['shipping']['street2'] = $shipping->street2 ? CHtml::encode($shipping->street2) : null;
+		//$orderdict['shipping']['street2'] = $shipping->street2 ? CHtml::encode($shipping->street2) : null;
 		$orderdict['shipping']['postcode'] = $shipping->postcode ? CHtml::encode($shipping->postcode) : null;
 		$orderdict['shipping']['city'] = $shipping->city ? CHtml::encode($shipping->city) : null;;
 		$orderdict['shipping']['region'] = $shipping->region ? CHtml::encode($shipping->region) : null;;

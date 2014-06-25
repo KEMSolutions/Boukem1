@@ -271,8 +271,14 @@ class CartController extends WebController
 			
 		}
 		
+		Yii::app()->session['cart_country'] = $country;
+		Yii::app()->session['cart_province'] = $province;
 		
-		
+		if ($postcode){
+			// Save the updated postcode
+			Yii::app()->user->user->postcode = $postcode;
+			Yii::app()->user->user->save();
+		}
 		
 		$dataProvider=new CActiveDataProvider('OrderHasProduct', array(
 		    'criteria'=>array(

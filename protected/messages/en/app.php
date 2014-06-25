@@ -80,5 +80,8 @@ return array(
 	"Déjà membre?"=>"Already signed up?",
 	"Pas de compte?"=>"No account yet?",
 	"Féliciations, votre compte a été créé!"=>"Congratulations, your account has been created!",
+	"Merci pour votre commande! Vous recevrez au cours des prochaines minutes un courriel de confirmation de la réception de votre commande. N'hésitez pas à répondre directement à ce courriel pour toute question concernant celle-ci."=>"Thank you for your order! You will receive a confirmation email shorty.",
+	"Votre commande a été reçue."=>"Your order has been received.",
+	"Confirmation"=>"Confirmation",
 );
 ?>

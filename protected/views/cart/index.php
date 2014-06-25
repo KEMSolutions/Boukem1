@@ -31,33 +31,42 @@
 		$cs = Yii::app()->clientScript;
 		$themePath = Yii::app()->theme->baseUrl;
 		
+		$login_url = $this->createUrl('site/login');
+		
 		$update_url = $this->createUrl('cart/update');
 		$estimate_url = $this->createUrl('cart/estimate');
+		Yii::app()->user->returnUrl = $this->createUrl('index');
 		
-		$cs
-		    ->registerScriptFile($themePath.'/assets/js/chosen.jquery.min.js',CClientScript::POS_END)
+		
+		$cs->registerScriptFile($themePath.'/assets/js/chosen.jquery.min.js',CClientScript::POS_END)
 
 		    ->registerScript('chosen',
 		        "$('select').chosen({});
+					
+					function updateChosenSelects() {
+					
+						var chosenCountry = $('#country').val();
+						if (chosenCountry == 'CA' || chosenCountry == 'US'){
+							$('#postcode').removeAttr('disabled');
+							$('#province').removeAttr('disabled');
+							$('#province').trigger('chosen:updated');
+						} else {
+							$('#province').attr('disabled','disabled');
+							$('#postcode').attr('disabled');
+						}
+					
+						$('#province optgroup').attr('disabled','disabled');
+					
+						if (chosenCountry == 'CA' || chosenCountry == 'US' || chosenCountry == 'MX'){
+							$('#province [data-country=\"' + chosenCountry + '\"]').removeAttr('disabled');
+						}
+					
+						$('#province').trigger('chosen:updated');
+					}
+					
 				$('#country').chosen().change( function(){
 					
-					var chosenCountry = $(this).val();
-					if (chosenCountry == 'CA' || chosenCountry == 'US'){
-						$('#postcode').removeAttr('disabled');
-						$('#province').removeAttr('disabled');
-						$('#province').trigger('chosen:updated');
-					} else {
-						$('#province').attr('disabled','disabled');
-						$('#postcode').attr('disabled');
-					}
-					
-					$('#province optgroup').attr('disabled','disabled');
-					
-					if (chosenCountry == 'CA' || chosenCountry == 'US' || chosenCountry == 'MX'){
-						$('#province [data-country=\"' + chosenCountry + '\"]').removeAttr('disabled');
-					}
-					
-					$('#province').trigger('chosen:updated');
+					updateChosenSelects();
 					
 					} );"
 		        ,CClientScript::POS_READY)
@@ -77,11 +86,9 @@
 							checkoutEnabled = true;
 						}
 						
-						$('#estimateButton').click(function( event ){
-							
-							event.preventDefault();
-							
-							$('#estimate').html('<i class=\"fa fa-spinner fa-3x fa-spin\"></i>');
+						
+						function fetchEstimate(){
+							$('#estimate').html('<div class=\'text-center\'><i class=\"fa fa-spinner fa-3x fa-spin\"></i></div>');
 							$.ajax({
 							  type: 'POST',
 							  dataType: 'json',
@@ -101,31 +108,34 @@
 									  });
 								  
 							 },
-							 error: function(data, textStatus){
+							 error: function(xhr, textStatus){
+								 
+								 if (xhr.status == 403){
+									 window.location.replace('$login_url');
+									 return;
+								 }
 								 
 								 $('#estimate').html('<div class=\"alert alert-danger\">Une erreur est survenue. Veuillez vérifier les informations fournies.</div>');
 							 }
 							  
 							});
+						}
+						
+						$('#estimateButton').click(function( event ){
+							
+							event.preventDefault();
+							fetchEstimate();
+							
 						});
 						"
 				        ,CClientScript::POS_READY)
 						    ->registerScript('checkout',
-						        "$('#checkoutButton').click( function(){
+						        "$('#checkoutButton').click( function(event){
 									
-									if (checkoutEnabled){
-										
-										// Check for an email address
-										if (!$('#customer_email').val()||$('#customer_email').val()==''){
-											$('#customer_email').parent().addClass('has-error');
-											return;
-										}
-										
-										
-										$('#cart_form').submit();
-										
+									
+									if (!checkoutEnabled){
+										event.preventDefault();
 									}
-									
 									});"
 						        ,CClientScript::POS_READY)
 									
@@ -146,6 +156,30 @@
 									
 									});"
 						        ,CClientScript::POS_READY);
+		
+		
+		if (Yii::app()->session['cart_country']){
+			$cart_country = Yii::app()->session['cart_country'];
+			$cart_province = Yii::app()->session['cart_province'];
+			
+			// A country was specified for the session, select if in the list with javascript
+			$cs->registerScript('auto_fill_country',"$('#country').val('$cart_country'); $('#country').trigger('chosen:updated'); updateChosenSelects();", CClientScript::POS_READY);
+			
+			
+			if (($cart_country === "CA" || $cart_country === "US" || $cart_country === "MX") && $cart_province) {
+				
+				$cs->registerScript('auto_fill_province',"$('#province').val('$cart_province'); $('#province').trigger('chosen:updated');", CClientScript::POS_READY);
+				
+			}
+			
+			
+			if (Yii::app()->user->user->postcode && Yii::app()->user->user->postcode !== ""){
+				
+				$cs->registerScript('auto_fetch_estimate',"fetchEstimate();", CClientScript::POS_READY);
+				
+			}
+			
+		}
 		
 		
 		$cs->registerCssFile($themePath.'/assets/css/chosen.min.css');
@@ -198,7 +232,7 @@
 				<option value="BI">Burundi</option>
 				<option value="KH">Cambodia</option>
 				<option value="CM">Cameroon</option>
-				<option value="CA" selected>Canada</option>
+				<option value="CA"<?php if (!isset(Yii::app()->session['cart_country']) || Yii::app()->session['cart_country']) {echo ' selected'; } ?>>Canada</option>
 				<option value="CV">Cape Verde</option>
 				<option value="KY">Cayman Islands</option>
 				<option value="CF">Central African Republic</option>
@@ -423,7 +457,7 @@
 				<option value="NS">Nova Scotia</option>
 				<option value="ON">Ontario</option>
 				<option value="PE">Prince Edward Island</option>
-				<option value="QC" selected>Quebec</option>
+				<option value="QC"<?php if (!isset(Yii::app()->session['cart_province']) || Yii::app()->session['cart_province']) {echo ' selected'; } ?>>Quebec</option>
 				<option value="SK">Saskatchewan</option>
 				<option value="NT">Northwest Territories</option>
 				<option value="NU">Nunavut</option>
