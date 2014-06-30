@@ -4262,3 +4262,36 @@ Stack trace:
 REQUEST_URI=/fr/cart/estimate
 HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
 ---
+2014/06/26 18:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « favicon.ico ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/favicon.ico
+---
+2014/06/26 19:56:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « cart/index ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/index')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/cart.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/checkout.html
+---
+2014/06/27 17:22:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « favicon.ico ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/favicon.ico
+---
+2014/06/27 17:22:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « gii ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/gii
+---

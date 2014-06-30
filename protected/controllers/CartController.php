@@ -243,6 +243,7 @@ class CartController extends WebController
 		
 		$country = Yii::app()->request->getPost("country", null);
 		$province = Yii::app()->request->getPost("province", null);
+		
 		$postcode = Yii::app()->request->getPost("postcode", null);
 		$email = Yii::app()->request->getPost("email", null);
 		

@@ -93,7 +93,7 @@
 							  type: 'POST',
 							  dataType: 'json',
 							  url: '$estimate_url',
-							  data: {'country':$(\"#country\").val(), 'province':$(\"#country\").val(), 'postcode':$(\"#postcode\").val(),'email':$(\"#customer_email\").val()},
+							  data: {'country':$(\"#country\").val(), 'province':$(\"#province\").val(), 'postcode':$(\"#postcode\").val(),'email':$(\"#customer_email\").val()},
 							  success: function(data){
 								  
 								  $('#estimate').html(data.shipping_block);
@@ -159,8 +159,8 @@
 		
 		
 		if (Yii::app()->session['cart_country']){
-			$cart_country = Yii::app()->session['cart_country'];
-			$cart_province = Yii::app()->session['cart_province'];
+			$cart_country = CJavaScript::quote(Yii::app()->session['cart_country']);
+			$cart_province = CJavaScript::quote(Yii::app()->session['cart_province']);
 			
 			// A country was specified for the session, select if in the list with javascript
 			$cs->registerScript('auto_fill_country',"$('#country').val('$cart_country'); $('#country').trigger('chosen:updated'); updateChosenSelects();", CClientScript::POS_READY);
@@ -565,7 +565,7 @@
 		<div class="form-group">
 			
 			<label for="country"><?php echo Yii::t('app', "Code Postal"); ?></label>
-			<input type="text" name="postcode" value="<?php echo (!Yii::app()->user->isGuest && Yii::app()->user->user->postcode) ? Yii::app()->user->user->postcode : ''; ?>" placeholder="A1A 1A1" id="postcode" class="form-control">
+			<input type="text" name="postcode" value="<?php echo (!Yii::app()->user->isGuest && Yii::app()->user->user->postcode) ? CHtml::encode(Yii::app()->user->user->postcode) : ''; ?>" placeholder="A1A 1A1" id="postcode" class="form-control">
 		</div>
 		
 		<?php if (Yii::app()->user->isGuest): ?>
