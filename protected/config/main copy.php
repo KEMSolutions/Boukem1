@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'__KEM_STORENAME__',
+	'name'=>'Boutique Démo',
 	'theme'=>"kem",
 	'sourceLanguage' => 'fr',
 	
@@ -96,8 +96,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=boukem_demo',
 			'emulatePrepare' => true,
-			'username' => '__KEM_DBUSER__',
-			'password' => '__KEM_DBPASSWORD__',
+			'username' => 'boukem_demo',
+			'password' => 'kAq65A,12_39-3_=1_',
 			'charset' => 'utf8',
 		),
 		
@@ -136,12 +136,12 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'support@boutiquekem.com',
-		'inbound_api_user'=>'__KEM_APIUSER__',
-		'inbound_api_secret'=>'__KEM_API_SECRET__',
+		'adminEmail'=>'support@kle-en-main.com',
+		'inbound_api_user'=>'KEM_services',
+		'inbound_api_secret'=>'ilxoTlZOTwwJjp1R7IL6CiHxuPW1AxdELaLNxUX5htP12Gfp4Hi1h1hoOCRVMQ3',
 		'outbound_api_user'=>'8',
-		'outbound_api_secret'=>'__KEM_API_KEY__',
-		'kem_analytics_id'=>'__KEM_ANALYTICS_ID__',
+		'outbound_api_secret'=>'DsfV1kjO0g2Qp8EGrLNQLBvg1EuyU5ZV5vCn3E4qq3lcP',
+		'kem_analytics_id'=>'9',
 	),
 	
 );

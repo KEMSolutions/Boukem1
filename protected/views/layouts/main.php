@@ -22,7 +22,7 @@ $themePath = Yii::app()->theme->baseUrl;
  * StyleSHeets
  */
 $cs
-    ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
 	->registerCssFile('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
 	->registerCssFile('/css/jquery.bxslider.css')
 	->registerCssFile('/css/style.css')
@@ -35,7 +35,7 @@ $cs
 $cs
     ->registerCoreScript('jquery',CClientScript::POS_END)
     ->registerCoreScript('jquery.ui',CClientScript::POS_END)
-    ->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js',CClientScript::POS_END)
+    ->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',CClientScript::POS_END)
 	->registerScriptFile('/js/bootstrap.touchspin.js',CClientScript::POS_END)
 	->registerScriptFile('/js/jquery.bxslider.min.js',CClientScript::POS_END)
 	->registerScriptFile('/js/jquery.blImageCenter.js',CClientScript::POS_END)
@@ -66,7 +66,7 @@ $cs
 	            <div class="col-lg-4 col-md-3 hidden-sm hidden-xs">
 	            	<div class="well logo">
 	            		<a href="/">
-	            			<img src="//placehold.it/240x50&text=<?php echo Yii::app()->name; ?>" alt="<?php echo Yii::app()->name; ?>">
+	            			<img src="/images/logo.png" alt="<?php echo Yii::app()->name; ?>">
 	            		</a>
 	            	</div>
 	            </div>
