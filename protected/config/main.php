@@ -48,6 +48,17 @@ return array(
 		    //'timeout' => 172800,
 		),
 		
+		'cache'=>array(
+			'class'=>'CMemCache',
+			'servers'=>array(
+			    array(
+			        'host'=>'127.0.0.1',
+			        'port'=>11211,
+			        'weight'=>60,
+			    ),
+			),
+		),
+		
 		'curl' => array(
 			'class' => 'ext.curl.Curl',
 			'options' => array(CURLOPT_FOLLOWLOCATION => false),

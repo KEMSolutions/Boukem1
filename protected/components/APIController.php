@@ -53,7 +53,7 @@ class APIController extends Controller
 		
 		// Check if the generated signature on both sides match.
 		// NEVER trust that simple mechanism for any sensitive transaction (anything regarding payments)
-		if ($generated_signature === $signature && $client === "KEM_services"){
+		if ($generated_signature === $signature && $client === Yii::app()->params['inbound_api_user']){
 			return true;
 		}
 		

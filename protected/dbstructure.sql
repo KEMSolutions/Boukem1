@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Jul 01, 2014 at 06:44 PM
+-- Generation Time: Jul 02, 2014 at 12:21 PM
 -- Server version: 5.1.73
 -- PHP Version: 5.4.16
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `boukem_demo`
+-- Database: `boukem_biotope`
 --
 
 -- --------------------------------------------------------
@@ -86,6 +86,11 @@ CREATE TABLE IF NOT EXISTS `locale` (
   `long_code` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `locale`
+--
+
 
 -- --------------------------------------------------------
 

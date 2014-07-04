@@ -29,7 +29,35 @@ class SiteController extends WebController
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		
+		if (Yii::app()->user->isGuest){
+			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguage] " . Yii::app()->language;
+			$cache_duration = 60;//10800
+		} else {
+			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguageUser] " . Yii::app()->language . " - " . Yii::app()->user->user->id;
+			$cache_duration = 60;//1600;
+		}
+		
+		$layout_html = Yii::app()->cache->get($cache_id);
+		
+		if (!$layout_html){
+			
+			
+			$layout_parameters = array('storeid'=>Yii::app()->params['outbound_api_user'], 'storekey'=>Yii::app()->params['outbound_api_secret'], 'locale'=>Yii::app()->language . "_CA");
+			if (!Yii::app()->user->isGuest){
+				$layout_parameters["email"] = Yii::app()->user->user->email;
+			}
+			
+			$output = Yii::app()->curl->get("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/Layout/index", $layout_parameters);
+			
+			$base_dict = json_decode($output);
+				
+			$layout_html = $this->renderPartial('_index_layout', array("items"=>$base_dict), true);
+			
+			Yii::app()->cache->set($cache_id, $layout_html, $cache_duration);
+		}
+		
+		$this->render('index', array("layout_html"=>$layout_html));
 	}
 
 	/**
@@ -49,6 +77,7 @@ class SiteController extends WebController
 	/**
 	 * Displays the contact page
 	 */
+	/*
 	public function actionContact()
 	{
 		$model=new ContactForm;
@@ -71,6 +100,7 @@ class SiteController extends WebController
 		}
 		$this->render('contact',array('model'=>$model));
 	}
+	*/
 	
 	/**
 	 * Displays the registration form
