@@ -430,3 +430,155 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/en/favicon.ico
 ---
+2014/07/04 13:17:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « apple-touch-icon-120x120-precomposed.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/apple-touch-icon-120x120-precomposed.png
+---
+2014/07/04 13:17:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « apple-touch-icon-120x120.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/apple-touch-icon-120x120.png
+---
+2014/07/04 13:17:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « apple-touch-icon-precomposed.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('apple-touch-ico...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/apple-touch-icon-precomposed.png
+---
+2014/07/04 14:57:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Le système ne peut trouver l'action « pages » demandée.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(270): CController->missingAction('pages')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('pages')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/pages/abou...')
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/fr/site/pages/about
+---
+2014/07/04 14:58:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('index')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(76): CViewAction->run()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/about')
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#9 {main}
+REQUEST_URI=/fr/site/page/about
+---
+2014/07/04 15:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('index')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(76): CViewAction->run()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/about')
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#9 {main}
+REQUEST_URI=/fr/page/about
+---
+2014/07/04 15:02:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('index')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(76): CViewAction->run()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/about')
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#9 {main}
+REQUEST_URI=/fr/page/about
+---
+2014/07/04 15:03:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « page/about.html ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('page/about.html')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/page/about.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/page/about
+---
+2014/07/04 15:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « page/about.html ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('page/about.html')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/page/about.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/page/about
+---
+2014/07/04 15:41:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « eb/page/about ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('eb/page/about')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/eb/page/about
+---
+2014/07/04 16:46:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « page/contact.html ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('page/contact.ht...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/page/contact.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/page/privacy
+---
+2014/07/04 17:19:25 [error] [php] Undefined variable: category_links_html (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/layouts/main.php:149)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/layouts/freestyle.php(6): SiteController->endContent()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(784): SiteController->renderFile()
+#9 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php(60): SiteController->render()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): SiteController->runAction()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): SiteController->run()
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/layouts/main.php (149)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/layouts/freestyle.php (6)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (60)
+2014/07/04 19:28:55 [error] [php] Missing argument 2 for CClientScript::registerScript(), called in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/pages/shipping.php on line 14 and defined (/var/www/vhosts/kle-en-main.com/Yii/framework/web/CClientScript.php:676)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CViewAction.php(140): SiteController->render()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(76): CViewAction->run()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CViewAction->runWithParams()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): SiteController->runAction()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/page/shipping
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/pages/shipping.php (14)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)

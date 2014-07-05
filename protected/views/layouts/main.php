@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/favicon.png" />
 	<?php if ($this->pageDescription): ?>
 		<meta name="description" content="<?php echo CHtml::encode($this->pageDescription); ?>">
 	<?php endif; ?>
@@ -145,9 +146,19 @@ $cs
                 <ul class="nav navbar-nav">
                     <li><a href="/" <?php if ($this->uniqueid === "site" && $this->action->id === "index") {echo "class=\"active\""; } ?>><?php echo Yii::t('app', 'Accueil'); ?></a></li>
                     <?php
-					foreach ($this->topCategoriesLocalizationsDataProvider()->getData() as $topCategory) {
-						$this->renderPartial("application.views._top_categories_menu_item", array("localization"=>$topCategory));
-					};
+					
+					$categories_links_cache_id = Yii::app()->request->hostInfo . " Layout:[footer_links_for_language] " . Yii::app()->language;
+					$category_links_html = Yii::app()->cache->get($categories_links_cache_id);
+					if (!$category_links_html){
+						
+						$category_links_html = "";
+						foreach ($this->topCategoriesLocalizationsDataProvider()->getData() as $topCategory) {
+							$category_links_html .= "<li>" . CHtml::link($topCategory->name, array('/category/view', 'slug'=>$topCategory->slug)) . "</li>";
+				}
+				Yii::app()->cache->set($categories_links_cache_id, $category_links_html, 120);
+					}
+					
+					echo $category_links_html;
 					
                     ?>
                 </ul>
@@ -166,10 +177,10 @@ $cs
         		<div class="column">
         			<h4><?php echo Yii::t('app', 'Information'); ?></h4>
         			<ul>
-        				<li><a href="about.html"><?php echo Yii::t('app', 'À propos de la boutique'); ?></a></li>
-        				<li><a href="typography.html"><?php echo Yii::t('app', 'Politique de confidentialité'); ?></a></li>
-        				<li><a href="typography.html"><?php echo Yii::t('app', "Conditions d'utilisation"); ?></a></li>
-        				<li><a href="typography.html"><?php echo Yii::t('app', "Méthodes d'expédition"); ?></a></li>
+        				<li><a href="<?php echo $this->createUrl('site/page', array('view'=>'about')); ?>"><?php echo Yii::t('app', 'À propos de la boutique'); ?></a></li>
+        				<li><a href="<?php echo $this->createUrl('site/page', array('view'=>'privacy')); ?>"><?php echo Yii::t('app', 'Politique de confidentialité'); ?></a></li>
+        				<li><a href="<?php echo $this->createUrl('site/page', array('view'=>'terms')); ?>"><?php echo Yii::t('app', "Conditions d'utilisation"); ?></a></li>
+        				<li><a href="<?php echo $this->createUrl('site/page', array('view'=>'shipping')); ?>"><?php echo Yii::t('app', "Méthodes d'expédition"); ?></a></li>
         			</ul>
         		</div>
         	</div>
@@ -179,9 +190,8 @@ $cs
         			<ul>
         				<li><a href="catalogue.html"><?php echo Yii::t('app', 'Accueil'); ?></a></li>
 						<?php
-						foreach ($this->topCategoriesLocalizationsDataProvider()->getData() as $topCategory) {
-							echo "<li>" . CHtml::link($topCategory->name, array('/category/view', 'slug'=>$topCategory->slug)) . "</li>";
-				}			?>
+						echo $category_links_html;
+						?>
         			</ul>
         		</div>
         	</div>
@@ -189,8 +199,8 @@ $cs
         		<div class="column">
         			<h4><?php echo Yii::t('app', 'Service à la clientèle'); ?></h4>
         			<ul>
-        				<li><a href="contact.html"><?php echo Yii::t('app', 'Nous contacter'); ?></a></li>
-        				<li><a href="#"><?php echo Yii::t('app', 'Retours et échanges'); ?></a></li>
+        				<li><a href="<?php echo $this->createUrl('site/contact'); ?>"><?php echo Yii::t('app', 'Nous contacter'); ?></a></li>
+        				<li><a href="<?php echo $this->createUrl('site/page', array('view'=>'returns')); ?>"><?php echo Yii::t('app', 'Retours et échanges'); ?></a></li>
         				<li><a href="#"><?php echo Yii::t('app', 'Signaler un problème'); ?></a></li>
 				  		  <?php if (Yii::app()->user->isGuest):?>
 		  

@@ -51,7 +51,7 @@ class SiteController extends WebController
 			$output = Yii::app()->curl->get("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/Layout/index", $layout_parameters);
 			
 			$base_dict = json_decode($output);
-				
+			
 			$layout_html = $this->renderPartial('_index_layout', array("items"=>$base_dict), true);
 			
 			Yii::app()->cache->set($cache_id, $layout_html, $cache_duration);

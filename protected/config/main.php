@@ -87,6 +87,7 @@ return array(
 				'/cart.html'=>'cart/index',
 				'/panier.html'=>'cart/index',
 				'/checkout.html'=>'cart/checkout',
+				'page/<view:\w+>'=>'site/page',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
