@@ -265,4 +265,13 @@ class Order extends CActiveRecord
 		return $balance;
 	}
 	
+	/**
+	 * Flush the cached array of products used at some places in the UI for the specified order id
+	 * @param float order id 
+	 */
+	public static function flushCacheForOrderId($order){
+		
+	    Yii::app()->cache->delete(Yii::app()->request->hostInfo . " CartController:[overviewForCart] " . $order);
+		
+	}
 }

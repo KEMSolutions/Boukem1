@@ -94,32 +94,7 @@ $cs
 	                <div class="well">
 	                    <div class="btn-group btn-group-cart">
 							<a href="<?php echo $this->createUrl('/cart/index'); ?>" class="btn btn-default"><i class="fa fa-shopping-cart icon-cart"></i> <?php echo Yii::t('app', 'Panier'); ?> <span class="badge" id="cart_badge"></span></a>
-	                        <? /*
-							
-							// Working sample code to add a list of items in the cart
-							
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-	                            <span class="pull-left"><i class="fa fa-shopping-cart icon-cart"></i></span>
-	                            <span class="pull-left"><?php echo Yii::t('app', 'Panier'); ?></span>
-	                            <?php <span class="pull-right"><i class="fa fa-caret-down"></i></span>
-	                        </button>
-	                        <?php <ul class="dropdown-menu cart-content" role="menu">
-                                <li>
-                                    <a href="detail.html">
-                                        <b>Penn State College T-Shirt</b>
-                                        <span>x1 $528.96</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">
-                                        <b>Live Nation ACDC Gray T-Shirt</b>
-                                        <span>x1 $428.96</span>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="cart.html">Total: $957.92</a></li>
-                            </ul>
-								*/ ?>
+	                      
 	                    </div>
 	                </div>
 	            </div>
@@ -224,6 +199,10 @@ $cs
     <a href="#top" class="back-top text-center" onclick="$('body,html').animate({scrollTop:0},500); return false">
     	<i class="fa fa-angle-double-up"></i>
     </a>
+
+
+<div id="modal_cart"></div>
+
 
 <script>
 

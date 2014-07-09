@@ -164,7 +164,12 @@ class SiteController extends WebController
 	    $this->render('register',array('model'=>$model));
 	}
 	
-	
+	/**
+	 * Return a small page jquery will insert to the main layout's dom so a modal can be displayed when the user adds an object to her cart
+	 */
+	public function actionModalCart(){
+		echo $this->renderPartial('modal_cart', array(), true, true);
+	}
 	
 	/**
 	 * Displays the login page

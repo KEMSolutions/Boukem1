@@ -550,17 +550,41 @@ class CartController extends WebController
 	{
 		$cart = $this->getCart();
 		
-		$dataProvider=new CActiveDataProvider('OrderHasProduct', array(
-		    'criteria'=>array(
-		        'condition'=>'order_id=' . $cart->id,
-		        //'with'=>array('product'),
-		    ),
-		    'pagination'=>false
-		));
 		
+		$cache_id = Yii::app()->request->hostInfo . " CartController:[overviewForCart] " . $cart->id;
+		$cache_duration = 10800;
+	
+		$output_array = Yii::app()->cache->get($cache_id);
+		if (!$output_array){
+			$dataProvider=new CActiveDataProvider('OrderHasProduct', array(
+			    'criteria'=>array(
+			        'condition'=>'order_id=' . $cart->id,
+			        'with'=>array('product'),
+			    ),
+			    'pagination'=>false
+			));
 		
-		
-		$this->renderJSON($dataProvider->getData());
+			$output_array = array();
+			foreach ($dataProvider->getData() as $item){
+				$cartitem = array(
+					'quantity'=>$item->quantity,
+					'price_paid'=>$item->price_paid,
+					'product_id'=>$item->product_id,
+				);
+				$product = $item->product;
+				$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+				$image = $localization->getMainImage();
+				$cartitem['name'] = $localization->name;
+				$cartitem['slug'] = $localization->slug;
+				$cartitem['thumbnail'] = $image ? $image->getImageURL(50, 50) : ProductImage::placehoderForSize(50, 50);
+				$cartitem['link'] = $this->createUrl('Product/view', array('id'=>$product->id));
+				$output_array[] = $cartitem;
+			}
+			
+			Yii::app()->cache->set($cache_id, $output_array, $cache_duration);
+			
+		}
+		$this->renderJSON($output_array);
 		
 		
 	}

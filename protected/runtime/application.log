@@ -704,3 +704,241 @@ Stack trace:
 REQUEST_URI=/fr/cart/estimate
 HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
 ---
+2014/07/07 14:49:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Postes Canada ne peut fournir d'estimé en ce moment.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:330
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/07 14:51:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Postes Canada ne peut fournir d'estimé en ce moment.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:330
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/07 14:56:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Votre requête est invalide.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php:1132
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#8 {main}
+REQUEST_URI=/fr/cart/estimate
+---
+2014/07/07 14:56:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Postes Canada ne peut fournir d'estimé en ce moment.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:332
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/07 15:34:39 [error] [exception.CException] exception 'CException' with message 'La propriété « CWebApplication.pathInfo » est indéfinie.' in /var/www/vhosts/kle-en-main.com/Yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CModule.php(105): CComponent->__get('pathInfo')
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php(325): CModule->__get('pathInfo')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#14 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/08 23:49:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « detail.html ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('detail.html')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/detail.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/09 00:02:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Votre requête est invalide.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Product/view')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/Product/858
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/09 00:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « Order/cart ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Order/cart')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/Order/cart
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-heel.html
+---
+2014/07/09 00:07:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « Order/index ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Order/index')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/Order/index
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-heel.html
+---
+2014/07/09 00:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « Order/index ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Order/index')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/Order/index
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-heel.html
+---
+2014/07/09 00:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:143
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php(19): CategoryController->loadLocalizationModelSlug('fr-performance-...')
+#1 [internal function]: CategoryController->actionView('fr-performance-...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/en/cat/fr-performance-blessures-et-trauma.html
+---
+2014/07/09 00:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Le système ne peut trouver l'action « modal_cart » demandée.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(270): CController->missingAction('modal_cart')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('modal_cart')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/modal_cart')
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/fr/site/modal_cart
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/09 09:33:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:129
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php(19): CategoryController->loadLocalizationModelSlug('en-performances...')
+#1 [internal function]: CategoryController->actionView('en-performances...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/en/cat/en-performances-intellectuelles.html
+HTTP_REFERER=http://dev.boutiquekem.com/en/
+---
+2014/07/09 09:34:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:129
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php(19): CategoryController->loadLocalizationModelSlug('en-lorna-vander...')
+#1 [internal function]: CategoryController->actionView('en-lorna-vander...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/en/cat/en-lorna-vanderhaeghe.html
+HTTP_REFERER=http://dev.boutiquekem.com/en/cat/en-brands.html
+---
+2014/07/09 11:09:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Votre requête est invalide.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php:1132
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('add')
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/add')
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#8 {main}
+REQUEST_URI=/fr/cart/add
+---
+2014/07/09 11:11:49 [error] [exception.CException] exception 'CException' with message 'La propriété « OrderHasProduct.id » est indéfinie.' in /var/www/vhosts/kle-en-main.com/Yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('id')
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/models/OrderHasProduct.php(112): CActiveRecord->__get('id')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(1097): OrderHasProduct->afterSave()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php(196): CActiveRecord->save()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionAdd()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('add')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/add')
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/fr/cart/add
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-gemmotherapie.html
+---

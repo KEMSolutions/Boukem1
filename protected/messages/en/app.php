@@ -83,5 +83,9 @@ return array(
 	"Merci pour votre commande! Vous recevrez au cours des prochaines minutes un courriel de confirmation de la réception de votre commande. N'hésitez pas à répondre directement à ce courriel pour toute question concernant celle-ci."=>"Thank you for your order! You will receive a confirmation email shorty.",
 	"Votre commande a été reçue."=>"Your order has been received.",
 	"Confirmation"=>"Confirmation",
+	"Continuer les achats"=>"Continue Shopping",
+	"Passer à la caisse"=>"Check Out",
+	"Fermer"=>"Close",
+	
 );
 ?>

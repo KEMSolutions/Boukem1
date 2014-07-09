@@ -3,15 +3,27 @@ function updateBuyButtonsForProductWithId(id){
 	$('button[data-product="' + id + '"]').attr("disabled", "disabled");
 }
 
-function updateCartOverview(){
+function updateCartOverview(openModal){
 	$.getJSON( "/" + page_lang + "/cart/overview", function( data ) {
-	  
+	  	
+		$("#cart_modal_items").html("");
 		var total_count = 0;
 		$.each( data, function( index, val ) {
 			total_count += parseInt(val.quantity);
 			updateBuyButtonsForProductWithId(val.product_id);
+			$("#cart_modal_items").append("<li class='media'><a class='pull-left' href='" + val.link + "'><img class='media-object' src='" + val.thumbnail + "' alt=''></a><div class='media-body'><h4 class='media-heading'>" + val.name + "</h4>" + val.quantity + " x " + val.price_paid + "</div></li>");
+			
 		});
 		$("#cart_badge").text(total_count);
+		if (openModal){
+			$( "#modal_cart" ).load( "/" + $("html").attr("lang") + '/site/modalCart', function() {
+			  $("#cartModal").modal('show');
+	  		$.each( data, function( index, val ) {
+	  			$("#cart_modal_items").append("<li class='media'><a class='pull-left' href='" + val.link + "'><img class='media-object' src='" + val.thumbnail + "' alt=''></a><div class='media-body'><h4 class='media-heading'>" + val.name + "</h4>" + val.quantity + " x " + val.price_paid + "</div></li>");
+	  		});
+			});
+			
+		}
 	});
 }
 
@@ -33,10 +45,10 @@ $(".buybutton").click(function(){
 	
 	$.post( "/" + page_lang + "/cart/add", { "product": product_id, "quantity" : quantity }, function( data ) {
 	buybutton.addClass('animated tada');
-	updateCartOverview();
+	updateCartOverview(true);
 	updateBuyButtonsForProductWithId(product_id);
-	});
+});
 })
 
 
-updateCartOverview();
+updateCartOverview(false);

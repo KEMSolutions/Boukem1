@@ -103,4 +103,23 @@ class OrderHasProduct extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	/**
+	 * After save make sure to empty any cached count of pending orders
+	 */
+	protected function afterSave() {
+	    parent::afterSave();
+		Order::flushCacheForOrderId($this->order_id);
+	}
+	
+	/**
+	 * Reset the cache after we deleted a ticket
+	 */
+	protected function afterDelete()
+	{
+	   parent::afterDelete();
+	   Order::flushCacheForOrderId($this->order_id);
+	}
+	
+	
 }
