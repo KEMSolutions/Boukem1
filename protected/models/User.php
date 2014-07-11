@@ -13,11 +13,15 @@
  * @property string $verification_string
  * @property string $locale_id
  * @property string $postcode
+ * @property string $prefered_billing_address_id
+ * @property string $prefered_shipping_address_id
  *
  * The followings are the available model relations:
  * @property Order[] $orders
  * @property Locale $locale
  * @property UserPhone[] $userPhones
+ * @property Address $preferedBillingAddress
+ * @property Address $preferedShippingAddress
  */
 class User extends CActiveRecord
 {
@@ -61,6 +65,8 @@ class User extends CActiveRecord
 			'locale' => array(self::BELONGS_TO, 'Locale', 'locale_id'),
 			'userPhones' => array(self::HAS_MANY, 'UserPhone', 'user_id'),
 			'addresses' => array(self::HAS_MANY, 'Address', 'user_id'),
+			"preferedShippingAddress"=>array(self::BELONGS_TO, 'Address', 'id'),
+			"preferedBillingAddress"=>array(self::BELONGS_TO, 'Address', 'id'),
 		);
 	}
 

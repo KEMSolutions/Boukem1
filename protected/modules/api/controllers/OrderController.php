@@ -49,6 +49,10 @@ class OrderController extends APIController
 		
 		$order->orderDetails->balance = $payload->balance;
 		
+		if ($order->order_number === null || $order->order_number === ""){
+			$order->order_number = $payload->order_number;
+		}
+		
 		$order->orderDetails->save();
 		$order->save();
 	}

@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'order':
  * @property integer $id
+ * @property integer $order_number
  * @property integer $user_id
  * @property integer $cart
  * @property string $timestamp
@@ -33,13 +34,13 @@ class Order extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, cart', 'numerical', 'integerOnly'=>true),
+			array('user_id, cart, order_number', 'numerical', 'integerOnly'=>true),
 			array('status', 'length', 'max'=>64),
 			array('status','in','range'=>array('pending', 'paid', 'canceled', 'complete', 'partial_shipment'),'allowEmpty'=>true),
 			array('timestamp', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, user_id, cart, timestamp, status', 'safe', 'on'=>'search'),
+			array('id, order_number, user_id, cart, timestamp, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +65,7 @@ class Order extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'order_number'=>'Order Number',
 			'user_id' => 'User',
 			'cart' => 'Cart',
 			'timestamp' => 'Timestamp',
@@ -90,6 +92,7 @@ class Order extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('order_number', $this->order_number);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('cart',$this->cart);
 		$criteria->compare('timestamp',$this->timestamp,true);
@@ -149,7 +152,7 @@ class Order extends CActiveRecord
 		$orderdict['billing']['firstname'] = $user->firstname;
 		$orderdict['billing']['lastname'] = $user->lastname;
 		$orderdict['billing']['street1'] = $billing->street1 ? CHtml::encode($billing->street1) : null;
-		//$orderdict['billing']['street2'] = $billing->street2 ? CHtml::encode($billing->street2) : null;
+		$orderdict['billing']['street2'] = $billing->street2 ? CHtml::encode($billing->street2) : null;
 		$orderdict['billing']['postcode'] = $billing->postcode ? CHtml::encode($billing->postcode) : null;
 		$orderdict['billing']['city'] = $billing->city ? CHtml::encode($billing->city) : null;
 		$orderdict['billing']['region'] = $billing->region ? CHtml::encode($billing->region) : null;
@@ -160,7 +163,7 @@ class Order extends CActiveRecord
 		$orderdict['shipping']['firstname'] = $user->firstname;
 		$orderdict['shipping']['lastname'] = $user->lastname;
 		$orderdict['shipping']['street1'] = $shipping->street1 ? CHtml::encode($shipping->street1) : null;
-		//$orderdict['shipping']['street2'] = $shipping->street2 ? CHtml::encode($shipping->street2) : null;
+		$orderdict['shipping']['street2'] = $shipping->street2 ? CHtml::encode($shipping->street2) : null;
 		$orderdict['shipping']['postcode'] = $shipping->postcode ? CHtml::encode($shipping->postcode) : null;
 		$orderdict['shipping']['city'] = $shipping->city ? CHtml::encode($shipping->city) : null;;
 		$orderdict['shipping']['region'] = $shipping->region ? CHtml::encode($shipping->region) : null;;

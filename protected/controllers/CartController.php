@@ -114,9 +114,6 @@ class CartController extends WebController
 		$details->save();
 		
 		
-		
-		
-		
 	}
 	
 	public function actionCheckout()
@@ -420,6 +417,11 @@ class CartController extends WebController
 		$billing_address->country = $billing_country;
 		$billing_address->save();
 		
+		if (!Yii::app()->user->user->prefered_billing_address_id){
+			Yii::app()->user->user->prefered_billing_address_id = $billing_address->id;
+			Yii::app()->user->user->save();
+		}
+		
 		$order_details->billing_address_id = $billing_address->id;
 		
 		if ($ship_to_billing === "true"){
@@ -439,6 +441,10 @@ class CartController extends WebController
 			$order_details->shipping_address_id = $shipping_address->id;
 		}
 		
+		if (!Yii::app()->user->user->prefered_shipping_address_id){
+			Yii::app()->user->user->prefered_shipping_address_id = $shipping_address->id;
+			Yii::app()->user->user->save();
+		}
 		
 		
 		// Save every detail for the order total price and taxes based on the provided shipping address
@@ -548,6 +554,7 @@ class CartController extends WebController
 	
 	public function actionOverview()
 	{
+		
 		$cart = $this->getCart();
 		
 		

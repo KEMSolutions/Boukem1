@@ -7,7 +7,7 @@
  * @property integer $id
  * @property integer $user_id
  * @property string $street1
- * @property integer $street2
+ * @property string $street2
  * @property string $postcode
  * @property string $city
  * @property string $name
@@ -38,9 +38,9 @@ class Address extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('user_id, street1, city, region, country', 'required'),
-			array('user_id, street2', 'numerical', 'integerOnly'=>true),
+			array('user_id', 'numerical', 'integerOnly'=>true),
 			array('postcode, region, country', 'length', 'max'=>32),
-			array('name', 'safe'),
+			array('name, street2', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, user_id, street1, street2, postcode, city, name, region, country', 'safe', 'on'=>'search'),
