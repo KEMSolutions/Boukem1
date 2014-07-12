@@ -28,7 +28,6 @@ $cs
 	->registerCssFile('/css/jquery.bxslider.css')
 	->registerCssFile('/css/style.css')
 	->registerCssFile('/css/animate.css');
-	//->registerCssFile($themePath.'/assets/css/kem-theme.css');
 
 /**
  * JavaScripts
@@ -130,7 +129,7 @@ $cs
 						foreach ($this->topCategoriesLocalizationsDataProvider()->getData() as $topCategory) {
 							$category_links_html .= "<li>" . CHtml::link($topCategory->name, array('/category/view', 'slug'=>$topCategory->slug)) . "</li>";
 				}
-				Yii::app()->cache->set($categories_links_cache_id, $category_links_html, 120);
+				Yii::app()->cache->set($categories_links_cache_id, $category_links_html, 3600);
 					}
 					
 					echo $category_links_html;
@@ -143,6 +142,13 @@ $cs
     <!-- End Navigation -->
 
 
+<?php if ($this->can_prompt_for_password_set && !Yii::app()->user->isGuest && !Yii::app()->user->user->password) {
+
+	$this->renderPartial("application.views._password_setter");
+
+}
+
+?>
 
 <?php echo $content; ?>
 

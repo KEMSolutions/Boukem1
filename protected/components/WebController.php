@@ -24,6 +24,13 @@ class WebController extends Controller
 	public $breadcrumbs=array();
 	
 	
+	/**
+	 * @var bool whe true, a prompt can appear at the top of the page asking the user to create a password if none is set.
+	 * Should be set to false during the checkout process. 
+	 */
+	public $can_prompt_for_password_set=true;
+	
+	
 	
 	/**
 	 * @var str the page description to insert in the meta tags.

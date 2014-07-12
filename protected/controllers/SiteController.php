@@ -171,6 +171,31 @@ class SiteController extends WebController
 		echo $this->renderPartial('modal_cart', array(), true, true);
 	}
 	
+	public function actionCreatePassword(){
+		
+		$user = !Yii::app()->user->isGuest ? Yii::app()->user->user : null;
+		
+		if ($user === null){
+			throw new CHttpException(403,'Not authorized');
+		}
+		
+		
+		if ($user->password !== null){
+			throw new CHttpException(403,'Not authorized');
+		}
+		
+		$password = Yii::app()->request->getPost("password", null);
+		if ($password === null || $password === ""){
+			throw new CHttpException(400,'Incorrect password.');
+		}
+		
+		$user->password = CPasswordHelper::hashPassword($password);
+		$user->save();
+		
+		Yii::app()->user->setFlash('success',Yii::t("app", 'Féliciations, votre mot de passe est enregistré!'));
+		$this->redirect(Yii::app()->user->returnUrl);
+	}
+	
 	/**
 	 * Displays the login page
 	 */
@@ -198,7 +223,8 @@ class SiteController extends WebController
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
-
+	
+	
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */

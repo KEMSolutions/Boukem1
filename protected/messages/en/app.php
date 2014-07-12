@@ -86,6 +86,10 @@ return array(
 	"Continuer les achats"=>"Continue Shopping",
 	"Passer à la caisse"=>"Check Out",
 	"Fermer"=>"Close",
+	"Créer un mot de passe"=>"Protect your account with a password",
+	"Retrouvez la liste de vos achats précédents et obtenez le statut de vos commandes en créant un mot de passe."=>"Save your order history and get order status updates by protecting your account with a password.",
+	"Mot de passe"=>"Password",
+	"Créer le mot de passe"=>"Save this password",
 	
 );
 ?>

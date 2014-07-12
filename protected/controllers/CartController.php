@@ -118,7 +118,7 @@ class CartController extends WebController
 	
 	public function actionCheckout()
 	{
-		
+		$this->can_prompt_for_password_set = false;
 		$country = Yii::app()->request->getPost("country", null);
 		$province = Yii::app()->request->getPost("province", null);
 		$postcode = Yii::app()->request->getPost("postcode", null);
@@ -142,6 +142,7 @@ class CartController extends WebController
 	public function actionIndex()
 	{
 		
+		$this->can_prompt_for_password_set = false;
 		$this->breadcrumbs=array(
 			Yii::t("app", 'Panier'),
 		);
