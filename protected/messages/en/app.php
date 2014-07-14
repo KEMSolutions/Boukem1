@@ -90,6 +90,12 @@ return array(
 	"Retrouvez la liste de vos achats précédents et obtenez le statut de vos commandes en créant un mot de passe."=>"Save your order history and get order status updates by protecting your account with a password.",
 	"Mot de passe"=>"Password",
 	"Créer le mot de passe"=>"Save this password",
-	
+	"Compte"=>"Account",
+	"Changer de mot de passe"=>"Change your password",
+	"Mot de passe actuel"=>"Current Password",
+	"Nouveau mot de passe"=>"New Password",
+	"Le mot de passe actuel entré est incorrect."=>"The current password you entered is incorrect",
+	"Le mot de passe de votre compte a été modifié. Veuillez dès maintenant utiliser votre nouveau mot de passe pour vous identifier."=>"Your password has been updated. You can now use your new password to log in.",
+	"Votre panier est vide."=>"Your cart is empty.",
 );
 ?>

@@ -35,11 +35,6 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'password', array('class'=>'alert alert-danger')); ?>
 	</div>
 
-	<div class="checkbox">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-	</div>
-
 		<?php echo CHtml::submitButton('Login', array('class'=>"btn btn-primary")); ?>
 
 <?php $this->endWidget(); ?>

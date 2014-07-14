@@ -3,7 +3,7 @@
 
 
 ?>
-<h1><?php echo Yii::t('app', "Panier"); ?></h1>
+<span class="title"><?php echo Yii::t('app', "Panier"); ?></span>
 
 <div class="table-responsive">
 <table class="table table-striped">
@@ -12,6 +12,7 @@
  $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
+	'emptyText'=>Yii::t("app", "Votre panier est vide."),
 )); ?>
 </table>
 </div>

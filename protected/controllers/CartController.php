@@ -296,6 +296,10 @@ class CartController extends WebController
 			$total_item_qty += $relationship->quantity;
 		}
 		
+		if ($total_item_qty == 0){
+			throw new CHttpException(400,'The cart is empty.');
+		}
+		
 		// Build the json request data we'll send to our server
 		$weight = $total_weight;
 		$handling = 0;

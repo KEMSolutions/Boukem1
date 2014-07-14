@@ -1082,3 +1082,196 @@ Stack trace:
 REQUEST_URI=/fr/Site/createPassword
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (192)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/07/11 22:04:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/components/WebUser.php:17
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php(269): WebUser->createGuestUser('remyv@kle-en-ma...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/Cart/index
+---
+2014/07/11 22:05:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Postes Canada ne peut fournir d'estimé en ce moment.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:328
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/11 22:09:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'The cart is empty.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:300
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/14 11:27:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Vous n'êtes pas autorisé à effectuer cette action.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Vous n'??tes pa...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('account')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/fr/account/
+---
+2014/07/14 11:43:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Vous n'êtes pas autorisé à effectuer cette action.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Vous n'??tes pa...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('updatePassword')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('account/updateP...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/fr/account/updatePassword
+HTTP_REFERER=http://dev.boutiquekem.com/fr/account/
+---
+2014/07/14 11:46:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Vous n'êtes pas autorisé à effectuer cette action.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'Vous n'??tes pa...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('updatePassword')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('account/updateP...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/fr/account/updatePassword
+HTTP_REFERER=http://dev.boutiquekem.com/fr/account/
+---
+2014/07/14 12:16:07 [error] [php] Undefined variable: form (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/updatePassword.php:18)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): AccountController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): AccountController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php(50): AccountController->render()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): AccountController->actionUpdatePassword()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): AccountController->runAction()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): AccountController->filterAccessControl()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): AccountController->runActionWithFilters()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): AccountController->run()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/account/updatePassword
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/updatePassword.php (18)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php (50)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/07/14 12:16:09 [error] [php] Undefined variable: form (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/updatePassword.php:18)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): AccountController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): AccountController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php(50): AccountController->render()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): AccountController->actionUpdatePassword()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): AccountController->runAction()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): AccountController->filterAccessControl()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): AccountController->runActionWithFilters()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): AccountController->run()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/account/updatePassword
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/updatePassword.php (18)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php (50)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/07/14 12:17:21 [error] [php] Undefined variable: form (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/updatePassword.php:18)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): AccountController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): AccountController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php(53): AccountController->render()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): AccountController->actionUpdatePassword()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): AccountController->runAction()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): AccountController->filterAccessControl()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): AccountController->runActionWithFilters()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): AccountController->run()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/account/updatePassword
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/updatePassword.php (18)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php (53)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/07/14 12:17:23 [error] [php] Undefined variable: form (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/updatePassword.php:18)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): AccountController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): AccountController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php(53): AccountController->render()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): AccountController->actionUpdatePassword()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): AccountController->runAction()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): AccountController->filterAccessControl()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): AccountController->runActionWithFilters()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): AccountController->run()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/account/updatePassword
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/updatePassword.php (18)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php (53)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)

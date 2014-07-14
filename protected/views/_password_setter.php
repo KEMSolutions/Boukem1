@@ -11,7 +11,7 @@
 			$('#password-setter-input-field').hidePassword(true);
 			" ,CClientScript::POS_READY);
 ?>
-<section class="container" id="password_setter">
+<section class="container main-container" id="password_setter">
 	
 	<div class="row">
 		<div class="col-xs-12">

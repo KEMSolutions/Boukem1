@@ -150,6 +150,19 @@ $cs
 
 ?>
 
+
+<?php if(Yii::app()->user->hasFlash('success') || Yii::app()->user->hasFlash('danger') || Yii::app()->user->hasFlash('warning') || Yii::app()->user->hasFlash('info')): ?>
+
+<div class="container main-container">
+<?php
+    foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="alert alert-' . $key . ' alert-dismissable animated pulse"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' . $message . "</div>\n";
+    }
+?>
+</div>
+
+<?php endif; ?>
+
 <?php echo $content; ?>
 
 	<footer>
