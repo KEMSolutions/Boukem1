@@ -36,7 +36,7 @@ class Order extends CActiveRecord
 		return array(
 			array('user_id, cart, order_number', 'numerical', 'integerOnly'=>true),
 			array('status', 'length', 'max'=>64),
-			array('status','in','range'=>array('pending', 'paid', 'canceled', 'complete', 'partial_shipment'),'allowEmpty'=>true),
+			array('status','in','range'=>array(self::STATUS_PENDING, self::STATUS_PAID, self::STATUS_CANCELED, self::STATUS_COMPLETE, self::STATUS_PARTIAL_SHIPMENT),'allowEmpty'=>true),
 			array('timestamp', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -65,11 +65,11 @@ class Order extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'order_number'=>'Order Number',
+			'order_number'=>Yii::t("app", 'Numéro de commande'),
 			'user_id' => 'User',
 			'cart' => 'Cart',
-			'timestamp' => 'Timestamp',
-			'status' => 'Status',
+			'timestamp' => Yii::t("app", "Date de création"),
+			'status' => Yii::t("app", 'Statut'),
 		);
 	}
 
@@ -277,4 +277,36 @@ class Order extends CActiveRecord
 	    Yii::app()->cache->delete(Yii::app()->request->hostInfo . " CartController:[overviewForCart] " . $order);
 		
 	}
+	
+	/**
+	 * Return a localized and prettified string describing an order status to print to end users.
+	 * @param str order status string constant
+	 * @return str order status as a localized string
+	 */
+	public static function localizedStatus($status){
+		
+  		if ($status === self::STATUS_PENDING){
+  			return Yii::t("app", "Impayée");
+  		} else if ($status === self::STATUS_PAID){
+  			return Yii::t("app", "Payée");
+  		} else if ($status === self::STATUS_CANCELED){
+  			return Yii::t("app", "Annulée");
+  		} else if ($status === self::STATUS_COMPLETE){
+  			return Yii::t("app", "Terminée");
+  		} else if ($status === self::STATUS_PARTIAL_SHIPMENT){
+  			return Yii::t("app", "Expédition partielle");
+  		}
+		
+  		return Yii::t("app", "Autre statut");
+  		
+	}
+	
+	
+	const STATUS_PAID = "paid";
+	const STATUS_PENDING = "pending";
+	const STATUS_CANCELED = "canceled";
+	const STATUS_COMPLETE = "complete";
+	const STATUS_PARTIAL_SHIPMENT = "partial_shipment";
+	
+	
 }

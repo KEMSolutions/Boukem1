@@ -43,9 +43,23 @@ class AccountController extends WebController
 	public function actionIndex()
 	{
 		
-		$this->render('index',array());
+		$ordersDataProvider=new CActiveDataProvider('Order', array(
+		    'criteria'=>array(
+		        'condition'=>'cart=0 AND user_id=' . Yii::app()->user->user->id,
+		        'order'=>'timestamp DESC',
+		        'with'=>array('orderDetails'),
+		    ),
+		    'pagination'=>array(
+		        'pageSize'=>10,
+		    ),
+		));
+		
+		$this->render('index', array('orders'=>$ordersDataProvider));
 	}
 	
+	/**
+	 * Update password for the current user.
+	 */
 	public function actionUpdatePassword(){
 		
 		$model=new UpdatePasswordForm;
@@ -66,6 +80,16 @@ class AccountController extends WebController
 		}
 		
 		$this->render('updatePassword',array('model'=>$model));
+	}
+	
+	
+	/**
+	 * Lists all models.
+	 */
+	public function actionViewOrder()
+	{
+		
+		$this->render('index',array());
 	}
 	
 }

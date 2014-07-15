@@ -195,7 +195,7 @@ $cs
         			<ul>
         				<li><a href="<?php echo $this->createUrl('site/contact'); ?>"><?php echo Yii::t('app', 'Nous contacter'); ?></a></li>
         				<li><a href="<?php echo $this->createUrl('site/page', array('view'=>'returns')); ?>"><?php echo Yii::t('app', 'Retours et échanges'); ?></a></li>
-        				<li><a href="#"><?php echo Yii::t('app', 'Signaler un problème'); ?></a></li>
+        				<li><a href="<?php echo $this->createUrl('account/index'); ?>"><?php echo Yii::t('app', 'Compte'); ?></a></li>
 				  		  <?php if (Yii::app()->user->isGuest):?>
 		  
 				  		  <li><a href=""><?php echo CHtml::link(Yii::t('app', 'Devenir membre ou se connecter'), array('site/register')); ?></a></li>

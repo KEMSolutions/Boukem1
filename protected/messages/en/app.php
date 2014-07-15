@@ -97,5 +97,16 @@ return array(
 	"Le mot de passe actuel entré est incorrect."=>"The current password you entered is incorrect",
 	"Le mot de passe de votre compte a été modifié. Veuillez dès maintenant utiliser votre nouveau mot de passe pour vous identifier."=>"Your password has been updated. You can now use your new password to log in.",
 	"Votre panier est vide."=>"Your cart is empty.",
+	"Historique de commandes"=>"Order History",
+	"Numéro de commande"=>"Order ID",
+	"Date de création"=>"Creation date",
+	"Statut"=>"Status",
+	"Impayée"=>"Unpaid",
+	"Payée"=>"Paid",
+	"Annulée"=>"Canceled",
+	"Terminée"=>"Completed",
+	"Expédition partielle"=>"Partial shipment",
+	"Autre statut"=>"Other status",
+	
 );
 ?>
