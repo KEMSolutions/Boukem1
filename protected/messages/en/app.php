@@ -6,7 +6,7 @@ return array(
 	'Panier'=>'Cart',
 	'Go!'=>'Go!',
 	'Devenir membre ou se connecter'=>'Sign up or sign in',
-	'Se déconnecter'=>'Se déconnecter',
+	'Se déconnecter'=>'Sign out',
 	'tous droits réservés'=>'all rights reserved',
 	'La page demandée n\'existe pas.'=>'The requested page does not exist.',
 	"Postes Canada ne peut fournir d'estimé en ce moment."=>"Canada Post cannot give us an estimate at this moment. Please try again later.",

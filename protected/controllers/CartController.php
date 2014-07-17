@@ -249,7 +249,7 @@ class CartController extends WebController
 			throw new CHttpException(400,'Your request is invalid.');
 		}
 		
-		$cart = $this->getCart();
+		
 		
 		
 		
@@ -269,6 +269,8 @@ class CartController extends WebController
 			$user = Yii::app()->user->createGuestUser($email);
 			
 		}
+		
+		$cart = $this->getCart();
 		
 		Yii::app()->session['cart_country'] = $country;
 		Yii::app()->session['cart_province'] = $province;

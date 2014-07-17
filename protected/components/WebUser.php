@@ -23,7 +23,7 @@ class WebUser extends CWebUser
 		$identity=new UserIdentity($email,null);
 		
 		if ($identity->authenticate())
-			$this->login($identity, 3600*24*30);
+			$this->login($identity);
 		
 	}
    
