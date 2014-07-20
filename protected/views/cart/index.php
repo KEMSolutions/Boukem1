@@ -1,9 +1,8 @@
 <?php
 /* @var $this CartController */
 
-
+$this->pageTitle = Yii::t("app", "Panier");
 ?>
-<span class="title"><?php echo Yii::t('app', "Panier"); ?></span>
 
 <div class="table-responsive">
 <table class="table table-striped">

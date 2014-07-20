@@ -1414,3 +1414,1242 @@ REQUEST_URI=/fr/account/
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/models/Order.php (288)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/account/index.php (31)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/AccountController.php (57)
+2014/07/20 15:47:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 15:47:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 15:54:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 15:54:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 15:56:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/20 15:56:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/20 15:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/Product/view?slug=fr-menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/20 15:56:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/Product/view?slug=fr-menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/20 16:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot-v1.1.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot-v1.1.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:09:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:09:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot-v1.1.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot-v1.1.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « contact.html ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('contact.html')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/contact.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:09:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot-v1.1.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot-v1.1.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/contact.html
+---
+2014/07/20 16:09:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/contact.html
+---
+2014/07/20 16:09:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/contact.html
+---
+2014/07/20 16:09:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/contact.html
+---
+2014/07/20 16:09:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot-v1.1.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot-v1.1.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/contact.html
+---
+2014/07/20 16:09:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/contact.html
+---
+2014/07/20 16:10:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot-v1.1.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot-v1.1.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:10:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/ebright-bootstrap-screenshot.png ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/ebright-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/ebright-bootstrap-screenshot.png
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:10:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/20 16:10:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/20 16:11:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:11:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:12:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:12:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:13:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:13:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:14:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:14:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:15:23 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('lorna')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=lorna
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:15:26 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('lorna')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=lorna
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:16:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:16:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:16:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:17:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:17:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:17:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:18:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:15 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('lorna')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=lorna
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:21 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('test')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=test
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:19:48 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('test')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=test
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:24:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:28:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:28:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/Cart/index
+---
+2014/07/20 16:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/Cart/index
+---
+2014/07/20 16:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:29:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:29:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:29:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:30:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:30:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:30:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:30:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:30:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:30:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:32:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:32:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:32:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-categories.html
+---
+2014/07/20 16:32:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-categories.html
+---
+2014/07/20 16:32:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:32:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:32:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:32:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:33:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:33:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:34:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:34:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:34:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:36:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:36:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:37:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:38:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:38:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:39:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:39:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « catalogue.html ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('catalogue.html')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/catalogue.html
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:39:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/catalogue.html
+---
+2014/07/20 16:39:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/catalogue.html
+---
+2014/07/20 16:43:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:43:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:43:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-sujets-de-sante.html
+---
+2014/07/20 16:43:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-sujets-de-sante.html
+---
+2014/07/20 16:43:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-categories.html
+---
+2014/07/20 16:43:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-categories.html
+---
+2014/07/20 16:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « cat/fr-categories.htmldfgfg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cat/fr-categori...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/cat/fr-categories.htmldfgfg
+---
+2014/07/20 16:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-categories.htmldfgfg
+---
+2014/07/20 16:43:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-categories.htmldfgfg
+---
+2014/07/20 16:43:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « cat/fr-categories.htmldfgfg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cat/fr-categori...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/cat/fr-categories.htmldfgfg
+---
+2014/07/20 16:43:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-categories.htmldfgfg
+---
+2014/07/20 16:43:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-categories.htmldfgfg
+---
+2014/07/20 16:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:43:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:50:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:50:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:52:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/timeline/timeline.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/timeline...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/timeline/timeline.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/20 16:52:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « assets/animate/animate.css ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/animate/...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/assets/animate/animate.css
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
