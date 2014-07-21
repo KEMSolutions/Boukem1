@@ -30,6 +30,8 @@ class SiteController extends WebController
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		
+		$this->isHomePage = true;
+		
 		if (Yii::app()->user->isGuest){
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguage] " . Yii::app()->language;
 			$cache_duration = 120;//10800

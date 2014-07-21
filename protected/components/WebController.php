@@ -42,6 +42,11 @@ class WebController extends Controller
 	 */
 	public $menuTitle=null;
 	
+	/**
+	 * @var bool current request should be treated as the site's home page
+	 */
+	public $isHomePage=false;
+	
 	
 	
 	/**

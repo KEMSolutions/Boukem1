@@ -18,11 +18,9 @@ $(document).ready(function() {
 		'height'			: '60%',
 		'scrolling'   		: 'no'
 	});
-	// Masonry
-	var container = document.querySelector('#masonryWr');
-	var msnry = new Masonry( container, {
-	  itemSelector: '.item'
-	});
+	
+	
+	
 	// Scroll to top
 	$().UItoTop({ easingType: 'easeOutQuart' });
 	//Animate hover slide
@@ -55,4 +53,13 @@ $(window).resize(function(){
 		var animateImgHeight = $(this).find("img").height();
 		$(this).find("figcaption").css({"height":animateImgHeight+"px"});
 	});
+});
+
+jQuery(window).load(function () {
+	
+	var container = $('#masonryWr');
+ 	container.masonry({
+	  itemSelector: '.item'
+	});
+
 });

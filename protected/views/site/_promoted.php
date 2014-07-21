@@ -5,7 +5,6 @@
 
 	<?php
 	
-	$counter = 0;
 	 foreach ($items as $item): 
 
 	$product = Product::model()->findByPk($item);

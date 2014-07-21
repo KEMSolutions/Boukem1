@@ -3,8 +3,8 @@
 /* @var $model Category */
 
 $this->breadcrumbs=array(
-	'Categories'=>array('index'),
-	$model->id,
+	Yii::t('app', 'Catégories')=>array('index'),
+	$localization->name,
 );
 
 $this->menu=array();
@@ -15,7 +15,9 @@ foreach ($model->children as $children){
 		$this->menu[] = array('label'=>$childLocalization->name, 'url'=>array('category/view', "slug"=>$childLocalization->slug));
 }
 
-$this->menuTitle = $localization->name;
+//$this->menuTitle = $localization->name;
+
+$this->pageTitle = $localization->name;
 
 ?>
 

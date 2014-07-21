@@ -12,7 +12,11 @@
 		<meta name="description" content="<?php echo CHtml::encode($this->pageDescription); ?>">
 	<?php endif; ?>
     
-    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <title><?php if ($this->isHomePage){
+    	echo Yii::app()->name;
+    } else {
+    	echo CHtml::encode($this->pageTitle) . " - " . Yii::app()->name;
+    }; ?></title>
 
 
 <?php
