@@ -107,6 +107,6 @@ return array(
 	"Terminée"=>"Completed",
 	"Expédition partielle"=>"Partial shipment",
 	"Autre statut"=>"Other status",
-	
+	"CUP/EAN"=>"UPC/EAN",
 );
 ?>

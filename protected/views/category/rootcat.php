@@ -2,10 +2,7 @@
 /* @var $this CategoryController */
 /* @var $model Category */
 
-$this->breadcrumbs=array(
-	Yii::t('app', 'Catégories')=>array('index'),
-	$localization->name,
-);
+$this->breadcrumbs=null;
 
 $this->menu=array();
 foreach ($model->children as $children){

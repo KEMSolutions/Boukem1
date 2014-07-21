@@ -61,5 +61,9 @@ jQuery(window).load(function () {
  	container.masonry({
 	  itemSelector: '.item'
 	});
+	
+	$(".input-qty").TouchSpin({
+	                initval: 1
+	});
 
 });

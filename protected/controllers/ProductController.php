@@ -54,13 +54,12 @@ class ProductController extends WebController
 			$modelLocalization->name,
 		);
 		
-		$this->pageTitle = $modelLocalization->name . " - " . Yii::app()->name;
+		$this->pageTitle = $modelLocalization->name;
 		
 		
 		foreach ($model->categories as $category){
 			$localized_cat = $category->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
 			$localized_categories[] = $localized_cat;
-			
 		}
 		
 		$localized_categories_data_provider = new CArrayDataProvider($localized_categories);
@@ -93,10 +92,14 @@ class ProductController extends WebController
 			"term" => array("locale"=>Yii::app()->language),
 		);
 		
+		
+		
 		$dataProvider = new \YiiElasticSearch\DataProvider(ProductLocalization::model(), array(
 		        'search' => $search,
 		));
 		$dataProvider->setPagination(array('pageSize' => 12));
+		
+		$this->pageTitle = Yii::t("app", "Rechercher") . ": " . $CHtml::encode($q);
 		
 		$this->render('search',array(
 			'dataProvider'=>$dataProvider,

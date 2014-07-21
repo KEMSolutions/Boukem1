@@ -52,3 +52,4 @@ $(".buybutton").click(function(){
 
 
 updateCartOverview(false);
+

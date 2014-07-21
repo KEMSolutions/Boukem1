@@ -3997,3 +3997,914 @@ REQUEST_URI=/fr/cat/fr-performance-blessures-et-trauma.html
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/category/view.php (14)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php (82)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/07/21 18:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Le système ne peut trouver l'action « index » demandée.' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/index')
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/fr/category/index
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cat/fr-sujets-de-sante.html
+---
+2014/07/21 18:33:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/wk-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/wk-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/wk-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/wk-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:33:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:35:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:35:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:35:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:35:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:35:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:35:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:35:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:40:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:40:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:41:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:45:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:46:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:48:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:53:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:53:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---
+2014/07/21 18:53:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « prod/images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('prod/images/prv...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/prod/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/prod/fr-rice-protein-vanille-21-oz.html
+---

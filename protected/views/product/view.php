@@ -2,79 +2,101 @@
 /* @var $this ProductController */
 /* @var $model Product */
 
+$this->pageTitle = $localization->name;
 
-
+	
 ?>
 
-<div class="col-lg-12 col-sm-12">
-	<span class="title"><?php echo CHtml::encode($localization->name); ?></span>
-</div>
 
-
-<div class="row">
-
-	<div class="col-md-7">
-		
-		
-		<img src="<?php
+<section class="slice animate-hover-slide">
+	<div class="w-section inverse blog-grid">
+    	<div class="container">
+        	<div class="row">
+                <div class="col-sm-8">
+                	<div class="row">
+                    	<div class="col-md-12">
+                        	<div class="w-box blog-post">
+                                <figure>
+                                    <img alt="" src="<?php
 		
 		$image = $localization->getMainImage();
 		
 		echo $image ? $image->getImageURL(700,500) : ProductImage::placehoderForSize(700,500);
 		
 		
-		?>" class="img-responsive" alt="<?php echo $localization->name; ?>">
-		
-	</div>
+		?>" class="img-responsive center-block">
+                                    <ul class="meta-list">
+                                        <?php if ($model->sku): ?>
+										<li>
+                                            <span>SKU</span>
+                                            <span class="bold"><?php echo $model->sku; ?></span>
+                                        </li>
+										<?php endif; ?>
+										
+                                        <?php if ($model->barcode): ?>
+										<li>
+                                            <span><?php echo Yii::t("app", "CUP/EAN"); ?></span>
+                                            <span class="bold"><?php echo $model->barcode; ?></span>
+                                        </li>
+										<?php endif; ?>
+                                        
+                                    </ul>
+                                    <?php echo $localization->long_description; ?>
+                                </figure>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
 
-	<div class="col-md-5  hero-feature">
-
-		<h4><?php echo CHtml::encode($localization->name); ?></h4>
-		<?php echo Yii::t("app", "Livré chez vous rapidement"); ?>
-		<hr/>
-		<p><?php echo strip_tags($localization->short_description); ?></p>
-		
-		<hr/>
-		<h3>$<?php echo $model->price; ?></h3>
-		
-		<div class="input-qty-detail">
-			<input type="text" class="form-control input-qty text-center" id="item_quantity" value="1">
-			<button class="btn btn-primary pull-left buybutton" data-product="<?php echo $model->id; ?>"><?php echo Yii::t("app", "Ajouter au panier"); ?></button>
-		</div>
-		<br/>
-		<hr/>
-		
-		<p class="small"><?php echo Yii::t("app", "Transaction sécurisée"); ?></p>
-
-	</div>
-
-</div>
-
-<div class="row">
-	
-	<div class="col-md-9">
-	
-			<?php echo $localization->long_description; ?>
-	
-	</div>
-	
-	<div class="col-md-3">
-	
-			<h3><?php echo Yii::t("app", "Catégories"); ?></h3>
-			<ul>
-			<?php
+                </div>
+                                        
+                <div class="col-sm-4">
+                    
+                    <div class="widget  pricing-plans">
+	                    <div class="w-box popular">
+	                        <h2 class="plan-title"><?php echo CHtml::encode($localization->name); ?></h2>
+	                        <h3 class="price-tag color-one"><span>$</span><?php echo $model->price; ?></h3>
+	                        <ul>
+	                            <li><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Livré chez vous rapidement"); ?></li>
+	                            <li><i class="fa fa-lock"></i> <?php echo Yii::t("app", "Transaction sécurisée"); ?></li>
+	                        </ul>          
+	                        <p class="plan-info"><?php echo strip_tags($localization->short_description); ?></p>
+	                        <p class="plan-select text-center">
+								<div class="input-qty-detail form-inline text-center">
+									<div class="form-group">
+									    <input type="text" class="form-control input-qty text-center" id="item_quantity" value="1">
+									  </div>
+									  
+									<button class="btn btn-three buybutton visible-lg-inline" data-product="<?php echo $model->id; ?>"><i class="fa fa-check-circle"></i>  <?php echo Yii::t("app", "Ajouter au panier"); ?></button>
+									<button class="btn btn-block btn-three center-block buybutton hidden-lg" data-product="<?php echo $model->id; ?>"><i class="fa fa-check-circle"></i>  <?php echo Yii::t("app", "Ajouter au panier"); ?></button>
+								</div>
+								
+	                    </div>
+					</div>
+                    
+                    <div class="widget tags-wr">
+                        <h4 class="widget-heading"><?php echo Yii::t("app", "Catégories"); ?></h4>
+                        <ul class="tags-list">
+							<?php
 			
 			
-			foreach ($localized_categories as $locat) {
+							foreach ($localized_categories as $locat) {
 				
-				echo "<li>";
-				echo CHtml::link(CHtml::encode($locat->name), array("category/view", "slug"=>$locat->slug));
-				echo "</li>";
-			}
-			?>
-			</ul>
-	</div>
-	
-	
-	
-</div>
+								echo "<li><i class=\"fa fa-tags\"></i>";
+								echo CHtml::link(CHtml::encode($locat->name), array("category/view", "slug"=>$locat->slug));
+								echo "</li>";
+							}
+							?>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

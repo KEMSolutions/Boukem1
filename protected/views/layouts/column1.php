@@ -8,14 +8,26 @@
             <div class="col-md-6">
                 <h2><?php echo $this->pageTitle; ?></h2>
             </div>
-            <?php /* <div class="col-md-6">
-                <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li class="active">Breadcrumb</li>
-                </ol>
-            </div>
-            */ ?>
+	            <?php 
+				if ($this->breadcrumbs):
+				?>
+				<div class="col-md-6">
+                
+						<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+						    'links'=>$this->breadcrumbs,
+							'separator'=>"",
+							'tagName'=>'ol',
+							'homeLink'=>false,
+							'htmlOptions'=>array('class'=>"breadcrumb"),
+							'activeLinkTemplate'=>'<li><a href="{url}">{label}</a></li>',
+							'inactiveLinkTemplate'=>'<li class="active">{label}</li>',
+						));
+						?>
+                    
+	            </div>
+			<?php 
+			endif;
+	             ?>
         </div>
     </div>
 </div>
