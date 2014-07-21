@@ -3170,3 +3170,785 @@ Stack trace:
 REQUEST_URI=/en/images/slider/fs-spinner.gif
 HTTP_REFERER=http://dev.boutiquekem.com/js_assets/fraction/fractionslider.css
 ---
+2014/07/21 12:47:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:06:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/team...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/team-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/team...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/team-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/team-img-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/team...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/team-img-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/team-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/team...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/team-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:16:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/wk-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/wk-i...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/wk-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:16:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/wk-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/wk-i...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/wk-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:16:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/wk-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/wk-i...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/wk-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/wk-img-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/wk-i...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/wk-img-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/wk-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/wk-i...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/wk-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:20:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:21:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:24:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:24:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:24:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:27:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:28:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:29:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:29:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:41:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:54:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 13:56:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:02:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:03:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:04:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:04:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:05:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:06:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:06:03 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('lorna')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=lorna
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:06:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:06:10 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('someiuejf')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=someiuejf
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:06:15 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('asd')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=asd
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:15:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:15:33 [error] [exception.CException] exception 'CException' with message 'IndexMissingException[[kemstorename] missing]' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php(144): YiiElasticSearch\Connection->perform(Object(Guzzle\Http\Message\EntityEnclosingRequest))
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/DataProvider.php(127): YiiElasticSearch\Connection->search(Object(YiiElasticSearch\Search))
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CDataProvider.php(168): YiiElasticSearch\DataProvider->fetchData()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(147): CListView->init()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/product/search.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require('/var/www/vhosts...')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vhosts...', Array, true)
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vhosts...', Array, true)
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(782): CController->renderPartial('search', Array, true)
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/ProductController.php(104): CController->render('search', Array)
+#13 [internal function]: ProductController->actionSearch('test')
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('search')
+#25 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/search')
+#26 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/fr/search?q=test
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:15:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:16:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:24:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/wk-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/wk-i...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/wk-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:31:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/wk-img-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/wk-i...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/wk-img-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:31:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:31:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:34:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:34:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:36:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:39:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:39:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:39:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:41:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:42:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:43:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:44:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:44:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:46:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/21 14:49:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+---
+2014/07/21 14:51:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+---
+2014/07/21 14:51:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/slider/fs-spinner.gif ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/slider/f...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/slider/fs-spinner.gif
+---
+2014/07/21 15:00:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/components/WebUser.php:17
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php(269): WebUser->createGuestUser('remyv@kle-en-ma...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/21 15:00:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Postes Canada ne peut fournir d'estimé en ce moment.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:334
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/21 15:01:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Postes Canada ne peut fournir d'estimé en ce moment.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:334
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
+2014/07/21 15:01:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Postes Canada ne peut fournir d'estimé en ce moment.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CartController.php:334
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): CartController->actionEstimate()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1130): CFilterChain->run()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('estimate')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cart/estimate')
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/fr/cart/estimate
+HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
+---
