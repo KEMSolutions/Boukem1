@@ -1,15 +1,10 @@
-<div class="row">
 
-	<!-- Slider -->
-	<div class="col-lg-9 col-md-12">
 		<?php $this->renderPartial('_slider', array("items"=>$items->slider)); ?>
-	</div>
-	<!-- End Slider -->
 
+<div class="container">
+	<div class="row">
 	<?php $this->renderPartial('_recommended', array("items"=>$items->recommended)); ?>
-</div>
-		
-		
+		</div>
 	
 <div class="row">
 	<div class="col-lg-3 col-md-3 col-sm-12">
@@ -45,4 +40,6 @@
 		            
 	</div>
 	<!-- End Featured -->
+</div>
+</div>
 	

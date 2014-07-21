@@ -26,6 +26,7 @@ $cs
     ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
 	->registerCssFile('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
 	->registerCssFile('/js_assets/fancybox/jquery.fancybox.css?v=2.1.5')
+	->registerCssFile('/js_assets/fraction/fractionslider.css')
 	->registerCssFile('/css/global-style.css')
 	->registerCssFile('/css/skin-four.css');
 
@@ -47,6 +48,8 @@ $cs
 	->registerScriptFile('/js_assets/mixitup/jquery.mixitup.js',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/mixitup/jquery.mixitup.init.js',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/fancybox/jquery.fancybox.pack.js?v=2.1.5',CClientScript::POS_END)
+	->registerScriptFile('/js_assets/fraction/jquery.fractionslider.min.js',CClientScript::POS_END)
+	->registerScriptFile('/js_assets/fraction/jquery.fractionslider.init.js',CClientScript::POS_END)
 	->registerScriptFile('/js/jquery.ebright.custom.js',CClientScript::POS_END)
 	->registerScriptFile('/js/boukem.js',CClientScript::POS_END)
 		
