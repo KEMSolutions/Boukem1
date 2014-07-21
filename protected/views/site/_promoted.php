@@ -10,11 +10,12 @@
 
 	$product = Product::model()->findByPk($item);
 	$localization = $product->localizationForLanguage(Yii::app()->language);
-	$product_url = $this->createUrl("Product/view", array('slug'=>$localization->slug));
 	
 	if ($localization === null){
 		continue;
 	}
+	
+	$product_url = $this->createUrl("Product/view", array('slug'=>$localization->slug));
 	
 	$brand = $product->brand;
 	$brand_localization = $brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);

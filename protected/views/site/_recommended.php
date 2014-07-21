@@ -10,13 +10,13 @@
 
 $product = Product::model()->findByPk($item);
 $localization = $product->localizationForLanguage(Yii::app()->language);
-$product_url = $this->createUrl("Product/view", array('slug'=>$localization->slug));
-
-
 
 if ($localization === null){
 	continue;
 }
+
+$product_url = $this->createUrl("Product/view", array('slug'=>$localization->slug));
+
 
 $brand = $product->brand;
 $brand_localization = $brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
@@ -33,7 +33,7 @@ $main_image = $localization->getMainImage();
 														echo $main_image->getImageUrl(600, 560); ?>" alt="<?php echo $localization->name; ?>" class="img-responsive center-block visible-xs-block visible-sm-block">
 									</a>
                                     <span class="date-over"><strong><?php echo CHtml::link($brand_localization->name, array('category/view', 'slug'=>$brand_localization->slug)); ?></strong></span>
-                                    <h2><?php echo $localization->name; ?></h2>
+                                    <h2><a href="<?php echo $product_url; ?>"><?php echo $localization->name; ?></a></h2>
                                     <p>
                                    <?php echo strip_tags(substr($localization->short_description, 0, 50)); ?>...
                                     </p>
