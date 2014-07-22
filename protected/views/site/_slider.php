@@ -47,14 +47,14 @@
 			<div class="slide">
                 <img src="<?php echo $base_static_url . $item->background_img; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="200" data-out="top">
                 
-                <p class="claim color-one" data-position="70,220" data-in="top" data-step="1" data-out="bottom" data-delay="100">
+                <p class="claim color-one" data-position="70,0" data-in="top" data-step="1" data-out="bottom" data-delay="50">
                 	<?php echo CHtml::encode($item->major_title); ?>
                 </p>
-        		<p class="teaser color-two-d" data-position="130,220" data-in="top" data-step="1" data-out="bottom" data-delay="200">
+        		<p class="teaser color-two-d" data-position="130,0" data-in="top" data-step="1" data-out="bottom" data-delay="100">
                 	<?php echo CHtml::encode($item->minor_title); ?>
                 </p>
 				
-        		<p class="text small  <?php if ($item->description_color === "light") {echo 'white';} else {echo 'black'; }?>" data-position="180,220" data-in="top" data-step="1" data-out="bottom" data-delay="300">
+        		<p class="text small  <?php if ($item->description_color === "light") {echo 'white';} else {echo 'black'; }?>" data-position="180,0" data-in="top" data-step="1" data-out="bottom" data-delay="150">
 					<?php echo CHtml::encode($item->description); ?>
                     <br>
                     <a href="<?php echo $this->createUrl('category/view', array('slug'=>$category_localization->slug)); ?>" class="btn btn-one"><?php echo CHtml::encode($item->link_title); ?></a>

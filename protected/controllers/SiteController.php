@@ -67,6 +67,7 @@ class SiteController extends WebController
 	 */
 	public function actionError()
 	{
+		$this->can_prompt_for_password_set = false;
 		if($error=Yii::app()->errorHandler->error)
 		{
 			if(Yii::app()->request->isAjaxRequest)
