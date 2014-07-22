@@ -17,7 +17,7 @@ $this->pageTitle = $localization->name;
                     	<div class="col-md-12">
                         	<div class="w-box blog-post">
                                 <figure>
-                                    <img alt="" src="<?php
+                                    <img alt=""  itemprop="image" src="<?php
 		
 		$image = $localization->getMainImage();
 		
