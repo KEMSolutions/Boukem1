@@ -2,27 +2,8 @@
 /* @var $this CartController */
 
 $this->pageTitle = Yii::t("app", "Panier");
+$this->breadcrumbs = null;
 ?>
-
-<div class="table-responsive">
-<table class="table table-striped">
-<?php
-
- $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-	'emptyText'=>Yii::t("app", "Votre panier est vide."),
-)); ?>
-</table>
-</div>
-
-<form method="post" action="<?php echo $this->createUrl('cart/checkout'); ?>" id="cart_form">
-<div class="panel panel-default">
-  <div class="panel-heading"><?php echo Yii::t('app', "Taxes et livraison"); ?></div>
-  <div class="panel-body">
-    
-	<div class="col-md-6">
-	
 
 		<?php
 		
@@ -34,6 +15,7 @@ $this->pageTitle = Yii::t("app", "Panier");
 		$login_url = $this->createUrl('site/login');
 		
 		$update_url = $this->createUrl('cart/update');
+		$remove_url = $this->createUrl('cart/remove');
 		$estimate_url = $this->createUrl('cart/estimate');
 		Yii::app()->user->returnUrl = $this->createUrl('index');
 		
@@ -150,11 +132,24 @@ $this->pageTitle = Yii::t("app", "Panier");
 										  .done(function( data ) {
 										    location.reload();
 										  });
-										
-										
+									
+									});
 									
 									
-									});"
+									$('.cart_remove_button').click(function(){
+										
+										var row = $(this).closest('tr');
+										var product_id = row.attr('data-product');
+										var quantity = row.find('.quantity_field').val();
+										
+										$.post( '$remove_url', { product: product_id })
+										  .done(function( data ) {
+										    location.reload();
+										  });
+										
+										});
+									
+									"
 						        ,CClientScript::POS_READY);
 		
 		
@@ -173,7 +168,7 @@ $this->pageTitle = Yii::t("app", "Panier");
 			}
 			
 			
-			if (Yii::app()->user->user->postcode && Yii::app()->user->user->postcode !== ""){
+			if (Yii::app()->user->user->postcode && Yii::app()->user->user->postcode !== "" && $dataProvider->totalItemCount > 0){
 				
 				$cs->registerScript('auto_fetch_estimate',"fetchEstimate();", CClientScript::POS_READY);
 				
@@ -189,6 +184,47 @@ $this->pageTitle = Yii::t("app", "Panier");
 		
 			
 		?>
+
+<section class="slice bg-3">
+    <div class="w-section inverse shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-cart table-responsive">
+                        <tbody>
+                           
+<?php
+
+ $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+	'emptyText'=>"<p class='text-center'>" . Yii::t("app", "Votre panier est vide.") . "</p>",
+)); ?>
+
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+
+ 
+                            
+                               
+
+<form method="post" action="<?php echo $this->createUrl('cart/checkout'); ?>" id="cart_form" class="<?php if ($dataProvider->totalItemCount == 0) {echo 'hidden'; } ?>">
+<div class="panel panel-default">
+  <div class="panel-heading"><?php echo Yii::t('app', "Taxes et livraison"); ?></div>
+  <div class="panel-body">
+    
+	<div class="col-md-6">
+	
+
+		
 		
 		<div class="form-group">
 			<label for="country"><?php echo Yii::t('app', "Pays"); ?></label>
