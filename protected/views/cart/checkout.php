@@ -9,6 +9,7 @@ $cs->registerCssFile($themePath.'/assets/css/chosen.min.css');
 $cs->registerCssFile($themePath.'/assets/css/process.css');
 
 $pageLocale = Yii::app()->language;
+$this->pageTitle = Yii::t("app", "Adresse et informations de commande");
 
 $cart_order_url = $this->createUrl("order");
 
@@ -260,7 +261,7 @@ $cs
           <div class="form-group">
             <label class="col-sm-2 control-label" for="billing_city"><?php echo Yii::t('app', 'Ville'); ?></label>
             <div class="col-sm-10">
-              <input type="text" required name="billing_city" id="billing_city" placeholder="<?php echo Yii::t('app', 'City'); ?>" class="form-control" x-autocompletetype="section-billing city">
+              <input type="text" required name="billing_city" id="billing_city" placeholder="<?php echo Yii::t('app', 'Ville'); ?>" class="form-control" x-autocompletetype="section-billing city">
             </div>
           </div>
 
