@@ -108,5 +108,7 @@ return array(
 	"Expédition partielle"=>"Partial shipment",
 	"Autre statut"=>"Other status",
 	"CUP/EAN"=>"UPC/EAN",
+	"Erreur"=>"Error",
+	"Oups...une erreur est survenue!"=>"Oops...an error occured!",
 );
 ?>
