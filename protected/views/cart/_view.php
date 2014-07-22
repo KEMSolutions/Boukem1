@@ -10,20 +10,7 @@ $localizationForProduct = $product->localizationForLanguage(Yii::app()->language
 
 <tr data-product="<?php echo $product->id; ?>">
     <td class="remove-cell col-xs-1"><button type="button" class="btn btn-default cart_remove_button" title="<?php echo Yii::t('app', 'Enlever du panier'); ?>"><i class="fa fa-times-circle fa-lg"></i></button>
-				<?php 
-				/* $cart_url = $this->createUrl('cart/index');
-				echo CHtml::ajaxButton('<i class="fa fa-times-circle fa-2x"></i>', CController::createUrl('cart/remove'),array(
-								'type'=>'POST',
-								'data'=>array('product'=>$product->id,
-								'success'=>'js:function(data){
-		window.location = "' . $cart_url . '";
-		}',
-								'async' => true,
-								),
-							), array("class"=>"btn btn-danger btn-xs", 'title'=>)); 
-			*/	?>
-		
-    <td class="hidden-xs"><img src="<?php
+		<td class="hidden-xs"><img src="<?php
 		
 		$image = $localizationForProduct->getMainImage();
 		
@@ -38,27 +25,3 @@ $localizationForProduct = $product->localizationForLanguage(Yii::app()->language
 		<div>
     </td>
 </tr>
-
-<?php /* 
-<tr>
-	<td><img src="" class="img-responsive"></td>
-	<td><h2></h2>
-		<strong><?php echo Yii::t('app', "En stock"); ?></strong>: <?php echo Yii::t('app', "Disponible à la livraison 7 à 10 jours après achat."); ?>
-		<hr>
-				
-		
-		
-	</td>
-	<td class="col-xs-2">
-		<div class="input-group">
-		     
-		      <div class="input-group-btn">
-		        
-		        
-		      </div><!-- /btn-group -->
-		    </div><!-- /input-group -->
-		</td>
-	<td><h3><?php echo CHtml::encode($data->price_paid);?></h3></td>
-
-</tr>
-*/ ?>

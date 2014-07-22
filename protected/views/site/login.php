@@ -3,13 +3,12 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
-$this->breadcrumbs=array(
-	Yii::t('app','Connexion'),
-);
+$this->breadcrumbs=null;
+$this->pageTitle = Yii::t('app','Connexion');
+
 ?>
 
 <div class="col-lg-8 col-sm-12 hero-feature">
-	<span class="title"><?php echo Yii::t("app", "Connexion")?></span>
 
 <p><?php echo Yii::t("app", "Veuillez renseigner les champs avec vos informations de connexion:"); ?></p>
 
@@ -35,7 +34,7 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'password', array('class'=>'alert alert-danger')); ?>
 	</div>
 
-		<?php echo CHtml::submitButton('Login', array('class'=>"btn btn-primary")); ?>
+		<?php echo CHtml::submitButton(Yii::t("app", "Se connecter"), array('class'=>"btn btn-primary")); ?>
 
 <?php $this->endWidget(); ?>
 </div>

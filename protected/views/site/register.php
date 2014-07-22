@@ -2,12 +2,16 @@
 /* @var $this UserController */
 /* @var $model User */
 /* @var $form CActiveForm */
+
+$this->pageTitle = Yii::t("app", "Devenir membre");
+
 ?>
 
 
-<div class="col-lg-8 col-sm-12 hero-feature">
+<div class="col-lg-8 col-sm-12">
 	
-	<span class="title"><?php echo Yii::t("app", "Devenir membre")?></span>
+	
+	
 	
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-register-form',
@@ -18,8 +22,11 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
+	<legend><?php echo Yii::t("app", "Déjà membre?")?></legend>
 	
-
+	<a href="<?php echo $this->createUrl('login'); ?>" class="btn btn-primary"><?php echo Yii::t('app', "Se connecter"); ?></a>
+	<hr>
+<legend><?php echo Yii::t("app", "Devenir membre")?></legend>
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="form-group">
@@ -54,8 +61,13 @@
 
 <div class="col-lg-4 col-sm-12">
 	
-	<span class="title"><?php echo Yii::t("app", "Déjà membre?")?></span>
-	
-	<a href="<?php echo $this->createUrl('login'); ?>" class="btn btn-success btn-block"><?php echo Yii::t('app', "Se connecter"); ?></a>
+	<h3><?php echo Yii::t("app", "Pourquoi devenir membre?"); ?></h3>
+    <ul class="list-check">
+    	<li><i class="fa fa-check-square"></i> <?php echo Yii::t("app", "C'est 100% gratuit"); ?></li>
+        <li><i class="fa fa-check-square"></i> <?php echo Yii::t("app", "Retrouvez l'historique de vos commandes"); ?></li>
+        <li><i class="fa fa-check-square"></i> <?php echo Yii::t("app", "Dupliquez vos commandes facilement"); ?></li>
+        <li><i class="fa fa-check-square"></i> <?php echo Yii::t("app", "Sauvez du temps en sauvegardant vos adresses"); ?></li>
+        <li><i class="fa fa-check-square"></i> <?php echo Yii::t("app", "Bénéficiez de meilleures recommandations"); ?></li>
+    </ul>
 	
 </div>

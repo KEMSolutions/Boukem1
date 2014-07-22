@@ -6,6 +6,7 @@ return array(
 	'Panier'=>'Cart',
 	'Go!'=>'Go!',
 	'Devenir membre ou se connecter'=>'Sign up or sign in',
+	"Se connecter"=>"Sign in",
 	'Se déconnecter'=>'Sign out',
 	'tous droits réservés'=>'all rights reserved',
 	'La page demandée n\'existe pas.'=>'The requested page does not exist.',
@@ -110,5 +111,12 @@ return array(
 	"CUP/EAN"=>"UPC/EAN",
 	"Erreur"=>"Error",
 	"Oups...une erreur est survenue!"=>"Oops...an error occured!",
+	"Pourquoi devenir membre?"=>"Why sign up?",
+	"C'est 100% gratuit"=>"It doesn't cost a thing",
+	"Retrouvez l'historique de vos commandes"=>"Track your orders",
+	"Dupliquez vos commandes récentes"=>"Reorder easily",
+	"Sauvez du temps en sauvegardant vos adresses"=>"Avoid retyping your billing and mailing address",
+	"Bénéficiez de meilleures recommandations"=>"Get useful recommendations",
+	
 );
 ?>
