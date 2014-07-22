@@ -6,9 +6,10 @@
 
 
 $this->pageTitle = $localization->name;
-
-		
 ?>
+
+
+
 <section class="slice animate-hover-slide">
 	<div class="w-section inverse blog-grid">
 
