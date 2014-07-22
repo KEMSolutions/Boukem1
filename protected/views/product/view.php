@@ -8,7 +8,7 @@ $this->pageTitle = $localization->name;
 ?>
 
 
-<section class="slice animate-hover-slide">
+<section class="slice animate-hover-slide"  itemscope itemtype="http://schema.org/Product">
 	<div class="w-section inverse blog-grid">
     	<div class="container">
         	<div class="row">
@@ -29,14 +29,14 @@ $this->pageTitle = $localization->name;
                                         <?php if ($model->sku): ?>
 										<li>
                                             <span>SKU</span>
-                                            <span class="bold"><?php echo $model->sku; ?></span>
+                                            <span class="bold" itemprop="sku"><?php echo $model->sku; ?></span>
                                         </li>
 										<?php endif; ?>
 										
                                         <?php if ($model->barcode): ?>
 										<li>
                                             <span><?php echo Yii::t("app", "CUP/EAN"); ?></span>
-                                            <span class="bold"><?php echo $model->barcode; ?></span>
+                                            <span class="bold" itemprop="gtin13"><?php echo $model->barcode; ?></span>
                                         </li>
 										<?php endif; ?>
                                         
@@ -56,13 +56,13 @@ $this->pageTitle = $localization->name;
                     
                     <div class="widget  pricing-plans">
 	                    <div class="w-box popular">
-	                        <h2 class="plan-title"><?php echo CHtml::encode($localization->name); ?></h2>
-	                        <h3 class="price-tag color-one"><span>$</span><?php echo $model->price; ?></h3>
+	                        <h2 class="plan-title" itemprop="name"><?php echo CHtml::encode($localization->name); ?></h2>
+	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><span>$</span><?php echo $model->price; ?></h3></span>
 	                        <ul>
 	                            <li><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Livré chez vous rapidement"); ?></li>
 	                            <li><i class="fa fa-lock"></i> <?php echo Yii::t("app", "Transaction sécurisée"); ?></li>
 	                        </ul>          
-	                        <p class="plan-info"><?php echo strip_tags($localization->short_description); ?></p>
+	                        <p class="plan-info" itemprop="description"><?php echo strip_tags($localization->short_description); ?></p>
 	                        <p class="plan-select text-center">
 								<div class="input-qty-detail form-inline text-center">
 									<div class="form-group">

@@ -94,9 +94,11 @@ $cs
 	                	<li class="hidden-xs">
 	                    	<a href="#" class="" id="cmdSearch"><i class="fa fa-search"></i></a>
 	                    </li>
-	                    
+	                    <li>
+							<a href="/"><?php echo Yii::t("app", "Accueil"); ?></a>
+						</li>
 		                    <?php
-					
+							
 							$categories_links_cache_id = Yii::app()->request->hostInfo . " Layout:[footer_links_for_language] " . Yii::app()->language;
 							$category_links_html = Yii::app()->cache->get($categories_links_cache_id);
 							if (!$category_links_html){

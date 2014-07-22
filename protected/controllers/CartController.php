@@ -325,6 +325,8 @@ class CartController extends WebController
 		curl_setopt($ch, CURLOPT_HTTPHEADER,     array('Content-Type: application/json')); 
 		$result=curl_exec ($ch);
 		
+		echo $result;
+		exit();
 		
 		curl_close($ch);
 		
