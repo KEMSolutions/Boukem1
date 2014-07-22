@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 if ($q){
-	$this->pageTitle = CHtml::encode($q) . " - " . Yii::t("app", "Rechercher") . " - " . Yii::app()->name;
+	$this->pageTitle = Yii::t("app", "Rechercher") . ": " . CHtml::encode($q);
 }
 
 
@@ -16,7 +16,6 @@ if ($q){
 ?>
 
         		<div class="col-lg-12 col-sm-12">
-            		<span class="title"><?php echo Yii::t("app", "Rechercher") . " : " . CHtml::encode($q); ?></span>
 					
 					
 

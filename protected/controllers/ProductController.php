@@ -99,8 +99,6 @@ class ProductController extends WebController
 		));
 		$dataProvider->setPagination(array('pageSize' => 12));
 		
-		$this->pageTitle = Yii::t("app", "Rechercher") . ": " . $CHtml::encode($q);
-		
 		$this->render('search',array(
 			'dataProvider'=>$dataProvider,
 			'q'=>$q,
