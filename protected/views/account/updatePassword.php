@@ -1,5 +1,10 @@
 <?php
-$this->pageTitle = Yii::t("app", "Changer de mot de passe") . " - " . Yii::app()->name;
+$this->pageTitle = Yii::t("app", "Changer de mot de passe");
+	
+$this->breadcrumbs = array(
+	Yii::t("app", "Compte") => array('account/index'),
+	Yii::t("app", "Changer de mot de passe")
+);
 	
 	$cs = Yii::app()->clientScript;
 	$cs->registerScriptFile('/js/modernizr.custom.js', CClientScript::POS_END);
@@ -13,7 +18,6 @@ $this->pageTitle = Yii::t("app", "Changer de mot de passe") . " - " . Yii::app()
 			" ,CClientScript::POS_READY);
 ?>
 
-<span class="title"><?php echo Yii::t('app', "Changer de mot de passe"); ?></span>
 
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -38,7 +42,7 @@ $this->pageTitle = Yii::t("app", "Changer de mot de passe") . " - " . Yii::app()
  
   <div class="form-group">
     <div class="col-sm-offset-3 col-sm-9">
-		<?php echo CHtml::submitButton(Yii::t('app', "Enregistrer"), array('class'=>"btn btn-default")); ?>
+		<?php echo CHtml::submitButton(Yii::t('app', "Enregistrer"), array('class'=>"btn btn-primary")); ?>
     </div>
   </div>
 <?php $this->endWidget(); ?>

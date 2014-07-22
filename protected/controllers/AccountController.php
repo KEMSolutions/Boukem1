@@ -42,7 +42,7 @@ class AccountController extends WebController
 	 */
 	public function actionIndex()
 	{
-		
+		$this->layout='//layouts/column2';
 		$ordersDataProvider=new CActiveDataProvider('Order', array(
 		    'criteria'=>array(
 		        'condition'=>'cart=0 AND user_id=' . Yii::app()->user->user->id,
