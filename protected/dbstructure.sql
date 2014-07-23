@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Jul 11, 2014 at 02:22 PM
+-- Generation Time: Jul 23, 2014 at 01:19 PM
 -- Server version: 5.1.73
 -- PHP Version: 5.4.16
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `address` (
   `country` varchar(32) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 -- --------------------------------------------------------
 
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   KEY `timestamp` (`timestamp`,`status`),
   KEY `user_id` (`user_id`),
   KEY `order_number` (`order_number`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=77 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=119 ;
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `order_has_product` (
 
 CREATE TABLE IF NOT EXISTS `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `sku` text NOT NULL,
+  `sku` text,
   `barcode` varchar(64) DEFAULT NULL,
   `brand_id` int(11) NOT NULL COMMENT 'Brand',
   `discontinued` tinyint(1) NOT NULL DEFAULT '0',
@@ -256,7 +256,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   KEY `locale_id` (`locale_id`),
   KEY `prefered_billing_address_id` (`prefered_billing_address_id`,`prefered_shipping_address_id`),
   KEY `prefered_shipping_address_id` (`prefered_shipping_address_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 -- --------------------------------------------------------
 
@@ -271,7 +271,7 @@ CREATE TABLE IF NOT EXISTS `user_phone` (
   `sms_opt_in` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Constraints for dumped tables

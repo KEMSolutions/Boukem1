@@ -45,10 +45,11 @@ class Product extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('sku, brand_id', 'required'),
+			array('brand_id', 'required'),
 			array('brand_id, discontinued, visible, taxable, parent_product_id', 'numerical', 'integerOnly'=>true),
 			array('barcode', 'length', 'max'=>64),
 			array('price, weight', 'length', 'max'=>10),
+			array('sku', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, sku, barcode, brand_id, discontinued, visible, taxable, price, weight, parent_product_id', 'safe', 'on'=>'search'),
