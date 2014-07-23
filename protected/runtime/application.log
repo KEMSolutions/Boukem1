@@ -5251,3 +5251,108 @@ Stack trace:
 REQUEST_URI=/fr/cart/estimate
 HTTP_REFERER=http://dev.boutiquekem.com/fr/cart.html
 ---
+2014/07/23 17:37:00 [error] [php] Undefined property: stdClass::$parent_product_id (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/modules/api/controllers/ProductController.php:30)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1116): CFilterChain->run()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterPostOnly()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/api/product/Create
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/modules/api/controllers/ProductController.php (30)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/modules/api/controllers/ProductController.php (98)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/07/23 18:38:20 [error] [php] Undefined property: stdClass::$error (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CComponent.php(561): YiiElasticSearch\SearchableBehavior->afterDelete()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(868): ProductLocalization->raiseEvent()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(989): ProductLocalization->onAfterDelete()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(1223): ProductLocalization->afterDelete()
+#4 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/modules/api/controllers/ProductController.php(55): ProductLocalization->delete()
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/modules/api/controllers/ProductController.php(139): ProductController->updateProductFromPayload()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdate()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1116): CFilterChain->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterPostOnly()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/api/product/Update
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php (177)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php (121)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/SearchableBehavior.php (149)
+2014/07/23 18:42:12 [error] [php] Undefined property: stdClass::$error (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php:177)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CComponent.php(561): YiiElasticSearch\SearchableBehavior->afterDelete()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(868): ProductLocalization->raiseEvent()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(989): ProductLocalization->onAfterDelete()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/db/ar/CActiveRecord.php(1223): ProductLocalization->afterDelete()
+#4 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/modules/api/controllers/ProductController.php(55): ProductLocalization->delete()
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/modules/api/controllers/ProductController.php(139): ProductController->updateProductFromPayload()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdate()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(1116): CFilterChain->run()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterPostOnly()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#14 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): ProductController->run()
+#15 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/en/api/product/Update
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php (177)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/Connection.php (121)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/vendor/codemix/yiielasticsearch/src/YiiElasticSearch/SearchableBehavior.php (149)
+2014/07/23 18:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « domain_profile.cfm ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('domain_profile....')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/domain_profile.cfm?d=boutiquedemo&e=com
+---
+2014/07/23 18:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:129
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php(19): CategoryController->loadLocalizationModelSlug('en-lorna-vander...')
+#1 [internal function]: CategoryController->actionView('en-lorna-vander...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/en/cat/en-lorna-vanderhaeghe.html
+---
+2014/07/23 18:43:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La page demandée n'existe pas.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:129
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php(19): CategoryController->loadLocalizationModelSlug('en-lorna-vander...')
+#1 [internal function]: CategoryController->actionView('en-lorna-vander...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/fr/cat/en-lorna-vanderhaeghe.html
+---

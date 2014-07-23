@@ -105,4 +105,22 @@ class Locale extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	/**
+	 * Returns a locale id for a specified long code.
+	 * Used to exchange KEMConsole locale_id to Boukem's locale ids.
+	 * @param string $long_code the long version of a locale identifier (eg. 'en_CA').
+	 * @return str the small version of the same locale (eg. 'en'). Returns null if that locale is not supported.
+	 */
+	public static function localeIdFromLongCode($long_code){
+			
+			if ($long_code === "fr_CA"){
+				return "fr";
+			} else if ($long_code === "en_CA") {
+				return "en";
+			}
+			
+			return null;
+	}
+	
 }
