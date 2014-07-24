@@ -176,4 +176,10 @@ class Product extends CActiveRecord
 	}
 	private $_localizationForLanguage = null;
 	
+	
+	
+	public function getCurrentPrice(){
+		return $this->price;
+	}
+	
 }

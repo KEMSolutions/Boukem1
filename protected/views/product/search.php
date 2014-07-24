@@ -2,10 +2,7 @@
 /* @var $this MainStoreProductController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Produits' => array('index'),
-	'Rechercher',
-);
+$this->breadcrumbs=null;
 
 if ($q){
 	$this->pageTitle = Yii::t("app", "Rechercher") . ": " . CHtml::encode($q);
@@ -35,10 +32,18 @@ if ($q){
             	</div>
 
 
+<section class="slice animate-hover-slide">
+	<div class="w-section inverse blog-grid">
 
 
-<?php $this->widget('zii.widgets.CListView', array(
+<?php $this->widget('CCustomListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_searchview',
-	'pagerCssClass'=>"pagination",
+	'ajaxUpdate'=>false,
+	'itemsCssClass'=>'row',
+	'itemsHtmlOptions' => array('id' => 'masonryWr'),
+	'pagerCssClass'=>"row pagination",
 )); ?>
+	    </div>
+
+	</section>
