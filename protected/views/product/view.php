@@ -4,7 +4,17 @@
 
 $this->pageTitle = $localization->name;
 
+$regular_price = $model->price;
+$current_price = $model->getCurrentPrice();
+
+
+if ($regular_price !== $current_price){
+	$on_sale = true;
+} else {
+	$on_sale = false;
+} 
 	
+
 ?>
 
 
@@ -57,8 +67,11 @@ $this->pageTitle = $localization->name;
                     <div class="widget  pricing-plans">
 	                    <div class="w-box popular">
 	                        <h2 class="plan-title" itemprop="name"><?php echo CHtml::encode($localization->name); ?></h2>
-	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><span>$</span><?php echo $model->price; ?></h3></span>
+	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><span>$</span><?php echo $current_price; ?></h3></span>
 	                        <ul>
+								<?php if ($on_sale): ?>
+								<li class="text-success"><i class="fa fa-smile-o"></i> <?php echo Yii::t("app", "Prix régulier:") . " $" . $regular_price; ?></li>
+								<?php endif; ?>
 	                            <li><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Livré chez vous rapidement"); ?></li>
 	                            <li><i class="fa fa-lock"></i> <?php echo Yii::t("app", "Transaction sécurisée"); ?></li>
 	                        </ul>          

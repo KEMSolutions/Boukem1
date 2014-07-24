@@ -188,7 +188,7 @@ class CartController extends WebController
 			$item->quantity = $quantity;
 		}
 		
-		$item->price_paid = $product->price;
+		$item->price_paid = $product->getCurrentPrice();
 		
 		
 		if (!$item->save()){

@@ -117,6 +117,6 @@ return array(
 	"Dupliquez vos commandes récentes"=>"Reorder easily",
 	"Sauvez du temps en sauvegardant vos adresses"=>"Avoid retyping your billing and mailing address",
 	"Bénéficiez de meilleures recommandations"=>"Get useful recommendations",
-	
+	"Prix régulier:"=>"Regular Price:",
 );
 ?>

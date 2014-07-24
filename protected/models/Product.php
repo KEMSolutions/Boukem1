@@ -73,7 +73,7 @@ class Product extends CActiveRecord
 			'productImages' => array(self::HAS_MANY, 'ProductImage', 'product_id'),
 			'productLocalizations' => array(self::HAS_MANY, 'ProductLocalization', 'product_id'),
             'productLocalization' => array(self::HAS_ONE, 'ProductLocalization', 'product_id', 'scopes' => array('locale'), 'joinType' => 'INNER JOIN'),
-			'productRebates' => array(self::HAS_MANY, 'ProductRebate', 'product_id'),
+			'productRebates' => array(self::HAS_MANY, 'ProductRebate', 'product_id', 'order'=>'price ASC'),
 		);
 	}
 
@@ -179,6 +179,11 @@ class Product extends CActiveRecord
 	
 	
 	public function getCurrentPrice(){
+		
+		if (count($this->productRebates)>0){
+			return array_shift(array_values($this->productRebates))->price;
+		}
+		
 		return $this->price;
 	}
 	
