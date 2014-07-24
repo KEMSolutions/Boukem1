@@ -12,8 +12,74 @@ class CategoryController extends APIController
 			'postOnly + batchcreate', // we only allow deletion via POST request
 			'postOnly + delete', // we only allow deletion via POST request
 			'postOnly + update', // we only allow deletion via POST request
+			'postOnly + create', // we only allow deletion via POST request
 		);
 	}
+	
+	
+	protected function updateCategoryFromPayload($category, $payload){
+		$category->parent_category = $payload->parent_id;
+		$category->visible = $payload->visible;
+		$category->is_brand = $payload->is_brand;
+		
+		$category->save();
+		
+		foreach ($payload->localizations as $localization){
+			$loc = new CategoryLocalization;
+			$loc->locale_id = Locale::localeIdFromLongCode($localization->locale);
+			
+			$loc->category_id = $category->id;
+			$loc->name = $localization->name;
+			$loc->visible = $localization->visible;
+			$loc->save();
+			
+		}
+		
+		return $category;
+		
+	}
+	
+	public function actionCreate(){
+		
+		error_reporting(E_ALL);
+		ini_set('display_errors', '1');
+		
+		
+		$payload = $this->extractJSON();
+		
+		$cat = new Category;
+		
+		$cat = $this->updateCategoryFromPayload($cat, $payload);
+		
+		$this->renderJSON($cat);
+		
+		
+	}
+	
+	public function actionDelete()
+	{
+		
+		$payload = $this->extractJSON();
+		
+		
+	}
+
+	/**
+	 * Updates a particular product. Takes a json payload with a mandatory ID.
+	 */
+	public function actionUpdate()
+	{
+		
+		$payload = $this->extractJSON();
+		$cat = $this->loadModel($payload);
+		
+		$cat = $this->updateCategoryFromPayload($cat, $payload);
+		
+		$this->renderJSON($cat);
+		
+		
+	}
+	
 	
 	/**
 	 * Create new categories.
@@ -45,13 +111,8 @@ class CategoryController extends APIController
 			
 			foreach ($category->localizations as $localization){
 				$loc = new CategoryLocalization;
-				if ($localization->locale === "fr_CA"){
-					$loc->locale_id = "fr";
-				} else if ($localization->locale === "en_CA") {
-					$loc->locale_id = "en";
-				} else {
-					$loc->locale_id = "fr";
-				}
+				$loc->locale_id = Locale::localeIdFromLongCode($localization->locale);
+				
 				$loc->category_id = $cat->id;
 				$loc->name = $localization->name;
 				$loc->visible = $localization->visible;
@@ -82,27 +143,7 @@ class CategoryController extends APIController
 		
 	}
 
-	public function actionDelete()
-	{
-		
-		$payload = $this->extractJSON();
-		
-		
-	}
-
-	/**
-	 * Updates a particular product. Takes a json payload with a mandatory ID.
-	 */
-	public function actionUpdate()
-	{
-		
-		$payload = $this->extractJSON();
-		$model = $this->loadModel($payload);
-		
-		
-		
-		
-	}
+	
 	
 	
 	/**
