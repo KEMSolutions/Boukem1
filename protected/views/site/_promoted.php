@@ -14,7 +14,7 @@
 		continue;
 	}
 	
-	$product_url = $this->createUrl("Product/view", array('slug'=>$localization->slug));
+	$product_url = $this->createUrl("product/view", array('slug'=>$localization->slug));
 	
 	$brand = $product->brand;
 	$brand_localization = $brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
@@ -50,7 +50,7 @@
                 </p>
                 
                 <span class="w-footer">
-                    <span class="pull-left"><small><?php echo $product->price; ?> $</small></span>
+                    <span class="pull-left"><small><?php echo $product->getCurrentPrice(); ?> $</small></span>
 					<button class="btn btn-xs btn-two pull-right buybutton" data-product="<?php echo $product->id ?>"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
                     <span class="clearfix"></span>
                 </span>

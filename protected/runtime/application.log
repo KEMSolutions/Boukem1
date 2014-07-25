@@ -5452,3 +5452,332 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/fr/favicon.ico
 ---
+2014/07/24 19:11:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:11:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-4.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-4.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:11:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:11:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-4.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-4.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-4.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-4.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:14:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:14:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:14:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:14:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:14:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-4.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-4.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-4.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-4.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-4.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-4.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-2.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-2.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-3.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-3.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:32:23 [error] [php] Invalid argument supplied for foreach() (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_rebates.php:11)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php(44): SiteController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php(65): SiteController->renderPartial()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): SiteController->runAction()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_rebates.php (11)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php (44)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (65)
+2014/07/24 19:32:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « favicon.ico ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/favicon.ico
+---
+2014/07/24 19:33:59 [error] [php] Invalid argument supplied for foreach() (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_rebates.php:11)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php(44): SiteController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php(65): SiteController->renderPartial()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): SiteController->runAction()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_rebates.php (11)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php (44)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (65)
+2014/07/24 19:37:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:37:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « images/prv/testimonial-item-1.jpg ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/prv/test...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/images/prv/testimonial-item-1.jpg
+HTTP_REFERER=http://dev.boutiquekem.com/fr/
+---
+2014/07/24 19:55:07 [error] [php] Invalid argument supplied for foreach() (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_rebates.php:10)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php(44): SiteController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php(65): SiteController->renderPartial()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): SiteController->runAction()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_rebates.php (10)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php (44)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (65)

@@ -28,6 +28,20 @@
 	        </div>
 	    </div>
 
+
+
+<div class="section-title color-three">
+        <h3><?php echo Yii::t("app", "Promotions"); ?></h3>
+        <div class="indicator-down color-three"></div>
+    </div>
+    
+
 	</section>
+	
+
+<?php
+if ($rebates->itemCount>0) {
+	$this->renderPartial('_rebates', array("items"=>$rebates));
+} ?>
 	
 <?php $this->renderPartial('_promoted', array("items"=>$items->promoted)); ?>

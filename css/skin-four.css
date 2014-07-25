@@ -6,6 +6,7 @@ a:hover{color:#f0523f; text-decoration:underline; -o-transition:.3s; -ms-transit
 /* COLORS: l=light, t=transparent, d=dark, c=contrast*/
 .color-one{background:#f0523f; color:#FFF;}
 .color-one-c{background:#dc402e; color:#FFF;}
+.color-one a{color:#fff;}
 
 .color-two{background:#ecebec; color:#717073;}
 .color-two-l{background:#ecebec; color:#4c4c4c;}

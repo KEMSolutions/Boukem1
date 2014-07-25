@@ -15,7 +15,7 @@ if ($localization === null){
 	continue;
 }
 
-$product_url = $this->createUrl("Product/view", array('slug'=>$localization->slug));
+$product_url = $this->createUrl("product/view", array('slug'=>$localization->slug));
 
 
 $brand = $product->brand;
@@ -50,7 +50,7 @@ $main_image = $localization->getMainImage();
                                    <?php echo strip_tags(substr($localization->short_description, 0, 50)); ?>...
                                     </p>
                                     <span class="w-footer">
-                                    	<span class="pull-left"><small><?php echo $product->price; ?> $</small></span>
+                                    	<span class="pull-left"><small><?php echo $product->getCurrentPrice(); ?> $</small></span>
                                         <button class="btn btn-xs btn-two pull-right buybutton" data-product="<?php echo $product->id ?>"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
                                         <span class="clearfix"></span>
                                     </span>

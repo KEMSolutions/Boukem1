@@ -34,10 +34,10 @@ class SiteController extends WebController
 		
 		if (Yii::app()->user->isGuest){
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguage] " . Yii::app()->language;
-			$cache_duration = 120;//10800
+			$cache_duration = 10800;
 		} else {
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguageUser] " . Yii::app()->language . " - " . Yii::app()->user->user->id;
-			$cache_duration = 120;//1600;
+			$cache_duration = 1600;
 		}
 		
 		$layout_html = Yii::app()->cache->get($cache_id);
@@ -54,7 +54,15 @@ class SiteController extends WebController
 			
 			$base_dict = json_decode($output);
 			
-			$layout_html = $this->renderPartial('_index_layout', array("items"=>$base_dict), true);
+			$rebatesDataProvider=new CActiveDataProvider('ProductRebate', array(
+			    'criteria'=>array(
+					'limit'=>10,
+			        'with'=>array('product', 'product.productLocalization'),
+			    ),
+			    'pagination'=>false,
+			));
+			
+			$layout_html = $this->renderPartial('_index_layout', array("items"=>$base_dict, 'rebates'=>$rebatesDataProvider), true);
 			
 			Yii::app()->cache->set($cache_id, $layout_html, $cache_duration);
 		}
