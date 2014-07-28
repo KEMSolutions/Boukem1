@@ -47,6 +47,9 @@ class ProductController extends WebController
 		$modelLocalization = $this->loadProductModelSlug($slug);
 		$model = $modelLocalization->product;
 		
+		if (!$model->visible)
+			throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
+		
 		$localized_brand = $model->brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
 		
 		$this->breadcrumbs = array(

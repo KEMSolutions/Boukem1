@@ -247,7 +247,7 @@ $cs
     g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="http://kle-en-main.com/CloudAnalytics/piwik.php?idsite=<?php echo Yii::app()->params['kem_analytics_id']; ?>" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="http://kle-en-main.com/CloudAnalytics/piwik.php?idsite=<?php echo Yii::app()->params['__KEM_ANALYTICS_ID__']; ?>" style="border:0;" alt="" /></p></noscript>
 
 </body>
 </html>

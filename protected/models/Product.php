@@ -113,7 +113,8 @@ class Product extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		
+		
 		/*
 		$criteria->compare('id',$this->id);
 		$criteria->compare('sku',$this->sku,true);
@@ -121,6 +122,7 @@ class Product extends CActiveRecord
 		$criteria->compare('brand_id',$this->brand_id);
 		$criteria->compare('discontinued',$this->discontinued);
 		$criteria->compare('t.visible',$this->visible);
+		$criteria->compare('visible', $this->visible);
 		$criteria->compare('taxable',$this->taxable);
 		$criteria->compare('price',$this->price,true);
 		$criteria->compare('weight',$this->weight,true);
@@ -131,7 +133,8 @@ class Product extends CActiveRecord
             $criteria->join='LEFT JOIN product_has_category ON product_id=t.id';
             $criteria->compare('product_has_category.category_id' , $this->categoryId);
         }
-
+		$criteria->compare('t.visible',$this->visible);
+		
         $criteria->with = array('productLocalization');
 
 		return new CActiveDataProvider($this, array(

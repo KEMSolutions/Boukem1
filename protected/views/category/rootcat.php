@@ -8,7 +8,7 @@ $this->menu=array();
 foreach ($model->children as $children){
 	
 	$childLocalization = $children->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
-	if ($childLocalization)
+	if ($childLocalization && $children->visible)
 		$this->menu[] = array('label'=>$childLocalization->name, 'url'=>array('category/view', "slug"=>$childLocalization->slug));
 }
 

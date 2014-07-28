@@ -105,4 +105,17 @@ class ProductRebate extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	
+	public function beforeSave() {
+	   	
+		// Clean the public home page cache when we save a promotion, so the old price doesn't stay up many hours after a rebate ended
+		$locales = Locale::model()->findAll();
+		foreach ($locales as $locale){
+			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguage] " . $locale;
+			Yii::app()->cache->delete($cache_id);
+		}
+		
+	    return parent::beforeSave();
+	}
 }

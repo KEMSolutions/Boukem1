@@ -20,15 +20,22 @@ class CategoryController extends WebController
 		
 		$model = $model_localization->category;
 
+		
+		if (!$model->visible)
+			throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
+		
 		$this->pageTitle = $model_localization->name . " - " . Yii::app()->name;
 		
 		
 		// Generate the subcategories to display in the sidebar.
 		# TODO Cache this before launch
 		$this->menu=array();
-		foreach ($model->children as $children){
+		foreach ($model->children as $child){
 			
-			$localization = $children->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
+			if (!$child->visible)
+				continue;
+			
+			$localization = $child->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
 			
 			if ($localization !== null)
 				$this->menu[] = array('label'=>$localization->name, 'url'=>array('category/view', "slug"=>$localization->slug));
@@ -70,6 +77,7 @@ class CategoryController extends WebController
 
             $product = new Product();
             $product->unsetAttributes();
+			$product->visible = 1;
             $product->categoryId = $model->id;
 			
 			$products_data_provider = $product->search();
