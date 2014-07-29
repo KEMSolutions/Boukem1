@@ -120,5 +120,6 @@ return array(
 	"Prix régulier:"=>"Regular Price:",
 	"En vedette"=>"Featured",
 	"Promotions"=>"Hot Deals",
+	"Accès rapide"=>"Quick Links",
 );
 ?>

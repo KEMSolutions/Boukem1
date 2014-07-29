@@ -1,9 +1,6 @@
-<section class="slice animate-hover-slide">
-	<div class="w-section inverse blog-grid">
-    	<div class="container">
-        	<div id="masonryWr" class="row">
-
-	<?php
+<?php
+	
+$counter = 0;
 	
 	 foreach ($items as $item): 
 
@@ -22,7 +19,7 @@
 	
 	?>
 	
-	<div class="item col-lg-3 col-md-4 col-sm-6">
+	<div class="item <?php echo ($style==="narrow") ? "col-lg-5 col-md-5 col-sm-5 col-xs-12" :  "col-lg-3 col-md-4 col-sm-6"; ?>">
         <div class="w-box">
             <figure>
                 <a href="<?php echo $product_url; ?>">
@@ -60,9 +57,10 @@
 	
 	
 	<?php 
+	
+	$counter ++;
+	if ($counter >= $limit){
+		break;
+	}
+	
 endforeach; ?>
-				</div>
-	        </div>
-	    </div>
-
-	</section>

@@ -148,6 +148,7 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
+		'mainPageLayout'=>'__KEM_MAIN_PAGE_LAYOUT__',
 		'adminEmail'=>'support@boutiquekem.com',
 		'inbound_api_user'=>'__KEM_APIUSER__',
 		'inbound_api_secret'=>'__KEM_API_SECRET__',

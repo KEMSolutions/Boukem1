@@ -34,10 +34,10 @@ class SiteController extends WebController
 		
 		if (Yii::app()->user->isGuest){
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguage] " . Yii::app()->language;
-			$cache_duration = 10800;
+			$cache_duration = 1600;//10800;
 		} else {
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguageUser] " . Yii::app()->language . " - " . Yii::app()->user->user->id;
-			$cache_duration = 1600;
+			$cache_duration = 1600;//1600;
 		}
 		
 		$layout_html = Yii::app()->cache->get($cache_id);
@@ -45,24 +45,33 @@ class SiteController extends WebController
 		if (!$layout_html){
 			
 			
-			$layout_parameters = array('storeid'=>Yii::app()->params['outbound_api_user'], 'storekey'=>Yii::app()->params['outbound_api_secret'], 'locale'=>Yii::app()->language . "_CA");
+			$layout_parameters = array('storeid'=>Yii::app()->params['outbound_api_user'], 'storekey'=>Yii::app()->params['outbound_api_secret'], 'locale'=>Yii::app()->language . "_CA", 'layout_type'=>Yii::app()->params['mainPageLayout']);
 			if (!Yii::app()->user->isGuest){
 				$layout_parameters["email"] = Yii::app()->user->user->email;
 			}
 			
 			$output = Yii::app()->curl->get("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/Layout/index", $layout_parameters);
 			
+			
 			$base_dict = json_decode($output);
 			
-			$rebatesDataProvider=new CActiveDataProvider('ProductRebate', array(
-			    'criteria'=>array(
-					'limit'=>10,
-			        'with'=>array('product', 'product.productLocalization'),
-			    ),
-			    'pagination'=>false,
-			));
+			if (Yii::app()->params['mainPageLayout'] === "limited"){
+				
+				$layout_html = $this->renderPartial('_index_limited_layout', array("items"=>$base_dict), true);
+				
+			} else {
+				
+				$rebatesDataProvider=new CActiveDataProvider('ProductRebate', array(
+				    'criteria'=>array(
+						'limit'=>10,
+				        'with'=>array('product', 'product.productLocalization'),
+				    ),
+				    'pagination'=>false,
+				));
 			
-			$layout_html = $this->renderPartial('_index_layout', array("items"=>$base_dict, 'rebates'=>$rebatesDataProvider), true);
+				$layout_html = $this->renderPartial('_index_layout', array("items"=>$base_dict, 'rebates'=>$rebatesDataProvider), true);
+			
+			}
 			
 			Yii::app()->cache->set($cache_id, $layout_html, $cache_duration);
 		}

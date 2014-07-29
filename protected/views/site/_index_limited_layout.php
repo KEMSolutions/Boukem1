@@ -1,11 +1,15 @@
 
-		<?php $this->renderPartial('_slider', array("items"=>$items->slider)); ?>
 
 <section class="slice animate-hover-slide">
 	<div class="w-section inverse blog-grid">
     	<div class="container">
         	<div class="row">
-	<?php $this->renderPartial('_recommended', array("items"=>$items->recommended)); ?>
+				<div class="col-md-8" id="masonryWr">
+					
+
+				<?php $this->renderPartial('_promoted', array("items"=>$items->promoted, 'style'=>'narrow', 'limit'=>16)); ?>
+				
+			</div>
 	                <div class="col-md-4">
 						
 	                    <div class="widget">
@@ -19,37 +23,16 @@
 	                        </form>
 	                    </div>
 
-	                   <?php $this->renderPartial('_highlighted_categories', array("items"=>$items->highlighted_categories, 'limit'=>8)); ?>
-	                       
-                      
-	    			</div>
+	                   <?php $this->renderPartial('_highlighted_categories', array("items"=>$items->highlighted_categories, 'limit'=>24)); ?>
+				   </div>
 	            </div>
 
 	        </div>
 	    </div>
 
-
-
-<div class="section-title color-three">
-        <h3><?php echo Yii::t("app", "Promotions"); ?></h3>
-        <div class="indicator-down color-three"></div>
-    </div>
     
 
 	</section>
 	
 
-<?php
-if ($rebates->itemCount>0) {
-	$this->renderPartial('_rebates', array("items"=>$rebates));
-} ?>
 	
-	<section class="slice animate-hover-slide">
-		<div class="w-section inverse blog-grid">
-	    	<div class="container">
-	        	<div id="masonryWr" class="row">
-<?php $this->renderPartial('_promoted', array("items"=>$items->promoted, 'style'=>'normal', 'limit'=>8)); ?>
-				</div>
-			</div>
-		</div>
-	</section>
