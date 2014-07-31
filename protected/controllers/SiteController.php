@@ -89,8 +89,28 @@ class SiteController extends WebController
 		{
 			if(Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
-			else
+			else {
+				
+				// Load the redirect map to keep Magento's urls valid
+				$equavalency_dict_file_path = Yii::app()->basePath . "/redirect_map.json";
+				$equavalency_dict_string = file_get_contents($equavalency_dict_file_path);
+				$equavalency_dict = json_decode($equavalency_dict_string, true);
+				
+				// Get current path info without the /en/ or /fr/ part
+				$current_url_particle = Yii::app()->request->getPathInfo();
+				
+				
+				
+				if (isset($equavalency_dict[$current_url_particle])){
+					// Make a permanent redirection
+					$this->redirect("/fr/prod/" . $equavalency_dict[$current_url_particle] . ".html", $terminate=true, $statusCode=301);
+				}
+				
+				
 				$this->render('error', $error);
+				
+			}
+				
 		}
 	}
 

@@ -51,7 +51,7 @@ class LocaleHttpRequest extends CHttpRequest
     /**
      * @var bool wether to redirect to the default language URL if no language specified
      */
-    public $redirectDefault = false;
+    public $redirectDefault = true;
 
     /**
      * @var string pathInfo with language key removed

@@ -10,7 +10,8 @@ return array(
 	'name'=>'__KEM_STORENAME__',
 	'theme'=>"kem",
 	'sourceLanguage' => 'fr',
-	
+	'language' => 'fr',
+	 
 	'aliases' => array(
 	    'bootstrap' => 'ext.bootstrap',
 	),

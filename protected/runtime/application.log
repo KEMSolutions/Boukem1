@@ -1536,3 +1536,187 @@ REQUEST_URI=/fr/
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_limited_layout.php (10)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (59)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/07/31 10:57:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « sdfsdfsf ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('sdfsdfsf')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/sdfsdfsf
+---
+2014/07/31 11:07:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('menosmart-plus-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:08:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('menosmart-plus-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:08:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « favicon.ico ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/favicon.ico
+---
+2014/07/31 11:15:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('menosmart-plus-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:15:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('menosmart-plus-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('menosmart-plus-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:17:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('menosmart-plus-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:18:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('menosmart-plus-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:18:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « fr-menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fr-menosmart-pl...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/fr-menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:19:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « fr-menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fr-menosmart-pl...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/fr-menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « acta-resveratrol-231-mg-90-capsules ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('acta-resveratro...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/acta-resveratrol-231-mg-90-capsules
+---
+2014/07/31 11:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « fr-acta-resveratrol-231-mg-90-capsules ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fr-acta-resvera...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/fr-acta-resveratrol-231-mg-90-capsules
+---
+2014/07/31 11:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « fr-acta-resveratrol-231-mg-90-capsules ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fr-acta-resvera...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/fr-acta-resveratrol-231-mg-90-capsules
+---
+2014/07/31 11:20:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « fr-menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fr-menosmart-pl...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/fr-menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:20:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('menosmart-plus-...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:20:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « fr-menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fr-menosmart-pl...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/fr-menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « fr-menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fr-menosmart-pl...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/fr-menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « fr-menosmart-plus-120-capsules-vegetariennes ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fr-menosmart-pl...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/fr-menosmart-plus-120-capsules-vegetariennes
+---
+2014/07/31 11:21:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « acta-resveratrol-231-mg-90-capsules ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('acta-resveratro...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/acta-resveratrol-231-mg-90-capsules
+---
+2014/07/31 11:21:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « acta-resveratrol-231-mg-90-capsules ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('acta-resveratro...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/acta-resveratrol-231-mg-90-capsules
+---
+2014/07/31 11:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « sdfsfsdfsfd ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('sdfsfsdfsfd')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/sdfsfsdfsfd
+---
+2014/07/31 11:22:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "acta-resveratrol-231-mg-90-capsules".' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('acta-resveratro...')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/acta-resveratrol-231-mg-90-capsules
+---
