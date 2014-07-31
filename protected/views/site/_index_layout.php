@@ -29,6 +29,9 @@
 	    </div>
 
 
+<?php
+if ($rebates->itemCount>0):
+?>
 
 <div class="section-title color-three">
         <h3><?php echo Yii::t("app", "Promotions"); ?></h3>
@@ -40,9 +43,11 @@
 	
 
 <?php
-if ($rebates->itemCount>0) {
 	$this->renderPartial('_rebates', array("items"=>$rebates));
-} ?>
+
+else:
+	echo "</section>";
+endif; ?>
 	
 	<section class="slice animate-hover-slide">
 		<div class="w-section inverse blog-grid">

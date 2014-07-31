@@ -40,7 +40,7 @@ class SiteController extends WebController
 			$cache_duration = 1600;//1600;
 		}
 		
-		$layout_html = Yii::app()->cache->get($cache_id);
+		$layout_html = null;//Yii::app()->cache->get($cache_id);
 		
 		if (!$layout_html){
 			
