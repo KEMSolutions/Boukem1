@@ -16,7 +16,7 @@ class SiteController extends WebController
 			// page action renders "static" pages stored under 'protected/views/site/pages'
 			// They can be accessed via: index.php?r=site/page&view=FileName
 			'page'=>array(
-				'class'=>'CViewAction',
+				'class'=>'CViewStaticAction',
 			),
 		);
 	}
@@ -75,6 +75,7 @@ class SiteController extends WebController
 			
 			Yii::app()->cache->set($cache_id, $layout_html, $cache_duration);
 		}
+		
 		
 		$this->render('index', array("layout_html"=>$layout_html));
 	}

@@ -23,6 +23,14 @@ class WebController extends Controller
 	 */
 	public $breadcrumbs=array();
 	
+	/**
+	 * @var array the alternate languages pages of the current page. The value of this property will
+	 * be of type array("locale-id"=>"url") and include the current language; for example array("en"=>"/en/cat/brands.html", "fr"=>"/fr/cat/marques.html").
+	 */
+	public $alternatives=array();
+	
+	
+	
 	
 	/**
 	 * @var bool whe true, a prompt can appear at the top of the page asking the user to create a password if none is set.
@@ -48,15 +56,22 @@ class WebController extends Controller
 	public $isHomePage=false;
 	
 	
-	
 	/**
-	 * Returns the suggested locale for the specified page based on user preference
-	 * @return str the locale id the page should be displayed in.
+	 * This method is invoked right before an action is to be executed (after all possible filters.)
+	 * You may override this method to do last-minute preparation for the action.
+	 * @param CAction $action the action to be executed.
+	 * @return boolean whether the action should be executed.
 	 */
-	/*
-	protected function suggestedPageLocale() {
-		return "fr";
-	}*/
+	protected function beforeAction($action)
+	{
+	
+		$alternatives = array();
+		foreach (Yii::app()->request->languages as $language){
+			$alternatives[$language] = $this->createAbsoluteUrl('', array("language"=>$language));
+		}
+		$this->alternatives = $alternatives;
+		return parent::beforeAction($action);
+	}
 	
 	
 	/**

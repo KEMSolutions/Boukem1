@@ -18,6 +18,9 @@
     	echo CHtml::encode($this->pageTitle) . " - " . Yii::app()->name;
     }; ?></title>
 
+<?php foreach ($this->alternatives as $key => $value) {
+	echo '<link rel="alternate" hreflang="' . $key . '" href="' . $value . '" />';
+}?>
 
 <?php
 $cs = Yii::app()->clientScript;

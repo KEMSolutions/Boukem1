@@ -1,13 +1,9 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle = Yii::t('app', 'À propos de la boutique') . ' - ' . Yii::app()->name;
-$this->breadcrumbs=array(
-	Yii::t('app', 'À propos de la boutique'),
-);
+$this->pageTitle = Yii::t('app', 'À propos de la boutique');
+$this->breadcrumbs=null;
 ?>
-<h1><?php echo Yii::t('app', 'À propos de la boutique'); ?></h1>
-
 <?php if (Yii::app()->language === "fr"): ?>
 <p>Avec plus de 4000 produits de qualité, notre boutique virtuelle facilite vos achats en santé naturelle. Des marques professionnelles aux marques grand public, de l'homéopathie à l'aromathérapie, en passant par une vaste sélection de suppléments alimentaires, nul doute que vous trouverez sur ses pages l'essentiel pour une bonne santé.</p>
 

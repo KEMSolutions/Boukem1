@@ -1,17 +1,12 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle = Yii::t('app', 'Politique de confidentialité') . ' - ' . Yii::app()->name;
-$this->breadcrumbs=array(
-	Yii::t('app', 'Politique de confidentialité'),
-);
+$this->pageTitle = Yii::t('app', 'Politique de confidentialité');
 ?>
-<h1><?php echo Yii::t('app', 'Politique de confidentialité'); ?></h1>
-
 <?php if (Yii::app()->language === "fr"): ?>
 
-
-<p><strong>Introduction</strong><br />
+<h2>Introduction</h2>
+<p>
 Devant le d&eacute;veloppement des nouveaux outils de communication, il est n&eacute;cessaire de porter une attention particuli&egrave;re &agrave; la protection de la vie priv&eacute;e. 
 C'est pourquoi, nous nous engageons &agrave; respecter la confidentialit&eacute; des renseignements personnels que nous collectons.
 </p><hr/>

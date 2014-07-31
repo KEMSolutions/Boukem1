@@ -65,6 +65,12 @@ class ProductController extends WebController
 			$localized_categories[] = $localized_cat;
 		}
 		
+		$alternatives = array();
+		foreach ($model->productLocalizations as $localization){
+			$alternatives[$localization->locale_id] = $this->createAbsoluteUrl("view", array("slug"=>$localization->slug, "language"=>$localization->locale_id));
+		}
+		$this->alternatives = $alternatives;
+		
 		$localized_categories_data_provider = new CArrayDataProvider($localized_categories);
 		
 		$this->render('view',array(

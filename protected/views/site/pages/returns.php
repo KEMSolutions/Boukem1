@@ -1,12 +1,9 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle = Yii::t('app', 'Retours et échanges') . ' - ' . Yii::app()->name;
-$this->breadcrumbs=array(
-	Yii::t('app', 'Retours et échanges'),
-);
+$this->pageTitle = Yii::t('app', 'Retours et échanges');
+
 ?>
-<h1><?php echo Yii::t('app', 'Retours et échanges'); ?></h1>
 
 <?php if (Yii::app()->language === "fr"): ?>
 <p>Notre politique est de 30 jours. Si 30 jours se sont écoulés depuis la date d'expédition de votre commande, nous ne pouvons malheureusement pas vous proposer un remboursement ou un échange.</p> 

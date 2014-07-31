@@ -82,6 +82,7 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
+				"/" => 'site/index',
 				array('category/view', 'pattern'=>'cat/<slug:[a-zA-Z0-9-]+>', 'urlSuffix'=>'.html', 'caseSensitive'=>true),
 				array('product/view', 'pattern'=>'prod/<slug:[a-zA-Z0-9-]+>', 'urlSuffix'=>'.html', 'caseSensitive'=>true),
 				array('product/search', 'pattern'=>'search', 'caseSensitive'=>false),

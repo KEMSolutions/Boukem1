@@ -26,6 +26,11 @@ class CategoryController extends WebController
 		
 		$this->pageTitle = $model_localization->name . " - " . Yii::app()->name;
 		
+		$alternatives = array();
+		foreach ($model->categoryLocalizations as $localization){
+			$alternatives[$localization->locale_id] = $this->createAbsoluteUrl("view", array("slug"=>$localization->slug, "language"=>$localization->locale_id));
+		}
+		$this->alternatives = $alternatives;
 		
 		// Generate the subcategories to display in the sidebar.
 		# TODO Cache this before launch

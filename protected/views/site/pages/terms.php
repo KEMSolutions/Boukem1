@@ -1,12 +1,9 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle = Yii::t('app', 'Conditions d\'utilisation') . ' - ' . Yii::app()->name;
-$this->breadcrumbs=array(
-	Yii::t('app', 'Conditions d\'utilisation'),
-);
+$this->pageTitle = Yii::t('app', 'Conditions d\'utilisation');
+
 ?>
-<h1><?php echo Yii::t('app', 'Conditions d\'utilisation'); ?></h1>
 
 <?php if (Yii::app()->language === "fr"): ?>
 

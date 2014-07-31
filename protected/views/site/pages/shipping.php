@@ -1,10 +1,7 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle = Yii::t('app', 'Méthodes d\'expédition') . ' - ' . Yii::app()->name;
-$this->breadcrumbs=array(
-	Yii::t('app', 'Méthodes d\'expédition'),
-);
+$this->pageTitle = Yii::t('app', 'Méthodes d\'expédition');
 
 $country_script = <<<EOD
 	
@@ -82,7 +79,6 @@ Yii::app()->clientScript->registerScriptFile('/js/jquery-jvectormap-world-mill-e
 Yii::app()->clientScript->registerScript("shipping_world_map" , $country_script);
 
 ?>
-<h1><?php echo Yii::t('app', 'Méthodes d\'expédition'); ?></h1>
 
 <?php if (Yii::app()->language === "fr"): ?>
 	
