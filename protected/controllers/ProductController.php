@@ -59,7 +59,7 @@ class ProductController extends WebController
 		
 		$this->pageTitle = $modelLocalization->name;
 		
-		
+		$localized_categories[] = array();
 		foreach ($model->categories as $category){
 			$localized_cat = $category->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
 			$localized_categories[] = $localized_cat;
@@ -70,9 +70,7 @@ class ProductController extends WebController
 			$alternatives[$localization->locale_id] = $this->createAbsoluteUrl("view", array("slug"=>$localization->slug, "language"=>$localization->locale_id));
 		}
 		$this->alternatives = $alternatives;
-		
-		$localized_categories_data_provider = new CArrayDataProvider($localized_categories);
-		
+				
 		$this->render('view',array(
 			'model'=>$modelLocalization->product,
 			'localization'=>$modelLocalization,
