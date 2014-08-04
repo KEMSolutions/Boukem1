@@ -96,7 +96,7 @@ class ProductController extends WebController
 		);
 		
 		$search->filter = array(
-			"term" => array("locale"=>Yii::app()->language),
+			"term" => array("locale"=>Yii::app()->language, "visible"=>1),
 		);
 		
 		
@@ -104,7 +104,7 @@ class ProductController extends WebController
 		$dataProvider = new \YiiElasticSearch\DataProvider(ProductLocalization::model(), array(
 		        'search' => $search,
 		));
-		$dataProvider->setPagination(array('pageSize' => 12));
+		$dataProvider->setPagination(array('pageSize' => 48));
 		
 		$this->render('search',array(
 			'dataProvider'=>$dataProvider,

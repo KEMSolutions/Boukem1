@@ -1978,3 +1978,11 @@ Stack trace:
 REQUEST_URI=/fr/page/privacy
 HTTP_REFERER=http://dev.boutiquekem.com/fr/
 ---
+2014/08/04 16:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « favicon.ico ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/favicon.ico
+---

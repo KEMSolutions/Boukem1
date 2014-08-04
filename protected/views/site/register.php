@@ -37,7 +37,7 @@ $this->pageTitle = Yii::t("app", "Devenir membre");
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password', array('class'=>"form-control")); ?>
+		<?php echo $form->passwordField($model,'password', array('class'=>"form-control", 'value' => '',)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 

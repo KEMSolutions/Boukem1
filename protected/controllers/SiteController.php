@@ -193,10 +193,16 @@ class SiteController extends WebController
 			
 	        if($model->validate() && $model->save())
 	        {
-	            $form=new LoginForm;
+				
+				$form=new LoginForm;
 				$form->username = $model->email;
 				$form->password = $original_password;
 				$form->login();
+				
+				
+				// ping KEMConsole with the user
+				$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/user/updateUserData", array('customer_id'=>$model->id, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+				
 				
 				Yii::app()->user->setFlash('success',Yii::t("app", 'Féliciations, votre compte a été créé!'));
 				$this->redirect(Yii::app()->user->returnUrl);

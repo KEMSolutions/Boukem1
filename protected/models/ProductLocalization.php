@@ -163,7 +163,6 @@ class ProductLocalization extends CActiveRecord
 	        $document->setId($this->id);
 	        $document->name = $this->name;
 	        $document->locale   = $this->locale_id;
-		    $document->long_description = $this->long_description;
 		    $document->short_description = $this->short_description;
 			$document->slug = $this->slug;
 			$document->visible = $this->visible;
@@ -196,7 +195,6 @@ class ProductLocalization extends CActiveRecord
 		$this->id       = $document->getId();
 		$this->name     = $document->name;
 		$this->locale_id   = $document->locale;
-	    $this->long_description = $document->long_description;
 		$this->short_description = $document->short_description;
 		$this->slug = $document->slug;
 		$this->visible = $document->visible;
