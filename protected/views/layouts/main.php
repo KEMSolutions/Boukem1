@@ -64,6 +64,15 @@ $cs
         "$('[data-toggle=\"tooltip\"]').tooltip();
         $('[data-toggle=\"popover\"]').tooltip()"
         ,CClientScript::POS_READY);
+		
+		
+	
+		if ($this->isB2b()){
+			$siteRoot = "https://kle-en-main.com/CloudServices/";
+		} else {
+			$siteRoot = "/";
+		}
+	
 
 ?>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -88,7 +97,7 @@ $cs
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <a class="navbar-brand" href="/">
+	                <a class="navbar-brand" href="<?php echo $siteRoot; ?>">
 	                	<img src="/images/logo.png" alt="<?php echo Yii::app()->name; ?>">
 	                </a>
 	            </div>
@@ -98,7 +107,14 @@ $cs
 	                    	<a href="#" class="" id="cmdSearch"><i class="fa fa-search"></i></a>
 	                    </li>
 	                    <li>
-							<a href="/"><?php echo Yii::t("app", "Accueil"); ?></a>
+							<a href="<?php echo $siteRoot; ?>"><?php 
+								
+								if ($this->isB2b()){
+									echo Yii::t("b2b", "Console");
+								} else {
+									echo Yii::t("app", "Accueil");
+								}
+								?></a>
 						</li>
 		                    <?php
 							
@@ -149,7 +165,7 @@ $cs
 	
 
 
-<?php if ($this->can_prompt_for_password_set && !Yii::app()->user->isGuest && !Yii::app()->user->user->password) {
+<?php if ($this->can_prompt_for_password_set && !$this->isB2b() && !Yii::app()->user->isGuest && !Yii::app()->user->user->password) {
 
 	$this->renderPartial("application.views._password_setter");
 
@@ -173,6 +189,9 @@ $cs
 
 <footer>
     <div class="container">
+		<?php if (!$this->isB2b()): ?>
+        
+		
         <div class="row">
             <div class="col-md-4">
             	<div class="col">
@@ -219,9 +238,9 @@ $cs
                 </div>
             </div>
         </div>
-        
-        <hr />
-        
+		
+	<?php endif; ?>
+	  <hr />
         <div class="row">
         	<div class="col-lg-9 copyright">
             	&copy; <?php echo date("Y"); ?>, <?php echo Yii::t('app', 'tous droits réservés'); ?>.

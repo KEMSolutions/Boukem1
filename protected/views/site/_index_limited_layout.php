@@ -1,4 +1,45 @@
+<?php if ($this->isB2b()): ?>
 
+<section class="slice color-two-l">
+	<div class="w-section inverse">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-5">
+                    <h2><?php echo Yii::t("b2b", "Bienvenue dans <strong>votre</strong> boutique"); ?></h2>
+                    <p><?php echo Yii::t("b2b", "La boutique KEMB2B vous permet d'acheter l'ensemble des produits du catalogue KEM en bénéficiant de prix réduits."); ?>
+                    </p>
+                    <p>
+                    <?php echo Yii::t("b2b", "Que vous exploitiez un magasin ou afin d'offrir à vos clients une officine bien garnie, la boutique KEMB2B est là pour vous faciliter la vie."); ?>
+                    </p>
+                   
+                </div>
+                <div class="col-md-6 col-md-offset-1">
+                    <h2><?php echo Yii::t("b2b", "Votre rabais");
+						
+						$rebate_percent = 100 * Yii::app()->params['b2b_rebate_multiplier'];
+						$total_percent = 100-$rebate_percent;
+						
+						 ?></h2>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-one" role="progressbar" aria-valuenow="<?php echo $total_percent; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $total_percent; ?>%">
+                        <span class="sr-only"><?php echo $rebate_percent; ?>%</span>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section-title color-three">
+        <h3><?php echo Yii::t("b2b", "Suggestions"); ?></h3>
+        <div class="indicator-down color-three"></div>
+    </div>
+    
+</section>
+
+
+<?php endif; ?>
 
 <section class="slice animate-hover-slide">
 	<div class="w-section inverse blog-grid">

@@ -37,13 +37,12 @@ class SiteController extends WebController
 			$cache_duration = 1600;//10800;
 		} else {
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguageUser] " . Yii::app()->language . " - " . Yii::app()->user->user->id;
-			$cache_duration = 1600;//1600;
+			$cache_duration = 1600;
 		}
 		
 		$layout_html = Yii::app()->cache->get($cache_id);
 		
 		if (!$layout_html){
-			
 			
 			$layout_parameters = array('storeid'=>Yii::app()->params['outbound_api_user'], 'storekey'=>Yii::app()->params['outbound_api_secret'], 'locale'=>Yii::app()->language . "_CA", 'layout_type'=>Yii::app()->params['mainPageLayout']);
 			if (!Yii::app()->user->isGuest){
@@ -55,7 +54,8 @@ class SiteController extends WebController
 			
 			$base_dict = json_decode($output);
 			
-			if (Yii::app()->params['mainPageLayout'] === "limited"){
+
+			if (Yii::app()->params['mainPageLayout'] === "limited") {
 				
 				$layout_html = $this->renderPartial('_index_limited_layout', array("items"=>$base_dict), true);
 				

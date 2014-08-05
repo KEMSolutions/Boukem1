@@ -158,6 +158,7 @@ return array(
 		'outbound_api_secret'=>'__KEM_API_KEY__',
 		'kem_analytics_id'=>'__KEM_ANALYTICS_ID__',
 		'boukem_version'=>'0.9',
+		'b2b_rebate_multiplier'=>0.2,
 	),
 	
 );

@@ -23,4 +23,18 @@ class Controller extends CController
 	}
 	
 	
+	/**
+	 * Check whether the current store is a b2b oriented store. B2B stores are only available for login through a KEMConsole application, and prices are multiplied using the 'b2b_rebate_multiplier' config value.
+	 * @return bool indicating if the current store is a b2b store (returns false if not).
+	 */
+	public function isB2b(){
+		
+		# TODO eventually make a call 
+		if (Yii::app()->request->serverName === "b2b.boutiquekem.com"){
+			return true;
+		}
+		
+		return false;
+	}
+	
 }
