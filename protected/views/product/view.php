@@ -69,7 +69,7 @@ if ($regular_price !== $current_price){
 	                        <h2 class="plan-title" itemprop="name"><?php echo CHtml::encode($localization->name); ?></h2>
 	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><span>$</span><?php echo $current_price; ?></h3></span>
 	                        <ul>
-								<?php if ($on_sale): ?>
+								<?php if ($on_sale || $this->isB2b()): ?>
 								<li class="text-success"><i class="fa fa-smile-o"></i> <?php echo Yii::t("app", "Prix régulier:") . " $" . $regular_price; ?></li>
 								<?php endif; ?>
 	                            <li><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Livré chez vous rapidement"); ?></li>
@@ -93,13 +93,15 @@ if ($regular_price !== $current_price){
                         <h4 class="widget-heading"><?php echo Yii::t("app", "Catégories"); ?></h4>
                         <ul class="tags-list">
 							<?php
-			
-			
+							
 							foreach ($localized_categories as $locat) {
 				
-								echo "<li><i class=\"fa fa-tags\"></i>";
-								echo CHtml::link(CHtml::encode($locat->name), array("category/view", "slug"=>$locat->slug));
-								echo "</li>";
+								if (isset($locat->name) && isset($locat->slug)){
+									echo "<li><i class=\"fa fa-tags\"></i>";
+									echo CHtml::link(CHtml::encode($locat->name), array("category/view", "slug"=>$locat->slug));
+									echo "</li>";
+								}
+							
 							}
 							?>
                             
