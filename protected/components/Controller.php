@@ -29,8 +29,7 @@ class Controller extends CController
 	 */
 	public function isB2b(){
 		
-		# TODO eventually make a call 
-		if (Yii::app()->request->serverName === "dev.boutiquekem.com"){
+		if (Yii::app()->request->serverName === "b2b.boutiquekem.com"){
 			return true;
 		}
 		
