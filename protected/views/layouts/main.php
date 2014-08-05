@@ -69,11 +69,11 @@ $cs
 	
 		if ($this->isB2b()){
 			$cs->registerScriptFile('/js/boukemb2b.js',CClientScript::POS_END);
-			$siteRoot = "https://kle-en-main.com/CloudServices/";
+			$redirect_domain = Yii::app()->language === "fr" ? "https://kle-en-main.com" : "https://kemsolutions.com";
+			$siteRoot = $redirect_domain . "/CloudServices/";
 		} else {
 			$siteRoot = "/";
 		}
-	
 
 ?>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -190,10 +190,11 @@ $cs
 
 <footer>
     <div class="container">
-		<?php if (!$this->isB2b()): ?>
+		
         
 		
         <div class="row">
+			<?php if (!$this->isB2b()): ?>
             <div class="col-md-4">
             	<div class="col">
                    <h4><?php echo Yii::t('app', 'Information'); ?></h4>
@@ -217,7 +218,7 @@ $cs
         			</ul>
                 </div>
             </div>
-            
+            <?php endif; ?>
             
              <div class="col-md-4">
              	<div class="col">
@@ -238,9 +239,10 @@ $cs
         			</ul>
                 </div>
             </div>
+			
         </div>
 		
-	<?php endif; ?>
+	
 	  <hr />
         <div class="row">
         	<div class="col-lg-9 copyright">

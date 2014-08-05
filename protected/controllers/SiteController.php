@@ -115,33 +115,7 @@ class SiteController extends WebController
 		}
 	}
 
-	/**
-	 * Displays the contact page
-	 */
-	/*
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-Type: text/plain; charset=UTF-8";
-
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
-	*/
+	
 	
 	/**
 	 * Displays the registration form
@@ -152,6 +126,14 @@ class SiteController extends WebController
 		
 		if (!Yii::app()->user->isGuest){
 			$this->redirect('/');
+		}
+		
+		if ($this->isB2b()){
+			
+			// Redirect to KEM login page
+			$redirect_domain = Yii::app()->language === "fr" ? "https://kle-en-main.com" : "https://kemsolutions.com";
+			$this->redirect($redirect_domain . "/CloudServices/index.php/Users/default/b2bGateway");
+			
 		}
 		
 	    $model=new User('register');
@@ -220,6 +202,10 @@ class SiteController extends WebController
 	
 	public function actionCreatePassword(){
 		
+		if ($this->isB2b()){
+			throw new CHttpException(403,'Not authorized');
+		}
+		
 		$user = !Yii::app()->user->isGuest ? Yii::app()->user->user : null;
 		
 		if ($user === null){
@@ -248,6 +234,14 @@ class SiteController extends WebController
 	 */
 	public function actionLogin()
 	{
+		if ($this->isB2b()){
+			
+			// Redirect to KEM login page
+			$redirect_domain = Yii::app()->language === "fr" ? "https://kle-en-main.com" : "https://kemsolutions.com";
+			$this->redirect($redirect_domain . "/CloudServices/index.php/Users/default/b2bGateway");
+			
+		}
+		
 		$model=new LoginForm;
 		
 		$this->pageTitle = Yii::t("app", "Connexion") . " - " . Yii::app()->name;
@@ -271,6 +265,46 @@ class SiteController extends WebController
 		$this->render('login',array('model'=>$model));
 	}
 	
+	/**
+	 * Login through B2B authentication
+	 */
+	public function actionLoginb2b($email, $timestamp, $check, $hash, $discount=0.2)
+	{
+		if (!$this->isB2b()){
+			// Redirect to the home page
+			$this->redirect(Yii::app()->homeUrl);
+		}
+		
+		if (!Yii::app()->user->isGuest){
+			// User is already logged in
+			$this->redirect(Yii::app()->homeUrl);
+		}
+		
+		// Check if the hash is valid
+		$concatenated_string = $email . $timestamp . $check . $discount . Yii::app()->params['inbound_api_secret'];
+		$expected_hash = hash('sha512', $concatenated_string);
+		
+		if ($expected_hash !== $hash) {
+			throw new CHttpException(403,'Not authorized');
+		}
+		
+		
+		// Compare timestamp to ensure it's current. We accept up to 30 seconds of delay
+		$current_timestamp = time();
+		$down_limit = $current_timestamp - 15;
+		$up_limit = $current_timestamp + 15;
+		
+		if ($timestamp <= $down_limit || $timestamp >= $up_limit){
+			throw new CHttpException(403,'Not authorized');
+		}
+		
+		// Log user in
+		Yii::app()->user->createGuestUser($email);
+		
+		
+		$this->redirect(Yii::app()->homeUrl);
+	}
+	
 	
 	/**
 	 * Logs out the current user and redirect to homepage.
@@ -278,6 +312,15 @@ class SiteController extends WebController
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		if ($this->isB2b()){
+			
+			// Also disconnect on kem
+			$redirect_domain = Yii::app()->language === "fr" ? "https://kle-en-main.com" : "https://kemsolutions.com";
+			$this->redirect($redirect_domain . "/CloudServices/index.php/Site/logout");
+			
+		} else {
+			$this->redirect(Yii::app()->homeUrl);
+		}
+		
 	}
 }

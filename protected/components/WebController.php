@@ -64,7 +64,15 @@ class WebController extends Controller
 	 */
 	protected function beforeAction($action)
 	{
-	
+		// When on B2B sites, check if the user is connected OR if user is currently connecting prior to allowing it in
+		
+		if ($this->isB2b() && Yii::app()->user->isGuest && !isset($_GET["email"])) {
+			// None of these, redirect the user to KEM's sign in prompt
+			$redirect_domain = Yii::app()->language === "fr" ? "https://kle-en-main.com" : "https://kemsolutions.com";
+			$this->redirect($redirect_domain . "/CloudServices/index.php/Users/default/b2bGateway");
+		}
+		
+		
 		$alternatives = array();
 		foreach (Yii::app()->request->languages as $language){
 			$alternatives[$language] = $this->createAbsoluteUrl('', array("language"=>$language));

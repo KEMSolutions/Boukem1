@@ -39,7 +39,7 @@ class UserIdentity extends CUserIdentity
 			return !$this->errorCode;
 		}
 		
-		if ($user!==null){
+		if ($user!==null && !Yii::app()->controller->isB2b()){
 			// Check for the validity of the password
 			if ($this->validatePassword($user)){
 				$this->errorCode=self::ERROR_NONE;
@@ -48,13 +48,14 @@ class UserIdentity extends CUserIdentity
 			}
 		} else {
 			
-			// Create a user with just a username
-			$user = new User;
-			$user->email = strtolower($this->username);
+			if ($user === null){
+				// Create a user with just a username
+				$user = new User;
+				$user->email = strtolower($this->username);
+				$user->save();
+			}
+			
 			$this->errorCode=self::ERROR_NONE;
-			
-			$user->save();
-			
 			
 		}
 		

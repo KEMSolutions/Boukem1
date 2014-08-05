@@ -11,7 +11,7 @@ class WebUser extends CWebUser
 		
 		$existing_user = User::model()->find("email = :email", array(":email"=>$email));
 		
-		if ($existing_user !== null && $existing_user->password !== null){
+		if ($existing_user !== null && !Yii::app()->controller->isB2b() && $existing_user->password !== null){
 			
 			// User already exists and has a password set.
 			throw new CHttpException(403,'Your request is invalid.');

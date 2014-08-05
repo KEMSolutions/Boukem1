@@ -1,7 +1,10 @@
 <?php
 $this->pageTitle = Yii::t("app", "Compte");
 
-$this->menu=array(array('label'=>Yii::t('app', "Changer de mot de passe"), 'url'=>array('account/updatePassword')));
+if (!$this->isB2b()) {
+	$this->menu=array(array('label'=>Yii::t('app', "Changer de mot de passe"), 'url'=>array('account/updatePassword')));
+}
+
 ?>
 
 

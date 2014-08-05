@@ -193,7 +193,8 @@ class Product extends CActiveRecord
 		
 		if (Yii::app()->controller->isB2b()){
 			
-			return $this->price * (1.0 - Yii::app()->params['b2b_rebate_multiplier']);
+			$current_price = $this->price * (1.0 - Yii::app()->params['b2b_rebate_multiplier']);
+			return number_format((float)$current_price, 2, '.', '');
 		}
 		
 		if (count($this->productRebates)>0){
