@@ -6,5 +6,7 @@ return array(
 	"Que vous exploitiez un magasin ou afin d'offrir à vos clients une officine bien garnie, la boutique KEMB2B est là pour vous faciliter la vie."=>"Whether you're a brick and mortar store owner or a professional, you'll find here a large selection of high quality products at a discounted price.",
 	"Votre rabais"=>"Your rebate",
 	'Suggestions'=>'Suggestions',
+	"Enregistrer les quantités"=>"Save quantities",
+	
 );
 ?>

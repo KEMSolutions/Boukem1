@@ -75,7 +75,7 @@ class CartController extends WebController
 	public function filters()
 	{
 		return array(
-			'ajaxOnly + add, remove, update, estimate, prepare, order',
+			'ajaxOnly + add, remove, update, estimate, prepare, order, addMultiple',
 		);
 	}
 	
@@ -194,6 +194,67 @@ class CartController extends WebController
 		if (!$item->save()){
 			throw new CHttpException(400,'Error raised: ' . $item->getError());
 		}
+		
+	}
+	
+	
+	public function actionAddMultiple()
+	{
+		
+		
+		$products_string = Yii::app()->request->getPost('products');
+		if ($products_string === null){
+			throw new CHttpException(400, 'Invalid products.');
+		}
+		
+		$products = json_decode($products_string);
+		
+		$cart = $this->getCart();
+		
+		foreach ($products as $product_id => $quantity) {
+			
+			// Look for that existing product in the cart
+			$item = OrderHasProduct::model()->findByPk(array('order_id' => $cart->id, 'product_id' => $product_id));
+			if (!$item || $item === null){
+				// Item doesn't exist
+				if ($quantity == 0){
+					// Don't create a new object and skip to next
+					continue;
+				}
+				
+				$item = new OrderHasProduct;
+				$item->order_id = $cart->id;
+				$item->product_id = $product_id;
+				$item->quantity = $quantity;
+				
+			} else {
+				// Item already exists
+				
+				if ($quantity == 0){
+					$item->delete();
+					continue;
+				}
+				
+				$item->quantity = $quantity;
+			}
+		
+			// Prior to saving make sure the object exists so we don't throw too many detailed exceptions
+			$product = Product::model()->findByPk($product_id);
+			if ($product === null){
+				continue;
+			}
+			
+			$item->price_paid = $product->getCurrentPrice();
+			
+			if (!$item->save()){
+				throw new CHttpException(400,'Error raised: ' . $item->getError());
+			}
+			
+			
+			
+		}
+		
+		
 		
 	}
 	

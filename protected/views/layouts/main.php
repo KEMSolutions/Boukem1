@@ -68,6 +68,7 @@ $cs
 		
 	
 		if ($this->isB2b()){
+			$cs->registerScriptFile('/js/boukemb2b.js',CClientScript::POS_END);
 			$siteRoot = "https://kle-en-main.com/CloudServices/";
 		} else {
 			$siteRoot = "/";

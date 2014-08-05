@@ -29,6 +29,8 @@
 class Product extends CActiveRecord
 {
     public  $categoryId = null;
+	public $restrictScopeToCurrentLocale = true;
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -135,7 +137,13 @@ class Product extends CActiveRecord
         }
 		$criteria->compare('t.visible',$this->visible);
 		
-        $criteria->with = array('productLocalization');
+		if ($this->restrictScopeToCurrentLocale){
+			$criteria->with = array('productLocalization');
+			
+		}
+		
+		
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

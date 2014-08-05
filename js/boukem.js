@@ -13,6 +13,8 @@ function updateCartOverview(openModal){
 			updateBuyButtonsForProductWithId(val.product_id);
 			$("#cart_modal_items").append("<li class='media'><a class='pull-left' href='" + val.link + "'><img class='media-object' src='" + val.thumbnail + "' alt=''></a><div class='media-body'><h4 class='media-heading'>" + val.name + "</h4>" + val.quantity + " x " + val.price_paid + "</div></li>");
 			
+			// Find products on the list view (if any)
+			$('input[data-product=' + val.product_id + ']').val(val.quantity);
 		});
 		$("#cart_badge").text(total_count);
 		if (openModal){
@@ -49,7 +51,6 @@ $(".buybutton").click(function(){
 	updateBuyButtonsForProductWithId(product_id);
 });
 })
-
 
 updateCartOverview(false);
 
