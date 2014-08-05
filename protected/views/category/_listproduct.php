@@ -30,6 +30,10 @@ $main_image = $localization->getMainImage();
 			<small><?php echo CHtml::link($brand_localization->name, array('category/view', 'slug'=>$brand_localization->slug)) . " - " . $data->sku . " - " . $data->barcode; ?></small>
 		</td>
 		
+		<td>
+			<?php echo number_format((float)$data->getCurrentPrice(), 2, '.', ''); ?> $
+		</td>
+		
 		<td class="input-qty-detail form-inline text-right col-xs-4 col-sm-3 col-lg-2">
 			
 
