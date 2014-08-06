@@ -71,6 +71,7 @@ return array(
 	"Accès rapide"=>"Shortcuts",
 	"Service à la clientèle"=>"Customer Service",
 	"Nous contacter"=>"Contact Us",
+	"Contact"=>"Contact",
 	"Retours et échanges"=>"Returns & Exchanges",
 	"Signaler un problème"=>"Report a problem",
 	"Produits"=>"Products",
@@ -121,5 +122,16 @@ return array(
 	"En vedette"=>"Featured",
 	"Promotions"=>"Hot Deals",
 	"Accès rapide"=>"Quick Links",
+	"Notre équipe de professionnels est à l'écoute de vos besoins: que vous ayez des questions sur nos produits ou sur une commande passée avec nous, n'hésitez pas à nous envoyer un message."=>"Our team of professionals is here for you: whether you have questions about our products or you want to contact us regarding an order, feel free to email us directly.",
+	"Notre magasin"=>"Our Store",
+	"Adresse"=>"Address",
+	"Heures d'affaires"=>"Business Hours",
+	"Lundi - Vendredi"=>"Monday - Friday",
+	"Samedi"=>"Saturday",
+	"Dimanche"=>"Sunday",
+	"Nous suivre..."=>"Follow Us",
+	"Infolettre"=>"Newsletter",
+	"Inscrivez vous à notre infolettre pour recevoir des nouvelles et offres exclusives!"=>"Sign up if you would like to receive occasional news and treats from us.",
+	
 );
 ?>
