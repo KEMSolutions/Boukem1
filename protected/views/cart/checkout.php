@@ -5,8 +5,8 @@
 
 $cs = Yii::app()->clientScript;
 $themePath = Yii::app()->theme->baseUrl;
-$cs->registerCssFile($themePath.'/assets/css/chosen.min.css');
-$cs->registerCssFile($themePath.'/assets/css/process.css');
+$cs->registerCssFile('/css/chosen.min.css');
+$cs->registerCssFile($themePath.'/css/process.css');
 
 $pageLocale = Yii::app()->language;
 $this->pageTitle = Yii::t("app", "Adresse et informations de commande");
@@ -14,7 +14,7 @@ $this->pageTitle = Yii::t("app", "Adresse et informations de commande");
 $cart_order_url = $this->createUrl("order");
 
 $cs
-    ->registerScriptFile($themePath.'/assets/js/chosen.jquery.min.js',CClientScript::POS_END)
+    ->registerScriptFile('/js/chosen.jquery.min.js',CClientScript::POS_END)
 
     ->registerScript('chosen',
         "$('select').chosen({});

@@ -20,7 +20,7 @@ $this->breadcrumbs = null;
 		Yii::app()->user->returnUrl = $this->createUrl('index');
 		
 		
-		$cs->registerScriptFile($themePath.'/assets/js/chosen.jquery.min.js',CClientScript::POS_END)
+		$cs->registerScriptFile('/js/chosen.jquery.min.js',CClientScript::POS_END)
 
 		    ->registerScript('chosen',
 		        "$('select').chosen({});
@@ -177,7 +177,7 @@ $this->breadcrumbs = null;
 		}
 		
 		
-		$cs->registerCssFile($themePath.'/assets/css/chosen.min.css');
+		$cs->registerCssFile('/css/chosen.min.css');
 		
 		
 		
