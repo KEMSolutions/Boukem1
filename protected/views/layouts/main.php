@@ -99,7 +99,7 @@ $cs
 	                    <span class="icon-bar"></span>
 	                </button>
 	                <a class="navbar-brand" href="<?php echo $siteRoot; ?>">
-	                	<img src="/images/logo.png" alt="<?php echo Yii::app()->name; ?>">
+	                	<img src="/images/logo.png" class="img-responsive" alt="<?php echo Yii::app()->name; ?>">
 	                </a>
 	            </div>
 	            <div class="navbar-collapse collapse">
