@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /
+Disallow: /*/cart.html
+Disallow: /*/site/login
+Disallow: /*/site/register

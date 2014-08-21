@@ -74,8 +74,8 @@ var gdpData = {
 EOD;
 
 Yii::app()->clientScript->registerCssFile('/css/jquery-jvectormap-1.2.2.css');
-Yii::app()->clientScript->registerScriptFile('/js/jquery-jvectormap-1.2.2.min.js');
-Yii::app()->clientScript->registerScriptFile('/js/jquery-jvectormap-world-mill-en.js');
+Yii::app()->clientScript->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery-jvectormap-1.2.2.min.js');
+Yii::app()->clientScript->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery-jvectormap-world-mill-en.js');
 Yii::app()->clientScript->registerScript("shipping_world_map" , $country_script);
 
 ?>

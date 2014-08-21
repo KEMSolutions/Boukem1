@@ -44,11 +44,11 @@ $cs
     ->registerCoreScript('jquery',CClientScript::POS_END)
     ->registerCoreScript('jquery.ui',CClientScript::POS_END)
     ->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',CClientScript::POS_END)
-	->registerScriptFile('/js/bootstrap.touchspin.js',CClientScript::POS_END)
-	->registerScriptFile('/js/modernizr.custom.js',CClientScript::POS_END)
-	->registerScriptFile('/js/jquery.mousewheel-3.0.6.pack.js',CClientScript::POS_END)
-	->registerScriptFile('/js/jquery.cookie.js',CClientScript::POS_END)
-	->registerScriptFile('/js/jquery.easing.js',CClientScript::POS_END)
+	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/bootstrap.touchspin.js',CClientScript::POS_END)
+	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/modernizr.custom.js',CClientScript::POS_END)
+	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.mousewheel-3.0.6.pack.js',CClientScript::POS_END)
+	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.cookie.js',CClientScript::POS_END)
+	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.easing.js',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/masonry/masonry.js',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/page-scroller/jquery.ui.totop.min.js',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/masonry/masonry.js',CClientScript::POS_END)
@@ -57,7 +57,7 @@ $cs
 	->registerScriptFile('/js_assets/fancybox/jquery.fancybox.pack.js?v=2.1.5',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/fraction/jquery.fractionslider.min.js',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/fraction/jquery.fractionslider.init.js',CClientScript::POS_END)
-	->registerScriptFile('/js/jquery.ebright.custom.js',CClientScript::POS_END)
+	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.ebright.custom.js',CClientScript::POS_END)
 	->registerScriptFile('/js/boukem.js',CClientScript::POS_END)
 		
     ->registerScript('tooltip',
@@ -78,8 +78,8 @@ $cs
 ?>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-    <script src="/js/html5shiv.js"></script>
-    <script src="/js/respond.min.js"></script>
+    <script src="//cdn.kem.guru/boukem/spirit/js/html5shiv.js"></script>
+    <script src="//cdn.kem.guru/boukem/spirit/js/respond.min.js"></script>
 <![endif]-->
 
 </head>
