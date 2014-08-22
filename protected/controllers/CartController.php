@@ -391,7 +391,7 @@ class CartController extends WebController
 		$arr = json_decode($result);
 		
 		if (!isset($arr->services)){
-			throw new CHttpException(400,Yii::t('app', "Postes Canada ne peut fournir d'estimé en ce moment."));
+			throw new CHttpException(400,Yii::t('app', "Postes Canada ne peut fournir d'estimation en ce moment."));
 		}
 		$rates = $arr->services;
 		

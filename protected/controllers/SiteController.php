@@ -186,7 +186,7 @@ class SiteController extends WebController
 				$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/user/updateUserData", array('customer_id'=>$model->id, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
 				
 				
-				Yii::app()->user->setFlash('success',Yii::t("app", 'Féliciations, votre compte a été créé!'));
+				Yii::app()->user->setFlash('success',Yii::t("app", 'Félicitations, votre compte a été créé!'));
 				$this->redirect(Yii::app()->user->returnUrl);
 	        }
 	    }
