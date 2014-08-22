@@ -85,7 +85,12 @@ class CategoryController extends WebController
 			$product->visible = 1;
             $product->categoryId = $model->id;
 			
-			$products_data_provider = $product->search();
+			if ($model->is_brand) {
+				$products_data_provider = $product->searchForBrand($model);
+			} else {
+				$products_data_provider = $product->search();
+			}
+			
 			$products_data_provider->setPagination(array('pageSize' => 12));
 			
 			$this->render('view',array(

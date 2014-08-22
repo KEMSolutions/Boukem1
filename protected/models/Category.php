@@ -14,7 +14,7 @@
  * @property Category[] $children
  * @property CategoryLocalization[] $categoryLocalizations
  * @property Product[] $products
- * @property Product[] $products1
+ * @property Product[] $branded_products
  */
 class Category extends CActiveRecord
 {
@@ -87,7 +87,7 @@ class Category extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		
 		$criteria->compare('id',$this->id);
 		$criteria->compare('parent_category',$this->parent_category);
 		$criteria->compare('visible',$this->visible);

@@ -149,7 +149,31 @@ class Product extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function searchForBrand($brand)
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
 
+		$criteria=new CDbCriteria;
+		
+		
+       $criteria->compare('brand_id' , $brand->id);
+       
+	   $criteria->compare('t.visible',$this->visible);
+		
+		if ($this->restrictScopeToCurrentLocale){
+			$criteria->with = array('productLocalization');
+			
+		}
+		
+		
+		
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
