@@ -163,17 +163,34 @@ class CategoryController extends WebController
 		$this->alternatives = $alternatives;
 		
 		// Generate the subcategories to display in the sidebar.
-		$this->menu=array();
-		foreach ($model->children as $child){
+		// Generate the subcategories to display in the sidebar.
+		$children_cache_id = Yii::app()->request->hostInfo . " CategoryController:[children_cats_for_cat] " . $model->id;
+		$cache_duration = 300;
+		$menu_array = Yii::app()->cache->get($children_cache_id);
+		
+		if (!$menu_array) {
 			
-			if (!$child->visible)
-				continue;
+			$menu_array = array();
 			
-			$localization = $child->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
+			$children = new Category();
+	        $children->unsetAttributes();
+			$children->visible = 1;
+			$children->id = $model->id;
+			$category_data_provider = $children->searchChildren();
+		
+			foreach ($category_data_provider->getData() as $child){
+	
+				if ($this->isB2b()){
+					// In a B2B store, we show a list of products so users can select many products at once
+					$menu_array[] = array('label'=>$child->categoryLocalization->name, 'url'=>array('category/list', "slug"=>$child->categoryLocalization->slug));
+				} else {
+					$menu_array[] = array('label'=>$child->categoryLocalization->name, 'url'=>array('category/view', "slug"=>$child->categoryLocalization->slug));
+				}
+			}
 			
-			if ($localization !== null)
-				$this->menu[] = array('label'=>$localization->name, 'url'=>array('category/view', "slug"=>$localization->slug));
+			Yii::app()->cache->set($children_cache_id, $menu_array, $cache_duration);
 		}
+		$this->menu = $menu_array;
 		
 		
 		if ($model->parent_category){
@@ -215,7 +232,12 @@ class CategoryController extends WebController
 			
 			$product->restrictScopeToCurrentLocale = false;
 			
-			$products_data_provider = $product->search();
+			if ($model->is_brand) {
+				$products_data_provider = $product->searchForBrand($model);
+			} else {
+				$products_data_provider = $product->search();
+			}
+			
 			$products_data_provider->setPagination(array('pageSize' => 100));
 			
 			$this->render('list',array(
