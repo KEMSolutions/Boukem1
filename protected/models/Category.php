@@ -18,6 +18,7 @@
  */
 class Category extends CActiveRecord
 {
+	public $restrictScopeToCurrentLocale = true;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -52,6 +53,7 @@ class Category extends CActiveRecord
 			'parentCategory' => array(self::BELONGS_TO, 'Category', 'parent_category'),
 			'children' => array(self::HAS_MANY, 'Category', 'parent_category'),
 			'categoryLocalizations' => array(self::HAS_MANY, 'CategoryLocalization', 'category_id'),
+			'categoryLocalization' => array(self::HAS_ONE, 'CategoryLocalization', 'category_id', 'scopes' => array('locale'), 'joinType' => 'INNER JOIN'),
 			'branded_products' => array(self::HAS_MANY, 'Product', 'brand_id'),
 			'products' => array(self::MANY_MANY, 'Product', 'product_has_category(category_id, product_id)'),
 		);
@@ -97,7 +99,35 @@ class Category extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	
+	
+	public function searchChildren()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
 
+		$criteria=new CDbCriteria;
+		
+		
+		
+        $criteria->compare('parent_category' , $this->id);
+		$criteria->compare('t.visible',$this->visible);
+		
+		if ($this->restrictScopeToCurrentLocale){
+			$criteria->with = array('categoryLocalization');
+			$criteria->order = "categoryLocalization.name ASC";
+			
+		}
+		
+		
+		
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination'=>false,
+		));
+	}
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

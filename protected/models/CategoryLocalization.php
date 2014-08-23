@@ -55,6 +55,15 @@ class CategoryLocalization extends CActiveRecord
 			'locale' => array(self::BELONGS_TO, 'Locale', 'locale_id'),
 		);
 	}
+	
+    public  function scopes()
+    {
+        return array(
+            'locale'=>array(
+                'condition'=>'locale_id="' . Yii::app()->language . '"',
+            ),
+        );
+    }
 
 	/**
 	 * @return array customized attribute labels (name=>label)

@@ -4,23 +4,6 @@
 
 $this->breadcrumbs=null;
 
-$this->menu=array();
-foreach ($model->children as $children){
-	
-	$childLocalization = $children->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
-	if ($childLocalization && $children->visible){
-		
-		
-		if ($this->isB2b()){
-			// In a B2B store, we show a list of products so users can select many products at once
-			$this->menu[] = array('label'=>$childLocalization->name, 'url'=>array('category/list', "slug"=>$childLocalization->slug));
-		} else {
-			$this->menu[] = array('label'=>$childLocalization->name, 'url'=>array('category/view', "slug"=>$childLocalization->slug));
-		}
-		
-	}
-		
-}
 
 $this->pageTitle = $localization->name;
 

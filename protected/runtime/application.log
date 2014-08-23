@@ -2950,3 +2950,93 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/en/site/loginb2b?email=remy.vanherweghem%40gmail.com&timestamp=1407276376&check=pvTbxfltFyFESjCSdGbcooy1&hash=e4c149fb2481c63d018dd781c1f951fad7851bff73721c779c2c99b5b07cbbcbc1437cc67449d583fc9df4c9ac661e1762c96036eee01b59f90cf48cceccd0ca
 ---
+2014/08/22 20:03:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:264
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php(19): CategoryController->loadLocalizationModelSlug('fr-categories')
+#1 [internal function]: CategoryController->actionView('fr-categories')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/en/cat/fr-categories.html
+---
+2014/08/22 20:03:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:264
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php(19): CategoryController->loadLocalizationModelSlug('fr-sujets-de-sa...')
+#1 [internal function]: CategoryController->actionView('fr-sujets-de-sa...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/en/cat/fr-sujets-de-sante.html
+---
+2014/08/22 20:05:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:262
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php(19): CategoryController->loadLocalizationModelSlug('fr-genestra-ser...')
+#1 [internal function]: CategoryController->actionView('fr-genestra-ser...')
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('category/view')
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/en/cat/fr-genestra-seroyal.html
+HTTP_REFERER=http://dev.boutiquekem.com/en/cat/en-brands.html
+---
+2014/08/22 20:12:38 [error] [php] Undefined variable: model (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:63)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CategoryController->runAction()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CategoryController->runActionWithFilters()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CategoryController->run()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/cat/fr-vitamines-et-supplements.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php (63)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php (75)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/08/22 20:18:57 [error] [php] Undefined variable: cat (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:36)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CategoryController->runAction()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CategoryController->runActionWithFilters()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CategoryController->run()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/cat/fr-vitamines-et-supplements.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php (36)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/08/22 20:21:53 [error] [php] Undefined variable: category_data_provider (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php:134)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): CategoryController->runAction()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): CategoryController->runActionWithFilters()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): CategoryController->run()
+#5 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/cat/fr-marques.html
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/CategoryController.php (134)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)

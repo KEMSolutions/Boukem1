@@ -33,18 +33,34 @@ class CategoryController extends WebController
 		$this->alternatives = $alternatives;
 		
 		// Generate the subcategories to display in the sidebar.
-		# TODO Cache this before launch
-		$this->menu=array();
-		foreach ($model->children as $child){
+		$children_cache_id = Yii::app()->request->hostInfo . " CategoryController:[children_cats_for_cat] " . $model->id;
+		$cache_duration = 300;
+		$menu_array = Yii::app()->cache->get($children_cache_id);
+		
+		if (!$menu_array) {
 			
-			if (!$child->visible)
-				continue;
+			$menu_array = array();
 			
-			$localization = $child->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
+			$children = new Category();
+	        $children->unsetAttributes();
+			$children->visible = 1;
+			$children->id = $model->id;
+			$category_data_provider = $children->searchChildren();
+		
+			foreach ($category_data_provider->getData() as $child){
+	
+				if ($this->isB2b()){
+					// In a B2B store, we show a list of products so users can select many products at once
+					$menu_array[] = array('label'=>$child->categoryLocalization->name, 'url'=>array('category/list', "slug"=>$child->categoryLocalization->slug));
+				} else {
+					$menu_array[] = array('label'=>$child->categoryLocalization->name, 'url'=>array('category/view', "slug"=>$child->categoryLocalization->slug));
+				}
+			}	
 			
-			if ($localization !== null)
-				$this->menu[] = array('label'=>$localization->name, 'url'=>array('category/view', "slug"=>$localization->slug));
+			Yii::app()->cache->set($children_cache_id, $menu_array, $cache_duration);
 		}
+		$this->menu = $menu_array;
+		
 		
 		
 		if ($model->parent_category){
@@ -53,24 +69,25 @@ class CategoryController extends WebController
 			
 			// Display breadcrumbs in the right order (home >> root category >> subcategory 1 >> subcatory 2, etc.)
 			$this->breadcrumbs = array();
-			function appendMotherCatToBreadcrumbs($cat, &$breadarray, $locale){
+			function appendMotherCatToBreadcrumbs($cat, &$breadarray){
 
-                $locale_category = CategoryLocalization::model()->find("category_id = :category AND locale_id = :locale", array(":category"=>$cat->id, ":locale"=>$locale));
+                $locale_category = $cat->categoryLocalization;
 
 
 				$breadarray[$locale_category->name] = array("category/view", "slug"=>$locale_category->slug);
 				if ($cat->parent_category){
-					appendMotherCatToBreadcrumbs($cat->parentCategory, $breadarray, $locale);
+					appendMotherCatToBreadcrumbs($cat->parentCategory, $breadarray);
 				}
 
 			}
 
 
 			if ($model->parent_category){
-				appendMotherCatToBreadcrumbs($model->parentCategory, $this->breadcrumbs, Yii::app()->language);
+				appendMotherCatToBreadcrumbs($model->parentCategory, $this->breadcrumbs);
 				// The array returned is reversed (top category at the end) we need to reverse it.
 				$this->breadcrumbs = array_reverse($this->breadcrumbs);
 			}
+			
 			// We're at the end of the run, just append our name
 			$this->breadcrumbs[] = $model_localization->name;
 			
@@ -93,6 +110,14 @@ class CategoryController extends WebController
 			
 			$products_data_provider->setPagination(array('pageSize' => 12));
 			
+			
+            $children = new Category();
+            $children->unsetAttributes();
+			$children->visible = 1;
+			$children->id = $model->id;
+			$category_data_provider = $children->searchChildren();
+			
+			
 			$this->render('view',array(
 				'model'         => $model,
 				'localization'  => $model_localization,
@@ -102,6 +127,8 @@ class CategoryController extends WebController
 		} else {
 			// We're dealing with a top category
 			// Top categories will NOT display products but some static html invite to choose a subcategory
+			
+					
 			$this->render('rootcat',array(
 				'model'=>$model,
 				'localization'=>$model_localization,
