@@ -34,7 +34,7 @@ class SiteController extends WebController
 		
 		if (Yii::app()->user->isGuest){
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguage] " . Yii::app()->language;
-			$cache_duration = 10;//10800;
+			$cache_duration = 1600;//10800;
 		} else {
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguageUser] " . Yii::app()->language . " - " . Yii::app()->user->user->id;
 			$cache_duration = 1600;
