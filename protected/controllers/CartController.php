@@ -436,13 +436,13 @@ class CartController extends WebController
 			$shipping_addr1 = Yii::app()->request->getPost("shipping_addr1", null);
 			$shipping_addr2 = Yii::app()->request->getPost('shipping_addr2', null);
 			$shipping_city = Yii::app()->request->getPost('shipping_city', null);
-			$shipping_region = Yii::app()->request->getPost('shipping_region', null);
+			$shipping_province = Yii::app()->request->getPost('shipping_region', null);
 			$shipping_postcode = Yii::app()->request->getPost('shipping_postcode', null);
 			$shipping_country = Yii::app()->request->getPost('shipping_country', null);
 		}
 		
 		
-		if (!$billing_addr1 || !$billing_city || !$billing_region || !$billing_postcode || !$billing_country || !$shipping_addr1 || !$shipping_city || !$shipping_region || !$shipping_postcode || !$shipping_country){
+		if (!$billing_addr1 || !$billing_city || !$billing_region || !$billing_postcode || !$billing_country || !$shipping_addr1 || !$shipping_city || !$shipping_province || !$shipping_postcode || !$shipping_country){
 			throw new CHttpException(400,'Invalid request; missing parameters.');
 			
 		}

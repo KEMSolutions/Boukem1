@@ -58,7 +58,7 @@ $cs
 		
 		$cs->registerScript('checkout_general', "
 			
-			
+			var ship_to_billing = 'true';
 			
 			$('#delivery_address').hide();
 			$('[name=\"useSameAddress\"]').change(function(){
@@ -67,8 +67,10 @@ $cs
 					// Add a 'required' attribute to all delivery fields when we don't use the same address
 					if ($(this).val()=='false'){
 						$('[id^=shipping_]').not('#shipping_addr2').not('#shipping_region').attr('required', 'required');
+						ship_to_billing = 'false';
 					} else {
 						$('[id^=shipping_]').removeAttr('required');
+						ship_to_billing = 'true';
 					} 
 					
 				})
@@ -112,7 +114,7 @@ $cs
 						  'billing_region' : $('#billing_region').val(),
 						  'billing_postcode' : $('#billing_postcode').val(),
 						  'billing_country' : $('#billing_country').val(),
-						  'ship_to_billing' : ($('[name=\"useSameAddress\"]').val() == 'true'),
+						  'ship_to_billing' : ship_to_billing,
 						  'shipping_addr1' : $('#shipping_addr1').val(),
 						  'shipping_addr2' : $('#shipping_addr2').val(),
 						  'shipping_city' : $('#shipping_city').val(),
