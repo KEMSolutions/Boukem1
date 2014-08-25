@@ -15,7 +15,7 @@ class ProductController extends WebController
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			'postOnly + delete, thumbnails', // we only allow deletion via POST request
 		);
 	}
 
@@ -28,7 +28,7 @@ class ProductController extends WebController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('view', 'search'),
+				'actions'=>array('view', 'search', 'thumbnails'),
 				'users'=>array('*'),
 			),
 			
@@ -143,6 +143,37 @@ class ProductController extends WebController
 	    return $model;
 	}
 	
+	/**
+	 * Renders a list of formatted html boxes from a posted json array of product ID
+	 * Non existing products id will fail silently. Non existing localizations for current language will return alternative language.
+	 */
+	public function actionThumbnails(){
+		
+		$raw_product_ids = Yii::app()->request->getPost("products", "[]");
+		$limit = Yii::app()->request->getPost("limit", 4);
+		$product_ids = json_decode($raw_product_ids);
+		
+		
+		$array_of_valid_products = array();
+		$counter = 0;
+		foreach ($product_ids as $product_id) {
+			
+			
+			$product = Product::model()->findByPk($product_id);
+			if ($product){
+				$array_of_valid_products[] = $product;
+			}
+			$counter++;
+
+			if ($counter >= $limit)
+				break;
+
+		}
+		
+		$this->renderPartial('_product_thumbnail', array("items"=>$array_of_valid_products, 'style'=>"large"));
+		
+		
+	}
 	
 	
 	/**

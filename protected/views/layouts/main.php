@@ -57,6 +57,7 @@ $cs
 	->registerScriptFile('/js_assets/fancybox/jquery.fancybox.pack.js?v=2.1.5',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/fraction/jquery.fractionslider.min.js',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/fraction/jquery.fractionslider.init.js',CClientScript::POS_END)
+	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/imagesloaded.pkgd.min.js',CClientScript::POS_END)
 	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.ebright.custom.js',CClientScript::POS_END)
 	->registerScriptFile('/js/boukem.js',CClientScript::POS_END)
 		

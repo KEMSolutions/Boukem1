@@ -55,6 +55,20 @@ endif; ?>
 	        	<div id="masonryWr" class="row">
 <?php $this->renderPartial('_promoted', array("items"=>$items->promoted, 'style'=>'normal', 'limit'=>8)); ?>
 				</div>
+				
+			    <div class="section-title color-one product_history_title hidden">
+			        <h3><?php echo Yii::t("app", "Articles récemment vus"); ?></h3>
+			        <div class="indicator-down color-one"></div>
+			    </div>
 			</div>
 		</div>
 	</section>
+	
+	
+	<section class="slice color-two product_history_box hidden" data-limit='4'> 
+		
+		<div class="text-center"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
+	                
+    
+	</section>
+	
