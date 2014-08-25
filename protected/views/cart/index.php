@@ -3,188 +3,250 @@
 
 $this->pageTitle = Yii::t("app", "Panier");
 $this->breadcrumbs = null;
+
+$cart_is_empty = $dataProvider->totalItemCount < 1;
+
+
 ?>
 
 		<?php
 		
 		// Register chosen script
 		
-		$cs = Yii::app()->clientScript;
-		$themePath = Yii::app()->theme->baseUrl;
+		if ($cart_is_empty) {
+			$this->layout = "//layouts/freestyle";
+		} else {
+			
+			$cs = Yii::app()->clientScript;
+			$themePath = Yii::app()->theme->baseUrl;
 		
-		$login_url = $this->createUrl('site/login');
+			$login_url = $this->createUrl('site/login');
 		
-		$update_url = $this->createUrl('cart/update');
-		$remove_url = $this->createUrl('cart/remove');
-		$estimate_url = $this->createUrl('cart/estimate');
-		Yii::app()->user->returnUrl = $this->createUrl('index');
+			$update_url = $this->createUrl('cart/update');
+			$remove_url = $this->createUrl('cart/remove');
+			$estimate_url = $this->createUrl('cart/estimate');
+			Yii::app()->user->returnUrl = $this->createUrl('index');
 		
 		
-		$cs->registerScriptFile('/js/chosen.jquery.min.js',CClientScript::POS_END)
+			$cs->registerScriptFile('/js/chosen.jquery.min.js',CClientScript::POS_END)
 
-		    ->registerScript('chosen',
-		        "$('select').chosen({});
+			    ->registerScript('chosen',
+			        "$('select').chosen({});
 					
-					function updateChosenSelects() {
+						function updateChosenSelects() {
 					
-						var chosenCountry = $('#country').val();
-						if (chosenCountry == 'CA' || chosenCountry == 'US'){
-							$('#postcode').removeAttr('disabled');
-							$('#province').removeAttr('disabled');
+							var chosenCountry = $('#country').val();
+							if (chosenCountry == 'CA' || chosenCountry == 'US'){
+								$('#postcode').removeAttr('disabled');
+								$('#province').removeAttr('disabled');
+								$('#province').trigger('chosen:updated');
+							} else {
+								$('#province').attr('disabled','disabled');
+								$('#postcode').attr('disabled');
+							}
+					
+							$('#province optgroup').attr('disabled','disabled');
+					
+							if (chosenCountry == 'CA' || chosenCountry == 'US' || chosenCountry == 'MX'){
+								$('#province [data-country=\"' + chosenCountry + '\"]').removeAttr('disabled');
+							}
+					
 							$('#province').trigger('chosen:updated');
-						} else {
-							$('#province').attr('disabled','disabled');
-							$('#postcode').attr('disabled');
 						}
 					
-						$('#province optgroup').attr('disabled','disabled');
+					$('#country').chosen().change( function(){
 					
-						if (chosenCountry == 'CA' || chosenCountry == 'US' || chosenCountry == 'MX'){
-							$('#province [data-country=\"' + chosenCountry + '\"]').removeAttr('disabled');
-						}
+						updateChosenSelects();
 					
-						$('#province').trigger('chosen:updated');
-					}
+						} );"
+			        ,CClientScript::POS_READY)
 					
-				$('#country').chosen().change( function(){
-					
-					updateChosenSelects();
-					
-					} );"
-		        ,CClientScript::POS_READY)
-					
-				    ->registerScript('estimate',
-				        "function updateTotal(){
-							var total_price = parseFloat($('#price_subtotal').text()) + parseFloat($('#price_transport').text()) + parseFloat($('#price_taxes').text());
-							$('#price_total').text(total_price.toFixed(2));
-						};
+					    ->registerScript('estimate',
+					        "function updateTotal(){
+								var total_price = parseFloat($('#price_subtotal').text()) + parseFloat($('#price_transport').text()) + parseFloat($('#price_taxes').text());
+								$('#price_total').text(total_price.toFixed(2));
+							};
 						
-						var checkoutEnabled = false;
-						function enableCheckout(){
-							$('#estimateButton').removeClass('btn-primary');
-							$('#estimateButton').addClass('btn-default');
-							$('#checkoutButton').addClass('btn-primary');
-							$('#checkoutButton').tooltip('disable');
-							checkoutEnabled = true;
-						}
+							var checkoutEnabled = false;
+							function enableCheckout(){
+								$('#estimateButton').removeClass('btn-primary');
+								$('#estimateButton').addClass('btn-default');
+								$('#checkoutButton').addClass('btn-primary');
+								$('#checkoutButton').tooltip('disable');
+								checkoutEnabled = true;
+							}
 						
 						
-						function fetchEstimate(){
-							$('#estimate').html('<div class=\'text-center\'><i class=\"fa fa-spinner fa-3x fa-spin\"></i></div>');
-							$.ajax({
-							  type: 'POST',
-							  dataType: 'json',
-							  url: '$estimate_url',
-							  data: {'country':$(\"#country\").val(), 'province':$(\"#province\").val(), 'postcode':$(\"#postcode\").val(),'email':$(\"#customer_email\").val()},
-							  success: function(data){
+							function fetchEstimate(){
+								$('#estimate').html('<div class=\'text-center\'><i class=\"fa fa-spinner fa-3x fa-spin\"></i></div>');
+								$.ajax({
+								  type: 'POST',
+								  dataType: 'json',
+								  url: '$estimate_url',
+								  data: {'country':$(\"#country\").val(), 'province':$(\"#province\").val(), 'postcode':$(\"#postcode\").val(),'email':$(\"#customer_email\").val()},
+								  success: function(data){
 								  
-								  $('#estimate').html(data.shipping_block);
-								  $('#price_taxes').text(data.taxes.toFixed(2));
+									  $('#estimate').html(data.shipping_block);
+									  $('#price_taxes').text(data.taxes.toFixed(2));
 								  
-								  // Register the received radio buttons to trigger a total update
-								  $(\".shipping_method\").change(function(){
-									  	$('#price_transport').text($(this).attr('data-cost'));
+									  // Register the received radio buttons to trigger a total update
+									  $(\".shipping_method\").change(function(){
+										  	$('#price_transport').text($(this).attr('data-cost'));
 										
-										updateTotal();
-										enableCheckout();
-									  });
+											updateTotal();
+											enableCheckout();
+										  });
 								  
-							 },
-							 error: function(xhr, textStatus){
+								 },
+								 error: function(xhr, textStatus){
 								 
-								 if (xhr.status == 403){
-									 window.location.replace('$login_url');
-									 return;
+									 if (xhr.status == 403){
+										 window.location.replace('$login_url');
+										 return;
+									 }
+								 
+									 $('#estimate').html('<div class=\"alert alert-danger\">Une erreur est survenue. Veuillez vérifier les informations fournies.</div>');
 								 }
-								 
-								 $('#estimate').html('<div class=\"alert alert-danger\">Une erreur est survenue. Veuillez vérifier les informations fournies.</div>');
-							 }
 							  
-							});
-						}
+								});
+							}
 						
-						$('#estimateButton').click(function( event ){
+							$('#estimateButton').click(function( event ){
 							
-							event.preventDefault();
-							fetchEstimate();
+								event.preventDefault();
+								fetchEstimate();
 							
-						});
-						"
-				        ,CClientScript::POS_READY)
-						    ->registerScript('checkout',
-						        "$('#checkoutButton').click( function(event){
+							});
+							"
+					        ,CClientScript::POS_READY)
+							    ->registerScript('checkout',
+							        "$('#checkoutButton').click( function(event){
 									
 									
-									if (!checkoutEnabled){
-										event.preventDefault();
-									}
-									});"
-						        ,CClientScript::POS_READY)
+										if (!checkoutEnabled){
+											event.preventDefault();
+										}
+										});"
+							        ,CClientScript::POS_READY)
 									
-									->registerScript('update_quantity',
-						        "$('.update_cart_quantity').click( function(){
+										->registerScript('update_quantity',
+							        "$('.update_cart_quantity').click( function(){
 										
-										var row = $(this).closest('tr');
-										var product_id = row.attr('data-product');
-										var quantity = row.find('.quantity_field').val();
+											var row = $(this).closest('tr');
+											var product_id = row.attr('data-product');
+											var quantity = row.find('.quantity_field').val();
 										
-										$.post( '$update_url', { product: product_id, quantity: quantity })
-										  .done(function( data ) {
-										    location.reload();
-										  });
+											$.post( '$update_url', { product: product_id, quantity: quantity })
+											  .done(function( data ) {
+											    location.reload();
+											  });
 									
-									});
-									
-									
-									$('.cart_remove_button').click(function(){
-										
-										var row = $(this).closest('tr');
-										var product_id = row.attr('data-product');
-										var quantity = row.find('.quantity_field').val();
-										
-										$.post( '$remove_url', { product: product_id })
-										  .done(function( data ) {
-										    location.reload();
-										  });
-										
 										});
 									
-									"
-						        ,CClientScript::POS_READY);
+									
+										$('.cart_remove_button').click(function(){
+										
+											var row = $(this).closest('tr');
+											var product_id = row.attr('data-product');
+											var quantity = row.find('.quantity_field').val();
+										
+											$.post( '$remove_url', { product: product_id })
+											  .done(function( data ) {
+											    location.reload();
+											  });
+										
+											});
+									
+										"
+							        ,CClientScript::POS_READY);
 		
 		
-		if (Yii::app()->session['cart_country']){
-			$cart_country = CJavaScript::quote(Yii::app()->session['cart_country']);
-			$cart_province = CJavaScript::quote(Yii::app()->session['cart_province']);
+			if (Yii::app()->session['cart_country']){
+				$cart_country = CJavaScript::quote(Yii::app()->session['cart_country']);
+				$cart_province = CJavaScript::quote(Yii::app()->session['cart_province']);
 			
-			// A country was specified for the session, select if in the list with javascript
-			$cs->registerScript('auto_fill_country',"$('#country').val('$cart_country'); $('#country').trigger('chosen:updated'); updateChosenSelects();", CClientScript::POS_READY);
+				// A country was specified for the session, select if in the list with javascript
+				$cs->registerScript('auto_fill_country',"$('#country').val('$cart_country'); $('#country').trigger('chosen:updated'); updateChosenSelects();", CClientScript::POS_READY);
 			
 			
-			if (($cart_country === "CA" || $cart_country === "US" || $cart_country === "MX") && $cart_province) {
+				if (($cart_country === "CA" || $cart_country === "US" || $cart_country === "MX") && $cart_province) {
 				
-				$cs->registerScript('auto_fill_province',"$('#province').val('$cart_province'); $('#province').trigger('chosen:updated');", CClientScript::POS_READY);
+					$cs->registerScript('auto_fill_province',"$('#province').val('$cart_province'); $('#province').trigger('chosen:updated');", CClientScript::POS_READY);
 				
+				}
+			
+			
+				if (Yii::app()->user->user->postcode && Yii::app()->user->user->postcode !== "" && $dataProvider->totalItemCount > 0){
+				
+					$cs->registerScript('auto_fetch_estimate',"fetchEstimate();", CClientScript::POS_READY);
+				
+				}
+			
 			}
+		
+		
+			$cs->registerCssFile('/css/chosen.min.css');
+		
+		
+		
 			
 			
-			if (Yii::app()->user->user->postcode && Yii::app()->user->user->postcode !== "" && $dataProvider->totalItemCount > 0){
-				
-				$cs->registerScript('auto_fetch_estimate',"fetchEstimate();", CClientScript::POS_READY);
-				
-			}
-			
-		}
-		
-		
-		$cs->registerCssFile('/css/chosen.min.css');
-		
-		
-		
+		} // end of $cart_is_empty
+
 		
 			
 		?>
 
+<?php if ($cart_is_empty) : ?>
+<section class="slice color-one">
+    <div class="w-section inverse">
+    	<div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="aside-feature">
+                        <div class="row">
+                            
+							 <div class="col-xs-12">
+							<div class="text-center">
+							                    	<h2><?php echo Yii::t("app", "Votre panier est vide."); ?></h2>
+							                    	<h1 class="font-lg">
+							                        	<i class="fa fa-shopping-cart"></i>                        </h1>
+                        
+							                        <span class="clearfix"></span>
+
+							                    </div>
+											</div>
+							
+							
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        
+        </div>
+ 	</div>  
+                       
+    <div class="section-title color-two product_history_title hidden">
+        <h3><?php echo Yii::t("app", "Articles récemment vus"); ?></h3>
+        <div class="indicator-down color-two"></div>
+    </div>
+
+</section>
+
+
+
+	
+
+<section class="slice color-two product_history_box hidden" data-limit='4'> 
+	<div class="text-center"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
+	
+ 
+</section>
+
+
+<?php else: ?>
 <section class="slice bg-3">
     <div class="w-section inverse shop">
         <div class="container">
@@ -207,13 +269,13 @@ $this->breadcrumbs = null;
                 </div>
             </div>
            
+		
+		   
         </div>
     </div>
 </section>
 
-
- 
-                            
+                       
                                
 
 <form method="post" action="<?php echo $this->createUrl('cart/checkout'); ?>" id="cart_form" class="<?php if ($dataProvider->totalItemCount == 0) {echo 'hidden'; } ?>">
@@ -648,3 +710,4 @@ $this->breadcrumbs = null;
   </div>
 </div>
 </form>
+<?php endif; ?>

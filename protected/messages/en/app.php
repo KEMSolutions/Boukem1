@@ -132,6 +132,6 @@ return array(
 	"Nous suivre..."=>"Follow Us",
 	"Infolettre"=>"Newsletter",
 	"Inscrivez vous à notre infolettre pour recevoir des nouvelles et offres exclusives!"=>"Sign up if you would like to receive occasional news and treats from us.",
-	
+	"Articles récemment vus"=>"Recently viewed",
 );
 ?>

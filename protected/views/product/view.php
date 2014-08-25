@@ -64,7 +64,7 @@ if ($regular_price !== $current_price){
                                         
                 <div class="col-sm-4">
                     
-                    <div class="widget  pricing-plans">
+                    <div class="widget pricing-plans" id="product_info_box" data-product="<?php echo $model->id; ?>">
 	                    <div class="w-box popular">
 	                        <h2 class="plan-title" itemprop="name"><?php echo CHtml::encode($localization->name); ?></h2>
 	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><span>$</span><?php echo $current_price; ?></h3></span>
