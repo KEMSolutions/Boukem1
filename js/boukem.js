@@ -61,8 +61,8 @@ function pageInitialization(){
 if( $('#product_info_box').length ){
 	var product_id = $('#product_info_box').attr("data-product");
 	var visited_products;
-	if (sessionStorage.getItem("product_history")){
-		visited_products = JSON.parse(sessionStorage.getItem("product_history"));
+	if (localStorage.getItem("product_history")){
+		visited_products = JSON.parse(localStorage.getItem("product_history"));
 	} else {
 		visited_products = [];
 	}
@@ -72,16 +72,16 @@ if( $('#product_info_box').length ){
 	}
 	visited_products.unshift(product_id);
 	var visited_string = JSON.stringify(visited_products.slice(0,25));
-	sessionStorage.setItem('product_history',visited_string);
+	localStorage.setItem('product_history',visited_string);
 }
 
 // On pages where a product history section is included (index, cart), fetch a pre-formatted html list prior to initialize our buy buttons
-if ($(".product_history_box").length && sessionStorage.getItem("product_history")){
+if ($(".product_history_box").length && localStorage.getItem("product_history")){
 	$(".product_history_title").removeClass("hidden");
 	$(".product_history_box").removeClass("hidden");
 	
 	// Post the JSON formatted list of recent product IDs
-	$.post( "/" + page_lang + "/product/thumbnails", { "products": sessionStorage.getItem("product_history"), "limit": $(".product_history_box").attr("data-limit")}, function( data ) {
+	$.post( "/" + page_lang + "/product/thumbnails", { "products": localStorage.getItem("product_history"), "limit": $(".product_history_box").attr("data-limit")}, function( data ) {
 		$(".product_history_box").html(data);
 		var container = $('.product_history_box');
 		
@@ -98,6 +98,3 @@ if ($(".product_history_box").length && sessionStorage.getItem("product_history"
 	// Initialize the buy button and cart counter immediatly
 	pageInitialization();
 }
-
-
-

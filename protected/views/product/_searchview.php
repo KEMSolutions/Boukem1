@@ -2,7 +2,7 @@
 /* @var $this ProductController */
 /* @var $data ProductLocalization */
 
-$product = Product::model()->findByPk($data->id);
+$product = Product::model()->findByPk($data->product_id);
 $product_link = $this->createUrl('view', array('slug'=>$data->slug));
 
 
