@@ -6,13 +6,14 @@ $this->pageTitle = Yii::t('app', 'Retours et échanges');
 ?>
 
 <?php if (Yii::app()->language === "fr"): ?>
-<p>Notre politique est de 30 jours. Si 30 jours se sont écoulés depuis la date d'expédition de votre commande, nous ne pouvons malheureusement pas vous proposer un remboursement ou un échange.</p> 
+<p>Toutes les ventes sont finales. En cas de problème avec les produits expédiés (expédition incorrecte de produits, defectuosités, etc.), une demande de retour peut être effectuée en contactant le courriel de support ou le centre d'aide spécifique à la commande. Si 30 jours se sont écoulés depuis la date d'expédition de votre commande, nous ne pouvons malheureusement pas vous proposer un remboursement ou un échange.</p> 
 
-<p>Pour être admissible à un retour, votre article doit être inutilisé et dans le même état que vous l'avez reçu. Il doit également être dans l'emballage original. Notez bien que seuls les articles défectueux et / ou les commandes erronées, à notre seule discrétion, peuvent être remboursés ou échangés.<p> 
+<p>Pour être admissible à un retour, votre article doit être inutilisé et dans le même état que vous l'avez reçu. Il doit également être dans l'emballage original. Notez bien que seuls les articles défectueux et / ou les commandes erronées (contenant des produits différent de ceux achetés), à notre seule discrétion, peuvent être remboursés ou échangés.<p> 
 
 <p>Pour remplir votre déclaration, nous avons besoin d'un reçu ou une preuve d'achat.</p> 
 
-<p>Ne retournez pas votre commande au magasin (s'il y a lieu) ou au manufacturier/fabricant. Prenez contact avec nous et nous nous occuperons de l'ensemble de la procédure de retour pour vous.</p> 
+<p class="strong">Ne retournez pas votre commande au magasin (s'il y a lieu) ou au manufacturier/fabricant. Prenez contact avec nous avant de renvoyer les items afin d'obtenir un Numéro de Retour Préautorisé (RMA) et une étiquette d'expédition. Attention: nous n'accepterons aucun retour sans numéro de retour préautorisé!</p>
+
 
 <p>Certaines situations ne vous rendent éligibles qu'à un remboursement partiel: (le cas échéant) <br /> 
 Tout article non pas dans son état ​​d'origine, est endommagé ou les pièces manquantes pour des raisons non imputables à notre erreur. <br/> 
