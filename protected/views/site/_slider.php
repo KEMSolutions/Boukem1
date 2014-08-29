@@ -4,95 +4,86 @@
         <div class="slider">
         	<div class="fs_loader"></div>
            
-		   <?php foreach ($items as $item): ?> 
-           
-		  <?php if ($item->type === "brand"): 
+		   <?php foreach ($items as $item):
 			   
-			   $brand = Category::model()->findByPk($item->brand_id);
-			   $brand_localization = $brand->localizationForLanguage(Yii::app()->language);
+			   $delay = 100;
+			    ?> 
 			   
-			   if ($brand_localization === null){
-				   continue;
-			   }
 			   
-			   ?>
-			<div class="slide">
-                <img src="<?php echo $base_static_url . $item->background_img; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="200" data-out="top">
-                <img src="<?php echo $base_static_url . $item->display_image; ?>" alt="" data-position="30, -30" data-in="top" data-delay="200" data-out="bottom">
+			   
+        
+        	
+              <div class="slide">
+				  <?php if (isset($item->background)): ?>
+                   <img src="https://cdn.kem.guru/<?php echo $item->background; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="<?php echo $delay; ?>" data-out="top">
+			   <?php endif; ?>
                 
-                <p class="claim color-one" data-position="70,520" data-in="top" data-step="1" data-out="bottom" data-delay="50">
-                	<?php echo CHtml::encode($item->major_title); ?>
-                </p>
-        		<p class="teaser color-two-d" data-position="130,520" data-in="top" data-step="1" data-out="bottom" data-delay="100">
-                	<?php echo CHtml::encode($item->minor_title); ?>
-                </p>		
-        		<p class="text small <?php if ($item->description_color === "light") {echo 'white';} else {echo 'black'; }?>" data-position="180,520" data-in="top" data-step="1" data-out="bottom" data-delay="150">
-               		<?php echo CHtml::encode($item->description); ?>
-                    <br>
-                    <a href="<?php echo $this->createUrl('category/view', array('slug'=>$brand_localization->slug)); ?>" class="btn btn-one"><?php echo CHtml::encode($item->link_title); ?></a>
-                </p>
-            </div>
-			
-		<?php endif; // BRAND ?>
-		
-		
-		   <?php if ($item->type === "category"):
-			   $category = Category::model()->findByPk($item->category_id);
-			   $category_localization = $category->localizationForLanguage(Yii::app()->language);
-			   
-			   if ($category_localization === null){
-				   continue;
-			   }
-			?>
-			<div class="slide">
-                <img src="<?php echo $base_static_url . $item->background_img; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="200" data-out="top">
-                
-                <p class="claim color-one" data-position="70,0" data-in="top" data-step="1" data-out="bottom" data-delay="50">
-                	<?php echo CHtml::encode($item->major_title); ?>
-                </p>
-        		<p class="teaser color-two-d" data-position="130,0" data-in="top" data-step="1" data-out="bottom" data-delay="100">
-                	<?php echo CHtml::encode($item->minor_title); ?>
-                </p>
+   				<?php if (isset($item->images)):
+				 foreach ($item->images as $image): ?>
+   					<img src="https://cdn.kem.guru/<?php echo $image->name; ?>" alt="" data-position="<?php echo $image->position_x; ?>,<?php echo $image->position_y; ?>" data-in="top" data-delay="<?php echo $delay; ?>" data-out="bottom">
+                   <?php
+				   $delay += 10;
+			   	    endforeach;
+					endif; ?>
 				
-        		<p class="text small  <?php if ($item->description_color === "light") {echo 'white';} else {echo 'black'; }?>" data-position="180,0" data-in="top" data-step="1" data-out="bottom" data-delay="150">
-					<?php echo CHtml::encode($item->description); ?>
-                    <br>
-                    <a href="<?php echo $this->createUrl('category/view', array('slug'=>$category_localization->slug)); ?>" class="btn btn-one"><?php echo CHtml::encode($item->link_title); ?></a>
-                </p>
-            </div>
-			
-		<?php endif; // category ?>
-		
-		
-		  <?php if ($item->type === "product_one"): 
-			   
-			   $product = Product::model()->findByPk($item->product_id);
-			   $product_localization = $product->localizationForLanguage(Yii::app()->language);
-			   
-			   if ($product_localization === null){
-				   continue;
-			   }
-			   
-			   ?>
-			<div class="slide">
-                <img src="<?php echo $base_static_url . $item->background_img; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="200" data-out="top">
-                <img src="<?php echo $base_static_url . $item->display_image; ?>" alt="" data-position="<?php echo $item->display_image_y; ?>, <?php echo $item->display_image_x; ?>" data-in="top" data-delay="200" data-out="bottom">
+   				<?php if (isset($item->titles)):
+					 foreach ($item->titles as $title): ?>
+   	                <p class="<?php 
+   					if ($title->type === "h1"){
+   						echo "claim color-one";
+   					} else if ($title->type === "h2") {
+   						echo "teaser color-two-d";	
+   					} else if ($title->type === "h3") {
+   						echo "teaser color-two-l small";
+   					} ?>" data-position="<?php echo $title->position_x; ?>,<?php echo $title->position_y; ?>" data-in="top" data-step="1" data-out="bottom" data-delay="<?php echo $delay; ?>"><?php echo $title->name; ?>
+   	                </p>
+                   <?php
+				    $delay += 10;
+				 endforeach;
+			   endif; ?>
+				
+   				<?php if (isset($item->textboxes)):
+				 foreach ($item->textboxes as $textbox): ?>
+   	        		<p class="text small <?php 
+   					if ($textbox->color === "light"){
+   						echo "white";
+   					} else if ($textbox->color === "dark") {
+   						echo "black";	
+   					} ?>" data-position="<?php echo $textbox->position_x; ?>,<?php echo $textbox->position_y; ?>" data-in="top" data-step="1" data-out="bottom" data-delay="<?php echo $delay; ?>"><?php echo $textbox->box_content; ?>
+   	                </p>
+                   <?php endforeach;
+			   endif; ?>
+				
+   				<?php if (isset($item->links)):
+					 foreach ($item->links as $link): ?>
+   	        		<p class="text small <?php 
+   					if ($textbox->color === "light"){
+   						echo "white";
+   					} else if ($textbox->color === "dark") {
+   						echo "black";	
+   					} ?>" data-position="<?php echo $link->position_x; ?>,<?php echo $link->position_y; ?>" data-in="top" data-step="1" data-out="bottom" data-delay="<?php echo $delay; ?>"><?php echo $link->name; ?>
+   	                </p>
+                   <?php endforeach; ?>
                 
-                <p class="claim color-one" data-position="70,520" data-in="top" data-step="1" data-out="bottom" data-delay="50">
-                	<?php echo CHtml::encode($item->major_title); ?>
-                </p>
-        		<p class="teaser color-two-d" data-position="130,520" data-in="top" data-step="1" data-out="bottom" data-delay="100">
-                	<?php echo CHtml::encode($item->minor_title); ?>
-                </p>		
-        		<p class="text small <?php if ($item->description_color === "light") {echo 'white';} else {echo 'black'; }?>" data-position="180,520" data-in="top" data-step="1" data-out="bottom" data-delay="150">
-               		<?php echo CHtml::encode($item->description); ?>
-                    <br>
-                    <a href="<?php echo $this->createUrl('product/view', array('slug'=>$product_localization->slug)); ?>" class="btn btn-one"><?php echo CHtml::encode($item->link_title); ?></a>
-                </p>
-            </div>
+   			<?php foreach ($item->links as $link):
+				
+				$store_link = "#";
+				
+   				?>
+				
+   				<?php if ($link->type === "button"): ?>
+   				<a href="<?php echo $store_link; ?>" class="btn btn-one" data-position="<?php echo $link->position_x; ?>,<?php echo $link->position_y; ?>" data-in="top" data-step="1" data-out="bottom" data-delay="<?php echo $delay; ?>"><?php echo $link->name; ?></a>
+   			<?php elseif ($link->type === "text"): ?>
+   				<a href="<?php echo $store_link; ?>" data-position="<?php echo $link->position_x; ?>,<?php echo $link->position_y; ?>" data-in="top" data-step="1" data-out="bottom" data-delay="<?php echo $delay; ?>"><?php echo $link->name; ?></a>
+   			<?php elseif ($link->type === "area"): ?>
+   				<a href="<?php echo $store_link; ?>" class="btn btn-one" data-position="<?php echo $link->position_x; ?>,<?php echo $link->position_y; ?>" data-in="top" data-step="1" data-out="bottom" data-delay="<?php echo $delay; ?>" style="opacity:0;"><?php echo $link->name; ?></a>
+   			<?php endif; ?>
+				
+   			<?php endforeach;
+		endif; ?>
 			
-		<?php endif; // PRODUCT_ONE ?>
-		
+               </div>
+            
             
 		<?php endforeach; ?>
 			
