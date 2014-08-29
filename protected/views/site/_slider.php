@@ -15,7 +15,17 @@
         	
               <div class="slide">
 				  <?php if (isset($item->background)): ?>
+					  
+					  <?php if (isset($item->link)): ?>
+					  <a href="<?php echo $item->link; ?>">
+				  <?php endif; ?>
+					  
                    <img src="https://cdn.kem.guru/<?php echo $item->background; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="<?php echo $delay; ?>" data-out="top">
+				   
+ 					  <?php if (isset($item->link)): ?>
+				  </a>
+ 				  <?php endif; ?>
+				   
 			   <?php endif; ?>
                 
    				<?php if (isset($item->images)):
@@ -68,6 +78,18 @@
    			<?php foreach ($item->links as $link):
 				
 				$store_link = "#";
+				
+				if (isset($link->to) && $link->to === "product"){
+					
+					$product = Product::model()->findByPk($link->href);
+					if ($product){
+						$localization = $product->localizationForLanguage(Yii::app()->language);
+						if ($localization){
+							$store_link = $this->createUrl('product/view', array("slug"=>$localization->slug));
+						}
+					} 
+					
+				}
 				
    				?>
 				
