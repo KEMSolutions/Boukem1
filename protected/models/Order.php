@@ -189,7 +189,7 @@ class Order extends CActiveRecord
 		$lastname = $user->lastname ? CHtml::encode($user->lastname) : "";
 		$orderdict["name"] = $firstname . $lastname;
 		
-		$locale = $this->user ? $user->locale->long_code : "en_CA";
+		$locale = Yii::app()->language . "_CA";
 		
 		$orderdict['locale'] = $locale;
 		foreach ($dataProvider->getData() as $relationship){

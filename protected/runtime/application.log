@@ -3860,3 +3860,51 @@ REQUEST_URI=/fr/
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php (2)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (72)
 in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php (14)
+2014/09/03 11:39:03 [error] [php] Undefined property: stdClass::$color (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_slider.php:58)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php(2): SiteController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php(72): SiteController->renderPartial()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): SiteController->runAction()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_slider.php (58)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php (2)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (72)
+2014/09/03 11:39:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « favicon.ico ».' in /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/fr/favicon.ico
+---
+2014/09/03 11:49:27 [error] [php] Use of undefined constant php - assumed 'php' (/var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_slider.php:96)
+Stack trace:
+#0 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php(2): SiteController->renderPartial()
+#2 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php(72): SiteController->renderPartial()
+#6 /var/www/vhosts/kle-en-main.com/Yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(286): SiteController->runAction()
+#9 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/vhosts/kle-en-main.com/Yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/vhosts/kle-en-main.com/Yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/index.php(14): CWebApplication->run()
+REQUEST_URI=/fr/
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_slider.php (96)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/views/site/_index_layout.php (2)
+in /var/www/vhosts/kle-en-main.com/dev.boutiquekem.com/protected/controllers/SiteController.php (72)
