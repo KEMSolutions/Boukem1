@@ -52,6 +52,7 @@ class UserIdentity extends CUserIdentity
 				// Create a user with just a username
 				$user = new User;
 				$user->email = strtolower($this->username);
+				$user->locale_id = Yii::app()->language;
 				$user->save();
 			}
 			

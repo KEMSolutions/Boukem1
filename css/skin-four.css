@@ -429,3 +429,5 @@ div.tabbable.tabs-right  ul.nav-tabs li.active a {
 
 /* PANELS */
 .panel-group .panel-heading{background:#ddd; border-radius:0;}
+#product_long_description {padding:1em;}
+#product_short_description{color:#333333;line-height:150%}

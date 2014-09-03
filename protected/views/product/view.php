@@ -51,7 +51,9 @@ if ($regular_price !== $current_price){
 										<?php endif; ?>
                                         
                                     </ul>
-                                    <?php echo $localization->long_description; ?>
+									<div id="product_long_description">
+                                    	<?php echo $localization->long_description; ?>
+									</div>
                                 </figure>
                             </div>
                             
@@ -75,7 +77,7 @@ if ($regular_price !== $current_price){
 	                            <li><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Livré chez vous rapidement"); ?></li>
 	                            <li><i class="fa fa-lock"></i> <?php echo Yii::t("app", "Transaction sécurisée"); ?></li>
 	                        </ul>          
-	                        <p class="plan-info" itemprop="description"><?php echo strip_tags($localization->short_description); ?></p>
+	                        <p class="plan-info" id="product_short_description" itemprop="description"><?php echo strip_tags($localization->short_description); ?></p>
 	                        <p class="plan-select text-center">
 								<div class="input-qty-detail form-inline text-center">
 									<div class="form-group">

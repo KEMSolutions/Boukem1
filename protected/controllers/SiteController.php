@@ -49,7 +49,7 @@ class SiteController extends WebController
 				$layout_parameters["email"] = Yii::app()->user->user->email;
 			}
 			
-			$output = Yii::app()->curl->get("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/Layout/index", $layout_parameters);
+			$output = Yii::app()->curl->get("https://kle-en-main.com/CloudServices/index.php/Layout/boukem/index", $layout_parameters);
 			
 			
 			$base_dict = json_decode($output);
@@ -70,7 +70,7 @@ class SiteController extends WebController
 				));
 			
 				$layout_html = $this->renderPartial('_index_layout', array("items"=>$base_dict, 'rebates'=>$rebatesDataProvider), true);
-			
+				
 			}
 			
 			Yii::app()->cache->set($cache_id, $layout_html, $cache_duration);

@@ -4,98 +4,108 @@
         <div class="slider">
         	<div class="fs_loader"></div>
            
-		   <?php foreach ($items as $item): ?> 
-           
-		  <?php if ($item->type === "brand"): 
+		   <?php foreach ($items as $content): ?>
 			   
-			   $brand = Category::model()->findByPk($item->brand_id);
-			   $brand_localization = $brand->localizationForLanguage(Yii::app()->language);
-			   
-			   if ($brand_localization === null){
-				   continue;
-			   }
-			   
-			   ?>
-			<div class="slide">
-                <img src="<?php echo $base_static_url . $item->background_img; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="200" data-out="top">
-                <img src="<?php echo $base_static_url . $item->display_image; ?>" alt="" data-position="30, -30" data-in="top" data-delay="200" data-out="bottom">
-                
-                <p class="claim color-one" data-position="70,520" data-in="top" data-step="1" data-out="bottom" data-delay="50">
-                	<?php echo CHtml::encode($item->major_title); ?>
-                </p>
-        		<p class="teaser color-two-d" data-position="130,520" data-in="top" data-step="1" data-out="bottom" data-delay="100">
-                	<?php echo CHtml::encode($item->minor_title); ?>
-                </p>		
-        		<p class="text small <?php if ($item->description_color === "light") {echo 'white';} else {echo 'black'; }?>" data-position="180,520" data-in="top" data-step="1" data-out="bottom" data-delay="150">
-               		<?php echo CHtml::encode($item->description); ?>
-                    <br>
-                    <a href="<?php echo $this->createUrl('category/view', array('slug'=>$brand_localization->slug)); ?>" class="btn btn-one"><?php echo CHtml::encode($item->link_title); ?></a>
-                </p>
-            </div>
-			
-		<?php endif; // BRAND ?>
-		
-		
-		   <?php if ($item->type === "category"):
-			   $category = Category::model()->findByPk($item->category_id);
-			   $category_localization = $category->localizationForLanguage(Yii::app()->language);
-			   
-			   if ($category_localization === null){
-				   continue;
-			   }
-			?>
-			<div class="slide">
-                <img src="<?php echo $base_static_url . $item->background_img; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="200" data-out="top">
-                
-                <p class="claim color-one" data-position="70,0" data-in="top" data-step="1" data-out="bottom" data-delay="50">
-                	<?php echo CHtml::encode($item->major_title); ?>
-                </p>
-        		<p class="teaser color-two-d" data-position="130,0" data-in="top" data-step="1" data-out="bottom" data-delay="100">
-                	<?php echo CHtml::encode($item->minor_title); ?>
-                </p>
+           <div class="slide">
+			   <?php if (isset($content->background) && $content->background !== "") : ?>
+                <img src="https://cdn.kem.guru/<?php echo $content->background; ?>" alt="" height="440" data-position="0,-460" data-in="<?php echo isset($content->data_in) ? $content->data_in : "none"; ?>" data-delay="<?php echo isset($content->data_delay) ? $content->data_delay : "0"; ?>" data-out="<?php echo isset($content->data_out) ? $content->data_out : "none"; ?>">
+			<?php endif; ?>
 				
-        		<p class="text small  <?php if ($item->description_color === "light") {echo 'white';} else {echo 'black'; }?>" data-position="180,0" data-in="top" data-step="1" data-out="bottom" data-delay="150">
-					<?php echo CHtml::encode($item->description); ?>
-                    <br>
-                    <a href="<?php echo $this->createUrl('category/view', array('slug'=>$category_localization->slug)); ?>" class="btn btn-one"><?php echo CHtml::encode($item->link_title); ?></a>
-                </p>
-            </div>
-			
-		<?php endif; // category ?>
-		
-		
-		  <?php if ($item->type === "product_one"): 
-			   
-			   $product = Product::model()->findByPk($item->product_id);
-			   $product_localization = $product->localizationForLanguage(Yii::app()->language);
-			   
-			   if ($product_localization === null){
-				   continue;
-			   }
-			   
-			   ?>
-			<div class="slide">
-                <img src="<?php echo $base_static_url . $item->background_img; ?>" alt="" height="440" data-position="0,-460" data-in="bottom" data-delay="200" data-out="top">
-                <img src="<?php echo $base_static_url . $item->display_image; ?>" alt="" data-position="<?php echo $item->display_image_y; ?>, <?php echo $item->display_image_x; ?>" data-in="top" data-delay="200" data-out="bottom">
+				<?php foreach ($content->images as $element): ?>
+					<?php if (isset($element->name) && isset($element->position_x) && isset($element->position_y)): ?>
+					<img src="https://cdn.kem.guru/<?php echo $element->name; ?>" alt="<?php echo isset($element->alt) ? $element->alt : ""; ?>" data-position="<?php echo $element->position_y; ?>,<?php echo $element->position_x; ?>" data-in="<?php echo isset($element->data_in) ? $element->data_in : "none"; ?>" data-delay="<?php echo isset($element->data_delay) ? $element->data_delay : "0"; ?>" data-out="<?php echo isset($element->data_out) ? $element->data_out : "none"; ?>"<?php if (isset($element->data_fixed) && $element->data_fixed) {echo " data-fixed";} ?> data-step="<?php echo isset($element->data_step) ? $element->data_step : "0"; ?>"<?php if (isset($element->data_special) && $element->data_special === "cycle") {echo " data-special='cycle'"; } ?>>
+				<?php endif; ?>
+                <?php endforeach; ?>
+				
+				<?php foreach ($content->textboxes as $element): ?>
+					<?php if (isset($element->name) && isset($element->position_x) && isset($element->position_y)): ?>
+	                <p class="<?php 
+					if ($element->type === "h1"){
+						echo "claim color-one";
+					} else if ($element->type === "h2") {
+						echo "teaser color-two-d";	
+					} else if ($element->type === "h3") {
+						echo "teaser color-two-l small";
+					} else if ($element->type === "small_light") {
+						echo "text small white";
+					} else if ($element->type === "small_dark") {
+						echo "text small black";
+					} else if ($element->type === "large_light") {
+						echo "white";
+					} else if ($element->type === "large_dark") {
+						echo "black";
+					} ?>" data-position="<?php echo $element->position_y; ?>,<?php echo $element->position_x; ?>" data-in="<?php echo isset($element->data_in) ? $element->data_in : "none"; ?>" data-delay="<?php echo isset($element->data_delay) ? $element->data_delay : "0"; ?>" data-out="<?php echo isset($element->data_out) ? $element->data_out : "none"; ?>"<?php if (isset($element->data_fixed) && $element->data_fixed) {echo " data-fixed";} ?> data-step="<?php echo isset($element->data_step) ? $element->data_step : "0"; ?>"<?php if (isset($element->data_special) && $element->data_special === "cycle") {echo " data-special='cycle'"; } ?>><?php echo $element->name; ?></p>
+					<?php endif; ?>
+                <?php endforeach; ?>
+				
                 
-                <p class="claim color-one" data-position="70,520" data-in="top" data-step="1" data-out="bottom" data-delay="50">
-                	<?php echo CHtml::encode($item->major_title); ?>
-                </p>
-        		<p class="teaser color-two-d" data-position="130,520" data-in="top" data-step="1" data-out="bottom" data-delay="100">
-                	<?php echo CHtml::encode($item->minor_title); ?>
-                </p>		
-        		<p class="text small <?php if ($item->description_color === "light") {echo 'white';} else {echo 'black'; }?>" data-position="180,520" data-in="top" data-step="1" data-out="bottom" data-delay="150">
-               		<?php echo CHtml::encode($item->description); ?>
-                    <br>
-                    <a href="<?php echo $this->createUrl('product/view', array('slug'=>$product_localization->slug)); ?>" class="btn btn-one"><?php echo CHtml::encode($item->link_title); ?></a>
-                </p>
+			<?php foreach ($content->links as $element):
+				
+				$store_link = "#";
+				
+				if (isset($element->to) && $element->to === "product"){
+					
+					$product = Product::model()->findByPk($element->href);
+					if ($product){
+						$localization = $product->localizationForLanguage(Yii::app()->language);
+						if ($localization){
+							$store_link = $this->createUrl('product/view', array("slug"=>$localization->slug));
+						}
+					}
+					
+				} else if (isset($element->to) && $element->to === "category"){
+					
+					$category = Category::model()->findByPk($element->href);
+					if ($category){
+						$localization = $category->localizationForLanguage(Yii::app()->language);
+						if ($localization){
+							$store_link = $this->createUrl('category/view', array("slug"=>$localization->slug));
+						}
+					}
+					
+				}  else if (isset($element->to) && $element->to === "external"){
+					
+					$store_link = $element->href;
+					
+				}
+				
+				
+				if ($store_link):
+				?>
+				
+				<a href="<?php echo $store_link; ?>" class="<?php
+					if (isset($element->type) && $element->type === "button_light"){
+						echo "btn btn-one";
+					} else if (isset($element->type) && $element->type === "button_dark"){
+						echo "btn btn-two";
+					} else if (isset($element->type) && $element->type === "button_primary_large"){
+						echo "btn btn-primary btn-lg";
+					} else if (isset($element->type) && $element->type === "button_primary_small"){
+						echo "btn btn-primary btn-xs";
+					} else if (isset($element->type) && $element->type === "button_default_large"){
+						echo "btn btn-default btn-lg";
+					} else if (isset($element->type) && $element->type === "button_default_small"){
+						echo "btn btn-default btn-xs";
+					} else if (isset($element->type) && $element->type === "button_success_large"){
+						echo "btn btn-success btn-lg";
+					} else if (isset($element->type) && $element->type === "button_success_small"){
+						echo "btn btn-success btn-xs";
+					} else if (isset($element->type) && $element->type === "text"){
+						echo "";
+					} ?>"  data-position="<?php echo $element->position_y; ?>,<?php echo $element->position_x; ?>" data-in="<?php echo isset($element->data_in) ? $element->data_in : "none"; ?>" data-delay="<?php echo isset($element->data_delay) ? $element->data_delay : "0"; ?>" data-out="<?php echo isset($element->data_out) ? $element->data_out : "none"; ?>"<?php if (isset($element->data_fixed) && $element->data_fixed) {echo " data-fixed";} ?> data-step="<?php echo isset($element->data_step) ? $element->data_step : "0"; ?>"<?php if (isset($element->data_special) && $element->data_special === "cycle") {echo " data-special='cycle'"; } ?>><?php echo $element->name; ?></a>
+
+			<?php endif; ?>
+			<?php endforeach; ?>
+			
             </div>
 			
-		<?php endif; // PRODUCT_ONE ?>
-		
-            
 		<?php endforeach; ?>
 			
         </div>
     </div>
 </section>
+   			<?php /* foreach ($item->links as $link):
+				
+				
+			*/	
+   				?>
