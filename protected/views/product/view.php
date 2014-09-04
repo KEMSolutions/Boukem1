@@ -91,6 +91,26 @@ if ($regular_price !== $current_price){
 	                    </div>
 					</div>
                     
+					
+				    <div class="widget">
+				                           <h4 class="widget-heading"><?php echo Yii::t("app", "Partagez")?></h4>
+
+				                           <ul class="categories highlight">
+											   
+					  				                               <li class="facebook_share_button"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $this->createAbsoluteUrl("", array("slug"=>$localization->slug)); ?>">
+					  					     <span class="fa fa-facebook fa-fw"></span> <?php echo Yii::t("app", "Partagez sur Facebook"); ?>
+					  					     </a></li>
+											   
+											   
+				                               <li class="pinterest_share_button"><a href="http://www.pinterest.com/pin/create/button/?url=<?php echo $this->createAbsoluteUrl("", array("slug"=>$localization->slug)); ?>&media=<?php echo $image ? $image->getImageURL(700,700) : ProductImage::placehoderForSize(700,700);?>&description=<?php echo urlencode($localization->name . "\n" . strip_tags($localization->short_description)); ?>" data-pin-do="buttonPin" data-pin-config="above">
+					     <span class="fa fa-pinterest fa-fw"></span> <?php echo Yii::t("app", "Pin it"); ?>
+					     </a></li>
+				                               
+				                           </ul>
+				                       </div>
+					
+					
+					
                     <div class="widget tags-wr">
                         <h4 class="widget-heading"><?php echo Yii::t("app", "Catégories"); ?></h4>
                         <ul class="tags-list">

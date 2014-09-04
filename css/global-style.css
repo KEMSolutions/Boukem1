@@ -281,15 +281,16 @@ color:#DDD;}
 /* FRACTION SLIDER CUSTOMS */
 .slider-wrapper{position:relative; overflow:hidden; width:100%; margin:0 auto; background:#f2f2f2; z-index:800;}
 .slider{position:relative; width:100%; height:440px; margin:0 auto; background:#f2f2f2;}
-.slider-wrapper p{position:absolute; top:-200px; z-index:8000; padding:1% 3%; font-size:24px; line-height:100%; white-space:nowrap;text-transform:uppercase;}
+.slider a {padding: 0.5em;}
+.slider-wrapper p{position:absolute; top:-200px; z-index:8000; padding:0.5em; margin:0; font-size:24px; line-height:100%; white-space:nowrap;text-transform:uppercase;}
 .slider-wrapper p.white{color:#FFF;}
 .slider-wrapper .claim{line-height:100%}	
-.slider-wrapper .teaser{padding:1.5% 1.5%; font-size:14px; line-height:100%}
-.slider-wrapper .small{width:250px; padding-left:1%; padding-right:0px; text-align:center;}
+.slider-wrapper .teaser{font-size:14px; line-height:100%}
+.slider-wrapper .small{width:250px; text-align:center;}
 .slider-wrapper .video{width:540px; height:360px; font-size:13px; line-height:18px; white-space:normal; text-align:left; text-transform:none;}
 .slider-wrapper .video iframe{width:100%;}
-.slider-wrapper .text{width:460px; font-size:13px; line-height:18px; white-space:normal; text-align:left; text-transform:none;}
-.slider-wrapper .text a{margin-top:20px;}
+.slider-wrapper .text{width:460px; padding:0.5em; font-size:13px; line-height:18px; white-space:normal; text-align:left; text-transform:none;}
+/*.slider-wrapper .text a{margin-top:20px;}*/
 
 /* CALL TO ACTION BOX */
 .cta-wr h1{margin:10px 0 !important; font-size:20px; line-height:26px;}

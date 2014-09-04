@@ -133,5 +133,8 @@ return array(
 	"Infolettre"=>"Newsletter",
 	"Inscrivez vous à notre infolettre pour recevoir des nouvelles et offres exclusives!"=>"Sign up if you would like to receive occasional news and treats from us.",
 	"Articles récemment vus"=>"Recently viewed",
+	"Partagez"=>"Share",
+	"Partagez sur Facebook" => "Share it on Facebook",
+	"Pin it"=>"Pin it",
 );
 ?>
