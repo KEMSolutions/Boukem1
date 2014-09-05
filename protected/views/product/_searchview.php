@@ -48,7 +48,7 @@ if ($product !== null):
             
             <span class="w-footer">
                 <span class="pull-left"><small><?php echo $product->getCurrentPrice(); ?> $</small></span>
-				<button class="btn btn-xs btn-two pull-right buybutton" data-product="<?php echo $product->id ?>"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
+				<button class="btn btn-xs btn-two pull-right buybutton" data-product="<?php echo $data->product_id ?>"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
                 <span class="clearfix"></span>
             </span>
         </figure>
