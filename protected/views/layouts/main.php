@@ -31,7 +31,7 @@ $themePath = Yii::app()->theme->baseUrl;
  */
 $cs
     ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
-	->registerCssFile('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+	->registerCssFile('//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
 	->registerCssFile('/js_assets/fancybox/jquery.fancybox.css?v=2.1.5')
 	->registerCssFile('/js_assets/fraction/fractionslider.css')
 	->registerCssFile('/css/global-style.css')
