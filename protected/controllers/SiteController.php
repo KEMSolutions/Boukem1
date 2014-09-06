@@ -20,7 +20,27 @@ class SiteController extends WebController
 			),
 		);
 	}
-
+	
+	
+	public function actionReindex($offset){
+		
+		/*echo "ok!";
+		
+		$product = Product::model()->findByPk(52);
+		$product->save();
+		*/
+		$array_of_products = array();
+		
+		$products = Product::model()->findAll(array("offset"=>$offset, "limit"=>500));
+		foreach ($products as $product) {
+			$array_of_products[] = $product->id;
+			$product->save();
+		}
+		
+		$this->renderJSON($array_of_products);
+		
+	}
+	
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
@@ -170,11 +190,10 @@ class SiteController extends WebController
 				
 			}
 			
-	        
 			
 			
-	        if($model->validate() && $model->save())
-	        {
+			if($model->validate() && $model->save())
+			{
 				
 				$form=new LoginForm;
 				$form->username = $model->email;
@@ -190,7 +209,7 @@ class SiteController extends WebController
 				$this->redirect(Yii::app()->user->returnUrl);
 	        }
 	    }
-	    $this->render('register',array('model'=>$model));
+	    $this->render('register', array('model'=>$model));
 	}
 	
 	/**

@@ -166,9 +166,6 @@ class Product extends CActiveRecord
 			
 		}
 		
-		
-		
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -186,6 +183,82 @@ class Product extends CActiveRecord
 	}
 	
 	
+	public function behaviors()
+	    {
+	        return array(
+	            'searchable' => array(
+	                'class' => 'YiiElasticSearch\SearchableBehavior',
+	            ),
+	        );
+	    }
+	
+	
+	
+	/**
+	 * @param DocumentInterface $document the document where the indexable data must be applied to.
+	 */
+	public function populateElasticDocument(YiiElasticSearch\Document $document)
+	{
+		
+		$document->setId($this->id);
+		$document->visible = $this->visible;
+		if ($this->brand){
+			$brandLocalization = $this->brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+			$document->brand_name = $brandLocalization->name;
+		}
+		
+		$array_of_languages = array();
+		foreach ($this->productLocalizations as $productLocalization){
+			
+			$name_variable = "name_" . $productLocalization->locale_id;
+			$shortDescription_variable = "shortdescription_" . $productLocalization->locale_id;
+			$longDescription_variable = "longdescription_" . $productLocalization->locale_id;
+			$categoriesVariableName = "categories_" . $productLocalization->locale_id;
+			
+			$document->$name_variable = $productLocalization->name;
+			$document->$shortDescription_variable = $productLocalization->short_description;
+			$document->$longDescription_variable = $productLocalization->long_description;
+			
+			$array_of_languages[] = $productLocalization->locale_id;
+			
+			$category_names = array();
+			foreach ($this->categories as $category){
+				
+				$category->_localizationForLanguage = null;
+				$category_localization = $category->localizationForLanguage($productLocalization->locale_id);
+				
+				if ($category_localization){
+					$category_names[] = $category_localization->name;
+				}
+				
+			}
+			
+			$document->$categoriesVariableName = $category_names;
+			
+		}
+		
+		
+		
+		$document->languages = $array_of_languages;
+	}
+	
+	
+	/**
+	* @param DocumentInterface $document the document that is providing the data for this record.
+	*/
+	public function parseElasticDocument(YiiElasticSearch\Document $document)
+	{
+		// You should always set the match score from the result document
+		
+		if ($document instanceof SearchResult)
+		    $this->setElasticScore($document->getScore());
+
+		$this->id = $document->getId();
+		
+		
+	}
+	
+	
 	/**
 	 * Returns a localization for the specified product and language.
 	 * @param string $language The two letter locale id for the language.
@@ -193,9 +266,11 @@ class Product extends CActiveRecord
 	 * @return ProductLocalization the static model class
 	 */
 	public function localizationForLanguage($language, $accept_substitute=false){
+		
 		if ($this->_localizationForLanguage !== null){
 			return $this->_localizationForLanguage;
 		}
+		
 		$criteria = new CDbCriteria;  
 		$criteria->addCondition('product_id=' . $this->id);
 		$criteria->addCondition('locale_id="' . $language .'"');

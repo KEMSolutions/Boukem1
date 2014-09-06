@@ -164,6 +164,6 @@ class Category extends CActiveRecord
 		$this->_localizationForLanguage = $localizationForCategory;
 		return $localizationForCategory;
 	}
-	private $_localizationForLanguage = null;
+	public $_localizationForLanguage = null;
 	
 }

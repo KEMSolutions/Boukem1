@@ -89,22 +89,30 @@ class ProductController extends WebController
 			$this->redirect("/");
 		}
 		
+		$language = Yii::app()->language;
+		
 		$search = new \YiiElasticSearch\Search;
 		
-		$search->query = array(
-		    "query_string" => array('query'=>$q),
-		);
 		
 		$search->filter = array(
-			"term" => array("locale"=>Yii::app()->language, "visible"=>1),
+			"term" => array("language"=>$language, "visible"=>1),
+		);
+		
+		$search->query = array(
+		    "multi_match" => array(
+				'query'=>$q,
+				"fields"=>array("name_" . $language . "^3", "categories_" . $language . "^2", "shortdescription_" . $language, "longdescription_" . $language, "brand_name^2"),
+				"type"=>"most_fields",
+			),
 		);
 		
 		
 		
-		$dataProvider = new \YiiElasticSearch\DataProvider(ProductLocalization::model(), array(
+		$dataProvider = new \YiiElasticSearch\DataProvider(Product::model(), array(
 		        'search' => $search,
 		));
 		$dataProvider->setPagination(array('pageSize' => 48));
+		
 		
 		$this->render('search',array(
 			'dataProvider'=>$dataProvider,
