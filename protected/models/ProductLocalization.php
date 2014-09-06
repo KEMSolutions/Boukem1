@@ -126,7 +126,7 @@ class ProductLocalization extends CActiveRecord
 		return parent::model($className);
 	}
 	
-	
+	public $image_id;
 	
 	/**
 	 * Returns the behaviors for the record class.
