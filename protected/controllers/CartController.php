@@ -379,7 +379,7 @@ class CartController extends WebController
 		// Ping our main store cloud services bridge so the change is repercuted on all the client stores
 		
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,            "https://kle-en-main.com/CloudServices/index.php/BoukemAPI/canadaPostEstimate/listServicesTest?storeid=" . Yii::app()->params['outbound_api_user'] . "&storekey=" . Yii::app()->params['outbound_api_secret'] );
+		curl_setopt($ch, CURLOPT_URL,            "https://kle-en-main.com/CloudServices/index.php/BoukemAPI/canadaPostEstimate/listServices?storeid=" . Yii::app()->params['outbound_api_user'] . "&storekey=" . Yii::app()->params['outbound_api_secret'] );
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
 		curl_setopt($ch, CURLOPT_POST,           1 );
 		curl_setopt($ch, CURLOPT_POSTFIELDS,     $jsonpayload ); 
