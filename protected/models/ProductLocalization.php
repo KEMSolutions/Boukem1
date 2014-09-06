@@ -128,12 +128,9 @@ class ProductLocalization extends CActiveRecord
 	
 	
 	
-	// Elasticsearch stuff
-	public $elasticType = 'product';
-	
 	/**
 	 * Returns the behaviors for the record class.
-	 * @return Array of behaviors (mostly there for adding elasticsearch)
+	 * @return Array of behaviors (mostly there for adding sluggable)
 	 */
 	public function behaviors()
 	    {
@@ -144,69 +141,12 @@ class ProductLocalization extends CActiveRecord
 				      'unique' => true,
 				      'update' => true,
 				),
-	            'searchable' => array(
-	                'class' => 'YiiElasticSearch\SearchableBehavior',
-	            ),
+	            
 	        );
 	    }
 		
 	
-	public $brand_name = null;
-	public $brand_slug = null;
-	public $image_id = null;
 	
-	/**
-     * @param DocumentInterface $document the document where the indexable data must be applied to.
-     */
-	public function populateElasticDocument(YiiElasticSearch\Document $document)
-	    {
-	        $document->setId($this->id);
-	        $document->name = $this->name;
-	        $document->locale   = $this->locale_id;
-		    $document->short_description = $this->short_description;
-			$document->slug = $this->slug;
-			$document->visible = $this->visible;
-			$document->product_id = $this->product_id;
-			
-			$brand = $this->product->brand;
-			if ($brand){
-				$brand_localized = $brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
-				$document->brand_name = $brand_localized->name;
-				$document->brand_slug = $brand_localized->slug;
-			}
-			
-			$main_image = $this->getMainImage();
-			if ($main_image){
-				$document->image_id = $this->getMainImage()->id;
-			}
-			
-	}
-	
-	/**
-	* @param DocumentInterface $document the document that is providing the data for this record.
-	*/
-	public function parseElasticDocument(YiiElasticSearch\Document $document)
-	{
-		// You should always set the match score from the result document
-		
-		if ($document instanceof SearchResult)
-		    $this->setElasticScore($document->getScore());
-
-		$this->id       = $document->getId();
-		$this->name     = $document->name;
-		$this->locale_id   = $document->locale;
-		$this->short_description = $document->short_description;
-		$this->slug = $document->slug;
-		$this->visible = $document->visible;
-		
-		if (isset($document->brand_name)){
-			$this->brand_name = $document->brand_name;
-			$this->brand_slug = $document->brand_slug;
-		}
-		
-		$this->image_id = isset($document->image_id) ? $document->image_id : null;
-		
-	}
 	
 	/**
 	 * Returns the main image for the localization, another localization if none exists, or null if the product has absolutely no image.
