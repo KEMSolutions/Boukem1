@@ -35,9 +35,9 @@ function updateTotal(){
 
 var checkoutEnabled = false;
 function enableCheckout(){
-	$('#estimateButton').removeClass('btn-primary');
+	$('#estimateButton').removeClass('btn-three');
 	$('#estimateButton').addClass('btn-one');
-	$('#checkoutButton').addClass('btn-primary');
+	$('#checkoutButton').addClass('btn-three animated pulse');
 	$('#checkoutButton').tooltip('disable');
 	checkoutEnabled = true;
 }

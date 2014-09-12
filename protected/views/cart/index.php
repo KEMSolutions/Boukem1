@@ -569,7 +569,7 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 		
 	
 		
-				<button class="btn btn-primary" id="estimateButton"><?php echo Yii::t('app', "Calculer les frais"); ?></button>
+				<button class="btn btn-three" id="estimateButton"><?php echo Yii::t('app', "Calculer les frais"); ?></button>
 	
 	</div>
 	<div class="col-md-6 hidden" id="total_column">
