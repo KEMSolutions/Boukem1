@@ -21,7 +21,6 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 			$themePath = Yii::app()->theme->baseUrl;
 		
 			$login_url = $this->createUrl('site/login');
-		
 			$update_url = $this->createUrl('cart/update');
 			$remove_url = $this->createUrl('cart/remove');
 			$estimate_url = $this->createUrl('cart/estimate');
@@ -29,136 +28,21 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 		
 		
 			$cs->registerScriptFile('/js/chosen.jquery.min.js',CClientScript::POS_END)
-
-			    ->registerScript('chosen',
-			        "$('select').chosen({});
-					
-						function updateChosenSelects() {
-					
-							var chosenCountry = $('#country').val();
-							if (chosenCountry == 'CA' || chosenCountry == 'US'){
-								$('#postcode').removeAttr('disabled');
-								$('#province').removeAttr('disabled');
-								$('#province').trigger('chosen:updated');
-							} else {
-								$('#province').attr('disabled','disabled');
-								$('#postcode').attr('disabled');
-							}
-					
-							$('#province optgroup').attr('disabled','disabled');
-					
-							if (chosenCountry == 'CA' || chosenCountry == 'US' || chosenCountry == 'MX'){
-								$('#province [data-country=\"' + chosenCountry + '\"]').removeAttr('disabled');
-							}
-					
-							$('#province').trigger('chosen:updated');
-						}
-					
-					$('#country').chosen().change( function(){
-					
-						updateChosenSelects();
-					
-						} );"
-			        ,CClientScript::POS_READY)
+				
 					
 					    ->registerScript('estimate',
-					        "function updateTotal(){
-								var total_price = parseFloat($('#price_subtotal').text()) + parseFloat($('#price_transport').text()) + parseFloat($('#price_taxes').text());
-								$('#price_total').text(total_price.toFixed(2));
-							};
-						
-							var checkoutEnabled = false;
-							function enableCheckout(){
-								$('#estimateButton').removeClass('btn-primary');
-								$('#estimateButton').addClass('btn-default');
-								$('#checkoutButton').addClass('btn-primary');
-								$('#checkoutButton').tooltip('disable');
-								checkoutEnabled = true;
-							}
-						
-						
-							function fetchEstimate(){
-								$('#estimate').html('<div class=\'text-center\'><i class=\"fa fa-spinner fa-3x fa-spin\"></i></div>');
-								$.ajax({
-								  type: 'POST',
-								  dataType: 'json',
-								  url: '$estimate_url',
-								  data: {'country':$(\"#country\").val(), 'province':$(\"#province\").val(), 'postcode':$(\"#postcode\").val(),'email':$(\"#customer_email\").val()},
-								  success: function(data){
-								  
-									  $('#estimate').html(data.shipping_block);
-									  $('#price_taxes').text(data.taxes.toFixed(2));
-								  
-									  // Register the received radio buttons to trigger a total update
-									  $(\".shipping_method\").change(function(){
-										  	$('#price_transport').text($(this).attr('data-cost'));
-										
-											updateTotal();
-											enableCheckout();
-										  });
-								  
-								 },
-								 error: function(xhr, textStatus){
-								 
-									 if (xhr.status == 403){
-										 window.location.replace('$login_url');
-										 return;
-									 }
-								 
-									 $('#estimate').html('<div class=\"alert alert-danger\">Une erreur est survenue. Veuillez vérifier les informations fournies.</div>');
-								 }
-							  
-								});
-							}
-						
-							$('#estimateButton').click(function( event ){
-							
-								event.preventDefault();
-								fetchEstimate();
-							
-							});
-							"
-					        ,CClientScript::POS_READY)
-							    ->registerScript('checkout',
-							        "$('#checkoutButton').click( function(event){
+					        "
+								var update_url = '$update_url';
+								var remove_url = '$remove_url';
+								var estimate_url = '$estimate_url';
+								var login_url = '$login_url';
+							" ,CClientScript::POS_HEAD)
+							->registerScriptFile('/js/boukem_cart.js',CClientScript::POS_END);
+								
+								
+							   
 									
 									
-										if (!checkoutEnabled){
-											event.preventDefault();
-										}
-										});"
-							        ,CClientScript::POS_READY)
-									
-										->registerScript('update_quantity',
-							        "$('.update_cart_quantity').click( function(){
-										
-											var row = $(this).closest('tr');
-											var product_id = row.attr('data-product');
-											var quantity = row.find('.quantity_field').val();
-										
-											$.post( '$update_url', { product: product_id, quantity: quantity })
-											  .done(function( data ) {
-											    location.reload();
-											  });
-									
-										});
-									
-									
-										$('.cart_remove_button').click(function(){
-										
-											var row = $(this).closest('tr');
-											var product_id = row.attr('data-product');
-											var quantity = row.find('.quantity_field').val();
-										
-											$.post( '$remove_url', { product: product_id })
-											  .done(function( data ) {
-											    location.reload();
-											  });
-										
-											});
-									
-										"
-							        ,CClientScript::POS_READY);
 		
 		
 			if (Yii::app()->session['cart_country']){
@@ -249,10 +133,20 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 <?php else: ?>
 <section class="slice bg-3">
     <div class="w-section inverse shop">
-        <div class="container">
+
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-cart table-responsive">
+						<thead>
+							
+							<tr>
+								<th class="hidden-xs"></th>
+								<th><?php echo Yii::t("app", "Produit"); ?></th>
+								<th><?php echo Yii::t("app", "Prix unitaire"); ?></th>
+								<th><?php echo Yii::t("app", "Quantité"); ?></th>
+								
+						</thead>
+						
                         <tbody>
                            
 <?php
@@ -271,13 +165,11 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
            
 		
 		   
-        </div>
     </div>
 </section>
 
                        
                                
-
 <form method="post" action="<?php echo $this->createUrl('cart/checkout'); ?>" id="cart_form" class="<?php if ($dataProvider->totalItemCount == 0) {echo 'hidden'; } ?>">
 <div class="panel panel-default">
   <div class="panel-heading"><?php echo Yii::t('app', "Taxes et livraison"); ?></div>
@@ -662,14 +554,14 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 		
 		<div class="form-group">
 			
-			<label for="country"><?php echo Yii::t('app', "Code Postal"); ?></label>
+			<label for="country" class="control-label"><?php echo Yii::t('app', "Code Postal"); ?></label>
 			<input type="text" name="postcode" value="<?php echo (!Yii::app()->user->isGuest && Yii::app()->user->user->postcode) ? CHtml::encode(Yii::app()->user->user->postcode) : ''; ?>" placeholder="A1A 1A1" id="postcode" class="form-control">
 		</div>
 		
 		<?php if (Yii::app()->user->isGuest): ?>
 		<div class="form-group">
-			
-			<label for="customer_email"><?php echo Yii::t('app', "Adresse courriel / mail"); ?></label>
+			<span class="hidden label label-info pull-right" id="why_email" data-toggle="tooltip" data-placement="left" data-trigger="click" title="<?php echo Yii::t('app', "Nous gardons votre courriel pour associer dès maintenant votre commande avec vos précédentes, appliquer les rabais associés à votre compte et vous permettre de retrouver votre panier. Nous ne vous enverrons aucun spam, aucune infolettre et nous ne vendrons pas votre courriel à des tiers."); ?>"><?php echo Yii::t('app', "Pourquoi?"); ?></span>
+			<label for="customer_email" class="control-label"><?php echo Yii::t('app', "Adresse courriel / mail"); ?></label>
 			<input type="text" name="email" id="customer_email" class="form-control" value="<?php //echo Yii::app()->user->user; ?>">
 			
 		</div>
@@ -680,7 +572,7 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 				<button class="btn btn-primary" id="estimateButton"><?php echo Yii::t('app', "Calculer les frais"); ?></button>
 	
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-6 hidden" id="total_column">
 	
 		<div id="estimate">
 		
@@ -691,7 +583,7 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 		
 		<dl class="dl-horizontal">
 		  <dt><?php echo Yii::t('app', "Sous-total"); ?></dt>
-		  <dd id="price_subtotal"><?php echo $subtotal; ?></dd>
+		  <dd id="price_subtotal"><?php echo number_format((float)$subtotal, 2, '.', ''); ?></dd>
 		  <dt><?php echo Yii::t('app', "Transport"); ?></dt>
 		  <dd id="price_transport">0.00</dd>
 		  <dt><?php echo Yii::t('app', "Taxes"); ?></dt>

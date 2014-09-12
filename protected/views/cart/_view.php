@@ -9,7 +9,7 @@ $localizationForProduct = $product->localizationForLanguage(Yii::app()->language
 ?>
 
 <tr data-product="<?php echo $product->id; ?>">
-    <td class="remove-cell col-xs-1"><button type="button" class="btn btn-default cart_remove_button" title="<?php echo Yii::t('app', 'Enlever du panier'); ?>"><i class="fa fa-times-circle fa-lg"></i></button>
+
 		<td class="hidden-xs"><img src="<?php
 		
 		$image = $localizationForProduct->getMainImage();
@@ -20,8 +20,13 @@ $localizationForProduct = $product->localizationForLanguage(Yii::app()->language
     <td>$<?php echo CHtml::encode($data->price_paid);?></td>
     <td class="col-md-3">
 		<div class="form-inline">
-		 <input type="text" class="form-control quantity_field" value="<?php echo $data->quantity;?>">
-		<button type="button" class="btn btn-default update_cart_quantity" data-toggle="dropdown"><?php echo Yii::t('app', "Modifier"); ?></button>
+		 <input type="number" step="1" min=0 max=100 class="form-control quantity_field" value="<?php echo $data->quantity;?>">
+		
+		<div class="btn-group">
+			<button type="button" class="btn btn-two update_cart_quantity" data-toggle="dropdown"><?php echo Yii::t('app', "Modifier"); ?></button>
+			<button type="button" class="btn btn-two cart_remove_button" title="<?php echo Yii::t('app', 'Enlever du panier'); ?>"><i class="fa fa-times-circle fa-lg"></i></button>
+		</div>
 		<div>
     </td>
+	   
 </tr>
