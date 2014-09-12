@@ -1100,7 +1100,7 @@ $cs
 		<div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <div class="pull-right">
-                <button type="submit" class="btn btn-primary" id="checkout_submit_button"><i class="fa fa-lock"></i> <?php echo Yii::t('app', "Poursuivre vers le paiement sécurisé"); ?></button>
+                <button type="submit" class="btn btn-three" id="checkout_submit_button"><i class="fa fa-lock"></i> <?php echo Yii::t('app', "Poursuivre vers le paiement sécurisé"); ?></button>
 				
               </div>
 			  
