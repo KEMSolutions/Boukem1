@@ -40,22 +40,59 @@ class APIController extends Controller
 		}
 		
 		$headers = parseRequestHeaders();
-		$signature = $headers['X-Kem-Signature'];
-		$salt = $headers["X-Kem-Salt"];
-		$client = $headers["X-Kem-User"];
-		
-		
-		$body = Yii::app()->request->getRawBody();
-		
-		// Generate a signature combining salt+body+secret
-		$concatenated_string = $salt . $body . Yii::app()->params['inbound_api_secret'];
-		$generated_signature = hash('sha512', $concatenated_string);
-		
-		// Check if the generated signature on both sides match.
-		// NEVER trust that simple mechanism for any sensitive transaction (anything regarding payments)
-		if ($generated_signature === $signature && $client === Yii::app()->params['inbound_api_user']){
-			return true;
+		if (isset($headers['X-Kem-Signature'])){
+			$signature = $headers['X-Kem-Signature'];
+		} else {
+			$signature = null;
 		}
+		if (isset($headers["X-Kem-Salt"])){
+			$salt = $headers["X-Kem-Salt"];
+		} else {
+			$salt = null;
+		}
+		if (isset($headers["X-Kem-User"])){
+			$client = $headers["X-Kem-User"];
+		} else {
+			$client = null;
+		}
+		
+		
+		$body = Yii::app()->request->getRawBody($client);
+		
+		if ($this->public_api) {
+			
+			// This is a public api call
+			
+			$user = User::model()->findByPk($client);
+			
+			
+			
+			if ($require_authentification){
+				// This call requires authentification
+				#TODO Implement
+			} else {
+				
+				// This is a public api call with no authentification
+				return true;
+				
+			}
+			
+			
+			
+			
+		} else {
+			// Private APIs require full authentication with KEM secret
+			// Generate a signature combining salt+body+secret
+			$concatenated_string = $salt . $body . Yii::app()->params['inbound_api_secret'];
+			$generated_signature = hash('sha512', $concatenated_string);
+		
+			// Check if the generated signature on both sides match.
+			// NEVER trust that simple mechanism for any sensitive transaction (anything regarding payments)
+			if ($generated_signature === $signature && $client === Yii::app()->params['inbound_api_user']){
+				return true;
+			}
+		}
+		
 		
 		return false;
 		
@@ -78,5 +115,9 @@ class APIController extends Controller
 		
 		return $valid_request;
 	}
+	
+	
+	protected $require_authentification = true;
+	protected $public_api = false;
 	
 }
