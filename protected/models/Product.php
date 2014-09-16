@@ -182,6 +182,19 @@ class Product extends CActiveRecord
 		return parent::model($className);
 	}
 	
+	public function beforeSave() {
+		
+		/// If this is not a new record, invalidate the structured product array for all available languages
+	    if (!$this->isNewRecord){
+	    	
+			foreach ($this->productLocalizations as $localization){
+				$cache_id = $this->getProductArrayCacheIdForLanguage($localization->locale_id);
+				Yii::app()->cache->delete($cache_id);
+			}
+	    }
+		
+		return parent::beforeSave();
+	}
 	
 	public function behaviors()
 	    {
@@ -303,5 +316,116 @@ class Product extends CActiveRecord
 		
 		return $this->price;
 	}
+	
+	public function getProductArrayCacheIdForLanguage($language) {
+		return "Product:[buildProductArray] " . $this->id . " - " . $language;
+	}
+	
+	/**
+	 * Returns an array of the current product with the current language description. Will always use an alternative language if necessary.
+	 * Use this function to serialize the product into JSON
+	 * @return str the static model as a json dict.
+	 */
+	public function getStructuredProductArray(){
+		
+		
+		$cache_id = $this->getProductArrayCacheIdForLanguage(Yii::app()->language);
+		$cache_duration = 300;//10800;
+		
+		$productArray = Yii::app()->cache->get($cache_id);
+		
+		if (!$productArray){
+		
+			$localization = $this->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+		
+			if ($localization === null){
+				return null;
+			}
+		
+			$is_product_available_in_current_language = true;
+			if ($this->productLocalization === null){
+				$is_product_available_in_current_language = false;
+			}
+		
+			$productArray = array(
+				"price"=>floatval($this->getCurrentPrice()),
+				"available_in_current_language" => $is_product_available_in_current_language,
+				"name"=>$localization->name,
+				"short_description"=>$localization->short_description,
+				"long_description"=>$localization->long_description,
+				"visible"=>$this->visible == 1 ? true : false,
+				"taxable"=>$this->taxable == 1 ? true : false,
+				"weight"=>floatval($this->weight),
+				"discontinued"=>$this->discontinued == 1 ? true : false,
+				"barcode"=>$this->barcode,
+				"parent_id"=>$this->parent_product_id,
+				"sku"=>$this->sku,
+				"product_id"=>intval($this->id),
+				"localization_id"=>intval($localization->id),
+				"slug"=>$localization->slug,
+				"categories" => array(),
+			);
+			
+			// Find the brand
+			$brand = $this->brand;
+			$brand_localization = $this->brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+			$productArray["brand"] = array(
+				"id"=>intval($this->brand_id),
+				"name"=>$brand_localization ? $brand_localization->name : null,
+				"visible"=>$brand ? ($brand->visible == 1 ? true : false) : false,
+			);
+			
+			
+			$main_image = $localization->getMainImage();
+		
+			$productArray["image"] = array(
+				"id"=>null,
+				"extension"=>null,
+				"locale_id"=>null,
+				"small"=>ProductImage::placehoderForSize(200, 200),
+				"large"=>ProductImage::placehoderForSize(800, 800),
+				"base_url"=>ProductImage::getImageGeneratorBaseUrl(),
+			);
+		
+			if ($main_image !== null) {
+			
+				$productArray["image"]["id"] = intval($main_image->id);
+				$productArray["image"]["extension"] = $main_image->extension;
+				$productArray["image"]["locale_id"] = $main_image->locale_id;
+				$productArray["image"]["small"] = $main_image->getImageURL(200, 200);
+				$productArray["image"]["large"] = $main_image->getImageURL(800, 800);
+			}
+		
+		
+			// Loop through the categories to return the appropriate product categories
+			
+			foreach ($this->categories as $category) {
+				
+				
+				$category_localization = $category->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
+				if ($category_localization !== null) {
+					
+					$productArray["categories"][] = array(
+						"id"=>intval($category->id),
+						"name"=>$localization->name,
+						"visible"=>$category->visible == 1 ? true : false,
+					);
+					
+				}
+				
+				
+			}
+			
+			Yii::app()->cache->set($cache_id, $productArray, $cache_duration);
+			
+		}
+		
+		
+		
+		return $productArray;
+		
+	}
+	
+	
 	
 }

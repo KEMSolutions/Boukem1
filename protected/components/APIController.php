@@ -67,7 +67,7 @@ class APIController extends Controller
 			
 			
 			
-			if ($require_authentification){
+			if ($this->require_authentification){
 				// This call requires authentification
 				#TODO Implement
 			} else {
