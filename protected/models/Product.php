@@ -389,7 +389,7 @@ class Product extends CActiveRecord
 		
 			if ($main_image !== null) {
 			
-				$productArray["image"]["id"] = intval($main_image->id);
+				$productArray["image"]["id"] = intval($main_image->identifier);
 				$productArray["image"]["extension"] = $main_image->extension;
 				$productArray["image"]["locale_id"] = $main_image->locale_id;
 				$productArray["image"]["small"] = $main_image->getImageURL(200, 200);
