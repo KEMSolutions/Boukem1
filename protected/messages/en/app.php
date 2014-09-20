@@ -140,6 +140,7 @@ return array(
 	"Prix unitaire"=>"Price per item",
 	"Quantité"=>"Quantity",
 	"Pourquoi?"=>"Why?",
+	"de"=>"by",
 	"Nous gardons votre courriel pour associer dès maintenant votre commande avec vos précédentes, appliquer les rabais associés à votre compte et vous permettre de retrouver votre panier. Nous ne vous enverrons aucun spam, aucune infolettre et nous ne vendrons pas votre courriel à des tiers."=>"We ask for your email to allow you to retrieve your cart easily, apply any discount associated with your account as well as guarantee you the quoted prices. We will not resell your email, send you any spam or subscribe you in any newsletter.",
 );
 ?>

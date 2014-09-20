@@ -22,7 +22,6 @@ class PublicProductController extends APIController
 	 */
 	public function actionView($id)
 	{
-		
 		$model = $this->loadModel($id);
 		$this->renderJSON($model->getStructuredProductArray());
 		
