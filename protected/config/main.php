@@ -90,6 +90,7 @@ return array(
 				'/cart.html'=>'cart/index',
 				'/panier.html'=>'cart/index',
 				'/checkout.html'=>'cart/checkout',
+				'/sitemap.xml'=>'site/sitemap',
 				'page/<view:\w+>'=>'site/page',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

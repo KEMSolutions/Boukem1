@@ -200,6 +200,115 @@ class SiteController extends WebController
 		echo $this->renderPartial('modal_cart', array(), true, true);
 	}
 	
+	
+	public function actionSitemap(){
+		
+		
+		header('Content-type: application/xml');
+		
+		$cache_id = "Sitemap";
+		$output_string = Yii::app()->cache->get($cache_id);
+		
+		if (!$output_string){
+			ini_set('memory_limit', '512000000');
+			set_time_limit(300);
+		
+			$output_string = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">\n";
+		
+			// Add the home page
+			$locales = Locale::model()->findAll();
+			$localizedHomepages = "";
+			foreach ($locales as $locale){
+			
+				$localizedHomepages .= "<xhtml:link rel=\"alternate\" hreflang=\"" . $locale->id . "\" href=\"" . $this->createAbsoluteUrl("site/index", array('language'=>$locale->id)) . "\"/>";
+		
+			}
+		
+			foreach ($locales as $locale){
+			
+				$output_string .= "<url>";
+			
+				$output_string .= "<loc>" . $this->createAbsoluteUrl("site/index", array('language'=>$locale->id)) . "</loc>";
+				$output_string .= $localizedHomepages;
+			
+				$output_string .= "</url>";
+		
+			}
+		
+		
+			// Add all categories
+			$all_categories = Category::model()->findAll(array("limit"=>10000));
+		
+			foreach ($all_categories as $category){
+			
+				$localizedLinks = "";
+				foreach ($category->categoryLocalizations as $localization){
+				
+					$localizedLinks .= "<xhtml:link rel=\"alternate\" hreflang=\"" . $localization->locale_id . "\" href=\"" . $this->createAbsoluteUrl("category/view", array('slug'=>$localization->slug, 'language'=>$localization->locale_id)) . "\"/>";
+				
+				}
+			
+				foreach ($category->categoryLocalizations as $localization){
+				
+					$output_string .= "<url>";
+				
+					$output_string .= "<loc>" . $this->createAbsoluteUrl("category/view", array('slug'=>$localization->slug, 'language'=>$localization->locale_id)) . "</loc>";
+					$output_string .= $localizedLinks;
+				
+					$output_string .= "</url>";
+				
+				}
+			
+			
+			
+			}
+		
+			// Same for products
+		
+			$all_products = Product::model()->findAll(array("limit"=>10000, "offset"=>0));
+		
+			foreach ($all_products as $product){
+			
+				$localizedLinks = "";
+				foreach ($product->productLocalizations as $localization){
+				
+					$localizedLinks .= "<xhtml:link rel=\"alternate\" hreflang=\"" . $localization->locale_id . "\" href=\"" . $this->createAbsoluteUrl("product/view", array('slug'=>$localization->slug, 'language'=>$localization->locale_id)) . "\"/>";
+				
+				}
+			
+				foreach ($product->productLocalizations as $localization){
+				
+					$output_string .= "<url>";
+				
+					$output_string .= "<loc>" . $this->createAbsoluteUrl("product/view", array('slug'=>$localization->slug, 'language'=>$localization->locale_id)) . "</loc>";
+					$output_string .= $localizedLinks;
+				
+					$output_string .= "</url>";
+				
+				}
+			
+			
+			
+			}
+		
+			$output_string .= "</urlset>";
+			Yii::app()->cache->set($cache_id, $output_string, 604800);
+			
+		}
+		
+		
+		
+		echo $output_string;
+		
+		foreach (Yii::app()->log->routes as $route) {
+	        if($route instanceof CWebLogRoute) {
+	            $route->enabled = false; // disable any weblogroutes
+	        }
+	    }
+	    Yii::app()->end();
+		
+	}
+	
 	public function actionCreatePassword(){
 		
 		if ($this->isB2b()){
