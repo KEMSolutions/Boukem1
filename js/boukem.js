@@ -37,6 +37,15 @@ function pageInitialization(){
 	$(".buybutton").click(function(){
 		var buybutton = $(this);
 		var product_id = buybutton.attr("data-product");
+		
+		// ABTEST STARTS
+		if (typeof window["ga"] != 'undefined' && buybutton.attr("data-abid")){
+			ga('send', 'event', 'buybutton', 'click', buybutton.attr("data-abid"), parseInt(product_id));
+		}
+		// ABTEST STOPS
+		
+		
+		
 		var quantity;
 		if($("#item_quantity").length) {
 		    quantity = $("#item_quantity").val();
