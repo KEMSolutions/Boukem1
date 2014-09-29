@@ -94,7 +94,7 @@ if (isset($style) && $style === "narrow"){
                 <?php echo substr(strip_tags($localization->short_description), 0, 120); ?>...
             </p>
             
-            <button type="button" class="button-buy btn-success buybutton" data-abid="v" data-product="<?php echo $product->id ?>">
+            <button type="button" class="button-buy btn-success buybutton" data-abid="h" data-product="<?php echo $product->id ?>">
                 <i class="fa fa-shopping-cart"></i> 
                 <?php echo Yii::t("app","Acheter");?> 
             </button>
