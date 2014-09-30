@@ -3,7 +3,7 @@
 foreach ($items as $type => $slice){
 	
 	if ($type === "slider"){
-		$this->renderPartial('_slider', array("items"=>$slice));
+		$this->renderPartial('_slider', array("items"=>$slice->items));
 	} else if ($type==="rebates"){
 		
 		$this->renderPartial('_rebates', array("items"=>$rebates, 'style'=>'normal', 'limit'=>4));
@@ -13,7 +13,7 @@ foreach ($items as $type => $slice){
 		$this->renderPartial('_recommended', array("items"=>$slice));
 		
 	} else if ($type === "featured") {
-		$this->renderPartial('_featured', array("items"=>$items->promoted, 'style'=>'normal', 'limit'=>8));
+		$this->renderPartial('_featured', array("items"=>$items->promoted->products, 'style'=>'normal', 'limit'=>8));
 	}
 	
 	
