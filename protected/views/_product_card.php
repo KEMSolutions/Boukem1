@@ -158,9 +158,16 @@ if (isset($style) && $style === "narrow"){
                 <p>
                <?php echo substr(strip_tags($localization->short_description), 0, 120); ?>...
                 </p>
+                
 
                 <span class="w-footer">
-                    <span class="pull-left"><strong style="font-size:1.5em;"><?php echo $product->getCurrentPrice(); ?> $</strong></span>
+                    <div class="pull-left"><?php
+
+                if ($product->getCurrentPrice() != $product->price) {
+                	echo Yii::t("app", "Prix régulier") . ": <span class='regularprice'>" . $product->price . "</span><br>";
+                }
+
+          		?><strong class="pricetag"><?php echo $product->getCurrentPrice(); ?> $</strong></div>
 					<button class="btn btn-success pull-right buybutton" data-product="<?php echo $product->id ?>" data-abid="v"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
                     <span class="clearfix"></span>
                 </span>

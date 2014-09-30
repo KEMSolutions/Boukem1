@@ -1116,3 +1116,5 @@ color:#DDD; font-weight:500;}
 .dropdown-cart .table-cart img{width:50px;}
 .table-cart .cart-remove{display:block; text-align:center; color:#9ab2cc;}
 .table-totals td:nth-child(even){padding:5px 15px;}
+.regularprice {text-decoration:line-through;}
+.w-footer .pricetag {color:#777; font-size:1.5em;}
