@@ -1,74 +1,25 @@
-
-		<?php $this->renderPartial('_slider', array("items"=>$items->slider)); ?>
-
-<section class="slice animate-hover-slide">
-	<div class="w-section inverse blog-grid">
-    	<div class="container">
-        	<div class="row">
-	<?php $this->renderPartial('_recommended', array("items"=>$items->recommended)); ?>
-	                <div class="col-md-4">
-						
-	                    <div class="widget">
-							<form class="form-inline" method="get" action="<?php echo $this->createUrl('product/search'); ?>">
-	                            <div class="input-group">
-	                                <input type="search" class="form-control" name="q" placeholder="<?php echo Yii::t("app", "Rechercher"); ?>" value="" autocomplete="off" spellcheck="false" />
-	                                <span class="input-group-btn">
-	                                    <button class="btn btn-primary" type="submit"><span class="fa fa-search"><span class="sr-only"><?php echo Yii::t("app", "Rechercher"); ?></span></span></button>
-	                                </span>
-	                            </div>
-	                        </form>
-	                    </div>
-
-	                   <?php $this->renderPartial('_highlighted_categories', array("items"=>$items->highlighted_categories, 'limit'=>8)); ?>
-	                       
-                      
-	    			</div>
-	            </div>
-
-	        </div>
-	    </div>
-
-
 <?php
-if ($rebates->itemCount>0):
-?>
-
-<div class="section-title color-three">
-        <h3><?php echo Yii::t("app", "Promotions"); ?></h3>
-        <div class="indicator-down color-three"></div>
-    </div>
-    
-
-	</section>
 	
-
-<?php
-	$this->renderPartial('_rebates', array("items"=>$rebates));
-
-else:
-	echo "</section>";
-endif; ?>
+foreach ($items as $type => $slice){
 	
-	<section class="slice animate-hover-slide">
-		<div class="w-section inverse blog-grid">
-	    	<div class="container">
-	        	<div id="masonryWr" class="row">
-<?php $this->renderPartial('_promoted', array("items"=>$items->promoted, 'style'=>'normal', 'limit'=>8)); ?>
-				</div>
-				
-			    <div class="section-title color-one product_history_title hidden">
-			        <h3><?php echo Yii::t("app", "Articles récemment vus"); ?></h3>
-			        <div class="indicator-down color-one"></div>
-			    </div>
-			</div>
-		</div>
-	</section>
-	
-	
-	<section class="slice color-two product_history_box hidden" data-limit='4'> 
+	if ($type === "slider"){
+		$this->renderPartial('_slider', array("items"=>$slice));
+	} else if ($type==="rebates"){
 		
-		<div class="text-center"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
-	                
-    
-	</section>
+		$this->renderPartial('_rebates', array("items"=>$rebates, 'style'=>'normal', 'limit'=>4));
+		
+	} else if ($type === "recommended") {
+		
+		$this->renderPartial('_recommended', array("items"=>$slice));
+		
+	} else if ($type === "featured") {
+		$this->renderPartial('_featured', array("items"=>$items->promoted, 'style'=>'normal', 'limit'=>8));
+	}
 	
+	
+}
+	
+?>
+<section class="slice color-two product_history_box hidden" data-limit='4'> 
+	<div class="text-center"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
+</section>

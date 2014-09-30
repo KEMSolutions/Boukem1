@@ -96,6 +96,16 @@ if ($(".product_history_box").length && localStorage.getItem("product_history"))
 		
 		// Wait until the images are loaded so we don't end up with a messed up layout
 		imagesLoaded( container, function() {
+			
+			jQuery(window).load(function () {
+	
+				$(".input-qty").TouchSpin({
+				                initval: 1
+				});
+
+			});
+			
+			
 		 	container.masonry({
 			  itemSelector: '.item'
 			});
