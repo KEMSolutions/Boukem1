@@ -12,8 +12,8 @@ foreach ($items as $type => $slice){
 		
 		$this->renderPartial('_recommended', array("items"=>$slice));
 		
-	} else if ($type === "featured") {
-		$this->renderPartial('_featured', array("items"=>$items->featured->products, 'style'=>'normal', 'limit'=>8));
+	} else if ($type === "promoted") {
+		$this->renderPartial('_featured', array("items"=>$slice->products, 'style'=>'normal', 'limit'=>8));
 	}
 	
 	
