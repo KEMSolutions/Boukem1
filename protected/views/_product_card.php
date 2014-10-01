@@ -118,7 +118,7 @@ else:
 // TYPE V ////////////////////////////
 	// Cookie is set to remy's 
 	
-	if (isset($localization)){
+	if (!isset($localization)){
 		$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
 	}
 	
