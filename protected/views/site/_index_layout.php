@@ -13,7 +13,7 @@ foreach ($items as $type => $slice){
 		$this->renderPartial('_recommended', array("items"=>$slice));
 		
 	} else if ($type === "featured") {
-		$this->renderPartial('_featured', array("items"=>$items->promoted->products, 'style'=>'normal', 'limit'=>8));
+		$this->renderPartial('_featured', array("items"=>$items->featured->products, 'style'=>'normal', 'limit'=>8));
 	}
 	
 	
