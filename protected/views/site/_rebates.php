@@ -15,12 +15,16 @@ $counter = 0;
 	 foreach ($rebates_array as $key => $rebate): 
 		
 		$product = $rebate->product;
-		if ($product && $product->visible && !$product->discontinued){
-			$this->renderPartial("application.views._product_card", array("product"=>$product, "style"=>"fs"));
+		$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
+		if ($product && $localization && $product->visible && !$product->discontinued){
+			$this->renderPartial("application.views._product_card", array("product"=>$product, "style"=>"fs", "localization"=>$localization));
+			
+			$counter ++;
+			
+			
 		}
 	
 	unset($rebates_array[$key]);
-	$counter ++;
 	if ($counter >= $limit){
 		break;
 	}

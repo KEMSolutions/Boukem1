@@ -33,8 +33,9 @@ if (isset(Yii::app()->request->cookies[$cookie_name])){
 // TYPE H ////////////////////////////
 if ($card_type === "h"):
 
-
-	$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+	if (!isset($localization)){
+		$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+	}
 	
 	if ($localization):
 	
@@ -117,7 +118,9 @@ else:
 // TYPE V ////////////////////////////
 	// Cookie is set to remy's 
 	
-	$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+	if (isset($localization)){
+		$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+	}
 	
 	if ($localization):
 	
