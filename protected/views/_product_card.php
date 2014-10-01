@@ -164,7 +164,29 @@ if (isset($style) && $style === "narrow"){
 					?>" alt="<?php echo $localization->name; ?>" class="img-responsive center-block visible-xs-block visible-sm-block">
 					</a>
                 <span class="date-over"><strong><?php echo CHtml::link($brand_localization->name, array('category/view', 'slug'=>$brand_localization->slug)); ?></strong></span>
-                <h2><a href="<?php echo $product_url; ?>"><?php echo $localization->name; ?></a></h2>
+                <h2><a href="<?php echo $product_url; ?>"><?php
+					
+					$title_lines = explode(" - ", $localization->name);
+					$counter = 0;
+					$number_of_lines = count($title_lines);
+					 foreach ($title_lines as $line){
+						 if ($counter != 0 && $counter <= $number_of_lines){
+							 // Not first line
+							 echo "<br>";
+						 }
+						 
+						 if ($counter != 0 && $counter+1 == $number_of_lines){
+							 // Last but also not first line
+							 echo "<small>" . $line . "</small>";
+						 } else {
+							 echo $line;
+						 }
+						
+						 $counter++;
+					 }
+					 
+					 
+					  ?></a></h2>
                 <p>
                <?php echo substr(strip_tags($localization->short_description), 0, 120); ?>...
                 </p>
