@@ -88,7 +88,14 @@ if (isset($style) && $style === "narrow"){
             <p class="product-manufacturer"> <?php echo Yii::t("app", "de"); ?> <?php echo CHtml::link($brand_localization->name, array('category/view', 'slug'=>$brand_localization->slug)); ?>
             </p>
             
-            <h1 class="price"><?php echo $product->getCurrentPrice(); ?> $</h1>
+            <h1 class="price"><?php echo $product->getCurrentPrice(); ?> $<?php
+
+                if ($product->getCurrentPrice() != $product->price) {
+                	echo "<br><small>" . Yii::t("app", "Prix régulier:") . " <span class='regularprice'>" . $product->price . "</span></small>";
+                }
+
+          		?>
+			</h1>
             
             <p class="description">
                 <?php echo substr(strip_tags($localization->short_description), 0, 120); ?>...
@@ -164,7 +171,7 @@ if (isset($style) && $style === "narrow"){
                     <div class="pull-left"><?php
 
                 if ($product->getCurrentPrice() != $product->price) {
-                	echo Yii::t("app", "Prix régulier") . ": <span class='regularprice'>" . $product->price . "</span><br>";
+                	echo Yii::t("app", "Prix régulier:") . " <span class='regularprice'>" . $product->price . "</span><br>";
                 }
 
           		?><strong class="pricetag"><?php echo $product->getCurrentPrice(); ?> $</strong></div>
