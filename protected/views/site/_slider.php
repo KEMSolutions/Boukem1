@@ -4,7 +4,10 @@
         <div class="slider">
         	<div class="fs_loader"></div>
            
-		   <?php foreach ($items as $content): ?>
+		   <?php
+		   shuffle($items);
+		   
+		    foreach ($items as $content): ?>
 			   
            <div class="slide">
 			   <?php if (isset($content->background) && $content->background !== "") : ?>
