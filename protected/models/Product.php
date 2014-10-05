@@ -317,6 +317,26 @@ class Product extends CActiveRecord
 		return $this->price;
 	}
 	
+	public function getVideosForLanguage($language) {
+		
+		
+		
+		$cache_id = "Product:[videosForLanguage] " . $this->id . " - " . Yii::app()->language;
+		$cache_duration = 3600;
+		Yii::app()->cache->delete($cache_id);
+		$videosArray = Yii::app()->cache->get($cache_id);
+		
+		if (!$videosArray) {
+			$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/product/videos", array('client_store_product_id'=>$this->id, 'locale'=>Yii::app()->language . "_CA", 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+		
+			$videosArray = json_decode($output);
+			
+			Yii::app()->cache->set($cache_id, $videosArray, $cache_duration);
+		}
+		
+		return $videosArray;
+	}
+	
 	public function getProductArrayCacheIdForLanguage($language) {
 		return "Product:[buildProductArray] " . $this->id . " - " . $language;
 	}
@@ -365,6 +385,9 @@ class Product extends CActiveRecord
 				"slug"=>$localization->slug,
 				"categories" => array(),
 			);
+			
+			// Load the videos
+			$productArray["videos"] = $this->getVideosForLanguage(Yii::app()->language);
 			
 			// Find the brand
 			$brand = $this->brand;

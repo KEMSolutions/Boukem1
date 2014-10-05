@@ -68,7 +68,30 @@ if ($regular_price !== $current_price){
                     
                     <div class="widget pricing-plans" id="product_info_box" data-product="<?php echo $model->id; ?>">
 	                    <div class="w-box popular">
-	                        <h2 class="plan-title" itemprop="name"><?php echo CHtml::encode($localization->name); ?></h2>
+	                        <h2 class="plan-title" itemprop="name">
+								<?php
+					
+													$title_lines = explode(" - ", $localization->name);
+													$counter = 0;
+													$number_of_lines = count($title_lines);
+													 foreach ($title_lines as $line){
+														 if ($counter != 0 && $counter <= $number_of_lines){
+															 // Not first line
+															 echo "<br>";
+														 }
+						 
+														 if ($counter != 0 && $counter+1 == $number_of_lines){
+															 // Last but also not first line
+															 echo "<small>" . $line . "</small>";
+														 } else {
+															 echo $line;
+														 }
+						
+														 $counter++;
+													 }
+					 
+					 
+													  ?></h2>
 	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><span>$</span><?php echo $current_price; ?></h3></span>
 	                        <ul>
 								<?php if ($on_sale || $this->isB2b()): ?>
@@ -90,8 +113,46 @@ if ($regular_price !== $current_price){
 								
 	                    </div>
 					</div>
-                    
 					
+					<?php
+					$videos = $model->getVideosForLanguage(Yii::app()->language);
+					
+					if (count($videos)>0){
+						// Insert support for video.js player
+						Yii::app()->clientScript->registerScriptFile("//vjs.zencdn.net/4.8/video.js", CClientScript::POS_END);
+						Yii::app()->clientScript->registerCssFile('//vjs.zencdn.net/4.8/video-js.css');
+
+						$product_video_player_script = <<<EOD
+							//store_video
+							document.createElement('video');document.createElement('audio');document.createElement('track');
+EOD;
+
+						Yii::app()->clientScript->registerScript('product_video_player_script', $product_video_player_script, CClientScript::POS_END);
+					}
+					
+					foreach ($videos as $video):
+					?>
+                    
+				    <div class="widget">
+				                           <h4 class="widget-heading"><?php echo Yii::t("app", "Vidéo"); ?></h4>
+				                           <div class="w-box">
+				                               <figure>
+				                                   <div class="video-container">
+				                                   
+												   <video width="100%" height=180 controls preload="auto" poster="<?php echo $video->poster; ?>" class="video-js vjs-default-skin vjs-big-play-centered">
+										   			   <source src="<?php echo $video->h264high; ?>" media="only screen and (min-device-width: 568px)" type='video/mp4'></source>
+										               <source src="<?php echo $video->h264low; ?>" media="only screen and (max-device-width: 568px)" type='video/mp4'></source>
+										               <source src="<?php echo $video->webm; ?>" type='video/webm'></source>
+												   <video>
+												   
+				                                   </div>        
+				                                   <h2><?php echo CHtml::encode($video->title); ?></h2>
+				                               </figure>
+				                           </div>
+				                       </div>
+					
+					
+				<?php endforeach; ?>
 				    <div class="widget">
 				                           <h4 class="widget-heading"><?php echo Yii::t("app", "Partagez")?></h4>
 
