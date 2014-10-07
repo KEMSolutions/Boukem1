@@ -91,7 +91,7 @@ if ($(".product_history_box").length && localStorage.getItem("product_history"))
 	
 	// Post the JSON formatted list of recent product IDs
 	$.post( "/" + page_lang + "/product/thumbnails", { "products": localStorage.getItem("product_history"), "limit": $(".product_history_box").attr("data-limit")}, function( data ) {
-		$(".product_history_box").html(data);
+		$(".product_history_box_content").html(data);
 		var container = $('.product_history_box');
 		
 		// Wait until the images are loaded so we don't end up with a messed up layout

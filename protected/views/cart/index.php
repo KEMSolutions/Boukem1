@@ -112,11 +112,7 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
         </div>
  	</div>  
                        
-    <div class="section-title color-two product_history_title hidden">
-        <h3><?php echo Yii::t("app", "Articles récemment vus"); ?></h3>
-        <div class="indicator-down color-two"></div>
-    </div>
-
+    
 </section>
 
 
@@ -124,8 +120,13 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 	
 
 <section class="slice color-two product_history_box hidden" data-limit='4'> 
+	<div class="section-title color-three">
+	        <h3><?php echo Yii::t("app", "Articles récemment vus"); ?></h3>
+	        <div class="indicator-down color-three"></div>
+	    </div>
+	<div class="product_history_box_content">
 	<div class="text-center"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
-	
+</div>
  
 </section>
 

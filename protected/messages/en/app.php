@@ -122,6 +122,8 @@ return array(
 	"En vedette"=>"Featured",
 	"Promotions"=>"Hot deals",
 	"Accès rapide"=>"Quick links",
+	"Recommandations"=>"Recommendations",
+	"Choix populaires"=>"Popular products",
 	"Notre équipe de professionnels est à l'écoute de vos besoins: que vous ayez des questions sur nos produits ou sur une commande passée avec nous, n'hésitez pas à nous envoyer un message."=>"Our team of professionals is here for you: whether you have questions about our products or you want to contact us regarding an order, feel free to email us directly.",
 	"Notre magasin"=>"Our Store",
 	"Adresse"=>"Address",

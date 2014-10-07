@@ -4,4 +4,4 @@
 $this->pageTitle=Yii::app()->name;
 $this->layout = "//layouts/freestyle";
 ?>
-		<?php echo $layout_html; ?>
+<?php echo $layout_html; ?>

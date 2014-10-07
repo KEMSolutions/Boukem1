@@ -31,11 +31,6 @@
         </div>
     </div>
     
-    <div class="section-title color-three">
-        <h3><?php echo Yii::t("b2b", "Suggestions"); ?></h3>
-        <div class="indicator-down color-three"></div>
-    </div>
-    
 </section>
 
 

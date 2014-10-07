@@ -1,12 +1,16 @@
 <section class="slice animate-hover-slide">
+	<?php if ($show_title): ?>
+	<div class="section-title color-three">
+	        <h3><?php echo Yii::t("app", "Choix populaires"); ?></h3>
+	        <div class="indicator-down color-three"></div>
+	    </div>
+	
+	<?php endif; ?>
 	<div class="w-section inverse blog-grid">
     	<div class="container">
         	<div id="masonryWr" class="row">
 				
 				<?php
-				error_reporting(E_ALL);
-				ini_set('display_errors', '1');
-	
 				$counter = 0;
 	
 					 foreach ($items as $item){

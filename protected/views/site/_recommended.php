@@ -1,4 +1,11 @@
 <section class="slice color-one">
+	<?php if ($show_title): ?>
+	<div class="section-title color-three">
+	        <h3><?php echo Yii::t("app", "Recommandations"); ?></h3>
+	        <div class="indicator-down color-three"></div>
+	    </div>
+	
+	<?php endif; ?>
     <div class="w-section inverse">
     	<div class="container">
 			<div class="row">
