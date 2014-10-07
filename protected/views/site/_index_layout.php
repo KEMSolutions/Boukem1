@@ -4,7 +4,8 @@ $counter = 0;
 foreach ($items as $type => $slice){
 	
 	if ($type === "slider"){
-		$this->renderPartial('_slider', array("items"=>$slice->items, 'show_title'=>$counter));
+		/* We do not render the fraction slider, at least for now */
+		//$this->renderPartial('_slider', array("items"=>$slice->items, 'show_title'=>$counter));
 	} else if ($type==="rebates"){
 		
 		$this->renderPartial('_rebates', array("items"=>$rebates, 'style'=>'normal', 'limit'=>4, 'show_title'=>$counter));
