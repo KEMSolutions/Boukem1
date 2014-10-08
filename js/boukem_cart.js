@@ -42,6 +42,17 @@ function enableCheckout(){
 	checkoutEnabled = true;
 }
 
+function updateTransport(){
+	if (!$(".shipping_method:checked").val()){
+		return;
+	}
+	
+  	$('#price_transport').text($(".shipping_method:checked").attr('data-cost'));
+
+	updateTotal();
+	enableCheckout();
+}
+
 
 function fetchEstimate(){
 	
@@ -102,13 +113,12 @@ function fetchEstimate(){
 		  $('#estimate').html(data.shipping_block);
 		  $('#price_taxes').text(data.taxes.toFixed(2));
 	  
+		  updateTransport();
+		  	
 		  // Register the received radio buttons to trigger a total update
 		  $(".shipping_method").change(function(){
-			  	$('#price_transport').text($(this).attr('data-cost'));
-			
-				updateTotal();
-				enableCheckout();
-			  });
+			  	updateTransport();
+		  });
 			  
 			  
 			  
