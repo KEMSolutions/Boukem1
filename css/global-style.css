@@ -991,4 +991,19 @@ color:#DDD; font-weight:500;}
 .table-cart .cart-remove{display:block; text-align:center; color:#9ab2cc;}
 .table-totals td:nth-child(even){padding:5px 15px;}
 .regularprice {text-decoration:line-through;}
-.w-footer .pricetag {color:#777; font-size:1.5em;}
+.w-footer .pricetag {color:#555; font-size:1.5em;}
+
+.rebatebadge
+{
+	width:2.5em;
+	height:2.5em;
+	border-radius:50%;
+	font-size:1.2em;
+	line-height:2.5em;
+	text-align:center;
+	display:block;
+	position:absolute; top:15px; left:15px; text-align:center;
+	transform: rotate(-15deg)!important;
+	background-color: #f0523f;
+	color: #fff;
+}

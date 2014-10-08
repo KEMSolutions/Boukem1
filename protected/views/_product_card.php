@@ -13,6 +13,17 @@ if ($localization):
 	$brand_localization = $brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
 	$main_image = $localization->getMainImage();
 
+	$currentPrice = $product->getCurrentPrice();
+	$regularPrice = $product->price;
+	if ($currentPrice == $regularPrice) {
+		$isOnSale = false;
+		$rebatePercent = 0;
+	} else {
+		$isOnSale = true;
+		$rebatePercent = round((($regularPrice - $currentPrice) / $regularPrice) * 100, $precision=0, $mode=PHP_ROUND_HALF_DOWN);
+	}
+
+
 
  ?>
 	 
@@ -28,6 +39,9 @@ if (isset($style) && $style === "narrow"){
 ?>">
         <div class="w-box">
             <figure>
+				
+				
+				
                 <a href="<?php echo $product_url; ?>">
 					<img alt="" src="<?php 
 
@@ -47,6 +61,9 @@ if (isset($style) && $style === "narrow"){
 					?>" alt="<?php echo $localization->name; ?>" class="img-responsive center-block visible-xs-block visible-sm-block">
 					</a>
                 <span class="date-over"><strong><?php echo CHtml::link($brand_localization->name, array('category/view', 'slug'=>$brand_localization->slug)); ?></strong></span>
+				<?php if ($isOnSale): ?>
+					<div class="rebatebadge"><span class="animated tada">-<?php echo $rebatePercent; ?>%</span></div>
+				<?php endif; ?>
                 <h2><a href="<?php echo $product_url; ?>"><?php
 					
 					$title_lines = explode(" - ", $localization->name);
@@ -78,13 +95,14 @@ if (isset($style) && $style === "narrow"){
                 <span class="w-footer">
                     <div class="pull-left"><?php
 
-                if ($product->getCurrentPrice() != $product->price) {
+                if ($isOnSale) {
                 	echo Yii::t("app", "Prix régulier:") . " <span class='regularprice'>" . $product->price . "</span><br>";
                 }
 
           		?><strong class="pricetag"><?php echo $product->getCurrentPrice(); ?> $</strong></div>
-					<button class="btn btn-success pull-right buybutton" data-product="<?php echo $product->id ?>" data-abid="v"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
+					<button class="btn <?php if ($isOnSale) {echo "btn-three";} else {echo "btn-success";} ?> pull-right buybutton" data-product="<?php echo $product->id ?>" data-abid="v"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
                     <span class="clearfix"></span>
+					
                 </span>
             </figure>
         </div>
