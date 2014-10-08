@@ -937,10 +937,10 @@ color:#DDD; font-weight:500;}
 	.w-box,.carousel-work figure{margin-bottom:15px;}
  	.animate-hover-slide figure img{width:100%;}
 	
-	.carousel-1 .carousel-inner{height:420px;}
+	.carousel-1 .carousel-inner{height:440px;}
 	.carousel-1 .carousel-inner{overflow:hidden;}
 	.carousel-1 .carousel-control i{position:absolute; top:50%; margin-top:-18px; font-size:36px; font-weight:600;}
-	.carousel-1 .item{}
+	.carousel-1 .item{background-size:cover; height:440px;}
 	.carousel-1 .item img{}
 	.carousel-1 .item-dark{color:#FFF;}
 	.carousel-1 p{font-size:16px;}
@@ -959,7 +959,7 @@ color:#DDD; font-weight:500;}
 	.carousel-3 figure{margin-bottom:20px;}
 	.carousel-3 .carousel-nav a{bottom:16px !important; top:auto !important;}
 	
-	.slider{height:auto; max-height:440px; margin:0;}
+	.slider{height:auto; max-height:260px; margin:0;}
 	
 	.cta-wr{text-align:center;}
 	.cta-wr .btn{float:none !important;}
