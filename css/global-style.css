@@ -995,15 +995,16 @@ color:#DDD; font-weight:500;}
 
 .rebatebadge
 {
-	width:2.5em;
-	height:2.5em;
+	width:2.6em;
+	height:2.6em;
 	border-radius:50%;
 	font-size:1.2em;
-	line-height:2.5em;
+	line-height:2.6em;
 	text-align:center;
 	display:block;
 	position:absolute; top:15px; left:15px; text-align:center;
 	transform: rotate(-15deg)!important;
 	background-color: #f0523f;
 	color: #fff;
+	text-shadow: 0 1px rgba(0,0,0,0.2);
 }
