@@ -323,7 +323,6 @@ class Product extends CActiveRecord
 		
 		$cache_id = "Product:[videosForLanguage] " . $this->id . " - " . Yii::app()->language;
 		$cache_duration = 3600;
-		Yii::app()->cache->delete($cache_id);
 		$videosArray = Yii::app()->cache->get($cache_id);
 		
 		if (!$videosArray) {

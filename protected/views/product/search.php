@@ -33,17 +33,5 @@ if ($q){
 
 
 <section class="slice animate-hover-slide">
-	<div class="w-section inverse blog-grid">
-
-
-<?php $this->widget('CCustomListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_searchview',
-	'ajaxUpdate'=>false,
-	'itemsCssClass'=>'row',
-	'itemsHtmlOptions' => array('id' => 'masonryWr'),
-	'pagerCssClass'=>"row pagination",
-)); ?>
-	    </div>
-
-	</section>
+	<?php echo $search_html; ?>
+</section>

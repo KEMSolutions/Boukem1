@@ -83,39 +83,35 @@ class ProductController extends WebController
 	/**
 	 * Search in all models with elastic search.
 	 */
-	public function actionSearch($q="")
+	public function actionSearch($q="", $page=0)
 	{
 		if ($q==""){
 			$this->redirect("/");
 		}
 		
-		$language = Yii::app()->language;
-		
-		$search = new \YiiElasticSearch\Search;
+		$locale = Yii::app()->language . "_CA";
 		
 		
-		$search->filter = array(
-			"term" => array("language"=>$language, "visible"=>1),
-		);
+		$cache_id = "ProductController:[search_results] " . md5($q) . " - " . Yii::app()->language . ":" . $page;
+		$cache_duration = 60;
+
+		$search_html = Yii::app()->cache->get($cache_id);
 		
-		$search->query = array(
-		    "multi_match" => array(
-				'query'=>$q,
-				"fields"=>array("name_" . $language . "^3", "categories_" . $language . "^2", "shortdescription_" . $language, "longdescription_" . $language, "brand_name^2"),
-				"type"=>"most_fields",
-			),
-		);
+		if (!$search_html) {
+			
+			$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/product/search", array('locale'=>Yii::app()->language . "_CA", 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret'], "query"=>$q, "page"=>$page));
+			
+			
+			$results = json_decode($output);
+			
+			$search_html = $this->renderPartial('_searchpage', array("results"=>$results, "q"=>$q), true);
+			Yii::app()->cache->set($cache_id, $search_html, $cache_duration);
+		}
 		
-		
-		
-		$dataProvider = new \YiiElasticSearch\DataProvider(Product::model(), array(
-		        'search' => $search,
-		));
-		$dataProvider->setPagination(array('pageSize' => 48));
 		
 		
 		$this->render('search',array(
-			'dataProvider'=>$dataProvider,
+			'search_html'=>$search_html,
 			'q'=>$q,
 		));
 	}
