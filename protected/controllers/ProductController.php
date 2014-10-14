@@ -105,7 +105,10 @@ class ProductController extends WebController
 			$results = json_decode($output);
 			
 			$search_html = $this->renderPartial('_searchpage', array("results"=>$results, "q"=>$q), true);
-			Yii::app()->cache->set($cache_id, $search_html, $cache_duration);
+			if ($results->count > 0){
+				Yii::app()->cache->set($cache_id, $search_html, $cache_duration);
+			}
+			
 		}
 		
 		

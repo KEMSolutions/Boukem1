@@ -118,7 +118,7 @@ class ProductImage extends CActiveRecord
 	 *  @return str specifies the base url of static images generator.
 	 */
 	public static function getImageGeneratorBaseUrl(){
-		return "http://static.boutiquekem.com/productimg-";
+		return "//static.boutiquekem.com/productimg-";
 	}
 	
 	/**

@@ -145,5 +145,6 @@ return array(
 	"de"=>"by",
 	"Nous gardons votre courriel pour associer dès maintenant votre commande avec vos précédentes, appliquer les rabais associés à votre compte et vous permettre de retrouver votre panier. Nous ne vous enverrons aucun spam, aucune infolettre et nous ne vendrons pas votre courriel à des tiers."=>"We ask for your email to allow you to retrieve your cart easily, apply any discount associated with your account as well as guarantee you the quoted prices. We will not resell your email, send you any spam or subscribe you in any newsletter.",
 	"Entrez votre code postal pour calculer les taxes et frais de livraison."=>"Please enter your postal code and select your prefered shipping method to continue.",
+	"Désolé, aucun résultat trouvé."=>"Sorry, no results were found."
 );
 ?>
