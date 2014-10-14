@@ -15,7 +15,7 @@ foreach ($items as $type => $slice){
 		$this->renderPartial('_recommended', array("items"=>$slice, 'show_title'=>$counter));
 		
 	} else if ($type === "promoted") {
-		$this->renderPartial('_featured', array("items"=>$slice->products, 'style'=>'normal', 'limit'=>8, 'show_title'=>$counter));
+		$this->renderPartial('_featured', array("items"=>$slice->products, 'style'=>'normal', 'limit'=>8, 'show_title'=>$counter, 'style'=>"fs"));
 	} else if ($type === "headline"){
 		$this->renderPartial('_headline', array("headline"=>$slice, 'show_title'=>$counter));
 	}

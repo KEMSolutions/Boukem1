@@ -18,7 +18,7 @@
 							$product = Product::model()->findByPk($item);
 							$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
 							if ($product && $localization && $product->visible && !$product->discontinued){
-								$this->renderPartial("application.views._product_card", array("product"=>$product, "style"=>"fs", "localization"=>$localization));
+								$this->renderPartial("application.views._product_card", array("product"=>$product, "style"=>$style, "localization"=>$localization));
 							
 							
 								$counter ++;

@@ -72,6 +72,7 @@ class SiteController extends WebController
 			
 				$layout_html = $this->renderPartial('_index_layout', array("items"=>$base_dict, 'rebates'=>$rebatesDataProvider), true);
 				
+				
 			}
 			
 			Yii::app()->cache->set($cache_id, $layout_html, $cache_duration);

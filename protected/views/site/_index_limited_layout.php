@@ -43,7 +43,7 @@
 				<div class="col-md-8" id="masonryWr">
 					
 
-				<?php $this->renderPartial('_promoted', array("items"=>$items->promoted, 'style'=>'narrow', 'limit'=>16)); ?>
+				<?php $this->renderPartial('_featured', array("items"=>$items->promoted->products, 'style'=>'normal', 'limit'=>9, 'show_title'=>false, 'style'=>"narrow")); ?>
 				
 			</div>
 	                <div class="col-md-4">
@@ -59,7 +59,7 @@
 	                        </form>
 	                    </div>
 
-	                   <?php $this->renderPartial('_highlighted_categories', array("items"=>$items->highlighted_categories, 'limit'=>24)); ?>
+	                   <?php $this->renderPartial('_highlighted_categories', array("items"=>$items->recommended->categories, 'limit'=>24)); ?>
 				   </div>
 	            </div>
 
