@@ -24,6 +24,7 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 			$update_url = $this->createUrl('cart/update');
 			$remove_url = $this->createUrl('cart/remove');
 			$estimate_url = $this->createUrl('cart/estimate');
+			$paypaltoken_url = $this->createUrl("cart/getPaypalToken");
 			Yii::app()->user->returnUrl = $this->createUrl('index');
 		
 		
@@ -36,6 +37,7 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 								var remove_url = '$remove_url';
 								var estimate_url = '$estimate_url';
 								var login_url = '$login_url';
+								var paypaltoken_url = '$paypaltoken_url';
 							" ,CClientScript::POS_HEAD)
 							->registerScriptFile('/js/boukem_cart.js',CClientScript::POS_END);
 								

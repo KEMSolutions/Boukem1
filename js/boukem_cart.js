@@ -150,6 +150,30 @@ $('#checkoutButton').click( function(event){
 	if (!checkoutEnabled){
 		event.preventDefault();
 	}
+	
+	$(this).removeClass("btn-three");
+	$(this).addClass("btn-primary");
+	$(this).html("<i class=\"fa fa-spinner fa-spin\"></i>");
+	$(this).attr("disabled", "disabled");
+	
+	$.ajax({
+	  type: "POST",
+	  url: paypaltoken_url,
+	  data: $("#cart_form").serialize(),
+	  success: function(data){
+	  	
+		window.location.href = data.paypal_url;
+		
+	  },
+	  dataType: "json"
+	});
+	
+	
+	
+	event.preventDefault();
+	
+	
+	
 });
 
 

@@ -450,4 +450,6 @@ class Product extends CActiveRecord
 	
 	
 	
+	
+	
 }

@@ -118,8 +118,8 @@ class Order extends CActiveRecord
 	/// CUSTOM methods
 	
 	/**
-	 * A JSON string (base64 encoding) to post to our payment processor (KEM payment) and order printer.
-	 * @return string order data to display to the end user or print on packing slip
+	 * An array to post to our payment processor (KEM payment) and order printer.
+	 * @return array order data to display to the end user or print on packing slip
 	 */
 	public function frontendData(){
 		
@@ -147,27 +147,32 @@ class Order extends CActiveRecord
 		
 		$orderdict['email'] = $this->user->email;
 		
-		$billing = $orderDetails->billingAddress;
-		$orderdict['billing'] = array();
-		$orderdict['billing']['firstname'] = $user->firstname;
-		$orderdict['billing']['lastname'] = $user->lastname;
-		$orderdict['billing']['street1'] = $billing->street1 ? CHtml::encode($billing->street1) : null;
-		$orderdict['billing']['street2'] = $billing->street2 ? CHtml::encode($billing->street2) : null;
-		$orderdict['billing']['postcode'] = $billing->postcode ? CHtml::encode($billing->postcode) : null;
-		$orderdict['billing']['city'] = $billing->city ? CHtml::encode($billing->city) : null;
-		$orderdict['billing']['region'] = $billing->region ? CHtml::encode($billing->region) : null;
-		$orderdict['billing']['country'] = $billing->country ? CHtml::encode($billing->country) : null;
+		if ($orderDetails->billingAddress){
+			$billing = $orderDetails->billingAddress;
+			$orderdict['billing'] = array();
+			$orderdict['billing']['firstname'] = $user->firstname;
+			$orderdict['billing']['lastname'] = $user->lastname;
+			$orderdict['billing']['street1'] = $billing->street1 ? CHtml::encode($billing->street1) : null;
+			$orderdict['billing']['street2'] = $billing->street2 ? CHtml::encode($billing->street2) : null;
+			$orderdict['billing']['postcode'] = $billing->postcode ? CHtml::encode($billing->postcode) : null;
+			$orderdict['billing']['city'] = $billing->city ? CHtml::encode($billing->city) : null;
+			$orderdict['billing']['region'] = $billing->region ? CHtml::encode($billing->region) : null;
+			$orderdict['billing']['country'] = $billing->country ? CHtml::encode($billing->country) : null;
+		}
+
+		if ($orderDetails->shippingAddress){
+			$shipping = $orderDetails->shippingAddress;
+			$orderdict['shipping'] = array();
+			$orderdict['shipping']['firstname'] = $user->firstname;
+			$orderdict['shipping']['lastname'] = $user->lastname;
+			$orderdict['shipping']['street1'] = $shipping->street1 ? CHtml::encode($shipping->street1) : null;
+			$orderdict['shipping']['street2'] = $shipping->street2 ? CHtml::encode($shipping->street2) : null;
+			$orderdict['shipping']['postcode'] = $shipping->postcode ? CHtml::encode($shipping->postcode) : null;
+			$orderdict['shipping']['city'] = $shipping->city ? CHtml::encode($shipping->city) : null;
+			$orderdict['shipping']['region'] = $shipping->region ? CHtml::encode($shipping->region) : null;
+			$orderdict['shipping']['country'] = $shipping->country ? CHtml::encode($shipping->country) : null;
+		}
 		
-		$shipping = $orderDetails->shippingAddress;
-		$orderdict['shipping'] = array();
-		$orderdict['shipping']['firstname'] = $user->firstname;
-		$orderdict['shipping']['lastname'] = $user->lastname;
-		$orderdict['shipping']['street1'] = $shipping->street1 ? CHtml::encode($shipping->street1) : null;
-		$orderdict['shipping']['street2'] = $shipping->street2 ? CHtml::encode($shipping->street2) : null;
-		$orderdict['shipping']['postcode'] = $shipping->postcode ? CHtml::encode($shipping->postcode) : null;
-		$orderdict['shipping']['city'] = $shipping->city ? CHtml::encode($shipping->city) : null;;
-		$orderdict['shipping']['region'] = $shipping->region ? CHtml::encode($shipping->region) : null;;
-		$orderdict['shipping']['country'] = $shipping->country ? CHtml::encode($shipping->country) : null;;
 		
 		$orderdict['telephones'] = array();
 		foreach ($user->userPhones as $phone){
@@ -184,10 +189,11 @@ class Order extends CActiveRecord
 		    'pagination'=>false,
 		));
 		
-		
-		$firstname = $user->firstname ? CHtml::encode($user->firstname) . " " : "";
-		$lastname = $user->lastname ? CHtml::encode($user->lastname) : "";
-		$orderdict["name"] = $firstname . $lastname;
+		if ($user->lastname || $user->firstname){
+			$firstname = $user->firstname ? CHtml::encode($user->firstname) . " " : "";
+			$lastname = $user->lastname ? CHtml::encode($user->lastname) : "";
+			$orderdict["name"] = $firstname . $lastname;
+		}
 		
 		$locale = Yii::app()->language . "_CA";
 		
@@ -224,6 +230,9 @@ class Order extends CActiveRecord
 		}
 		
 		$orderdict["confirm_url"] = Yii::app()->createAbsoluteUrl('cart/confirm', array('order'=>$this->id));
+		$orderdict["cancel_url"] = Yii::app()->createAbsoluteUrl('cart/cancel', array('order'=>$this->id));
+		$orderdict["paypalconfirm_url"] = Yii::app()->createAbsoluteUrl('cart/confirmpaypal', array('order'=>$this->id));
+		$orderdict["paypalcancel_url"] = Yii::app()->createAbsoluteUrl('cart/cancelpaypal', array('order'=>$this->id));
 		
 		return $orderdict;
 	}
@@ -308,5 +317,17 @@ class Order extends CActiveRecord
 	const STATUS_COMPLETE = "complete";
 	const STATUS_PARTIAL_SHIPMENT = "partial_shipment";
 	
+	
+	public function getPaypalPaymentLink(){
+		
+		
+		$encrypted_blob = $this->encryptedFrontendData();
+		
+		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/order/retrievePaypalToken", array('order_id'=>$this->id, 'locale'=>Yii::app()->language . "_CA", "encrypted_blob"=>$encrypted_blob, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+		
+		$linkdict = json_decode($output);
+		
+		return $linkdict->url;
+	}
 	
 }

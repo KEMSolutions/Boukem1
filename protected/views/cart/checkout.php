@@ -124,13 +124,15 @@ $cs
 						  },
 					  success: function(data){
 						  
+						  
+						  /*
 						  $('<form>', {
 						      'id': 'submitToPaymentPortal',
 						      'html': '<input type=\"text\" name=\"order_id\" value=\"' + data.id + '\" /><input type=\"text\" name=\"sid\" value=\"' + data.sid + '\" /><input type=\"text\" name=\"verification_blob\" value=\"' + data.verification_blob + '\" /><input type=\"text\" name=\"locale\" value=\"$pageLocale\" />',
 						      'action': 'https://kem.guru/secure/payment',
 							  'method':'post'
 						  }).appendTo(document.body).submit();
-						  
+						  */
 						  
 					 },
 					 error: function(data, textStatus){
