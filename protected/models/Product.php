@@ -309,6 +309,12 @@ class Product extends CActiveRecord
 			return number_format((float)$current_price, 2, '.', '');
 		}
 		
+		if (Yii::app()->session['applicable_rebate']){
+			$current_price = $this->price * (1.0 - Yii::app()->session['applicable_rebate']);
+			return number_format((float)$current_price, 2, '.', '');
+		}
+		
+		
 		if (count($this->productRebates)>0){
 			return array_shift(array_values($this->productRebates))->price;
 		}

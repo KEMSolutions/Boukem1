@@ -120,7 +120,8 @@ $cs
 						  'shipping_city' : $('#shipping_city').val(),
 						  'shipping_region' : $('#shipping_region').val(),
 						  'shipping_postcode' : $('#shipping_postcode').val(),
-						  'shipping_country' : $('#shipping_country').val()
+						  'shipping_country' : $('#shipping_country').val(),
+						  'promocode' : $('#promocode').val()
 						  },
 					  success: function(data){
 						  
@@ -1096,6 +1097,21 @@ $cs
 		
 		</fieldset>
 		<div class="alert alert-danger hide" id="incomplete_form_alert"><strong><?php echo Yii::t('app', "Votre formulaire est incomplet."); ?></strong> <?php echo Yii::t('app', "Certains champs obligatoires ne sont pas correctement remplis. Retournez dans le formulaire et renseignez ces champs avant de soumettre à nouveau le formulaire."); ?></div>
+		
+		<fieldset>
+        <!-- Form Name -->
+        <legend class="giftcard"><?php echo Yii::t('app', 'Carte cadeau'); ?></legend>
+		            <!-- Text input-->
+		            <div class="form-group">
+		              <label class="col-sm-2 control-label" for="promocode" ><?php echo Yii::t('app', 'Code de la carte'); ?></label>
+		              <div class="col-sm-10">
+		                <input type="text" name="promocode" placeholder="<?php echo Yii::t('app', 'Code de la carte'); ?>" id="promocode" class="form-control">
+		              </div>
+		            </div>
+		
+		</fieldset>
+		
+		
 		
 		<div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">

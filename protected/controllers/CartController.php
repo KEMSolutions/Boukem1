@@ -412,7 +412,17 @@ class CartController extends WebController
 	
 	public function actionOrder()
 	{
-
+		
+		// Temporary promocode stuff
+		$promocode = strtoupper(Yii::app()->request->getPost("promocode", null));
+		
+		
+		if ($promocode === "FALL14"){
+			Yii::app()->session['applicable_rebate'] = 0.15;
+		}
+		
+		// Temporary promocode stuff
+		
 		$firstname = Yii::app()->request->getPost("firstname", null);
 		$lastname = Yii::app()->request->getPost("lastname", null);
 		$phone = Yii::app()->request->getPost("phone", null);
