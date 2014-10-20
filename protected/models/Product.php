@@ -309,12 +309,23 @@ class Product extends CActiveRecord
 			return number_format((float)$current_price, 2, '.', '');
 		}
 		
+		$regular_price = $this->price;
+		if (Yii::app()->session['applicable_rebate']){
+					$current_price = $this->price * (1.0 - Yii::app()->session['applicable_rebate']);
+					$regular_price = number_format((float)$current_price, 2, '.', '');
+		}
+		
 		if (count($this->productRebates)>0){
-			return array_shift(array_values($this->productRebates))->price;
+			
+			$discounted_price = array_shift(array_values($this->productRebates))->price;
+			
+			if ($discounted_price < $regular_price){
+				return $discounted_price;
+			}
 		}
 		
 		
-		return $this->price;
+		return $regular_price;
 	}
 	
 	public function getVideosForLanguage($language) {

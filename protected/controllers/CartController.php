@@ -148,6 +148,15 @@ class CartController extends WebController
 		$postcode = Yii::app()->request->getPost("postcode", null);
 		$shipment = Yii::app()->request->getPost("shipment", null);
 		
+		
+		// Temporary promocode stuff
+		$promocode = strtoupper(Yii::app()->request->getPost("promocode", null));
+		if ($promocode === "FALL14"){
+			Yii::app()->session['applicable_rebate'] = 0.15;
+		}
+		// Temporary promocode stuff
+		
+		
 		if (!$country || !$province || !$postcode || !$shipment){
 			throw new CHttpException(400,'Invalid request: missing parameters.');
 		}
@@ -171,6 +180,12 @@ class CartController extends WebController
 		$total_value = 0.0;
 		$total_item_qty = 0;
 		foreach ($itemsInCart->getData() as $relationship){
+			
+			if ($promocode){
+				$relationship->price_paid = $relationship->product->getCurrentPrice();
+				$relationship->save();
+			}
+			
 			$total_weight += $relationship->quantity * $relationship->product->weight;
 			$total_value += $relationship->quantity * $relationship->price_paid;
 			$total_item_qty += $relationship->quantity;

@@ -598,6 +598,7 @@ $cart_is_empty = $dataProvider->totalItemCount < 1;
 	</div>
 	
 	<div>
+		<input type="text" class="form-group" name="promocode" placeholder="<?php echo Yii::t("app", "Carte cadeau"); ?>">
 	<button class="btn btn-default pull-right btn-lg" id="checkoutButton" data-toggle="tooltip" data-placement="top" title="<?php echo Yii::t("app", "Entrez votre code postal pour calculer les taxes et frais de livraison."); ?>"><?php echo Yii::t('app', "Commander"); ?></button>
 </div>
 	</div>

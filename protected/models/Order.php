@@ -214,8 +214,8 @@ class Order extends CActiveRecord
 				$itemdict["brand"]["id"] = $brand_id;
 				if ($brand_localization){
 					$itemdict["brand"]["name"] = $brand_localization->name;
-				} else if (count($order->brand->categoryLocalizations) > 0) {
-					$any_localization =  $order->brand->categoryLocalizations[0];
+				} else if (count($product->brand->categoryLocalizations) > 0) {
+					$any_localization =  $product->brand->categoryLocalizations[0];
 					$itemdict["brand"]["name"] = $any_localization->name;
 				} else {
 					$itemdict["brand"]["name"] = null;
