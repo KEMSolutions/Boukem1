@@ -199,9 +199,9 @@ class Product extends CActiveRecord
 	public function behaviors()
 	    {
 	        return array(
-	            'searchable' => array(
+	            /*'searchable' => array(
 	                'class' => 'YiiElasticSearch\SearchableBehavior',
-	            ),
+	            ),*/
 	        );
 	    }
 	

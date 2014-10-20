@@ -145,6 +145,12 @@ return array(
 	"de"=>"by",
 	"Nous gardons votre courriel pour associer dès maintenant votre commande avec vos précédentes, appliquer les rabais associés à votre compte et vous permettre de retrouver votre panier. Nous ne vous enverrons aucun spam, aucune infolettre et nous ne vendrons pas votre courriel à des tiers."=>"We ask for your email to allow you to retrieve your cart easily, apply any discount associated with your account as well as guarantee you the quoted prices. We will not resell your email, send you any spam or subscribe you in any newsletter.",
 	"Entrez votre code postal pour calculer les taxes et frais de livraison."=>"Please enter your postal code and select your prefered shipping method to continue.",
-	"Désolé, aucun résultat trouvé."=>"Sorry, no results were found."
+	"Désolé, aucun résultat trouvé."=>"Sorry, no results were found.",
+	"Le lien de paiement a expiré."=>"The payment link has expired.",
+	"Vous avez annulés le processus de commande. Nous ne préparons les commandes qu'une fois payées. N'hésitez pas à nous contacter si vous avez des questions sur le processus de paiement."=>"You canceled the payment of this order. Unfortunately, we cannot process unpaid orders; please contact us if you have any question regarding the payment process.",
+	"Annulation"=>"Cancelation",
+	"Votre commande a été annulée."=>"Your order was canceled.",
+	"Erreur de paiement"=>"Payment error",
+	"Pour reprendre le processus de paiement, rendez-vous simplement dans votre panier."=>"To pay for this order, simply head back to your cart.",
 );
 ?>

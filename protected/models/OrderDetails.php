@@ -37,7 +37,7 @@ class OrderDetails extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('order_id, shipping_type, billing_address_id, shipping_address_id', 'required'),
+			array('order_id, shipping_type', 'required'),
 			array('order_id, billing_address_id, shipping_address_id', 'numerical', 'integerOnly'=>true),
 			array('subtotal, taxes, total, shipping, balance', 'length', 'max'=>10),
 			// The following rule is used by search().

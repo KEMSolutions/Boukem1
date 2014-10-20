@@ -246,6 +246,7 @@ class CartController extends WebController
 		
 		$order_details->save();
 		
+		
 		// Transform the cart in order to avoid deleting it.
 		$cart->status = "pending";
 		$cart->save();
@@ -740,6 +741,42 @@ class CartController extends WebController
 		$this->render('confirm', array('model'=>$model));
 		
 	}
+	
+	public function actionConfirmpaypal($order, $token){
+		
+		$model = Order::model()->findByPk($order);
+		if ($model === null){
+			throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
+		}
+		
+		$encrypted_blob = $model->encryptedFrontendData();
+		
+		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/order/confirmPaypalOrder", array('order_id'=>$model->id, 'locale'=>Yii::app()->language . "_CA", "token"=>$token, "encrypted_blob"=>$encrypted_blob, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+		
+		$response_dict = json_decode($output);
+		if ($response_dict->status == "success") {
+			$this->render('confirm', array('model'=>$model));
+		} else {
+			$this->render('error', array('model'=>$model, "error"=>$response_dict->error));
+		}
+		
+	}
+	
+	
+	public function actionCancelpaypal($order){
+		
+		$model = Order::model()->findByPk($order);
+		if ($model === null){
+			throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
+		}
+		
+		$this->render('cancel', array('model'=>$model));
+		
+	}
+	
+	
+	
+	
 	
 	public function actionOverview()
 	{
