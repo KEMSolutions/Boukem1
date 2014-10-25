@@ -1,20 +1,21 @@
 <section class="slice color-one">
-	<?php if ($show_title): ?>
-	<div class="section-title color-three">
-	        <h3><?php echo Yii::t("app", "Recommandations"); ?></h3>
-	        <div class="indicator-down color-three"></div>
-	    </div>
 	
-	<?php endif; ?>
+	<?php
+	if ($show_tab){
+		$this->renderPartial('_tab', array("layout"=>$layout));
+	}
+	?>
+	
     <div class="w-section inverse">
     	<div class="container">
 			<div class="row">
 				<div class="col-md-8">
 				<?php
 				$counter = 0;
-				foreach ($items->products as $item):
+				foreach ($layout->products as $item):
 					
-					$product = Product::model()->findByPk($item);
+					
+					$product = Product::model()->findByPk($item->id);
 					
 					if (!$product || !$product->visible || $product->discontinued){
 						continue;
@@ -22,7 +23,7 @@
 					
 					$localization = $product->productLocalization;
 					
-					if ($localization === null){
+					if ($localization === null) {
 						continue;
 					}
 					
@@ -63,7 +64,7 @@
 			
 			$counter++;
 			
-			if ($counter >= 4) {
+			if ($counter >= $layout->product_limit) {
 				break;
 			}
 			
@@ -89,8 +90,8 @@
 		 		<?php
 
 		 		$counter = 0;
-		 	foreach ($items->categories as $category_id){
-		 		$category = Category::model()->findByPk($category_id);
+		 	foreach ($layout->categories as $cat){
+		 		$category = Category::model()->findByPk($cat->id);
 		 		$localization = $category->localizationForLanguage(Yii::app()->language);
 		 		if ($localization){
 		 			echo '<li><a href="' . $this->createUrl('category/view', array('slug'=>$localization->slug)) . '">' . $localization->name . '</a></li>';
@@ -98,7 +99,7 @@
 		 			$counter ++;
 		 		}
 		
-		 		if ($counter>=8)
+		 		if ($counter>=$layout->category_limit)
 		 			break;
 		 	}
 	

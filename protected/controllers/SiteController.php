@@ -50,7 +50,7 @@ class SiteController extends WebController
 				$layout_parameters["email"] = Yii::app()->user->user->email;
 			}
 			
-			$output = Yii::app()->curl->get("https://kle-en-main.com/CloudServices/index.php/Layout/boukem/view", $layout_parameters);
+			$output = Yii::app()->curl->get("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/layout/index", $layout_parameters);
 			
 			
 			$base_dict = json_decode($output);

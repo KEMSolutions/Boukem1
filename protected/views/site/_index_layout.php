@@ -1,23 +1,27 @@
 <?php
 	
 $counter = 0;
-foreach ($items as $type => $slice){
+
+
+foreach ($items as $slice){
 	
-	if ($type === "slider"){
+	if ($slice->type === "slider"){
 		/* We do not render the fraction slider, at least for now */
 		//$this->renderPartial('_slider', array("items"=>$slice->items, 'show_title'=>$counter));
-	} else if ($type==="rebates"){
+	} else if ($slice->type==="rebates"){
 		
-		$this->renderPartial('_rebates', array("items"=>$rebates, 'style'=>'normal', 'limit'=>4, 'show_title'=>$counter));
+		$this->renderPartial('_rebates', array("items"=>$rebates, 'layout'=>$slice->content, 'show_tab'=>$counter));
 		
-	} else if ($type === "recommended") {
+	} else if ($slice->type === "mixed") {
 		
-		$this->renderPartial('_recommended', array("items"=>$slice, 'show_title'=>$counter));
+		$this->renderPartial('_mixed', array("layout"=>$slice->content, 'show_tab'=>$counter));
 		
-	} else if ($type === "promoted") {
+	} else if ($slice->type === "promoted") {
+		
 		$this->renderPartial('_featured', array("items"=>$slice->products, 'style'=>'normal', 'limit'=>8, 'show_title'=>$counter, 'style'=>"fs"));
-	} else if ($type === "headline"){
-		$this->renderPartial('_headline', array("headline"=>$slice, 'show_title'=>$counter));
+
+	} else if ($slice->type === "headline"){
+		$this->renderPartial('_headline', array("layout"=>$slice->content, 'show_tab'=>$counter));
 	}
 	
 	$counter++;
