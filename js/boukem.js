@@ -38,14 +38,6 @@ function pageInitialization(){
 		var buybutton = $(this);
 		var product_id = buybutton.attr("data-product");
 		
-		// ABTEST STARTS
-		if (typeof window["ga"] != 'undefined' && buybutton.attr("data-abid")){
-			ga('send', 'event', 'buybutton', 'click', buybutton.attr("data-abid"), parseInt(product_id));
-		}
-		// ABTEST STOPS
-		
-		
-		
 		var quantity;
 		if($("#item_quantity").length) {
 		    quantity = $("#item_quantity").val();
@@ -62,6 +54,17 @@ function pageInitialization(){
 		updateBuyButtonsForProductWithId(product_id);
 	});
 	})
+	
+	imagesLoaded( $("body"), function() {
+		jQuery(window).load(function () {
+			$(".input-qty").TouchSpin({
+			                initval: 1
+			});
+		});
+		$( ".js-masonry" ).each(function( index ) {
+			$(this).masonry();
+		});
+	});
 	
 	updateCartOverview(false);
 }
@@ -92,25 +95,8 @@ if ($(".product_history_box").length && localStorage.getItem("product_history"))
 	// Post the JSON formatted list of recent product IDs
 	$.post( "/" + page_lang + "/product/thumbnails", { "products": localStorage.getItem("product_history"), "limit": $(".product_history_box").attr("data-limit")}, function( data ) {
 		$(".product_history_box_content").html(data);
-		var container = $('.product_history_box');
-		
 		// Wait until the images are loaded so we don't end up with a messed up layout
-		imagesLoaded( container, function() {
-			
-			jQuery(window).load(function () {
-	
-				$(".input-qty").TouchSpin({
-				                initval: 1
-				});
-
-			});
-			
-			
-		 	container.masonry({
-			  itemSelector: '.item'
-			});
-		});
-	 	
+		
 		pageInitialization();
 	});
 } else {

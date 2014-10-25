@@ -16,9 +16,9 @@ foreach ($items as $slice){
 		
 		$this->renderPartial('_mixed', array("layout"=>$slice->content, 'show_tab'=>$counter));
 		
-	} else if ($slice->type === "promoted") {
+	} else if ($slice->type === "featured") {
 		
-		$this->renderPartial('_featured', array("items"=>$slice->products, 'style'=>'normal', 'limit'=>8, 'show_title'=>$counter, 'style'=>"fs"));
+		$this->renderPartial('_featured', array("layout"=>$slice->content, 'show_tab'=>$counter));
 
 	} else if ($slice->type === "headline"){
 		$this->renderPartial('_headline', array("layout"=>$slice->content, 'show_tab'=>$counter));

@@ -1,28 +1,26 @@
 <section class="slice animate-hover-slide">
-	<?php if ($show_title): ?>
-	<div class="section-title color-three">
-	        <h3><?php echo Yii::t("app", "Choix populaires"); ?></h3>
-	        <div class="indicator-down color-three"></div>
-	    </div>
-	
-	<?php endif; ?>
+	<?php
+	if ($show_tab){
+		$this->renderPartial('_tab', array("layout"=>$layout));
+	}
+	?>
 	<div class="w-section inverse blog-grid">
     	<div class="container">
-        	<div id="masonryWr" class="row">
+        	<div class="row js-masonry">
 				
 				<?php
 				$counter = 0;
 	
-					 foreach ($items as $item){
+					 foreach ($layout->products as $item){
 		
-							$product = Product::model()->findByPk($item);
+							$product = Product::model()->findByPk($item->id);
 							$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
 							if ($product && $localization && $product->visible && !$product->discontinued){
-								$this->renderPartial("application.views._product_card", array("product"=>$product, "style"=>$style, "localization"=>$localization));
+								$this->renderPartial("application.views._product_card", array("product"=>$product, "style"=>"fs", "localization"=>$localization));
 							
 							
 								$counter ++;
-								if ($counter >= $limit){
+								if ($counter >= $layout->limit){
 									break;
 								}
 							}
@@ -30,9 +28,6 @@
 						}
 					?>
 	
-	
-	
-				
 			</div>
 		</div>
 	</div>

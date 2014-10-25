@@ -435,45 +435,4 @@ class SiteController extends WebController
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public function actionTest(){
-		
-		$order = Order::model()->findByPk(238);
-		
-		echo $order->getPaypalPaymentLink(); 
-		
-	}
-	
-	
 }

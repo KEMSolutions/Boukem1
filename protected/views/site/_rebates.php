@@ -6,7 +6,7 @@
 	?>
 	<div class="w-section inverse blog-grid">
     	<div class="container">
-        	<div class="row">
+        	<div class="row js-masonry" data-masonry-options='{ "itemSelector": ".item" }'>
 <?php
 
 if (!isset($rebates_array)){
