@@ -1,0 +1,60 @@
+#cart-container {
+    background : #EFEFEF;
+    width: 33.3333%;
+    height: 100%;
+    position : fixed;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    z-index: 10000000;
+    display: none;
+	box-shadow: rgba(0, 0, 0, 0.2) -3px 0px 30px 2px;
+}
+
+
+.close-button:hover {
+    cursor: pointer;
+}
+
+#cart-container hr {
+    margin-top: 0;
+}
+
+#cart-container .btn-group, #cart-container .btn{
+	border-radius: 0px;
+}
+
+#cart-total {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.subtotal dd, .item dd, .taxes dd {
+    float: left;
+    margin-right: 40%;
+}
+
+.subtotal dd {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.subtotal dt {
+    font-size: 2.5rem;
+}
+
+.taxes dt, .item dt, .subtotal dt {
+    text-align: right;
+}
+
+#cart-items-list {
+    padding: 0;
+}
+
+#cart-items-list li {
+    margin: 1em;
+}
+
+#cart-items-list li img {
+    margin: 0.5em 0;
+}

@@ -37,6 +37,7 @@ $cs
 	
 	->registerCssFile('//cdn.kem.guru/boukem/spirit/css/fancybox-fraction-concat.css')
 	->registerCssFile('/css/global-style.css')
+	->registerCssFile('/css/cart-drawer.css')
 	->registerCssFile('/css/skin-four.css');
 
 /**
@@ -62,6 +63,7 @@ $cs
 	//->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/imagesloaded.pkgd.min.js',CClientScript::POS_END)
 	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.ebright.custom.js.gz',CClientScript::POS_END)
 	->registerScriptFile('/js/boukem.js',CClientScript::POS_END)
+	
 		
     ->registerScript('tooltip',
         "$('[data-toggle=\"tooltip\"]').tooltip();
@@ -260,6 +262,33 @@ $cs
   
 
 <div id="modal_cart"></div>
+<div id="cart-container">
+	<div class="proceed btn-group btn-group-justified">
+		<a class="btn btn-two btn-lg" id="back"><?php echo Yii::t("app", "Continuer le magasinage"); ?></a>
+		<?php echo CHtml::link(Yii::t("app", "Passer à la caisse"), "cart/index", array('class'=>'btn btn-three btn-lg', 'id'=>'checkout')); ?>
+	</div>
+	<hr/>
+	<div id="cart-total">
+		<dl class="subtotal">
+			<dd><?php echo Yii::t("app", "Sous-total"); ?></dd>
+			<dt>&nbsp;</dt>
+		</dl>
+		<hr>
+		<dl class="item">
+			<dd>0 item</dd>
+			<dt>&nbsp;</dt>
+		</dl>
+		<dl class="taxes">
+			<dd> <?php echo Yii::t("app", "Taxes"); ?> </dd>
+			<dt>&nbsp;</dt>
+		</dl>            
+	</div>
+	<hr>
+	<div id="cart-items">
+		<ul id="cart-items-list">            
+		</ul>
+	</div>
+</div>
 
 
 

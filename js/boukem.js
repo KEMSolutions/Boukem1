@@ -24,7 +24,6 @@ function updateCartOverview(openModal){
 	  			$("#cart_modal_items").append("<li class='media'><a class='pull-left' href='" + val.link + "'><img class='media-object' src='" + val.thumbnail + "' alt=''></a><div class='media-body'><h4 class='media-heading'>" + val.name + "</h4>" + val.quantity + " x " + val.price_paid + "</div></li>");
 	  		});
 			});
-			
 		}
 	});
 }
@@ -34,6 +33,12 @@ function updateCartOverview(openModal){
 var page_lang = $("html").attr("lang");
 
 function pageInitialization(){
+	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	
+	if (w > 961) {
+	        $.getScript("/js/cartdrawer.js");
+	    }
+	
 	$(".buybutton").click(function(){
 		var buybutton = $(this);
 		var product_id = buybutton.attr("data-product");
@@ -49,10 +54,16 @@ function pageInitialization(){
 		buybutton.html('<i class="fa fa-spinner fa-spin"></i>');
 	
 		$.post( "/" + page_lang + "/cart/add", { "product": product_id, "quantity" : quantity }, function( data ) {
-		buybutton.addClass('animated tada');
-		updateCartOverview(true);
-		updateBuyButtonsForProductWithId(product_id);
-	});
+			buybutton.addClass('animated tada');
+			updateBuyButtonsForProductWithId(product_id);
+			
+			if (w < 961) {
+				updateCartOverview(true);
+			} else {
+				updateCartOverview(false);
+				cartDisplay.animateIn();
+			}
+		});
 	})
 	
 	imagesLoaded( $("body"), function() {
@@ -87,7 +98,7 @@ if( $('#product_info_box').length ){
 	localStorage.setItem('product_history',visited_string);
 }
 
-// On pages where a product history section is included (index, cart), fetch a pre-formatted html list prior to initialize our buy buttons
+// On pages where a product history section is included (index, cart), fetch a pre-formatted html list prior to initializing our buy buttons
 if ($(".product_history_box").length && localStorage.getItem("product_history")){
 	$(".product_history_title").removeClass("hidden");
 	$(".product_history_box").removeClass("hidden");

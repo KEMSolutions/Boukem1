@@ -398,6 +398,10 @@ class CartController extends WebController
 	{
 		
 		$product = Yii::app()->request->getPost("product", null);
+		if ($product === null){
+			throw new CHttpException(400,'Your request is invalid.');
+		}
+		
 		$cart = $this->getCart();
 		
 		$orderHasProduct = OrderHasProduct::model()->findByPk(array('product_id'=>$product, 'order_id'=>$cart->id));
@@ -408,18 +412,20 @@ class CartController extends WebController
 		}
 		
 		$orderHasProduct->delete();
-		var_dump($orderHasProduct->getErrors());
 	}
 	
 	public function actionUpdate()
 	{
 		$product = Yii::app()->request->getPost("product", null);
-		$quantity = Yii::app()->request->getPost("quantity", null);
+		
+		if ($product === null){
+			throw new CHttpException(400,'Your request is invalid.');
+		}
+		
+		$quantity = Yii::app()->request->getPost("quantity", 1);
 		$cart = $this->getCart();
 		
 		$orderHasProduct = OrderHasProduct::model()->findByPk(array('product_id'=>$product, 'order_id'=>$cart->id));
-		
-		
 		
 		if ($orderHasProduct === null){
 			throw new CHttpException(400,'Your request is invalid.');
@@ -427,7 +433,6 @@ class CartController extends WebController
 		
 		$orderHasProduct->quantity = $quantity;
 		
-		echo var_export($orderHasProduct);
 		$orderHasProduct->save();
 		
 	}
@@ -442,7 +447,7 @@ class CartController extends WebController
 		$postcode = Yii::app()->request->getPost("postcode", null);
 		$email = Yii::app()->request->getPost("email", null);
 		
-		if ($country === null){
+		if ($country === null) {
 			throw new CHttpException(400,'Your request is invalid.');
 		}
 		
@@ -825,6 +830,7 @@ class CartController extends WebController
 				$cartitem['name'] = $localization->name;
 				$cartitem['slug'] = $localization->slug;
 				$cartitem['thumbnail'] = $image ? $image->getImageURL(50, 50) : ProductImage::placehoderForSize(50, 50);
+				$cartitem['thumbnail_lg'] = $image ? $image->getImageURL(120, 160) : ProductImage::placehoderForSize(120, 160);
 				$cartitem['link'] = $this->createUrl('Product/view', array('id'=>$product->id));
 				$output_array[] = $cartitem;
 			}
