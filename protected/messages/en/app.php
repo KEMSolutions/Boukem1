@@ -154,6 +154,6 @@ return array(
 	"Pour reprendre le processus de paiement, rendez-vous simplement dans votre panier."=>"To pay for this order, simply head back to your cart.",
 	"Carte cadeau"=>'Gift Card',
 	"Code de la carte"=>"Gift Card Code",
-	"Continuer le magasinage"="Keep Shopping",
+	"Continuer le magasinage"=>"Keep Shopping",
 );
 ?>
