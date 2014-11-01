@@ -157,7 +157,7 @@ class CartController extends WebController
 		// Temporary promocode stuff
 		
 		
-		if (!$country || !$province || !$postcode || !$shipment){
+		if (!$country || !$postcode || !$shipment){
 			throw new CHttpException(400,'Invalid request: missing parameters.');
 		}
 		
