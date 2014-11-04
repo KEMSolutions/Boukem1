@@ -291,7 +291,18 @@ class Product extends CActiveRecord
 
 		if ($localizationForProduct===null && $accept_substitute){
 			// No localization exists for the current page localization. User might have added the product from a page in another language than switched language. Just pick the first localization available for the product and call it a day.
-			$localizationForProduct = array_shift(array_values($this->productLocalizations));
+			
+			// We need to run on multiple hosts, some supporting PHP 5.3 and others supporting 5.4 and up
+			if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
+				// 5.4 and up
+				// We can't use the new PHP 5.4 syntax directly since 5.3 will throw a syntax error.
+				eval('$localizationForProduct = array_values($this->productLocalizations)[0];');
+				
+			} else {
+				// Older than 5.4
+				$localizationForProduct = array_shift(array_values($this->productLocalizations));
+			}
+			
 		}
 		
 		$this->_localizationForLanguage = $localizationForProduct;
@@ -317,7 +328,17 @@ class Product extends CActiveRecord
 		
 		if (count($this->productRebates)>0){
 			
-			$discounted_price = array_shift(array_values($this->productRebates))->price;
+			// We need to run on multiple hosts, some supporting PHP 5.3 and others supporting 5.4 and up
+			if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
+				// 5.4 and up
+				// We can't use the new PHP 5.4 syntax directly since 5.3 will throw a syntax error.
+				eval('$discounted_price = array_values($this->productRebates)[0]->price;');
+				
+			} else {
+				// Older than 5.4
+				$discounted_price = array_shift(array_values($this->productRebates))->price;
+			}
+			
 			
 			if ($discounted_price < $regular_price){
 				return $discounted_price;
