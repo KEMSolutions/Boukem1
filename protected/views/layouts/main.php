@@ -265,7 +265,7 @@ $cs
 <div id="cart-container">
 	<div class="proceed btn-group btn-group-justified">
 		<a class="btn btn-two btn-lg" id="back"><?php echo Yii::t("app", "Continuer le magasinage"); ?></a>
-		<?php echo CHtml::link(Yii::t("app", "Passer à la caisse"), "cart/index", array('class'=>'btn btn-three btn-lg', 'id'=>'checkout')); ?>
+		<?php echo CHtml::link(Yii::t("app", "Passer à la caisse"), "/cart/index", array('class'=>'btn btn-three btn-lg', 'id'=>'checkout')); ?>
 	</div>
 	<hr/>
 	<div id="cart-total">
