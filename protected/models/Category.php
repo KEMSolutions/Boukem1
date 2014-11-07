@@ -158,7 +158,20 @@ class Category extends CActiveRecord
 
 		if ($localizationForCategory===null && $accept_substitute){
 			// No localization exists for the current page localization. User might have added the product from a page in another language than switched language. Just pick the first localization available for the product and call it a day.
-			$localizationForCategory = array_shift(array_values($this->categoryLocalizations));
+			
+			// We need to run on multiple hosts, some supporting PHP 5.3 and others supporting 5.4 and up
+			if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
+				// 5.4 and up
+				// We can't use the new PHP 5.4 syntax directly since 5.3 will throw a syntax error.
+				
+				eval('$localizationForCategory = $this->categoryLocalizations[0];');
+				
+			} else {
+				// Older than 5.4
+				$localizationForCategory = array_shift(array_values($this->categoryLocalizations));
+			}
+			
+			
 		}
 		
 		$this->_localizationForLanguage = $localizationForCategory;

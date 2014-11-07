@@ -296,7 +296,7 @@ class Product extends CActiveRecord
 			if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
 				// 5.4 and up
 				// We can't use the new PHP 5.4 syntax directly since 5.3 will throw a syntax error.
-				eval('$localizationForProduct = array_values($this->productLocalizations)[0];');
+				eval('$localizationForProduct = $this->productLocalizations[0];');
 				
 			} else {
 				// Older than 5.4
@@ -332,7 +332,7 @@ class Product extends CActiveRecord
 			if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
 				// 5.4 and up
 				// We can't use the new PHP 5.4 syntax directly since 5.3 will throw a syntax error.
-				eval('$discounted_price = array_values($this->productRebates)[0]->price;');
+				eval('$discounted_price = $this->productRebates[0]->price;');
 				
 			} else {
 				// Older than 5.4

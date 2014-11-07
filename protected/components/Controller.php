@@ -36,4 +36,29 @@ class Controller extends CController
 		return false;
 	}
 	
+	
+	
+	/**
+	 * If we're currently running on a .local domain name, we'll switch to a dummy cache so we don't have to install memcached in our Homestead boxes during development.
+	 */
+	private function updateCache() {
+		
+		if (strpos(Yii::app()->request->serverName,'.local') !== false) {
+		    Yii::app()->setComponent('cache', new CDummyCache());
+		} else {
+			Yii::app()->setComponent('cache', new CMemCache());
+			Yii::app()->cache->setServers(array(
+			    array(
+			        'host'=>'127.0.0.1',
+			        'port'=>11211,
+			        'weight'=>60,
+			    ),
+			));
+		}
+	}
+	
+	function init() {
+	    $this->updateCache();
+	}
+	
 }
