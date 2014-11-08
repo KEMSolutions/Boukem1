@@ -13,7 +13,7 @@ if ($currentPrice == $regularPrice) {
 	$rebatePercent = round((($regularPrice - $currentPrice) / $regularPrice) * 100, $precision=0, $mode=PHP_ROUND_HALF_DOWN);
 }	
 ?><li class="col-xs-12 col-sm-6 col-md-3"><figure class="card">
-  <a href="<?php echo $product_url; ?>">
+  <a href="<?php echo $product_url; ?>" target="_parent">
 	  
 <img alt="" class="center-block" src="<?php 
 
