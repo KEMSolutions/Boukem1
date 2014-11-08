@@ -121,19 +121,24 @@ class ProductImage extends CActiveRecord
 		return "//static.boutiquekem.com/productimg-";
 	}
 	
+	
+	const FIT_AUTO = "auto";
+	const FIT_WIDTH = "w";
+	const FIT_HEIGHT = "h";
+	
 	/**
 	 * Returns the appropriate url for the image with the provided width and height.
 	 * @param int $width maximum width.
 	 * @param int $height maximum height.
 	 * @return str the image url (eg.: http://static.boutiquekem.com/img-1-2-3-4.png)
 	 */
-	public function getImageURL($width, $height){
+	public function getImageURL($width, $height, $fit=self::FIT_AUTO){
 		
 		if ($width <= 300 && $height <= 280){
 			// We can display thumbnails without the store's watermark. Cleaner for end users and easier on the server.
-			$url = ProductImage::getImageGeneratorBaseUrl() . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+			$url = ProductImage::getImageGeneratorBaseUrl() . $width . "-" . $height . "-" . $this->identifier . ( $fit=== self::FIT_AUTO ? "" : "-" . $fit) . "." . $this->extension;
 		} else {
-			$url = ProductImage::getImageGeneratorBaseUrl() . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-" . $this->identifier . "." . $this->extension;
+			$url = ProductImage::getImageGeneratorBaseUrl() . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-" . $this->identifier . ( $fit=== self::FIT_AUTO ? "" : "-" . $fit) . "." . $this->extension;
 		}
 		
 		
