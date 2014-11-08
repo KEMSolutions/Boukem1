@@ -3,6 +3,23 @@
 class WidgetController extends WebController
 {
 	
+  /** Validates hex color, adding #-sign if not found.
+   *   $color: the color hex value stirng to Validates
+   */
+	protected function validate_html_color($color) {
+	  
+  	  if (preg_match('/^#[a-f0-9]{6}$/i', $color)) {
+	    // Verified OK, of type #00FF00
+	  } else if (preg_match('/^[a-f0-9]{6}$/i', $color)) {
+		  // Verified OK, of type 00FF00
+	    $color = '#' . $color;
+	  } else {
+		  // Not a correct color. Return a flashy color so our user can notice.
+		$color = "#000000";
+	  }
+	  
+	  return $color;
+	}
 	
 
 	/**
@@ -20,8 +37,8 @@ class WidgetController extends WebController
 			throw new CHttpException(400,'Offset and limit can\'t be larger than 32. If you need to retrieve a large amount of products efficiently, please refer to Boukem\'s API documentation.');
 		}
 		
-		$cache_id = Yii::app()->request->hostInfo . " WidgetController:[promotionsForLanguage] " . Yii::app()->language . $format . " " . $limit . " " . $offset;
-		$cache_duration = 10;//10800;
+		$cache_id = "WidgetController:[promotionsForLanguage] " . md5(Yii::app()->language . CHtml::encode($background) . CHtml::encode($format) . " " . $limit . " " . $offset);
+		$cache_duration = 120;//10800;
 		$content = Yii::app()->cache->get($cache_id);
 		
 		if (!$content) {
@@ -35,6 +52,11 @@ class WidgetController extends WebController
 			), 'pagination'=>false,));
 			
 			if ($format === "html"){
+				
+				if ($background != "transparent" && $background != "default") {
+					$background = $this->validate_html_color($background);
+				}
+				
 				$content = $this->renderPartial('_rebates', array('rebates'=>$rebatesDataProvider, "background"=>$background), true);
 			} else {
 				$content = array();

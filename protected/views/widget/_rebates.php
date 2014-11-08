@@ -12,8 +12,10 @@ shuffle($rebates_array);
 	<?php
 	if ($background === "default"){
 		echo "<style>html {background:#f2f2f2}</style>";
-	} else {
+	} else if ($background === "transparent") {
 		echo "<style>.card {box-shadow: 0 -1px 30px rgba(0, 0, 0, 0.15);}</style>";
+	} else {
+		echo "<style>html {background:" . $background . ";}</style>";
 	}
 ?>
 </head>
