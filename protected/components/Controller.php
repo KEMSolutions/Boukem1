@@ -9,11 +9,24 @@ class Controller extends CController
 	 * Return data to browser as JSON and end application.
 	 * @param array $data
 	 */
-	protected function renderJSON($data)
+	protected function renderJSON($data, $pretty=false)
 	{
 	    header('Content-type: application/json');
-	    echo CJSON::encode($data);
-
+		if ($pretty){
+			if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
+				// 5.4 and up
+				//eval('$localizationForProduct = $this->productLocalizations[0];');
+				echo json_encode($data, JSON_PRETTY_PRINT);
+			} else {
+				// Older than 5.4 do not support pretty print
+				echo json_encode($data);
+			}
+			
+			
+		} else {
+		    echo CJSON::encode($data);
+		}
+	    
 	    foreach (Yii::app()->log->routes as $route) {
 	        if($route instanceof CWebLogRoute) {
 	            $route->enabled = false; // disable any weblogroutes
