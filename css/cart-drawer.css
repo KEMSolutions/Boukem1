@@ -12,6 +12,7 @@
 }
 
 
+
 .close-button:hover {
     cursor: pointer;
 }
@@ -29,7 +30,7 @@
     padding-right: 8%;
 }
 
-.subtotal dd, .item dd, .taxes dd {
+.subtotal dd, .item dd{
     float: left;
     margin-right: 40%;
 }
@@ -43,7 +44,7 @@
     font-size: 2.5rem;
 }
 
-.taxes dt, .item dt, .subtotal dt {
+.item dt, .subtotal dt {
     text-align: right;
 }
 
@@ -51,10 +52,33 @@
     padding: 0;
 }
 
+#cart-items-list input {
+    margin-top: 1px;
+}
+
+
 #cart-items-list li {
     margin: 1em;
 }
 
 #cart-items-list li img {
     margin: 0.5em 0;
+}
+
+#cart-items-list .product-name{
+	white-space:nowrap;
+	overflow:hidden;
+}
+#cart-items-list h2{
+	padding: 15px 0;
+	border-bottom: 0;
+}
+
+#cart-items-list .no-padding-left{
+	padding-left: 0;
+}
+
+#cart-items-list .product-price{
+	font-size: 1.2em;
+	padding-top: 0.3em;
 }

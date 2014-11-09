@@ -81,7 +81,6 @@ var cartData = {
         $subtotal : $(".subtotal dt"),
         $itemprice : $(".item dt"),
         $nbItem : $(".item dd"),
-        $taxes : $(".taxes dt"),
         $close : $(".close-button"),
     },
     
@@ -98,6 +97,14 @@ var cartData = {
             array_length = res.length;
             total_price = [];
             
+			if (page_lang == 'fr'){
+				var localized_remove_item_string = "Enlever du panier";
+				var localized_edit_item_quantity_string = "Mettre à jour la quantité"; 
+			} else {
+				var localized_remove_item_string = "Remove from cart";
+				var localized_edit_item_quantity_string = "Update quantity"; 
+			}
+			
             function getnbItem() {
                 var return_total = 0;
                 
@@ -115,12 +122,12 @@ var cartData = {
                 total_price.push(new Entity(res[i].price_paid, res[i].quantity));
                 
                 var domElement = '<li class="w-box" data-product="' + res[i].product_id + '" data-quantity=' + res[i].quantity + '>' +
-                    '<div class="col-xs-3 text-center"><img src=' + res[i].thumbnail_lg + ' ></div>' +
-                    '<div class="col-xs-9">' + 
-                        '<h2 class="product-name">' + res[i].name + '<i class="fa fa-times fa-1 close-button pull-right"></i></h2>' + 
-                        '<p class="product-price">' + res[i].price_paid + '$</p>' +
-                        '<div class="input-group"><input type="number" value="' + res[i].quantity + '" class="quantity form-control" min="1" step="1" >' +
-                        '<span class="input-group-btn"><button type="button" class="btn btn-primary update_quantity">Modifier</button></span></div>'
+                    '<div class="col-xs-3 text-center"><img src=' + res[i].thumbnail_lg + ' class="img-responsive"></div>' +
+                    '<div class="col-xs-9 no-padding-left">' + 
+                        '<div class="row"><div class="col-xs-10"><h2 class="product-name">' + res[i].name + '</h2></div><div class="col-xs-2"><h2><i class="fa fa-trash fa-1 close-button"><span class="sr-only">' + localized_remove_item_string + '</span></i></h2></div></div>' + 
+                        '<div class="row"><div class="col-xs-8"><div class="input-group"><input type="number" value="' + res[i].quantity + '" class="quantity form-control input-sm" min="1" step="1" >' +
+                        '<span class="input-group-btn"><button type="button" class="btn btn-default btn-sm update_quantity"><i class="fa fa-pencil"><span class="sr-only">' + localized_edit_item_quantity_string + '</span></i></button></span></div></div>' +
+						'<div class="col-xs-4 product-price text-right">' + res[i].price_paid + '$</div></div>' +
                     '</div>' +
                     '</li>';
                 cartData.$el.$cartitemslist.append(domElement);
@@ -157,16 +164,11 @@ var cartData = {
     },
     
     setPrice : function(price, nb_item) {
-        var taxes = taxes(price, 0.05, 0.09975).toFixed(2);
         
         cartData.$el.$itemprice.text(price.toFixed(2) + "$");
         cartData.$el.$nbItem.text(nb_item + " items");
-        cartData.$el.$taxes.text(taxes + "$");
-        cartData.$el.$subtotal.text(((parseFloat(price) + parseFloat(taxes)).toFixed(2) + "$"));
+        cartData.$el.$subtotal.text((parseFloat(price).toFixed(2) + "$"));
         
-        function taxes(price, tvs, tvq) {
-            return (price * tvs) + (price * tvq);
-        }
     },
     
     modifiyQuantity: function() {

@@ -277,11 +277,7 @@ $cs
 		<dl class="item">
 			<dd>0 item</dd>
 			<dt>&nbsp;</dt>
-		</dl>
-		<dl class="taxes">
-			<dd> <?php echo Yii::t("app", "Taxes"); ?> </dd>
-			<dt>&nbsp;</dt>
-		</dl>            
+		</dl>      
 	</div>
 	<hr>
 	<div id="cart-items">
