@@ -38,6 +38,10 @@ if ($main_image){
 						 if ($counter != 0 && $counter+1 == $number_of_lines){
 							 // Last but also not first line
 							 echo "<small>" . $line . " - </small>";
+						 } else if ($counter == 0 && $counter+1 == $number_of_lines) {
+							 // Last AND first
+							 echo $line;
+							 echo "<br>";
 						 } else {
 							 echo $line;
 						 }
