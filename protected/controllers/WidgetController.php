@@ -128,6 +128,7 @@ class WidgetController extends WebController
 		if ($format === "html") {
 			echo $content;
 		} else if ($format === "json") {
+			header('Access-Control-Allow-Origin: *');
 			$this->renderJson($content, $pretty=$pretty);
 		} else {
 			throw new CHttpException(400,'The format parameter is invalid.');
