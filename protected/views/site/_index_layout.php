@@ -8,17 +8,25 @@ foreach ($items as $slice){
 	if ($slice->type === "slider"){
 		/* We do not render the fraction slider, at least for now */
 		//$this->renderPartial('_slider', array("items"=>$slice->items, 'show_title'=>$counter));
+	} else if ($slice->type==="rebates_dense"){
+		
+		$this->renderPartial('_rebates', array("items"=>$rebates, 'layout'=>$slice->content, 'show_tab'=>$counter, "dense"=>true));
+		
 	} else if ($slice->type==="rebates"){
 		
-		$this->renderPartial('_rebates', array("items"=>$rebates, 'layout'=>$slice->content, 'show_tab'=>$counter));
+		$this->renderPartial('_rebates', array("items"=>$rebates, 'layout'=>$slice->content, 'show_tab'=>$counter, "dense"=>false));
 		
 	} else if ($slice->type === "mixed") {
 		
 		$this->renderPartial('_mixed', array("layout"=>$slice->content, 'show_tab'=>$counter));
 		
+	} else if ($slice->type === "featured_dense") {
+		
+		$this->renderPartial('_featured', array("layout"=>$slice->content, 'show_tab'=>$counter, 'dense'=>true));
+
 	} else if ($slice->type === "featured") {
 		
-		$this->renderPartial('_featured', array("layout"=>$slice->content, 'show_tab'=>$counter));
+		$this->renderPartial('_featured', array("layout"=>$slice->content, 'show_tab'=>$counter, 'dense'=>false));
 
 	} else if ($slice->type === "headline"){
 		$this->renderPartial('_headline', array("layout"=>$slice->content, 'show_tab'=>$counter));

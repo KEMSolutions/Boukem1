@@ -86,6 +86,7 @@ if (isset($style) && $style === "narrow"){
 					 }
 					 
 					  ?></a></h2>
+					  
                 <p>
                <?php echo substr(strip_tags($localization->short_description), 0, 120); ?>...
                 </p>

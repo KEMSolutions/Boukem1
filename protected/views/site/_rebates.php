@@ -1,12 +1,26 @@
+<?php if ($dense) :?>
+	<section class="slice color-two-d">
+		<?php
+		if ($show_tab){
+			$this->renderPartial('_tab', array("layout"=>$layout));
+		}
+		?>
+		
+	<div class="w-section inverse blog-grid">
+    	<div class="container">
+			<div class="row">
+<?php else: ?>
 <section class="slice animate-hover-slide">
 	<?php
 	if ($show_tab){
 		$this->renderPartial('_tab', array("layout"=>$layout));
 	}
 	?>
+	
 	<div class="w-section inverse blog-grid">
     	<div class="container">
         	<div class="row js-masonry" data-masonry-options='{ "itemSelector": ".item" }'>
+<?php endif; ?>
 <?php
 
 if (!isset($rebates_array)){
@@ -22,7 +36,12 @@ $counter = 0;
 		$product = $rebate->product;
 		$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=false);
 		if ($product && $localization && $product->visible && !$product->discontinued){
-			$this->renderPartial("application.views._product_card", array("product"=>$product, "style"=>"fs", "localization"=>$localization));
+			if ($dense){
+				$this->renderPartial("application.views._product_card_dense", array("product"=>$product, "style"=>"fs", "localization"=>$localization));
+			} else {
+				$this->renderPartial("application.views._product_card", array("product"=>$product, "style"=>"fs", "localization"=>$localization));
+			}
+			
 			
 			$counter ++;
 			

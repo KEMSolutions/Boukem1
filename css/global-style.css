@@ -1009,3 +1009,15 @@ color:#DDD; font-weight:500;}
 	color: #fff;
 	text-shadow: 0 1px rgba(0,0,0,0.2);
 }
+
+
+.dense_product {
+	margin-bottom: 2em;
+}
+.dense_product .brand {
+}
+.dense_product img {
+	margin-bottom: 0.5em;
+	max-width: 20em;
+	height: 160px;
+}
