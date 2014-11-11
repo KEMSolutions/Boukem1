@@ -993,8 +993,7 @@ color:#DDD; font-weight:500;}
 .regularprice {text-decoration:line-through;}
 .w-footer .pricetag {color:#555; font-size:1.5em;}
 
-.rebatebadge
-{
+.rebatebadge {
 	width:2.6em;
 	height:2.6em;
 	border-radius:50%;
@@ -1014,7 +1013,9 @@ color:#DDD; font-weight:500;}
 .dense_product {
 	margin-bottom: 2em;
 }
-.dense_product .brand {
+.dense_product .brand, .dense_product .name {
+	white-space:nowrap;
+	overflow:hidden;
 }
 .dense_product img {
 	margin-bottom: 0.5em;
