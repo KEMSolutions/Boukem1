@@ -10,7 +10,13 @@ foreach ($items as $slice){
 		//$this->renderPartial('_slider', array("items"=>$slice->items, 'show_title'=>$counter));
 	} else if ($slice->type==="rebates"){
 		
-		$this->renderPartial('_rebates', array("items"=>$rebates, 'layout'=>$slice->content, 'show_tab'=>$counter, "dense"=>false));
+		// It may take a while for a website to be fully provisioned. Therefore, hide the rebates slice until there are rebates
+		if ($rebates->itemCount > 0){
+			$this->renderPartial('_rebates', array("items"=>$rebates, 'layout'=>$slice->content, 'show_tab'=>$counter, "dense"=>false));
+		} else {
+			// We need to decrement the counter in prevision to the final increment
+			$counter--;
+		}
 		
 	} else if ($slice->type === "mixed") {
 		
