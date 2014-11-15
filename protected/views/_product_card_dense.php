@@ -38,7 +38,9 @@ if ($localization):
 			echo ProductImage::placehoderForSize(160, 160);
 		}
 			?>" alt="<?php echo $localization->name; ?>" class=" center-block"></a>
-		
+		<?php if ($isOnSale): ?>
+			<div class="rebatebadge"><span class="animated tada">-<?php echo $rebatePercent; ?>%</span></div>
+		<?php endif; ?>
 		<div class="text-uppercase brand"><strong><?php echo CHtml::link($brand_localization->name, array('category/view', 'slug'=>$brand_localization->slug)); ?></strong></div>
 		
 		<div class="name">
@@ -66,7 +68,15 @@ if ($localization):
 								  ?></a>
 		</div>
 		
-		<div class="price"><?php echo $product->getCurrentPrice(); ?> $</div>
+		<div class="price">
+		
+		<button class="btn btn-default btn-xs buybutton" data-product="<?php echo $product->id ?>"><i class="fa fa-shopping-cart"></i> <?php
+		
+		if ($isOnSale) {
+			echo "<small class='regularprice'>" . $product->price . "</small> ";
+		}
+		 echo $product->getCurrentPrice(); ?> $</button>
+		</div>
 		
 		
 	</div>
