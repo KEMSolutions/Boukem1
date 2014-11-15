@@ -3,19 +3,47 @@ function updateBuyButtonsForProductWithId(id){
 	$('button[data-product="' + id + '"]').attr("disabled", "disabled");
 }
 
+if (page_lang == 'fr'){
+	var localized_remove_item_string = "Enlever du panier";
+	var localized_edit_item_quantity_string = "Mettre à jour la quantité"; 
+} else {
+	var localized_remove_item_string = "Remove from cart";
+	var localized_edit_item_quantity_string = "Update quantity"; 
+}
+
 function updateCartOverview(openModal){
 	$.getJSON( "/" + page_lang + "/cart/overview", function( data ) {
 	  	
 		$("#cart_modal_items").html("");
 		var total_count = 0;
+		
+		
 		$.each( data, function( index, val ) {
 			total_count += parseInt(val.quantity);
 			updateBuyButtonsForProductWithId(val.product_id);
 			$("#cart_modal_items").append("<li class='media'><a class='pull-left' href='" + val.link + "'><img class='media-object' src='" + val.thumbnail + "' alt=''></a><div class='media-body'><h4 class='media-heading'>" + val.name + "</h4>" + val.quantity + " x " + val.price_paid + "</div></li>");
 			
+			
+            var sidebarElement = '<li class="w-box animated bounceInDown" data-product="' + val.product_id + '" data-quantity=' + val.quantity + '>' +
+                '<div class="col-xs-3 text-center"><img src=' + val.thumbnail_lg + ' class="img-responsive"></div>' +
+                '<div class="col-xs-9 no-padding-left">' + 
+                    '<div class="row"><div class="col-xs-10"><h2 class="product-name">' + val.name + '</h2></div><div class="col-xs-2"><h2><i class="fa fa-trash fa-1 close-button"><span class="sr-only">' + localized_remove_item_string + '</span></i></h2></div></div>' + 
+                    '<div class="row"><div class="col-xs-8"><div class="input-group"><input type="number" value="' + val.quantity + '" class="quantity form-control input-sm" min="1" step="1" >' +
+                    '<span class="input-group-btn"><button type="button" class="btn btn-default btn-sm update_quantity"><i class="fa fa-pencil"><span class="sr-only">' + localized_edit_item_quantity_string + '</span></i></button></span></div></div>' +
+					'<div class="col-xs-4 product-price text-right">' + val.price_paid + '$</div></div>' +
+                '</div>' +
+                '</li>';
+			
+			// Don't add the same product twice
+			if (!$("#cart-items-list [data-product='" + val.product_id + "']").length){
+	            $("#cart-items-list").append(sidebarElement);
+			}
+            
+			
 			// Find products on the list view (if any)
 			$('input[data-product=' + val.product_id + ']').val(val.quantity);
 		});
+		
 		$("#cart_badge").text(total_count);
 		if (openModal){
 			$( "#modal_cart" ).load( "/" + $("html").attr("lang") + '/site/modalCart', function() {
