@@ -92,7 +92,14 @@ if ($regular_price !== $current_price){
 					 
 					 
 													  ?></h2>
-	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><span>$</span><?php echo $current_price; ?></h3></span>
+	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><?php
+								
+							if (Yii::app()->language === "fr") {
+	                        	echo $current_price . "<span>$</span>";
+	                        } else {
+	                        	echo "<span>$</span>" . $current_price;
+	                        }
+							?></h3></span>
 	                        <ul>
 								<?php if ($on_sale || $this->isB2b()): ?>
 								<li class="text-success"><i class="fa fa-smile-o"></i> <?php echo Yii::t("app", "Prix régulier:") . " $" . $regular_price; ?></li>

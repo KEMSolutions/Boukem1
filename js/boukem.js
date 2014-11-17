@@ -30,7 +30,7 @@ function updateCartOverview(openModal){
                     '<div class="row"><div class="col-xs-10"><h2 class="product-name">' + val.name + '</h2></div><div class="col-xs-2"><h2 class="text-right"><i class="fa fa-trash fa-1 close-button"><span class="sr-only">' + localized_remove_item_string + '</span></i></h2></div></div>' + 
                     '<div class="row"><div class="col-xs-8"><div class="input-group"><input type="number" value="' + val.quantity + '" class="quantity form-control input-sm" min="1" step="1" >' +
                     '<span class="input-group-btn"><button type="button" class="btn btn-default btn-sm update_quantity"><i class="fa fa-pencil"><span class="sr-only">' + localized_edit_item_quantity_string + '</span></i></button></span></div></div>' +
-					'<div class="col-xs-4 product-price text-right">' + val.price_paid + '$</div></div>' +
+					'<div class="col-xs-4 product-price text-right">$' + val.price_paid + '</div></div>' +
                 '</div>' +
                 '</li>';
 			

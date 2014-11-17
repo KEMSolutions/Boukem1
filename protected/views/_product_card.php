@@ -99,7 +99,7 @@ if (isset($style) && $style === "narrow"){
                 	echo Yii::t("app", "Prix régulier:") . " <span class='regularprice'>" . $product->price . "</span><br>";
                 }
 
-          		?><strong class="pricetag"><?php echo $product->getCurrentPrice(); ?> $</strong></div>
+          		?><strong class="pricetag"><?php echo $product->getLocalizedCurrentPrice(); ?></strong></div>
 					<button class="btn <?php if ($isOnSale) {echo "btn-three";} else {echo "btn-success";} ?> pull-right buybutton" data-product="<?php echo $product->id ?>" data-abid="v"><i class="fa fa-shopping-cart"></i> <?php echo Yii::t("app","Acheter");?></button>
                     <span class="clearfix"></span>
 					

@@ -53,7 +53,7 @@
 	                            <div class="col-md-10">
 									<p><a href="<?php echo $product_url; ?>" class="strong"><?php echo $localization->name; ?></a><span class="pull-right"><strong><i class="fa fa-star"></i> <?php echo Yii::t("app", "En vedette"); ?></strong></span></p>
 	                                <p><?php echo substr(strip_tags($localization->short_description), 0, 120); ?>...
-										<br><button class="btn btn-one btn-xs buybutton" data-product="<?php echo $product->id ?>"><i class="fa fa-shopping-cart"></i> <?php echo $product->getCurrentPrice(); ?> $</button></p>
+										<br><button class="btn btn-one btn-xs buybutton" data-product="<?php echo $product->id ?>"><i class="fa fa-shopping-cart"></i> <?php echo $product->getLocalizedCurrentPrice(); ?></button></p>
 									
 	                            </div>
 	                        </div>

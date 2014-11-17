@@ -349,6 +349,20 @@ class Product extends CActiveRecord
 		return $regular_price;
 	}
 	
+	
+	public function getLocalizedCurrentPrice(){
+		
+		
+		if (Yii::app()->language == "fr"){
+			return $this->getCurrentPrice() . " $";
+		} else if (Yii::app()->language = "en"){
+			return "$ " . $this->getCurrentPrice();
+		}
+		
+		return $this->getCurrentPrice();
+	}
+	
+	
 	public function getVideosForLanguage($language) {
 		
 		

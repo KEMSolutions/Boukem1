@@ -75,7 +75,7 @@ if ($localization):
 		if ($isOnSale) {
 			echo "<small class='regularprice'>" . $product->price . "</small> ";
 		}
-		 echo $product->getCurrentPrice(); ?> $</button>
+		 echo $product->getLocalizedCurrentPrice(); ?></button>
 		</div>
 		
 		
