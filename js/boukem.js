@@ -21,7 +21,7 @@ function updateCartOverview(openModal){
 		$.each( data, function( index, val ) {
 			total_count += parseInt(val.quantity);
 			updateBuyButtonsForProductWithId(val.product_id);
-			$("#cart_modal_items").append("<li class='media'><a class='pull-left' href='" + val.link + "'><img class='media-object' src='" + val.thumbnail + "' alt=''></a><div class='media-body'><h4 class='media-heading'>" + val.name + "</h4>" + val.quantity + " x " + val.price_paid + "</div></li>");
+			$(".cart_modal_items").append("<li class='media'><a class='pull-left' href='" + val.link + "'><img class='media-object' src='" + val.thumbnail + "' alt=''></a><div class='media-body'><h4 class='media-heading'>" + val.name + "</h4>" + val.quantity + " x " + val.price_paid + "</div></li>");
 			
 			
             var sidebarElement = '<li class="w-box animated bounceInDown" data-product="' + val.product_id + '" data-quantity=' + val.quantity + '>' +
@@ -35,8 +35,8 @@ function updateCartOverview(openModal){
                 '</li>';
 			
 			// Don't add the same product twice
-			if (!$("#cart-items-list [data-product='" + val.product_id + "']").length){
-	            $("#cart-items-list").append(sidebarElement);
+			if (!$(".cart-items-list [data-product='" + val.product_id + "']").length){
+	            $(".cart-items-list").append(sidebarElement);
 			}
             
 			

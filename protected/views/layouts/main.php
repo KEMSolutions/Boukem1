@@ -268,7 +268,7 @@ $cs
 		<?php echo CHtml::link(Yii::t("app", "Passer à la caisse"), "/cart/index", array('class'=>'btn btn-three btn-lg', 'id'=>'checkout')); ?>
 	</div>
 	<div id="cart-items">
-		<ul id="cart-items-list">            
+		<ul class="cart-items-list">            
 		</ul>
 	</div>
 </div>

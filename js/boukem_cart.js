@@ -35,10 +35,11 @@ function updateTotal(){
 
 var checkoutEnabled = false;
 function enableCheckout(){
-	$('#estimateButton').removeClass('btn-three');
-	$('#estimateButton').addClass('btn-one');
-	$('#checkoutButton').addClass('btn-three animated pulse');
-	$('#checkoutButton').tooltip('disable');
+
+	$("#payment").removeClass("hidden");
+	$("#payment").addClass("animated fadeInDown");
+	$("#checkoutButton").addClass("animated rubberBand");
+	
 	checkoutEnabled = true;
 }
 
@@ -48,7 +49,7 @@ function updateTransport(){
 	}
 	
   	$('#price_transport').text($(".shipping_method:checked").attr('data-cost'));
-
+	$("#estimate").addClass("animated fadeInDown");
 	updateTotal();
 	enableCheckout();
 }
@@ -98,10 +99,10 @@ function fetchEstimate(){
 		return;
 	}
 	
-	$('#estimate').html('<div class="text-center"><i class="fa fa-spinner fa-3x fa-spin"></i></div>');
 	
-  $("#total_column").removeClass("hidden");
-  $("#total_column").addClass("animated zoomIn");
+	var estimateButtonText = $('#estimateButton').text();
+	$('#estimateButton').html('<i class="fa fa-spinner fa-spin"></i>');
+	
 	
 	$.ajax({
 	  type: 'POST',
@@ -109,11 +110,41 @@ function fetchEstimate(){
 	  url: estimate_url,
 	  data: {'country':country_value, 'province':$("#province").val(), 'postcode':postcode_value,'email':email_value},
 	  success: function(data){
-	  
+		  
+		  // If the element has already the animated class, that means our user ran the estimate script once already
+		  var firstRun = true;
+		  if ($("#estimate").hasClass("animated")){
+			  firstRun = false;
+		  }
+		  
 		  $('#estimate').html(data.shipping_block);
-		  $('#price_taxes').text(data.taxes.toFixed(2));
+  		  $("#estimate").removeClass("hidden");
+  		  $("#estimate").addClass("animated fadeInDown");
+		
+		$("#estimateButton").removeClass("btn-three");
+			$("#estimateButton").addClass("btn-one");
+	  	  $('#estimateButton').text(estimateButtonText);
+	  	
+		  $('html, body').animate({
+		      scrollTop: $("#estimate").offset().top
+		  }, 1000);
 	  
-		  updateTransport();
+	  	// If this is not the first run, we need to manually update the total price for the order with the provided data
+		  if (firstRun){
+			  $('#estimate').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	  			  $('#price_taxes').text(data.taxes.toFixed(2));
+			  
+				  updateTransport();
+			
+			  });
+		  } else {
+		  	updateTransport();
+		  }
+		  
+		  
+		  
+	  	  //$('body').scrollTo('#estimate');
+		  
 		  	
 		  // Register the received radio buttons to trigger a total update
 		  $(".shipping_method").change(function(){
@@ -152,9 +183,10 @@ $('#checkoutButton').click( function(event){
 	}
 	
 	$(this).removeClass("btn-three");
-	$(this).addClass("btn-primary");
+	$(this).addClass("btn-one");
 	$(this).html("<i class=\"fa fa-spinner fa-spin\"></i>");
-	$(this).attr("disabled", "disabled");
+	$(".btn").attr("disabled", "disabled");
+	
 	
 	$.ajax({
 	  type: "POST",
