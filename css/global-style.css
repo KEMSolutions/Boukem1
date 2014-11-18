@@ -1022,3 +1022,13 @@ color:#DDD; font-weight:500;}
 	max-width: 20em;
 	height: 160px;
 }
+
+.facebook_share_button a {
+	background-color:#3b5998!important;
+	color:#f7f7f7!important;
+}
+
+.pinterest_share_button a:link {
+	background-color:#EFEFEF!important;
+	color: #BD091F!important;
+}

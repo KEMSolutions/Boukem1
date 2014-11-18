@@ -98,9 +98,21 @@ var cartData = {
                 updateCartOverview(false);
             });
 			var cart_item = $this.closest("li");
-			cart_item.addClass('animated bounceOutRight');
+			
+			// When we are on the cart layout, make the products disapear by the left as they are presented on the left side of the screen
+			if (typeof cartCheckoutFetchEstimateProgramatically == 'function') { 
+			  cart_item.addClass('animated bounceOutLeft'); 
+			} else {
+				cart_item.addClass('animated bounceOutRight');
+			}
+			
 			cart_item.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	            cart_item.remove();
+				
+				if (typeof cartCheckoutFetchEstimateProgramatically == 'function') { 
+				  cartCheckoutFetchEstimateProgramatically(); 
+				}
+				
 			});
             
         });        
@@ -120,7 +132,12 @@ var cartData = {
             
             $.post( cartData.$links.update_url, { product: product_id, quantity: quantity })
             .done(function( data ) {
-	           location.reload();
+				if (typeof cartCheckoutFetchEstimateProgramatically == 'function') { 
+				  cartCheckoutFetchEstimateProgramatically(); 
+				} else {
+					location.reload();
+				}
+				
 	       }); 
         })
     },

@@ -48,12 +48,25 @@ function updateTransport(){
 		return;
 	}
 	
-  	$('#price_transport').text($(".shipping_method:checked").attr('data-cost'));
-	$("#estimate").addClass("animated fadeInDown");
-	updateTotal();
-	enableCheckout();
+	$.getJSON( details_url, function( data ) {
+		$("#price_subtotal").text(data.subtotal);
+		$('#price_transport').text($(".shipping_method:checked").attr('data-cost'));
+		updateTotal();
+		enableCheckout();
+	});
+	
+  	
 }
 
+/**
+ *  Will start the fetch estimate procedure only if user has finished filling up the Taxes and delivery section.
+ *  Is used by the cart drawer script to update the total and shipping based on user modifications to the cart content.
+ */
+function cartCheckoutFetchEstimateProgramatically(){
+	if (!$("#estimate").hasClass("hidden")){
+		fetchEstimate();
+	}
+}
 
 function fetchEstimate(){
 	
@@ -128,11 +141,13 @@ function fetchEstimate(){
 		  $('html, body').animate({
 		      scrollTop: $("#estimate").offset().top
 		  }, 1000);
-	  
+	  	
+		$('#price_taxes').text(data.taxes.toFixed(2));
+		
 	  	// If this is not the first run, we need to manually update the total price for the order with the provided data
 		  if (firstRun){
 			  $('#estimate').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-	  			  $('#price_taxes').text(data.taxes.toFixed(2));
+	  			  
 			  
 				  updateTransport();
 			
@@ -193,7 +208,10 @@ $('#checkoutButton').click( function(event){
 	  url: paypaltoken_url,
 	  data: $("#cart_form").serialize(),
 	  success: function(data){
-	  	
+	  	// Restore part of the UI so our user can come back from paypal using the back button and still be able to order
+		$("#checkoutButton").removeClass("btn-three");
+		$("#checkoutButton").addClass("btn-one");
+		$(".btn").removeAttr("disabled");
 		window.location.href = data.paypal_url;
 		
 	  },

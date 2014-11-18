@@ -330,4 +330,38 @@ class Order extends CActiveRecord
 		return $linkdict->url;
 	}
 	
+	public function getPrintableOrderItemsArray(){
+		
+		$dataProvider=new CActiveDataProvider('OrderHasProduct', array(
+		    'criteria'=>array(
+		        'condition'=>'order_id=' . $this->id,
+		        'with'=>array('product'),
+		    ),
+		    'pagination'=>false
+		));
+		
+		$output_array = array();
+		foreach ($dataProvider->getData() as $item){
+			
+			$cartitem = array(
+				'quantity'=>$item->quantity,
+				'price_paid'=>$item->price_paid,
+				'product_id'=>$item->product_id,
+			);
+			$product = $item->product;
+			$localization = $product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
+			$image = $localization->getMainImage();
+			$cartitem['name'] = $localization->name;
+			$cartitem['slug'] = $localization->slug;
+			$cartitem['thumbnail'] = $image ? $image->getImageURL(50, 50) : ProductImage::placehoderForSize(50, 50);
+			$cartitem['thumbnail_lg'] = $image ? $image->getImageURL(120, 160) : ProductImage::placehoderForSize(120, 160);
+			$cartitem['link'] = Yii::app()->createUrl('product/view', array('slug'=>$localization->slug));
+			$output_array[] = $cartitem;
+		}
+		
+		return $output_array;
+	}
+	
+	
+	
 }

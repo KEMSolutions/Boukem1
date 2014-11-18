@@ -24,6 +24,7 @@ $this->layout = "//layouts/freestyle";
 			$update_url = $this->createUrl('cart/update');
 			$remove_url = $this->createUrl('cart/remove');
 			$estimate_url = $this->createUrl('cart/estimate');
+			$details_url = $this->createUrl('cart/details');
 			$paypaltoken_url = $this->createUrl("cart/getPaypalToken");
 			Yii::app()->user->returnUrl = $this->createUrl('index');
 		
@@ -36,6 +37,7 @@ $this->layout = "//layouts/freestyle";
 								var update_url = '$update_url';
 								var remove_url = '$remove_url';
 								var estimate_url = '$estimate_url';
+								var details_url = '$details_url';
 								var login_url = '$login_url';
 								var paypaltoken_url = '$paypaltoken_url';
 							" ,CClientScript::POS_HEAD)
@@ -559,9 +561,7 @@ $this->layout = "//layouts/freestyle";
 			
 					</div>
 				<?php endif; ?>
-		
-	
-		
+							
 							<button class="btn btn-three pull-right btn-lg" id="estimateButton"><?php echo Yii::t('app', "Continuer"); ?></button>
 				
 			</div><!-- panel-body -->
@@ -583,7 +583,7 @@ $this->layout = "//layouts/freestyle";
 			<table class="table" id="finalPrice">
 			    <tr>
 					<td width="75%" class="text-right"><?php echo Yii::t('app', "Sous-total"); ?></td>
-					<td id="price_subtotal"><?php echo number_format((float)$subtotal, 2, '.', ''); ?></td>
+					<td id="price_subtotal">0.00</td>
 				</tr>
 				<tr>
 					<td class="text-right"><?php echo Yii::t('app', "Transport"); ?></td>

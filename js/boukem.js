@@ -23,7 +23,6 @@ function updateCartOverview(openModal){
 			updateBuyButtonsForProductWithId(val.product_id);
 			$(".cart_modal_items").append("<li class='media'><a class='pull-left' href='" + val.link + "'><img class='media-object' src='" + val.thumbnail + "' alt=''></a><div class='media-body'><h4 class='media-heading'>" + val.name + "</h4>" + val.quantity + " x " + val.price_paid + "</div></li>");
 			
-			
             var sidebarElement = '<li class="w-box animated bounceInDown" data-product="' + val.product_id + '" data-quantity=' + val.quantity + '>' +
                 '<div class="col-xs-3 text-center"><img src=' + val.thumbnail_lg + ' class="img-responsive"></div>' +
                 '<div class="col-xs-9 no-padding-left">' + 
