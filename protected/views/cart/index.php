@@ -160,7 +160,7 @@ $this->layout = "//layouts/freestyle";
 		<hr>
 		<div class="cart-content-agreement">
 		
-		<p><?php echo Yii::t("app", "En cliquant sur le bouton acheter et/ou en visitant ce site, vous reconnaissez avoir lu et compris les conditions d'utilisation du site incluant, sans s'y limiter, la politique de confidentialité en vigueur. Si vous n'acceptez pas ces conditions, vous ne pouvez pas continuer à accéder à ce site.")?></p>
+		<p><?php echo Yii::t("app", "En cliquant sur le bouton acheter, continuer ou commander et/ou en visitant ce site, vous reconnaissez avoir lu et compris les conditions d'utilisation du site incluant, sans s'y limiter, la politique de confidentialité en vigueur. Si vous n'acceptez pas ces conditions, vous ne pouvez pas continuer à accéder à ce site.")?></p>
 		
 		</div>
 

@@ -23,7 +23,7 @@ return array(
 	"Adresse courriel / mail"=>"Email address",
 	"Calculer les frais"=>"Estimate shipping and taxes",
 	"Sous-total"=>"Subtotal",
-	"Transport"=>"Delivery",
+	"Transport"=>"Shipping",
 	"Taxes"=>"Taxes",
 	"Total"=>"Total",
 	"Commander"=>"Proceed to checkout",
@@ -157,6 +157,7 @@ return array(
 	"Code de la carte"=>"Gift Card Code",
 	"Continuer le magasinage"=>"Keep Shopping",
 	"Appliquer"=>"Apply",
-	"En cliquant sur le bouton acheter et/ou en visitant ce site, vous reconnaissez avoir lu et compris les conditions d'utilisation du site incluant, sans s'y limiter, la politique de confidentialité en vigueur. Si vous n'acceptez pas ces conditions, vous ne pouvez pas continuer à accéder à ce site."=>"By clicking on i agree below and/or by accessing or using the site in any manner, you acknowledge that you have read and agree to be bound by these terms and conditions. If you do not agree to all of the terms, you are not authorized to access or otherwise use this site (the 'site').",
+	"Méthode d'expédition"=>"Shipping method",
+	"En cliquant sur le bouton acheter, continuer ou commander et/ou en visitant ce site, vous reconnaissez avoir lu et compris les conditions d'utilisation du site incluant, sans s'y limiter, la politique de confidentialité en vigueur. Si vous n'acceptez pas ces conditions, vous ne pouvez pas continuer à accéder à ce site."=>"By clicking on 'Next', 'Buy', 'Order' or 'Checkout' and/or by accessing or using the site in any manner, you acknowledge that you have read and agree to be bound by these terms and conditions. If you do not agree to all of the terms, you are not authorized to access or otherwise use this site (the 'site').",
 );
 ?>

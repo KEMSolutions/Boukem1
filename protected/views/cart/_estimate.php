@@ -1,5 +1,5 @@
 <div class="panel-heading"><span class="badge pull-right">2</span><?php echo Yii::t('app', "Méthode d'expédition"); ?></div>
-<div class="panel-body">
+
 	<table class="table table-striped">
 		<thead>
 			<tr><th><?php echo Yii::t('app', "Nom du service"); ?></th><th><?php echo Yii::t('app', "Jours de transit"); ?></th><th><?php echo Yii::t('app', "Prix"); ?></th><th></th></tr>
@@ -25,4 +25,4 @@
 	
 		?>
 	</table>
-</div><!-- panel-body -->
+
