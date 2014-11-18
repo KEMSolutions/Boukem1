@@ -93,6 +93,23 @@
 }
 
 /* cart page styles */
+
+.credit-cart-trust{
+	font-size:1em;
+	opacity:0.7;
+	height: 47px!important;
+	margin-right:0.5em;
+	transition: opacity .25s ease-in-out, box-shadow .5s ease-in-out;
+	 -moz-transition: opacity .25s ease-in-out, box-shadow .5s ease-in-out;
+	 -webkit-transition: opacity .25s ease-in-out, box-shadow .5s ease-in-out;
+	box-shadow: none;
+}
+
+.credit-cart-trust:hover{
+	opacity:1;
+	box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
 .cart-checkout-content{
 	min-height: 100%;
 	padding-bottom: 0.5em;
