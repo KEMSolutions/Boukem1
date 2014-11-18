@@ -86,7 +86,7 @@ class CartController extends WebController
 		
 		$country = Yii::app()->request->getPost("country", null);
 		$province = Yii::app()->request->getPost("province", null);
-		$postcode = Yii::app()->request->getPost("postcode", null);
+		$postcode = Yii::app()->request->getPost("postalcode", null);
 		$shipping_type = Yii::app()->request->getPost("shipping_type", null);
 		
 		$shipping_estimated_value = Yii::app()->request->getPost("shipping_estimated_value", null);
@@ -122,7 +122,7 @@ class CartController extends WebController
 		$this->can_prompt_for_password_set = false;
 		$country = Yii::app()->request->getPost("country", null);
 		$province = Yii::app()->request->getPost("province", null);
-		$postcode = Yii::app()->request->getPost("postcode", null);
+		$postcode = Yii::app()->request->getPost("postalcode", null);
 		$shipment = Yii::app()->request->getPost("shipment", null);
 		
 		// Set the shipment in the session
@@ -146,17 +146,18 @@ class CartController extends WebController
 		
 		$country = Yii::app()->request->getPost("country", null);
 		$province = Yii::app()->request->getPost("province", null);
-		$postcode = Yii::app()->request->getPost("postcode", null);
+		$postcode = Yii::app()->request->getPost("postalcode", null);
 		$shipment = Yii::app()->request->getPost("shipment", null);
 		
 		
 		// Temporary promocode stuff
+		/*
 		$promocode = strtoupper(Yii::app()->request->getPost("promocode", null));
 		if ($promocode === "FALL14"){
 			Yii::app()->session['applicable_rebate'] = 0.15;
 		}
 		// Temporary promocode stuff
-		
+		*/
 		
 		if (!$country || !$postcode || !$shipment){
 			throw new CHttpException(400,'Invalid request: missing parameters.');
@@ -182,10 +183,11 @@ class CartController extends WebController
 		$total_item_qty = 0;
 		foreach ($itemsInCart->getData() as $relationship){
 			
+			/*
 			if ($promocode){
 				$relationship->price_paid = $relationship->product->getCurrentPrice();
 				$relationship->save();
-			}
+			}*/
 			
 			$total_weight += $relationship->quantity * $relationship->product->weight;
 			$total_value += $relationship->quantity * $relationship->price_paid;
@@ -445,7 +447,7 @@ class CartController extends WebController
 		$country = Yii::app()->request->getPost("country", null);
 		$province = Yii::app()->request->getPost("province", null);
 		
-		$postcode = Yii::app()->request->getPost("postcode", null);
+		$postcode = Yii::app()->request->getPost("postalcode", null);
 		$email = Yii::app()->request->getPost("email", null);
 		
 		if ($country === null) {

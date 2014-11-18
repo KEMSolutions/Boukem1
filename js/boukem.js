@@ -1,3 +1,11 @@
+$('body').on('click', function (e) {
+	// Hide all tooltips when user click outside
+    if ($(e.target).data('toggle') !== 'tooltip'
+        && $(e.target).parents('.tooltip.in').length === 0) { 
+        $('[data-toggle="tooltip"]').tooltip('hide');
+    }
+});
+
 function updateBuyButtonsForProductWithId(id){
 	$('button[data-product="' + id + '"]').html('<i class="fa fa-check-square"></i>');
 	$('button[data-product="' + id + '"]').attr("disabled", "disabled");
@@ -62,9 +70,9 @@ var page_lang = $("html").attr("lang");
 function pageInitialization(){
 	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	
-	if (w > 961) {
-	        $.getScript("/js/cartdrawer.js");
-	    }
+	
+	$.getScript("/js/cartdrawer.js");
+	
 	
 	$(".buybutton").click(function(){
 		var buybutton = $(this);

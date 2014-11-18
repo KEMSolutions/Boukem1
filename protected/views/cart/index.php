@@ -550,14 +550,14 @@ $this->layout = "//layouts/freestyle";
 					<div class="form-group">
 			
 						<label for="country" class="control-label"><?php echo Yii::t('app', "Code Postal"); ?></label>
-						<input type="text" name="postcode" value="<?php echo (!Yii::app()->user->isGuest && Yii::app()->user->user->postcode) ? CHtml::encode(Yii::app()->user->user->postcode) : ''; ?>" placeholder="A1A 1A1" id="postcode" class="form-control">
+						<input type="text" name="postalcode" value="<?php echo (!Yii::app()->user->isGuest && Yii::app()->user->user->postcode) ? CHtml::encode(Yii::app()->user->user->postcode) : ''; ?>" placeholder="A1A 1A1" id="postcode" class="form-control">
 					</div>
 		
 					<?php if (Yii::app()->user->isGuest): ?>
 					<div class="form-group">
 						<span class="hidden label label-info pull-right" id="why_email" data-toggle="tooltip" data-placement="left" data-trigger="click" title="<?php echo Yii::t('app', "Nous gardons votre courriel pour associer dès maintenant votre commande avec vos précédentes, appliquer les rabais associés à votre compte et vous permettre de retrouver votre panier. Nous ne vous enverrons aucun spam, aucune infolettre et nous ne vendrons pas votre courriel à des tiers."); ?>"><?php echo Yii::t('app', "Pourquoi?"); ?></span>
 						<label for="customer_email" class="control-label"><?php echo Yii::t('app', "Adresse courriel / mail"); ?></label>
-						<input type="text" name="email" id="customer_email" class="form-control" value="<?php //echo Yii::app()->user->user; ?>">
+						<input type="email" name="email" id="customer_email" class="form-control" value="<?php //echo Yii::app()->user->user; ?>">
 			
 					</div>
 				<?php endif; ?>

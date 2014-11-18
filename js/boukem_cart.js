@@ -121,7 +121,7 @@ function fetchEstimate(){
 	  type: 'POST',
 	  dataType: 'json',
 	  url: estimate_url,
-	  data: {'country':country_value, 'province':$("#province").val(), 'postcode':postcode_value,'email':email_value},
+	  data: {'country':country_value, 'province':$("#province").val(), 'postalcode':postcode_value,'email':email_value},
 	  success: function(data){
 		  
 		  // If the element has already the animated class, that means our user ran the estimate script once already
