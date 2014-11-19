@@ -25,6 +25,7 @@ $this->layout = "//layouts/freestyle";
 			$remove_url = $this->createUrl('cart/remove');
 			$estimate_url = $this->createUrl('cart/estimate');
 			$details_url = $this->createUrl('cart/details');
+			$redeem_url = $this->createUrl('cart/redeem');
 			$paypaltoken_url = $this->createUrl("cart/getPaypalToken");
 			Yii::app()->user->returnUrl = $this->createUrl('index');
 		
@@ -39,6 +40,7 @@ $this->layout = "//layouts/freestyle";
 								var estimate_url = '$estimate_url';
 								var details_url = '$details_url';
 								var login_url = '$login_url';
+								var redeem_url = '$redeem_url';
 								var paypaltoken_url = '$paypaltoken_url';
 							" ,CClientScript::POS_HEAD)
 							->registerScriptFile('/js/boukem_cart.js',CClientScript::POS_END);
@@ -152,9 +154,9 @@ $this->layout = "//layouts/freestyle";
 		<div class="cart-content-giftcard">
 			
 			<div class="input-group">
-			      <input type="text" class="form-control input-sm" placeholder="<?php echo Yii::t("app", "Carte cadeau"); ?>">
+			      <input id="couponField" type="text" class="form-control input-sm" placeholder="<?php echo Yii::t("app", "Carte cadeau"); ?>" value="<?php echo Yii::app()->session['promocode']; ?>">
 			      <span class="input-group-btn">
-			        <button class="btn btn-sm btn-default" type="button"><?php echo Yii::t("app", "Appliquer"); ?></button>
+			        <button class="btn btn-sm btn-default" id="redeemCouponButton" type="button"><?php echo Yii::t("app", "Appliquer"); ?></button>
 			      </span>
 			    </div><!-- /input-group -->
 		</div><!-- cart-content-giftcard -->
@@ -169,7 +171,7 @@ $this->layout = "//layouts/freestyle";
 	</div>
 	
 	<div class="col-md-7 cart-content-checkout-process">
-		<form method="post" action="<?php echo $this->createUrl('cart/checkout'); ?>" id="cart_form" class="<?php if ($dataProvider->totalItemCount == 0) {echo 'hidden'; } ?>">
+		<form method="post" id="cart_form" class="<?php if ($dataProvider->totalItemCount == 0) {echo 'hidden'; } ?>">
 		
 		<div class="panel panel-default">
 			<!-- Default panel contents -->
@@ -581,6 +583,12 @@ $this->layout = "//layouts/freestyle";
 			
 			
 			<table class="table" id="finalPrice">
+				
+				<tr id="rebate_row" class="hidden">
+					<td class="text-right" id="rebate_name"></td>
+					<td id="rebate_value"></td>
+				</tr>
+				
 			    <tr>
 					<td width="75%" class="text-right"><?php echo Yii::t('app', "Sous-total"); ?></td>
 					<td id="price_subtotal">0.00</td>

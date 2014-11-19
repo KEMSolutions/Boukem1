@@ -76,10 +76,51 @@ class CartController extends WebController
 	public function filters()
 	{
 		return array(
-			'ajaxOnly + add, remove, update, estimate, prepare, order, addMultiple, details',
+			'postOnly + redeem, add, remove, update, estimate, prepare, order, addmultiple',
+			'ajaxOnly + add, remove, update, estimate, prepare, order, addmultiple, overview, details, redeem',
 		);
 	}
 	
+	
+	public function actionRedeem(){
+		
+		$cart = $this->getCart();
+		
+		$promocode = strtoupper(Yii::app()->request->getPost("coupon", null));
+		
+		if (!$promocode || $promocode === ""){
+			throw new CHttpException(400,'The request is invalid.');
+		}
+		
+		$coupon_array = array();
+		if ($promocode === "FALL14"){
+			
+			Yii::app()->session['applicable_rebate'] = 0.15;
+			Yii::app()->session['promocode'] = "FALL14";
+			
+			// Apply the coupon to items already in the cart
+			$itemsInCart = OrderHasProduct::model()->findAll("order_id=:order_id", array(":order_id"=>$cart->id));
+			
+			foreach ($itemsInCart as $relationship){
+					$relationship->price_paid = $relationship->product->getCurrentPrice();
+					$relationship->save();
+			}
+			
+			// Build a json array that could be used by our 
+			
+			$coupon_array["valid"] = true;
+			$coupon_array["code"] = Yii::app()->session['promocode'];
+			$coupon_array["expired"] = false;
+			$coupon_array["type"] = "percent";
+			$coupon_array["details"] = array("rebate"=>Yii::app()->session['applicable_rebate']*100);
+		} else {
+			$coupon_array["valid"] = false;
+		}
+		
+		$this->renderJSON($coupon_array);
+		
+		
+	}
 	
 	
 	public function actionPrepare(){
@@ -805,6 +846,14 @@ class CartController extends WebController
 		$cart_array = $cart->getPrintableOrderItemsArray();
 		
 		$json_dict = array("subtotal"=>$this->subtotalForCart($cart), "count"=>count($cart_array), "items"=>$cart_array);
+		
+		if (Yii::app()->session['promocode']){
+			$json_dict["rebate"] = array("percent"=>Yii::app()->session['applicable_rebate'], "coupon"=>Yii::app()->session['promocode']);
+		} else {
+			$json_dict["rebate"] = null;
+		}
+		
+		
 		
 		$this->renderJSON($json_dict);
 		

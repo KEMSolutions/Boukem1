@@ -51,6 +51,21 @@ function updateTransport(){
 	$.getJSON( details_url, function( data ) {
 		$("#price_subtotal").text(data.subtotal);
 		$('#price_transport').text($(".shipping_method:checked").attr('data-cost'));
+		
+		if (data.rebate){
+			$("#rebate_row").removeClass("hidden");
+			var rebate_description = $("#couponField").attr("placeholder") + " <em>" + data.rebate.coupon + "</em>";
+			$("#rebate_name").html(rebate_description);
+			
+			var rebate_amount;
+			if (data.rebate.percent){
+				rebate_amount = (data.rebate.percent * 100) + " %";
+			}
+			
+			$("#rebate_value").html(rebate_amount);
+			
+		}
+		
 		updateTotal();
 		enableCheckout();
 	});
@@ -255,3 +270,52 @@ $('.cart_remove_button').click(function(){
 });
 
 $('#why_email').tooltip();
+
+
+
+$("#couponField").keydown(function (e) {
+     if (e.keyCode == 32) {
+       return false; // prevent spaces
+     }
+});
+
+$("#redeemCouponButton").click(function(){
+	event.preventDefault();
+	var field = $("#couponField");
+	var button = $(this);
+	var group = button.closest("div");
+	var button_string = button.text();
+	
+	button.prop("disabled", true);
+	field.prop("readonly", true);
+	group.removeClass("has-error");
+	
+	button.html("<i class='fa fa-spinner fa-spin'></i>");
+	$.post( redeem_url, {coupon:field.val()}, function( data ) {
+		
+		if (data.valid){
+			
+			button.html("<i class='fa fa-check-circle-o fa-lg'></i>");
+			button.addClass("btn-success");
+			group.addClass("has-success");
+			cartCheckoutFetchEstimateProgramatically();
+			
+		} else {
+			// The coupon code is invalid
+			button.removeProp("disabled");
+			field.removeProp("readonly");
+			
+			group.addClass('animated shake');
+			group.addClass("has-error");
+			button.text(button_string);
+			
+			group.bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				$(this).removeClass("animated");
+				$(this).removeClass("shake");
+			});
+		}
+		
+		
+	  	
+	}, "json");
+});
