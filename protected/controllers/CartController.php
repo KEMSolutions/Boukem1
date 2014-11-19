@@ -475,9 +475,13 @@ class CartController extends WebController
 			throw new CHttpException(400,'Your request is invalid.');
 		}
 		
-		$orderHasProduct->quantity = $quantity;
 		
-		$orderHasProduct->save();
+		if ($quantity <= 0){
+			$orderHasProduct->delete();
+		} else {
+			$orderHasProduct->quantity = $quantity;
+			$orderHasProduct->save();
+		}
 		
 	}
 	

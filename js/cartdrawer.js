@@ -127,18 +127,45 @@ var cartData = {
            $this = $(this);
            
 		   var container = $this.closest("li");
-            product_id = container.data("product");
-            quantity = container.find(".quantity").val();
+           var product_id = container.data("product");
+		   var quantity_group = $this.closest("div");
+           var quantity = container.find(".quantity").val();
+		   var editIcon = quantity_group.find(".fa");
+			
+			
+			if (quantity <=0){
+				quantity_group.addClass("has-error");
+				quantity_group.addClass('animated shake');
+				quantity_group.bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					quantity_field.removeClass("animated");
+					quantity_field.removeClass("shake");
+					
+				});
+				return;
+			}
+			
+			editIcon.removeClass("fa-pencil");
+			editIcon.addClass("fa-spinner fa-spin");
+			
             
             $.post( cartData.$links.update_url, { product: product_id, quantity: quantity })
             .done(function( data ) {
+				updateCartOverview(false);
+				quantity_group.removeClass("has-error");
+				editIcon.removeClass("fa-spinner fa-spin");
+				editIcon.addClass('animated tada fa-check-circle-o text-success');
+				editIcon.bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					editIcon.removeClass("animated tada text-success fa-check-circle-o");
+					editIcon.addClass("fa-pencil");
+				});
+				
+				// Reload the total if we are currently on the cart's page
 				if (typeof cartCheckoutFetchEstimateProgramatically == 'function') { 
 				  cartCheckoutFetchEstimateProgramatically(); 
-				} else {
-					location.reload();
 				}
 				
-	       }); 
+	       });
+			
         })
     },
     
