@@ -112,7 +112,8 @@ var cartData = {
 				if (typeof cartCheckoutFetchEstimateProgramatically == 'function') { 
 				  cartCheckoutFetchEstimateProgramatically(); 
 				}
-				
+				cart_item.unbind();
+				cart_item.remove();
 			});
             
         });        
@@ -139,7 +140,7 @@ var cartData = {
 				quantity_group.bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 					quantity_field.removeClass("animated");
 					quantity_field.removeClass("shake");
-					
+					quantity_field.unbind();
 				});
 				return;
 			}
@@ -157,6 +158,7 @@ var cartData = {
 				editIcon.bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 					editIcon.removeClass("animated tada text-success fa-check-circle-o");
 					editIcon.addClass("fa-pencil");
+					editIcon.unbind();
 				});
 				
 				// Reload the total if we are currently on the cart's page

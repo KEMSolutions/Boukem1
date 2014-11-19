@@ -99,6 +99,7 @@ function fetchEstimate(){
 		$('#customer_email').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			$(this).removeClass("animated");
 			$(this).removeClass("shake");
+			$(this).unbind();
 		});
 		
 		$("#why_email").removeClass("hidden");
@@ -116,6 +117,7 @@ function fetchEstimate(){
 		$('#postcode').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			$(this).removeClass("animated");
 			$(this).removeClass("shake");
+			$(this).unbind();
 		});
 		
 		shouldBlock = true;
@@ -162,10 +164,7 @@ function fetchEstimate(){
 	  	// If this is not the first run, we need to manually update the total price for the order with the provided data
 		  if (firstRun){
 			  $('#estimate').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-	  			  
-			  
-				  updateTransport();
-			
+				updateTransport();
 			  });
 		  } else {
 		  	updateTransport();
@@ -312,6 +311,7 @@ $("#redeemCouponButton").click(function(){
 			group.bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 				$(this).removeClass("animated");
 				$(this).removeClass("shake");
+				$(this).unbind();
 			});
 		}
 		
