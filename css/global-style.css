@@ -254,6 +254,26 @@ color:#DDD;}
 .carousel-1 .description.fluid-center{width:100%; top:50px; left:0; margin:0;}
 .carousel-1 .description.fluid-center .title{margin-bottom:5px; display:block; text-align:center; background:none; color:#FFF; font-weight:500; text-shadow: 1px 1px 3px rgba(150, 150, 150, 0.5);}
 .carousel-1 .description.fluid-center .subtitle{font-size:20px; margin:0; display:block; text-align:center;}
+.carousel-2{}
+.carousel-2 .item{padding:36px 0 80px 0!important;}
+.carousel-2 .carousel-indicators{width:auto; padding:6px 18px; border-radius:3px; top:16px; bottom:auto; left:auto; right:8%; margin-left:0; }
+.carousel-2 .img-thumbnail{margin-top:26px;}
+
+.carousel-3 .carousel-nav{}
+.carousel-3 .carousel-nav a{width:48px; border-radius:80px; position:absolute; top:50%; margin-top:-20px; padding:10px 0; font-size:20px; text-align:center; border:1px solid transparent;}
+.carousel-3 .carousel-nav a.left{left:20px;}
+.carousel-3 .carousel-nav a.right{right:20px;}
+.carousel-3 .carousel-nav a:hover{background:#FFF;}
+
+.carousel-4{}
+.carousel-4 .carousel-inner{}
+.carousel-4 .carousel-inner{overflow:hidden;}
+.carousel-4 .carousel-control i{position:absolute; top:50%; margin-top:-18px; font-size:36px; font-weight:600;}
+
+.carousel-top-controls{float:right; position:relative; top:12px; width:74px;}
+.carousel-top-controls a{font-size:22px; margin-left:5px; padding:0 10px 1px 10px; text-align:center; color:#2f2f2f; border-radius:2px;}
+.carousel-top-controls a:hover{background:#3333; background:rgba(34, 34, 34, 0.6); color:#FFF; text-decoration:none;}
+
 
 /* CALL TO ACTION BOX */
 .cta-wr h1{margin:10px 0 !important; font-size:20px; line-height:26px;}

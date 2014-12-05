@@ -8,6 +8,9 @@ foreach ($items as $slice){
 	if ($slice->type === "slider"){
 		/* We do not render the fraction slider, at least for now */
 		//$this->renderPartial('_slider', array("items"=>$slice->items, 'show_title'=>$counter));
+	} else if ($slice->type === "carousel"){
+		/* We do not render the fraction slider, at least for now */
+		$this->renderPartial('_carousel', array("layout"=>$slice->content, 'show_tab'=>$counter));
 	} else if ($slice->type==="rebates"){
 		
 		// It may take a while for a website to be fully provisioned. Therefore, hide the rebates slice until there are rebates
