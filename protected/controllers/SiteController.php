@@ -435,4 +435,47 @@ class SiteController extends WebController
 	}
 	
 	
+	
+	public function actionMaintain($offset, $limit){
+		/*
+		$products = Product::model()->findAll(array(
+			'order' => "id ASC",
+			'offset' => $offset,
+			'limit' => $limit,
+		));
+		
+		
+		$product_list = array();
+		foreach ($products as $product){
+			$product_list[] = $product->id;
+		}
+		
+		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/product/maintain", array('store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret'], "product_list"=>json_encode($product_list)));
+		
+		$output_object = json_decode($output);
+		
+		if (!$output_object)
+			echo "ERROR : " . $output;
+			exit();
+		
+		
+		foreach ($products as $product){
+			
+			$product_variable_name = $product->id;
+			
+			if (isset($output_object->$product_variable_name)){
+				// Everything is alright
+				echo "<span style='color:green'>" . $product->id . " : OK</span><br>";
+			} else {
+				echo "<span style='color:red'>" . $product->id . " : DEL</span><br>";
+				$product->delete();
+				
+			}
+			
+		}
+		
+		*/
+	}
+	
+	
 }

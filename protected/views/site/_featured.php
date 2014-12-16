@@ -1,5 +1,5 @@
 <?php if ($layout->dense): ?>
-<section class="slice color-two-d">
+<section class="slice color-two-d home_featured">
 	<?php
 	if ($show_tab){
 		$this->renderPartial('_tab', array("layout"=>$layout));

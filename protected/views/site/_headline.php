@@ -2,7 +2,7 @@
 $language = Yii::app()->language;
 $locale = $language . "_CA";
 ?>
-<section id="homepageCarousel" class="carousel carousel-1 slide <?php if (!isset($layout->background) && $layout->style === "dark"){
+<section id="homepageCarousel" class="carousel carousel-1 home_headline slide <?php if (!isset($layout->background) && $layout->style === "dark"){
 	echo "color-one";
 } else {
 	echo "color-two";

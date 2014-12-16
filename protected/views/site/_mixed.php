@@ -1,4 +1,4 @@
-<section class="slice color-one">
+<section class="slice color-one home_mixed">
 	
 	<?php
 	if ($show_tab){
