@@ -10,7 +10,7 @@
     	<div class="container">
 			<div class="row js-masonry">
 <?php else: ?>
-<section class="slice animate-hover-slide">
+<section class="slice animate-hover-slide home_rebates">
 	<?php
 	if ($show_tab){
 		$this->renderPartial('_tab', array("layout"=>$layout));
