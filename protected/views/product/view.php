@@ -92,6 +92,11 @@ if ($regular_price !== $current_price){
 					 
 					 
 													  ?></h2>
+							<?php if ($model->discontinued): ?>
+								<p class="text-center text-danger">
+									<?php echo Yii::t("app", "Ce produit n'est pas disponible."); ?>
+								</p>
+							<?php else: ?>
 	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><?php
 								
 							if (Yii::app()->language === "fr") {
@@ -106,9 +111,14 @@ if ($regular_price !== $current_price){
 								<?php endif; ?>
 	                            <li><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Livré chez vous rapidement"); ?></li>
 	                            <li><i class="fa fa-lock"></i> <?php echo Yii::t("app", "Transaction sécurisée"); ?></li>
-	                        </ul>          
+	                        </ul>
+							
+							<?php endif; ?>
 	                        <p class="plan-info" id="product_short_description" itemprop="description"><?php echo strip_tags($localization->short_description); ?></p>
-	                        <p class="plan-select text-center">
+	                        <?php if (!$model->discontinued): ?>
+							<p class="plan-select text-center">
+								
+								
 								<div class="input-qty-detail form-inline text-center">
 									<div class="form-group">
 									    <input type="text" class="form-control input-qty text-center" id="item_quantity" value="1">
@@ -117,9 +127,13 @@ if ($regular_price !== $current_price){
 									<button class="btn btn-three buybutton visible-lg-inline" data-product="<?php echo $model->id; ?>"><i class="fa fa-check-circle"></i>  <?php echo Yii::t("app", "Ajouter au panier"); ?></button>
 									<button class="btn btn-block btn-three center-block buybutton hidden-lg" data-product="<?php echo $model->id; ?>"><i class="fa fa-check-circle"></i>  <?php echo Yii::t("app", "Ajouter au panier"); ?></button>
 								</div>
+							
 								
-	                    </div>
+	                    </p>
+					<?php endif; ?>
 					</div>
+					
+				</div>
 					
 					<?php
 					$videos = $model->getVideosForLanguage(Yii::app()->language);

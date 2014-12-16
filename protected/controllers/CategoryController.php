@@ -100,6 +100,7 @@ class CategoryController extends WebController
             $product = new Product();
             $product->unsetAttributes();
 			$product->visible = 1;
+			$product->discontinued = 0;
             $product->categoryId = $model->id;
 			
 			if ($model->is_brand) {
@@ -228,7 +229,8 @@ class CategoryController extends WebController
             $product = new Product();
             $product->unsetAttributes();
 			$product->visible = 1;
-            $product->categoryId = $model->id;
+			$product->discontinued = 0;
+			$product->categoryId = $model->id;
 			
 			$product->restrictScopeToCurrentLocale = false;
 			

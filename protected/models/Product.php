@@ -136,6 +136,7 @@ class Product extends CActiveRecord
             $criteria->compare('product_has_category.category_id' , $this->categoryId);
         }
 		$criteria->compare('t.visible',$this->visible);
+		$criteria->compare('discontinued',$this->discontinued);
 		
 		if ($this->restrictScopeToCurrentLocale){
 			$criteria->with = array('productLocalization');
@@ -160,6 +161,8 @@ class Product extends CActiveRecord
        $criteria->compare('brand_id' , $brand->id);
        
 	   $criteria->compare('t.visible',$this->visible);
+	   $criteria->compare('discontinued', $this->discontinued);
+	   
 		
 		if ($this->restrictScopeToCurrentLocale){
 			$criteria->with = array('productLocalization');
