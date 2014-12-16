@@ -128,7 +128,6 @@ if ($regular_price !== $current_price){
 									<button class="btn btn-block btn-three center-block buybutton hidden-lg" data-product="<?php echo $model->id; ?>"><i class="fa fa-check-circle"></i>  <?php echo Yii::t("app", "Ajouter au panier"); ?></button>
 								</div>
 							
-								
 	                    </p>
 					<?php endif; ?>
 					</div>

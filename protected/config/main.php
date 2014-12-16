@@ -65,11 +65,6 @@ return array(
 		),
 		// uncomment the following to enable URLs in path-format
 		
-		'elasticSearch' => array(
-		        'class' => 'YiiElasticSearch\Connection',
-		        'baseUrl' => 'http://localhost:9200/',
-		),
-		
 		'urlManager'=>array(
 			'class'     => 'ext.localeurls.LocaleUrlManager',
 			'urlFormat'=>'path',
