@@ -64,7 +64,7 @@ class SiteController extends WebController
 				
 				$rebatesDataProvider=new CActiveDataProvider('ProductRebate', array(
 				    'criteria'=>array(
-						'limit'=>10,
+						'limit'=>24,
 				        'with'=>array('product', 'product.productLocalization'),
 				    ),
 				    'pagination'=>false,

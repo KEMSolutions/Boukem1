@@ -120,9 +120,6 @@ class CategoryLocalization extends CActiveRecord
 		return parent::model($className);
 	}
 	
-	// Elasticsearch stuff
-	public $elasticType = 'category';
-	
 	/**
 	 * Returns the behaviors for the record class.
 	 * @return Array of behaviors (mostly there for adding elasticsearch)
@@ -136,42 +133,11 @@ class CategoryLocalization extends CActiveRecord
 				      'unique' => true,
 				      'update' => true,
 				),
-	            'searchable' => array(
-	                'class' => 'YiiElasticSearch\SearchableBehavior',
-	            ),
+	            
 	        );
 	    }
 		
 	
-	/**
-     * @param DocumentInterface $document the document where the indexable data must be applied to.
-     */
-	public function populateElasticDocument(YiiElasticSearch\Document $document)
-	    {
-	        $document->setId($this->id);
-	        $document->name = $this->name;
-	        $document->locale   = $this->locale_id;
-		    $document->visible = $this->visible;
-
-	}
-	
-	/**
-	* @param DocumentInterface $document the document that is providing the data for this record.
-	*/
-	public function parseElasticDocument(YiiElasticSearch\Document $document)
-	{
-		// You should always set the match score from the result document
-		
-		if ($document instanceof SearchResult)
-		    $this->setElasticScore($document->getScore());
-
-		$this->id       = $document->getId();
-		$this->name     = $document->name;
-		$this->locale_id   = $document->locale;
-	    $this->visible = $document->visible;
-		
-		
-	}
 	
 	
 }
