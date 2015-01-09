@@ -12,7 +12,7 @@ if ($localization):
 	$brand = $product->brand;
 	$brand_localization = $brand->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
 	$main_image = $localization->getMainImage();
-
+	
 	$currentPrice = $product->getCurrentPrice();
 	$regularPrice = $product->price;
 	if ($currentPrice == $regularPrice) {
@@ -41,7 +41,7 @@ if ($localization):
 		<?php if ($isOnSale): ?>
 			<div class="rebatebadge"><span class="animated tada">-<?php echo $rebatePercent; ?>%</span></div>
 		<?php endif; ?>
-		<div class="text-uppercase brand"><strong><?php echo CHtml::link($brand_localization->name, array('category/view', 'slug'=>$brand_localization->slug)); ?></strong></div>
+		<div class="text-uppercase brand"><strong><?php echo CHtml::link($brand_localization ? $brand_localization->name : "&mdash;", array('category/view', 'slug'=>$brand_localization->slug)); ?></strong></div>
 		
 		<div class="name">
 			<a href="<?php echo $product_url; ?>"><?php

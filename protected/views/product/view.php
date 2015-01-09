@@ -36,23 +36,35 @@ if ($regular_price !== $current_price){
 		
 		?>" class="img-responsive center-block">
                                     <ul class="meta-list">
-                                        <?php if ($model->sku): ?>
+                                        <?php if ($kemProduct->sku): ?>
 										<li>
                                             <span>SKU</span>
-                                            <span class="bold" itemprop="sku"><?php echo $model->sku; ?></span>
+                                            <span class="bold" itemprop="sku"><?php echo $kemProduct->sku; ?></span>
                                         </li>
 										<?php endif; ?>
 										
-                                        <?php if ($model->barcode): ?>
+                                        <?php if ($kemProduct->barcode): ?>
 										<li>
                                             <span><?php echo Yii::t("app", "CUP/EAN"); ?></span>
-                                            <span class="bold" itemprop="gtin13"><?php echo $model->barcode; ?></span>
+                                            <span class="bold" itemprop="gtin13"><?php
+												if (strlen($kemProduct->barcode) == 12)
+													echo "0";
+												echo $kemProduct->barcode;
+											?></span>
                                         </li>
 										<?php endif; ?>
                                         
+										<li itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+											<span><?php echo Yii::t("app", "Marque"); ?></span>
+										    <span class="bold" itemprop="name"><?php echo $brand->name; ?></span>
+											<meta itemprop="url" content="<?php echo $this->createAbsoluteUrl("category/view", array("slug"=>$brand->slug)); ?>">
+										</li>
+										
+										
+										
                                     </ul>
 									<div id="product_long_description">
-                                    	<?php echo $localization->long_description; ?>
+                                    	<?php echo $kemProduct->localization->long_description; ?>
 									</div>
                                 </figure>
                             </div>
@@ -71,7 +83,7 @@ if ($regular_price !== $current_price){
 	                        <h2 class="plan-title" itemprop="name">
 								<?php
 					
-													$title_lines = explode(" - ", $localization->name);
+													$title_lines = explode(" - ", $kemProduct->localization->name);
 													$counter = 0;
 													$number_of_lines = count($title_lines);
 													 foreach ($title_lines as $line){
@@ -92,30 +104,51 @@ if ($regular_price !== $current_price){
 					 
 					 
 													  ?></h2>
-							<?php if ($model->discontinued): ?>
+							
+							<?php if ($kemProduct->discontinued): ?>
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+								<link itemprop="availability" href="http://schema.org/Discontinued">
 								<p class="text-center text-danger">
 									<?php echo Yii::t("app", "Ce produit n'est pas disponible."); ?>
 								</p>
+								</span>
 							<?php else: ?>
-	                        <span itemscope itemtype="http://schema.org/Offer"><h3 class="price-tag color-one" itemprop="price"><?php
+								<span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+	                        <h3 class="price-tag color-one">
+								<meta itemprop="price" content="<?php echo $current_price; ?>"><?php
 								
 							if (Yii::app()->language === "fr") {
-	                        	echo $current_price . "<span>$</span>";
+	                        	echo $current_price . "<span itemprop='priceCurrency' content='CAD'>$</span>";
 	                        } else {
-	                        	echo "<span>$</span>" . $current_price;
+	                        	echo "<span itemprop='priceCurrency' content='CAD'>$</span>" . $current_price;
 	                        }
-							?></h3></span>
+							?></h3>
+							
 	                        <ul>
 								<?php if ($on_sale || $this->isB2b()): ?>
 								<li class="text-success"><i class="fa fa-smile-o"></i> <?php echo Yii::t("app", "Prix régulier:") . " $" . $regular_price; ?></li>
 								<?php endif; ?>
-	                            <li><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Livré chez vous rapidement"); ?></li>
+								
+								<?php if ($kemProduct->inventory->count > 5): ?>
+									<link itemprop="availability" href="http://schema.org/InStock" >
+									<li class="text-success"><i class="fa fa-truck"></i> <?php echo Yii::t("app", "En stock : Expédition express"); ?></li>
+								<?php elseif ($kemProduct->inventory->count > 0): ?>
+									<link itemprop="availability" href="http://schema.org/InStock" >
+									<li class="text-warning"><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Seulement {n} restant en expédition express|{n} restants en expédition express.", $kemProduct->inventory->count); ?></li>
+								<?php else: ?>
+									<link itemprop="availability" href="http://schema.org/LimitedAvailability" >
+									<li><i class="fa fa-truck"></i> <?php echo Yii::t("app", "Expédition prévue dans les 3 à 7 jours."); ?></li>
+								<?php endif; ?>
+								
 	                            <li><i class="fa fa-lock"></i> <?php echo Yii::t("app", "Transaction sécurisée"); ?></li>
+								
 	                        </ul>
+							</span>
 							
 							<?php endif; ?>
-	                        <p class="plan-info" id="product_short_description" itemprop="description"><?php echo strip_tags($localization->short_description); ?></p>
-	                        <?php if (!$model->discontinued): ?>
+							
+	                        <p class="plan-info" id="product_short_description" itemprop="description"><?php echo strip_tags($kemProduct->localization->short_description); ?></p>
+	                        <?php if (!$kemProduct->discontinued): ?>
 							<p class="plan-select text-center">
 								
 								
@@ -130,12 +163,13 @@ if ($regular_price !== $current_price){
 							
 	                    </p>
 					<?php endif; ?>
+					
 					</div>
 					
 				</div>
 					
 					<?php
-					$videos = $model->getVideosForLanguage(Yii::app()->language);
+					$videos = $kemProduct->videos;
 					
 					if (count($videos)>0){
 						// Insert support for video.js player

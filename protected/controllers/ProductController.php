@@ -57,7 +57,23 @@ class ProductController extends WebController
 			$modelLocalization->name,
 		);
 		
-		$this->pageTitle = $modelLocalization->name;
+		$cache_id = "Product:[videosForLanguage] " . $this->id . " - " . Yii::app()->language;
+		$cache_duration = 900;
+		$kemProduct = Yii::app()->cache->get($cache_id);
+		
+		if (!$kemProduct) {
+			$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/product/view", array('client_store_product_id'=>$model->id, 'locale'=>Yii::app()->language . "_CA", 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+			
+			$kemProduct = json_decode($output);
+			
+			if (!$kemProduct)
+				throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
+			
+			Yii::app()->cache->set($cache_id, $kemProduct, $cache_duration);
+		}
+		
+		
+		$this->pageTitle = $kemProduct->localization->name;
 		
 		$localized_categories[] = array();
 		foreach ($model->categories as $category){
@@ -70,12 +86,13 @@ class ProductController extends WebController
 			$alternatives[$localization->locale_id] = $this->createAbsoluteUrl("view", array("slug"=>$localization->slug, "language"=>$localization->locale_id));
 		}
 		$this->alternatives = $alternatives;
-				
+		
 		$this->render('view',array(
 			'model'=>$modelLocalization->product,
 			'localization'=>$modelLocalization,
 			'brand'=>$localized_brand,
 			'localized_categories' => $localized_categories,
+			'kemProduct'=>$kemProduct,
 		));
 	}
 
