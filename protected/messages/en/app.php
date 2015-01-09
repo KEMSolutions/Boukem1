@@ -161,6 +161,9 @@ return array(
 	"En cliquant sur le bouton acheter, continuer ou commander et/ou en visitant ce site, vous reconnaissez avoir lu et compris les conditions d'utilisation du site incluant, sans s'y limiter, la politique de confidentialité en vigueur. Si vous n'acceptez pas ces conditions, vous ne pouvez pas continuer à accéder à ce site."=>"By clicking on 'Next', 'Buy', 'Order' or 'Checkout' and/or by accessing or using the site in any manner, you acknowledge that you have read and agree to be bound by these terms and conditions. If you do not agree to all of the terms, you are not authorized to access or otherwise use this site (the 'site').",
 	"Précédent"=>"Previous",
 	"Suivant"=>"Next",
-	"Ce produit n'est pas disponible."=>"This product is not available."
+	"Ce produit n'est pas disponible."=>"This product is not available.",
+	"En stock : Expédition express"=>"In stock : Express Shipping",
+	"Seulement {n} restant en expédition express|{n} restants en expédition express."=>"Only {n} left in stock (more on the way).",
+	"Expédition prévue dans les 3 à 7 jours."=>"Usually ships within 3 to 7 days.",
 );
 ?>

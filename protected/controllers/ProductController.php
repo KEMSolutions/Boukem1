@@ -57,7 +57,7 @@ class ProductController extends WebController
 			$modelLocalization->name,
 		);
 		
-		$cache_id = "Product:[videosForLanguage] " . $this->id . " - " . Yii::app()->language;
+		$cache_id = "Product:[descriptionForLanguage] " . $model->id . " - " . Yii::app()->language;
 		$cache_duration = 900;
 		$kemProduct = Yii::app()->cache->get($cache_id);
 		
