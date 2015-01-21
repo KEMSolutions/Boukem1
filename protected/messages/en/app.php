@@ -165,5 +165,6 @@ return array(
 	"En stock : Expédition express"=>"In stock : Express Shipping",
 	"Seulement {n} restant en expédition express|{n} restants en expédition express."=>"Only {n} left in stock (more on the way).",
 	"Expédition prévue dans les 3 à 7 jours."=>"Usually ships within 3 to 7 days.",
+	"Retour au site principal"=>"Back to main site",
 );
 ?>

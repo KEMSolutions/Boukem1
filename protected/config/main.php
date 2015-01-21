@@ -149,6 +149,7 @@ return array(
 		'kem_analytics_id'=>'__KEM_ANALYTICS_ID__',
 		'boukem_version'=>'0.9',
 		'b2b_rebate_multiplier'=>0.2,
+		"back_link"=>null,
 	),
 	
 );

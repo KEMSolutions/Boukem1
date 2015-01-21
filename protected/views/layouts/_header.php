@@ -1,3 +1,8 @@
+<?php if (isset(Yii::app()->params['back_link']) && Yii::app()->params['back_link'] !== null): ?>
+	<div class="back-link">
+		<a href="<?php echo Yii::app()->params['back_link']; ?>" class="btn btn-one"><i class="fa fa-angle-double-left"></i> <?php echo Yii::t("app", "Retour au site principal"); ?></a>
+	</div>
+<?php endif; ?>
 	    <div id="navbar" class="navbar navbar-white" role="navigation">
 	        <div class="container">
 	            <div class="navbar-header">
