@@ -77,7 +77,7 @@ class CartController extends WebController
 	{
 		return array(
 			'postOnly + redeem, add, remove, update, estimate, prepare, order, addmultiple',
-			'ajaxOnly + add, remove, update, estimate, prepare, order, addmultiple, overview, details, redeem',
+			'ajaxOnly + add, remove, update, estimate, prepare, order, addmultiple, overview, details, redeem, chargePaypal',
 		);
 	}
 	
@@ -810,7 +810,21 @@ class CartController extends WebController
 		
 	}
 	
+	
+	
 	public function actionConfirmpaypal($order, $token){
+		
+		$model = Order::model()->findByPk($order);
+		if ($model === null){
+			throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
+		}
+		
+		$this->render('paypalcharge', array('model'=>$model, 'token'=>$token));
+		
+	}
+	
+	
+	public function actionChargePaypal($order, $token) {
 		
 		$model = Order::model()->findByPk($order);
 		if ($model === null){
@@ -821,11 +835,12 @@ class CartController extends WebController
 		
 		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/order/confirmPaypalOrder", array('order_id'=>$model->id, 'locale'=>Yii::app()->language . "_CA", "token"=>$token, "encrypted_blob"=>$encrypted_blob, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
 		
+		
 		$response_dict = json_decode($output);
 		if ($response_dict->status == "success") {
-			$this->render('confirm', array('model'=>$model));
+			$this->renderJSON(array("status"=>"success"));
 		} else {
-			$this->render('error', array('model'=>$model, "error"=>$response_dict->error));
+			$this->renderJSON(array("status"=>"error", 'error'=>$response_dict->error));
 		}
 		
 	}

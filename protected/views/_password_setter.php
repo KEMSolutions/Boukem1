@@ -11,7 +11,7 @@
 			" ,CClientScript::POS_READY);
 ?>
 
-<section class="slice color-one">
+<section class="slice color-one passwordsetter">
 	<div class="w-section inverse">
     	<div class="container">
         	<div class="row">
