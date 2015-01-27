@@ -18,7 +18,7 @@ if ($regular_price !== $current_price){
 ?>
 
 
-<section class="slice animate-hover-slide"  itemscope itemtype="http://schema.org/Product">
+<section class="slice product-slice animate-hover-slide"  itemscope itemtype="http://schema.org/Product">
 	<div class="w-section inverse blog-grid">
     	<div class="container">
         	<div class="row">
