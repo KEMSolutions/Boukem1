@@ -1,5 +1,5 @@
 <?php if (count($layout->videos) > 0): ?>
-<section class="slice animate-hover-slide">
+<section class="slice animate-hover-slide homevideos">
 	<?php
 	if ($show_tab){
 		$this->renderPartial('_tab', array("layout"=>$layout));
@@ -52,10 +52,7 @@
 									   
 								   
 	                                   </div>
-									
 									</div>
-									
-									
                                 </figcaption>
         					</figure>
                             <h2><?php echo $productName[0]; ?></h2>
