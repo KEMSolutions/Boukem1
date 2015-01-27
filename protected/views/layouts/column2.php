@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<section class="slice animate-hover-slide">
+<section class="slice animate-hover-slide column2_main_slice">
 	<div class="w-section inverse blog-grid">
 		<div class="container">
 			<div class="row">
