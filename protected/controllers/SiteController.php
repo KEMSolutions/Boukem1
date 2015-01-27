@@ -35,10 +35,10 @@ class SiteController extends WebController
 		
 		if (Yii::app()->user->isGuest){
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguage] " . Yii::app()->language;
-			$cache_duration = 100;//10800;
+			$cache_duration = 1800;//10800;
 		} else {
 			$cache_id = Yii::app()->request->hostInfo . " SiteController:[indexForLanguageUser] " . Yii::app()->language . " - " . Yii::app()->user->user->id;
-			$cache_duration = 1600;
+			$cache_duration = 1800;
 		}
 		
 		$layout_html = Yii::app()->cache->get($cache_id);
@@ -51,7 +51,6 @@ class SiteController extends WebController
 			}
 			
 			$output = Yii::app()->curl->get("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/layout/index", $layout_parameters);
-			
 			
 			$base_dict = json_decode($output);
 			

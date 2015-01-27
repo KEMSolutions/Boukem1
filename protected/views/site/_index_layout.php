@@ -31,6 +31,8 @@ foreach ($items as $slice){
 
 	} else if ($slice->type === "headline"){
 		$this->renderPartial('_headline', array("layout"=>$slice->content, 'show_tab'=>$counter));
+	} else if ($slice->type === "videos"){
+		$this->renderPartial('_videos', array("layout"=>$slice->content, 'show_tab'=>$counter));
 	}
 	
 	$counter++;

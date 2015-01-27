@@ -37,7 +37,7 @@ if (file_exists(Yii::app()->basePath . "/.." . $themePath . $secondary_style_she
  * StyleSHeets
  */
 $cs
-    ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    ->registerCssFile('//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
 	->registerCssFile('//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
 	//->registerCssFile('/js_assets/fancybox/jquery.fancybox.css?v=2.1.5')
 	//->registerCssFile('/js_assets/fraction/fractionslider.css')

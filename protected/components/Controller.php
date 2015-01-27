@@ -56,7 +56,7 @@ class Controller extends CController
 	 */
 	private function updateCache() {
 		
-		if (strpos(Yii::app()->request->serverName,'.local') !== false) {
+		if (strpos(Yii::app()->request->serverName,'.local') !== false || strpos(Yii::app()->request->serverName,'dev.boutiquekem.com') !== false) {
 		    Yii::app()->setComponent('cache', new CDummyCache());
 		} else {
 			Yii::app()->setComponent('cache', new CMemCache());
