@@ -33,7 +33,7 @@
 </div>
 
 
-<section class="slice color-three">
+<section class="slice color-three column1_main_slice">
 	<div class="w-section inverse">
     	<div class="container">
 			<div class="row">
