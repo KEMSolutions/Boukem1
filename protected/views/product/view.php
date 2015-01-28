@@ -63,6 +63,27 @@ if ($regular_price !== $current_price){
 										
 										
                                     </ul>
+									
+									<?php if ($kemProduct->localization->custom_description): ?>
+									</figure> <!-- Image figure -->
+								</div><!-- blog post -->
+								
+								<div class="w-box inner">
+                	
+								                                <div class="comments-wr">
+								                                	<h2><?php echo Yii::t("app", "La suggestion de {name}", array("{name}"=>$kemProduct->localization->custom_description->author_name)); ?></h2>
+                                    
+								                                    <div class="comment">
+								                                        <img src="<?php echo $this->createUrl("avatar", array("user"=>$kemProduct->localization->custom_description->author_id, "hash"=>$kemProduct->localization->custom_description->hash)); ?>" alt="<?php echo Yii::t("app", "La suggestion de {name}", array("{name}"=>$kemProduct->localization->custom_description->author_name)); ?>">
+								                                        <p><?php echo $kemProduct->localization->custom_description->content; ?></p>
+								                                    </div><!-- Comment -->
+								                                  </div><!-- comments-wr -->
+								                            </div><!-- w-box inner -->
+									
+		                        	<div class="w-box blog-post">
+		                                <figure>
+									
+									<?php endif; ?>
 									<div id="product_long_description">
                                     	<?php echo $kemProduct->localization->long_description; ?>
 									</div>

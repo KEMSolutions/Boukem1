@@ -28,7 +28,7 @@ class ProductController extends WebController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('view', 'search', 'thumbnails'),
+				'actions'=>array('view', 'search', 'thumbnails', 'avatar'),
 				'users'=>array('*'),
 			),
 			
@@ -64,6 +64,7 @@ class ProductController extends WebController
 		if (!$kemProduct) {
 			$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/product/view", array('client_store_product_id'=>$model->id, 'locale'=>Yii::app()->language . "_CA", 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
 			
+			
 			$kemProduct = json_decode($output);
 			
 			if (!$kemProduct)
@@ -94,6 +95,38 @@ class ProductController extends WebController
 			'localized_categories' => $localized_categories,
 			'kemProduct'=>$kemProduct,
 		));
+	}
+	
+	
+	public function actionAvatar($user, $hash) {
+		
+		$cache_id = "Product:[avatarForUser] " . CHtml::encode($user);
+		$cache_duration = 3600;
+		$avatarBinary = Yii::app()->cache->get($cache_id);
+		
+		if (!$avatarBinary) {
+			$result = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/product/avatar", array('user_id'=>$user, 'hash'=>$hash, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+			$json_dict = json_decode($result);
+			
+			if (!$json_dict)
+				throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
+			
+			$avatarBinary = $json_dict->avatar_medium;
+			Yii::app()->cache->set($cache_id, $avatarBinary, $cache_duration);
+		}
+		
+		
+		$raw_data = base64_decode($avatarBinary);
+		
+		header('Content-Type: image/jpeg');
+		
+		echo $raw_data;
+	    foreach (Yii::app()->log->routes as $route) {
+	        if($route instanceof CWebLogRoute) {
+	            $route->enabled = false; // disable any weblogroutes
+	        }
+	    }
+	    Yii::app()->end();
 	}
 
 	
