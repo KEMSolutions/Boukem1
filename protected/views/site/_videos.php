@@ -41,7 +41,7 @@
 									
 	                                   <div class="video-container">
                                    
-									   <video width=640 height=360 controls preload="auto" poster="<?php echo $video->poster; ?>" class="video-js vjs-default-skin vjs-big-play-centered">
+									   <video width=640 height=360 controls preload="metadata" poster="<?php echo $video->poster; ?>" class="video-js vjs-default-skin vjs-big-play-centered">
 							   			   <source src="<?php echo $video->h264high; ?>" media="only screen and (min-device-width: 568px)" type='video/mp4'></source>
 							               <source src="<?php echo $video->h264low; ?>" media="only screen and (max-device-width: 568px)" type='video/mp4'></source>
 							               <source src="<?php echo $video->webm; ?>" type='video/webm'></source>
