@@ -652,10 +652,6 @@ $cs
             </div>
           </div>
 		  
-         
-
-          
-
         </fieldset>
 		
         <fieldset>

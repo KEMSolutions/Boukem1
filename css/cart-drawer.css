@@ -135,3 +135,11 @@
 	padding-bottom: 1em;
 	padding-top: 1em;
 }
+
+.update_quantity_indicator{
+	background-color: transparent;
+	border: none;
+}
+.update_quantity_indicator .fa{
+	min-width: 1em;
+}

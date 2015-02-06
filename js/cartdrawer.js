@@ -121,18 +121,15 @@ var cartData = {
     
     modifiyQuantity: function() {
         $("#cart-items").on("change", ".quantity", function() {
-            $(this).next().fadeIn();
-        });
-        
-        $("#cart-items").on("click", ".update_quantity", function() {
            $this = $(this);
            
 		   var container = $this.closest("li");
            var product_id = container.data("product");
 		   var quantity_group = $this.closest("div");
-           var quantity = container.find(".quantity").val();
+		   var quantityField = container.find(".quantity");
+           var quantity = quantityField.val();
 		   var editIcon = quantity_group.find(".fa");
-			
+		   var priceLabel = container.find(".product-price");
 			
 			if (quantity <=0){
 				quantity_group.addClass("has-error");
@@ -145,20 +142,20 @@ var cartData = {
 				return;
 			}
 			
-			editIcon.removeClass("fa-pencil");
 			editIcon.addClass("fa-spinner fa-spin");
-			
+			quantityField.prop("disabled", true);
             
             $.post( cartData.$links.update_url, { product: product_id, quantity: quantity })
             .done(function( data ) {
 				updateCartOverview(false);
+				priceLabel.text( (priceLabel.data("price") * quantity).toFixed(2) );
 				quantity_group.removeClass("has-error");
 				editIcon.removeClass("fa-spinner fa-spin");
 				editIcon.addClass('animated tada fa-check-circle-o text-success');
 				editIcon.bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 					editIcon.removeClass("animated tada text-success fa-check-circle-o");
-					editIcon.addClass("fa-pencil");
 					editIcon.unbind();
+					quantityField.prop("disabled", false);
 				});
 				
 				// Reload the total if we are currently on the cart's page
