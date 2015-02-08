@@ -15,11 +15,11 @@
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://kle-en-main.com/CloudAnalytics/";
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.kem.guru/";
     _paq.push(['setTrackerUrl', u+'piwik.php']);
     _paq.push(['setSiteId', <?php echo Yii::app()->params['kem_analytics_id']; ?>]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
     g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="http://kle-en-main.com/CloudAnalytics/piwik.php?idsite=<?php echo Yii::app()->params['__KEM_ANALYTICS_ID__']; ?>" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="//analytics.kem.guru/piwik.php?idsite=<?php echo Yii::app()->params['__KEM_ANALYTICS_ID__']; ?>" style="border:0;" alt="" /></p></noscript>
