@@ -150,6 +150,7 @@ return array(
 		'boukem_version'=>'0.9',
 		'b2b_rebate_multiplier'=>0.2,
 		"back_link"=>null,
+		'google_analytics_tracking_id'=>null,
 	),
 	
 );

@@ -23,3 +23,15 @@
   })();
 </script>
 <noscript><p><img src="//analytics.kem.guru/piwik.php?idsite=<?php echo Yii::app()->params['__KEM_ANALYTICS_ID__']; ?>" style="border:0;" alt="" /></p></noscript>
+<?php if (isset(Yii::app()->params["google_analytics_tracking_id"]) && Yii::app()->params["google_analytics_tracking_id"] !== null): ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '<?php echo Yii::app()->params["google_analytics_tracking_id"]; ?>', 'auto');
+  ga('send', 'pageview');
+  <?php if (!Yii::app()->user->isGuest): ?>ga('set', '&uid', "<?php echo Yii::app()->user->user->id; ?>");<?php endif; ?>
+</script>
+<?php endif; ?>
