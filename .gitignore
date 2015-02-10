@@ -1,2 +1,3 @@
 # .gitignore
 /protected/runtime/application.log
+/assets/*
