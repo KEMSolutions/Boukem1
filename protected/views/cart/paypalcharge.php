@@ -8,7 +8,37 @@ $cs = Yii::app()->clientScript;
 
 $charge_url = $this->createUrl("chargePaypal", array("order"=>$model->id, "token"=>CHtml::encode($token)));
 $localized_expired_error = Yii::t("app", "Le lien de paiement a expiré.");
+
+$googleAnalytics = "";
+if (isset(Yii::app()->params["google_analytics_tracking_id"]) && Yii::app()->params["google_analytics_tracking_id"] !== null){
+	
+	$store_name = Yii::app()->name;
+	$revenue = $model->orderDetails->total;
+	$tax = $model->orderDetails->taxes;
+	$shipping = $model->orderDetails->shipping;
+	
+	$googleAnalytics = "
+	
+		ga('require', 'ecommerce');
+		ga('ecommerce:addTransaction', {
+			'id': '$model->id',
+			'affiliation': \"$store_name\",
+			'revenue': '$revenue',
+			'shipping': '$shipping',
+			'tax': '$tax',
+			'currency': 'CAD'
+		});
+	
+		ga('ecommerce:send');
+		";
+
+} // End of Google analytics ecommerce data
+
 $cs->registerScript('charge_paypal',"
+
+function sendEcommerceTransactionToGoogleAnalytics(){
+	$googleAnalytics
+}
 
 $('.passwordsetter').hide();
 $('#success_indicator').hide();
@@ -26,6 +56,9 @@ $.post( '$charge_url', function( data ) {
 
 	$('#progress_indicator').addClass('animated fadeOutLeftBig');
 	if (data.status == 'success'){
+		
+		sendEcommerceTransactionToGoogleAnalytics();
+		
 		
 		$('#progress_indicator').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			$('#progress_indicator').hide();
@@ -71,6 +104,8 @@ $.post( '$charge_url', function( data ) {
 
 
 " ,CClientScript::POS_END);
+
+
 
 ?>
 
