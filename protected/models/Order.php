@@ -251,12 +251,23 @@ class Order extends CActiveRecord
 		$securityManager->encryptionKey =  $this->id . Yii::app()->params['outbound_api_secret'];
 		
 		
-		
-		
 		return base64_encode($securityManager->encrypt(json_encode($orderdict)));
 		
 	}
 	
+	
+	/**
+	 * Returns a base64 encoded string to post to our payment processor (KEM payment).
+	 * @return string json base64 encoded. 
+	 */
+	public function blobbedFrontendData()
+	{
+		
+		$orderdict = $this->frontendData();
+		
+		return base64_encode(json_encode($orderdict));
+		
+	}
 	
 	/**
 	 * Calculate the remaining balance for the order 
@@ -321,9 +332,9 @@ class Order extends CActiveRecord
 	public function getPaypalPaymentLink(){
 		
 		
-		$encrypted_blob = $this->encryptedFrontendData();
+		$blob = $this->blobbedFrontendData();
 		
-		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/order/retrievePaypalToken", array('order_id'=>$this->id, 'locale'=>Yii::app()->language . "_CA", "encrypted_blob"=>$encrypted_blob, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/order/retrievePaypalToken", array('order_id'=>$this->id, 'locale'=>Yii::app()->language . "_CA", "blob"=>$blob, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
 		
 		$linkdict = json_decode($output);
 		

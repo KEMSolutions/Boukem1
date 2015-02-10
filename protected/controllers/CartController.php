@@ -831,9 +831,9 @@ class CartController extends WebController
 			throw new CHttpException(404,Yii::t('app', 'La page demandée n\'existe pas.'));
 		}
 		
-		$encrypted_blob = $model->encryptedFrontendData();
+		$blob = $model->blobbedFrontendData();
 		
-		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/order/confirmPaypalOrder", array('order_id'=>$model->id, 'locale'=>Yii::app()->language . "_CA", "token"=>$token, "encrypted_blob"=>$encrypted_blob, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/order/confirmPaypalOrder", array('order_id'=>$model->id, 'locale'=>Yii::app()->language . "_CA", "token"=>$token, "blob"=>$blob, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
 		
 		
 		$response_dict = json_decode($output);

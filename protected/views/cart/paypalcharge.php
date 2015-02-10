@@ -89,7 +89,7 @@ $.post( '$charge_url', function( data ) {
                             </div>
                             <div class="col-md-11">
                                 <h4><?php echo Yii::t("app", "Veuiller patienter"); ?></h4>
-                                <p><?php echo Yii::t("app", "Votre paiement est présentement en train d'être traité par Paypal. Ne quittez et ne rechargez pas cette page au risque de voir votre commande annulée ou chargée plus d'une fois."); ?></p>
+                                <p><?php echo Yii::t("app", "Votre paiement est présentement en train d'être traitée par Paypal. Ne quittez et ne rechargez pas cette page au risque de voir votre commande annulée ou chargée plus d'une fois."); ?></p>
 								
 								<p class="small"><?php echo Yii::t("app", "En cas de problème, contactez nous au <a href='mailto:{contact_email}'>{contact_email}</a> ou au {contact_phone}.", array("{contact_phone}"=>"1-844-276-3434 ext. " . Yii::app()->params['outbound_api_user'], "{contact_email}"=>Yii::app()->params['adminEmail']))?></p>
                             </div>

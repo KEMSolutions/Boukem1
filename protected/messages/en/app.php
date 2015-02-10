@@ -167,7 +167,7 @@ return array(
 	"Expédition prévue dans les 3 à 7 jours."=>"Usually ships within 3 to 7 days.",
 	"Retour au site principal"=>"Back to main site",
 	"Veuiller patienter"=>"Please wait",
-	"Votre paiement est présentement en train d'être traité par Paypal. Ne quittez et ne rechargez pas cette page au risque de voir votre commande annulée ou chargée plus d'une fois."=>"Your payment is currently being processed by Paypal. Please do not leave or refresh this page.",
+	"Votre paiement est présentement en train d'être traitée par Paypal. Ne quittez et ne rechargez pas cette page au risque de voir votre commande annulée ou chargée plus d'une fois."=>"Your payment is currently being processed by Paypal. Please do not leave or refresh this page.",
 	"En cas de problème, contactez nous au <a href='mailto:{contact_email}'>{contact_email}</a> ou au {contact_phone}."=>"If you encounter a problem, you can always contact us at <a href='mailto:{contact_email}'>{contact_email}</a> or {contact_phone}.",
 	"Certaines situations peuvent entrainer un rejet initial de votre commande par Paypal. Dans un tel cas, vous recevriez un courriel de Paypal et de notre magasin au cours des prochaines minutes. Si le problème persiste et aucune confirmation de commande ne vous parvient, contactez nous au <a href='mailto:{contact_email}'>{contact_email}</a> ou au {contact_phone}."=>"Some errors can be resolved automatically by Paypal in the next minutes. If that is the case, you'll receive an email from us and from Paypal acknowledging receipt of your order in a few minutes. If you don't receive those emails and this problem persists, please contact us at <a href='mailto:{contact_email}'>{contact_email}</a> or {contact_phone}.",
 	"La suggestion de {name}"=>"{name}'s recommendation",
