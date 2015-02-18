@@ -79,6 +79,7 @@ return array(
 				'/panier.html'=>'cart/index',
 				'/checkout.html'=>'cart/checkout',
 				'/sitemap.xml'=>'site/sitemap',
+				'/css/custom.css'=>'css/custom',
 				'page/<view:\w+>'=>'site/page',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

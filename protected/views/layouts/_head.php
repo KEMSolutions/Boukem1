@@ -20,17 +20,17 @@
 $cs = Yii::app()->clientScript;
 $themePath = Yii::app()->theme->baseUrl;
 
+/*
 $main_style_sheet = '/css/global-style.css';
 if (file_exists(Yii::app()->basePath . "/.." . $themePath . $main_style_sheet)){
 	$main_style_sheet = $themePath . $main_style_sheet;
 }
 
-
-
 $secondary_style_sheet = '/css/skin-four.css';
 if (file_exists(Yii::app()->basePath . "/.." . $themePath . $secondary_style_sheet)){
 	$secondary_style_sheet = $themePath . $secondary_style_sheet;
 }
+*/
 
 
 /**
@@ -43,9 +43,8 @@ $cs
 	//->registerCssFile('/js_assets/fraction/fractionslider.css')
 	
 	->registerCssFile('//cdn.kem.guru/boukem/spirit/css/fancybox-fraction-concat.css')
-	->registerCssFile($main_style_sheet)
-	->registerCssFile('/css/cart-drawer.css')
-	->registerCssFile($secondary_style_sheet);
+	->registerCssFile($this->createUrl("css/custom"));
+
 
 /**
  * JavaScripts
