@@ -42,7 +42,7 @@ class CssController extends WebController
 	{
 		
 		$cache_id = "CustomBoukemCss";
-		$cache_duration = 60;
+		$cache_duration = 3600;
 		
 		$customCss = Yii::app()->cache->get($cache_id);
 		
