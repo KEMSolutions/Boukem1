@@ -58,6 +58,7 @@ class Controller extends CController
 		
 		if (strpos(Yii::app()->request->serverName,'.local') !== false || strpos(Yii::app()->request->serverName,'dev.boutiquekem.com') !== false) {
 		    Yii::app()->setComponent('cache', new CDummyCache());
+			header('X-KEM-Server: dev');
 		} else {
 			Yii::app()->setComponent('cache', new CMemCache());
 			Yii::app()->cache->setServers(array(
