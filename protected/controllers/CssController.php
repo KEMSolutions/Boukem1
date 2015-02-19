@@ -27,9 +27,22 @@ class CssController extends WebController
 	}
 	
 	protected function getCssFilesList(){
+		
+		$themePath = Yii::app()->theme->baseUrl;
+		$main_style_sheet = '/css/global-style.css';
+		if (file_exists(Yii::app()->basePath . "/.." . $themePath . $main_style_sheet)){
+			$main_style_sheet = $themePath . $main_style_sheet;
+		}
+
+		$secondary_style_sheet = '/css/skin-four.css';
+		if (file_exists(Yii::app()->basePath . "/.." . $themePath . $secondary_style_sheet)){
+			$secondary_style_sheet = $themePath . $secondary_style_sheet;
+		}
+		
+		
 		$cssFiles = array(
-		Yii::app()->basePath . "/../css/global-style.css",
-		Yii::app()->basePath . "/../css/skin-four.css",
+		Yii::app()->basePath . "/../" . $main_style_sheet,
+		Yii::app()->basePath . "/../" . $secondary_style_sheet,
 		Yii::app()->basePath . "/../css/cart-drawer.css",
 		);
 		return $cssFiles;
