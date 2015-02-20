@@ -60,14 +60,7 @@ class Controller extends CController
 		    Yii::app()->setComponent('cache', new CDummyCache());
 			header('X-KEM-Server: dev');
 		} else {
-			Yii::app()->setComponent('cache', new CMemCache());
-			Yii::app()->cache->setServers(array(
-			    array(
-			        'host'=>'127.0.0.1',
-			        'port'=>11211,
-			        'weight'=>60,
-			    ),
-			));
+			Yii::app()->setComponent('cache', new CDbCache());
 		}
 	}
 	
