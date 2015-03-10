@@ -143,7 +143,7 @@ class ProductController extends WebController
 		
 		
 		$cache_id = "ProductController:[search_results] " . md5($q) . " - " . Yii::app()->language . ":" . $page;
-		$cache_duration = 5;
+		$cache_duration = 125;
 
 		$search_html = Yii::app()->cache->get($cache_id);
 		
