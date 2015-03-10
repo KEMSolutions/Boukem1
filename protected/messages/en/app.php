@@ -171,5 +171,7 @@ return array(
 	"En cas de problème, contactez nous au <a href='mailto:{contact_email}'>{contact_email}</a> ou au {contact_phone}."=>"If you encounter a problem, you can always contact us at <a href='mailto:{contact_email}'>{contact_email}</a> or {contact_phone}.",
 	"Certaines situations peuvent entrainer un rejet initial de votre commande par Paypal. Dans un tel cas, vous recevriez un courriel de Paypal et de notre magasin au cours des prochaines minutes. Si le problème persiste et aucune confirmation de commande ne vous parvient, contactez nous au <a href='mailto:{contact_email}'>{contact_email}</a> ou au {contact_phone}."=>"Some errors can be resolved automatically by Paypal in the next minutes. If that is the case, you'll receive an email from us and from Paypal acknowledging receipt of your order in a few minutes. If you don't receive those emails and this problem persists, please contact us at <a href='mailto:{contact_email}'>{contact_email}</a> or {contact_phone}.",
 	"La suggestion de {name}"=>"{name}'s recommendation",
+	"Suggestions"=>"Curated results",
+	"Tous les résultats"=>"All results",
 );
 ?>
