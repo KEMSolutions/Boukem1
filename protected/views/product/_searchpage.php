@@ -61,6 +61,7 @@
 </section>
 <?php endif; ?>
 	
+<?php if (count($results->items)>0): ?>
 <section class="slice animate-hover-slide color-two-d">
 	<div class="w-section inverse blog-grid">
 		<div class="container">
@@ -89,7 +90,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="section">
+	
+
+<div class="section">
 		<div class="container">
 		<ul class="pagination">
 			<?php
@@ -106,6 +109,7 @@
 	</div>
 	
 	</div>
+
 	<?php if ($results->tag && count($results->tag->items)>0): ?>
     <span class="clearfix"></span>
     <div style="height:16px;"></div> 
@@ -115,6 +119,7 @@
     </div>
 	<?php endif; ?>
 </section>
+<?php endif; // Items more than 0 ?>
 <?php else: 
 	
 	 ?>
