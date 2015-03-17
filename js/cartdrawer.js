@@ -148,7 +148,7 @@ var cartData = {
             $.post( cartData.$links.update_url, { product: product_id, quantity: quantity })
             .done(function( data ) {
 				updateCartOverview(false);
-				priceLabel.text( (priceLabel.data("price") * quantity).toFixed(2) );
+				priceLabel.text( "$" + (priceLabel.data("price") * quantity).toFixed(2) );
 				quantity_group.removeClass("has-error");
 				editIcon.removeClass("fa-spinner fa-spin");
 				editIcon.addClass('animated tada fa-check-circle-o text-success');
