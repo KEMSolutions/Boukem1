@@ -99,10 +99,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=boukem_demo',
+			'connectionString' => 'mysql:host=localhost;dbname=boutique_dev',
 			'emulatePrepare' => true,
-			'username' => '__KEM_DBUSER__',
-			'password' => '__KEM_DBPASSWORD__',
+			'username' => 'boutique_DEVUSER',//'__KEM_DBUSER__',
+			'password' => '__KEM_DBPASSWORD__172639',
 			'charset' => 'utf8',
 		),
 		
