@@ -28,6 +28,15 @@ if ($regular_price !== $current_price){
                     				
 				                    <div class="widget pricing-plans" id="product_info_box" data-product="<?php echo $model->id; ?>">
 					                    <div class="w-box popular">
+											
+									                                    <img alt="" itemprop="image" src="<?php
+		
+											$image = $localization->getMainImage();
+		
+											echo $image ? $image->getImageURL(300,300) : ProductImage::placehoderForSize(300,300);
+		
+											?>" class="img-responsive center-block hidden-sm hidden-md hidden-lg">
+											
 					                        <h2 class="plan-title" itemprop="name">
 												<?php
 					
@@ -220,15 +229,41 @@ EOD;
                     	<div class="col-md-12">
                         	<div class="w-box blog-post">
                                 <figure>
-                                    <img alt=""  itemprop="image" src="<?php
+                                    <img alt="" itemprop="image" src="<?php
 		
 		$image = $localization->getMainImage();
 		
 		echo $image ? $image->getImageURL(700,500) : ProductImage::placehoderForSize(700,500);
 		
 		
-		?>" class="img-responsive center-block">
-                                    <ul class="meta-list">
+		?>" class="img-responsive center-block hidden-xs">
+                                    
+									
+									<?php if ($kemProduct->localization->custom_description): ?>
+									</figure> <!-- Image figure -->
+								</div><!-- blog post -->
+								
+								<div class="w-box inner">
+                	
+								                                <div class="comments-wr">
+								                                	<h2><?php echo Yii::t("app", "La suggestion de {name}", array("{name}"=>$kemProduct->localization->custom_description->author_name)); ?></h2>
+                                    
+								                                    <div class="comment">
+								                                        <img src="<?php echo $this->createUrl("avatar", array("user"=>$kemProduct->localization->custom_description->author_id, "hash"=>$kemProduct->localization->custom_description->hash)); ?>" alt="<?php echo Yii::t("app", "La suggestion de {name}", array("{name}"=>$kemProduct->localization->custom_description->author_name)); ?>">
+								                                        <p><?php echo $kemProduct->localization->custom_description->content; ?></p>
+								                                    </div><!-- Comment -->
+								                                  </div><!-- comments-wr -->
+								                            </div><!-- w-box inner -->
+									
+		                        	<div class="w-box blog-post">
+		                                <figure>
+									
+									<?php endif; ?>
+									<div id="product_long_description">
+                                    	<?php echo $kemProduct->localization->long_description; ?>
+									</div>
+									
+                                    <ul class="meta-list text-center">
                                         <?php if ($kemProduct->sku): ?>
 										<li>
                                             <span>SKU</span>
@@ -257,29 +292,6 @@ EOD;
 										
                                     </ul>
 									
-									<?php if ($kemProduct->localization->custom_description): ?>
-									</figure> <!-- Image figure -->
-								</div><!-- blog post -->
-								
-								<div class="w-box inner">
-                	
-								                                <div class="comments-wr">
-								                                	<h2><?php echo Yii::t("app", "La suggestion de {name}", array("{name}"=>$kemProduct->localization->custom_description->author_name)); ?></h2>
-                                    
-								                                    <div class="comment">
-								                                        <img src="<?php echo $this->createUrl("avatar", array("user"=>$kemProduct->localization->custom_description->author_id, "hash"=>$kemProduct->localization->custom_description->hash)); ?>" alt="<?php echo Yii::t("app", "La suggestion de {name}", array("{name}"=>$kemProduct->localization->custom_description->author_name)); ?>">
-								                                        <p><?php echo $kemProduct->localization->custom_description->content; ?></p>
-								                                    </div><!-- Comment -->
-								                                  </div><!-- comments-wr -->
-								                            </div><!-- w-box inner -->
-									
-		                        	<div class="w-box blog-post">
-		                                <figure>
-									
-									<?php endif; ?>
-									<div id="product_long_description">
-                                    	<?php echo $kemProduct->localization->long_description; ?>
-									</div>
                                 </figure>
                             </div>
                             
