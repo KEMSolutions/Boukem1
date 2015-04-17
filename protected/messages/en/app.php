@@ -173,5 +173,6 @@ return array(
 	"La suggestion de {name}"=>"{name}'s recommendation",
 	"Suggestions"=>"Curated results",
 	"Tous les résultats"=>"All results",
+	"Nouveau!"=>"New!",
 );
 ?>

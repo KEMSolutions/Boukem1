@@ -101,7 +101,7 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=boutique_dev',
 			'emulatePrepare' => true,
-			'username' => 'boutique_DEVUSER',//'__KEM_DBUSER__',
+			'username' => 'boutique_DEVUSER',
 			'password' => '__KEM_DBPASSWORD__172639',
 			'charset' => 'utf8',
 		),

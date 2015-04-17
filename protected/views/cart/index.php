@@ -608,20 +608,17 @@ $this->layout = "//layouts/freestyle";
 			
 			</table>
 			
-			<div class="panel-body">
-				<button class="btn btn-three pull-right btn-lg" id="checkoutButton"><?php echo Yii::t('app', "Commander"); ?></button>
-				<span class="credit-cart-trust well well-sm text-warning hidden-xs">
+			<div class="panel-body text-right">
+				<button class="btn btn-three btn-lg" id="checkoutButton"><?php echo Yii::t('app', "Commander"); ?></button><br>
+				<small class="hidden-xs">
 					<i class="fa fa-lock"></i> <?php echo Yii::t("app", "Transaction sécurisée");?>
-				</span>
-				
-				<span class="credit-cart-trust well well-sm hidden-xs">
+					<br>
 					<i class="fa fa-cc-paypal"><span class="sr-only">Paypal</span></i>
 					<i class="fa fa-cc-visa"><span class="sr-only">Visa</span></i>
 					<i class="fa fa-cc-mastercard"><span class="sr-only">Mastercard</span></i>
 					<i class="fa fa-cc-amex"><span class="sr-only">American Express</span></i>
 					<i class="fa fa-cc-discover"><span class="sr-only">Discover</span></i>
-				</span>
-					
+				</small>
 				
 			</div><!-- panel-body -->
 			
