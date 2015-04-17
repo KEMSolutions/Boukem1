@@ -30,6 +30,16 @@ class WebController extends Controller
 	public $alternatives=array();
 	
 	
+	/**
+	 * This method attempts to find the visitor country code. Only work if the request passes through Cloudflare.
+	 * @return string a country code in the ISO 3166-1 Alpha 2 format.
+	 */
+	public function getVisitorCountryCode() {
+		
+		return isset($_SERVER["HTTP_CF_IPCOUNTRY"]) ? $_SERVER["HTTP_CF_IPCOUNTRY"] : "CA";
+		
+	}
+	
 	
 	
 	/**

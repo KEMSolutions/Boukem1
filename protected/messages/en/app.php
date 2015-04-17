@@ -174,5 +174,7 @@ return array(
 	"Suggestions"=>"Curated results",
 	"Tous les résultats"=>"All results",
 	"Nouveau!"=>"New!",
+	"Livraison à l'international disponible"=>"International shipping available",
+	"Livraison partout au pays"=>"We ship everywhere in Canada",
 );
 ?>
