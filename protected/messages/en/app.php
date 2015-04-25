@@ -176,5 +176,8 @@ return array(
 	"Nouveau!"=>"New!",
 	"Livraison à l'international disponible"=>"International shipping available",
 	"Livraison partout au pays"=>"We ship everywhere in Canada",
+	"Votre navigateur n'est pas compatible avec la boutique!"=>"Your browser is out-of-date!",
+	"Veuillez utiliser un navigateur plus récent pour accéder au site. Cliquez sur le bouton mettre à jour pour obtenir de l'aide.<br>En attendant, vous pouvez également passer votre commande par téléphone en nous appellant au {contact_phone}."=>"Please use a modern browser to access this site. Click the 'Upgrade' button to get a list of compatible browsers.<br>You can also call us at {contact_phone} to order or obtain further assistance.",
+	"Mettre à jour"=>"Update",
 );
 ?>

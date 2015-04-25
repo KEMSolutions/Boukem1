@@ -62,3 +62,10 @@
         </div>
     </div>
 </footer><!-- JavaScript -->
+<div id="outdated">
+     <h6><?php echo Yii::t('app', "Votre navigateur n'est pas compatible avec la boutique!"); ?></h6>
+	 <p><?php echo Yii::t('app', "Veuillez utiliser un navigateur plus récent pour accéder au site. Cliquez sur le bouton mettre à jour pour obtenir de l'aide.<br>En attendant, vous pouvez également passer votre commande par téléphone en nous appellant au {contact_phone}.", array("{contact_phone}"=>"1-844-276-3434 p" . Yii::app()->params['outbound_api_user'])); ?></p>
+     <p><a id="btnUpdateBrowser" href="http://outdatedbrowser.com/<?php echo Yii::app()->language; ?>"><?php echo Yii::t("app", "Mettre à jour"); ?></a></p>
+	 
+     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="<?php echo Yii::t("app", "Fermer"); ?>">&times;</a></p>
+</div>

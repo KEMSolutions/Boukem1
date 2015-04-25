@@ -23,12 +23,13 @@ $cs = Yii::app()->clientScript;
  * StyleSHeets
  */
 $cs
-    ->registerCssFile('//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
-	->registerCssFile('//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
+	->registerCssFile('https://cdn.kem.guru/boukem/spirit/css/outdatedbrowser.min.css')
+    ->registerCssFile('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+	->registerCssFile('https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
 	//->registerCssFile('/js_assets/fancybox/jquery.fancybox.css?v=2.1.5')
 	//->registerCssFile('/js_assets/fraction/fractionslider.css')
 	
-	->registerCssFile('//cdn.kem.guru/boukem/spirit/css/fancybox-fraction-concat.css')
+	->registerCssFile('https://cdn.kem.guru/boukem/spirit/css/fancybox-fraction-concat.css')
 	->registerCssFile($this->createUrl("css/custom"));
 
 
@@ -36,15 +37,16 @@ $cs
  * JavaScripts
  */
 $cs
+	->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/outdatedbrowser.min.js',CClientScript::POS_HEAD)
     ->registerCoreScript('jquery',CClientScript::POS_END)
-    ->registerCoreScript('jquery.ui',CClientScript::POS_END)
-    ->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',CClientScript::POS_END)
-	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/gcc_ressources.js.gz',CClientScript::POS_END)
-	//->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/bootstrap.touchspin.js',CClientScript::POS_END)
-	//->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/modernizr.custom.js',CClientScript::POS_END)
-	//->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.mousewheel-3.0.6.pack.js',CClientScript::POS_END)
-	//->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.cookie.js',CClientScript::POS_END)
-	//->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.easing.js',CClientScript::POS_END)
+    //->registerCoreScript('jquery.ui',CClientScript::POS_END)
+    ->registerScriptFile('https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',CClientScript::POS_END)
+	->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/gcc_ressources.js.gz',CClientScript::POS_END)
+	//->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/bootstrap.touchspin.js',CClientScript::POS_END)
+	//->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/modernizr.custom.js',CClientScript::POS_END)
+	//->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/jquery.mousewheel-3.0.6.pack.js',CClientScript::POS_END)
+	//->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/jquery.cookie.js',CClientScript::POS_END)
+	//->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/jquery.easing.js',CClientScript::POS_END)
 	//->registerScriptFile('/js_assets/masonry/masonry.js',CClientScript::POS_END)
 	//->registerScriptFile('/js_assets/page-scroller/jquery.ui.totop.min.js',CClientScript::POS_END)
 	//->registerScriptFile('/js_assets/mixitup/jquery.mixitup.js',CClientScript::POS_END)
@@ -52,15 +54,16 @@ $cs
 	->registerScriptFile('/js_assets/fancybox/jquery.fancybox.pack.js?v=2.1.5',CClientScript::POS_END)
 	//->registerScriptFile('/js_assets/fraction/jquery.fractionslider.min.js',CClientScript::POS_END)
 	->registerScriptFile('/js_assets/fraction/jquery.fractionslider.init.js',CClientScript::POS_END)
-	//->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/imagesloaded.pkgd.min.js',CClientScript::POS_END)
-	->registerScriptFile('//cdn.kem.guru/boukem/spirit/js/jquery.ebright.custom.js.gz',CClientScript::POS_END)
+	//->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/imagesloaded.pkgd.min.js',CClientScript::POS_END)
+	->registerScriptFile('https://cdn.kem.guru/boukem/spirit/js/jquery.ebright.custom.js.gz',CClientScript::POS_END)
 	->registerScriptFile('/js/boukem.js',CClientScript::POS_END)
 	
 		
     ->registerScript('tooltip',
-        "$('[data-toggle=\"tooltip\"]').tooltip();
-        $('[data-toggle=\"popover\"]').tooltip()"
-        ,CClientScript::POS_READY);
+        "outdatedBrowser({bgColor: '#f25648',color: '#ffffff',lowerThan: 'borderImage',languagePath: ''});
+$('[data-toggle=\"tooltip\"]').tooltip();
+$('[data-toggle=\"popover\"]').tooltip();
+",CClientScript::POS_READY);
 		
 		
 	
