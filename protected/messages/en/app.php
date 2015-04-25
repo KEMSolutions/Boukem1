@@ -72,6 +72,7 @@ return array(
 	"Service à la clientèle"=>"Customer Service",
 	"Nous contacter"=>"Contact Us",
 	"Contact"=>"Contact",
+	"Contact & Commandes téléphoniques"=>"Contact & Order over the phone",
 	"Retours et échanges"=>"Returns & Exchanges",
 	"Signaler un problème"=>"Report a problem",
 	"Produits"=>"Products",

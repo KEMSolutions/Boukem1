@@ -1064,3 +1064,11 @@ color: #4c4c4c;
 h2 small{
 	color: #777;
 }
+
+.back-link .searchbutton {
+	border: #ccc 1px solid;
+}
+
+.cart_button{
+	width:100%;
+}

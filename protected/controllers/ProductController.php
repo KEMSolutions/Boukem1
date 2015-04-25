@@ -139,6 +139,8 @@ class ProductController extends WebController
 			$this->redirect("/");
 		}
 		
+		$this->searchTerm = $q;
+		
 		$locale = Yii::app()->language . "_CA";
 		
 		
