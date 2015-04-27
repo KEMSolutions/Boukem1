@@ -143,6 +143,7 @@ return array(
 		// this is used in contact page
 		'mainPageLayout'=>'__KEM_MAIN_PAGE_LAYOUT__',
 		'adminEmail'=>'support@boutiquekem.com',
+		'adminPhone'=>null,
 		'inbound_api_user'=>'__KEM_APIUSER__',
 		'inbound_api_secret'=>'__KEM_API_SECRET__',
 		'outbound_api_user'=>'8',

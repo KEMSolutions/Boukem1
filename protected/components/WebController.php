@@ -43,6 +43,23 @@ class WebController extends Controller
 	}
 	
 	
+	public function getSupportPhoneNumber(){
+		$phone = "";
+		
+		// Add the international prefix '+' if the current visitor is not in Canada
+		if ($this->getVisitorCountryCode() !== "CA")
+			$phone .= "+";
+		
+		if (isset(Yii::app()->params['adminPhone']) && Yii::app()->params['adminPhone'] !== null) {
+			$phone .= Yii::app()->params['adminPhone'];
+		} else {
+			$phone .= Yii::t("app", "{number} poste {extension}", array("{number}"=>"1-844-276-3434", "{extension}"=>Yii::app()->params['outbound_api_user']));
+		}
+		
+		return $phone;
+		
+	}
+	
 	
 	/**
 	 * @var bool whe true, a prompt can appear at the top of the page asking the user to create a password if none is set.

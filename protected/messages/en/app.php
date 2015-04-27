@@ -180,5 +180,9 @@ return array(
 	"Votre navigateur n'est pas compatible avec la boutique!"=>"Your browser is out-of-date!",
 	"Veuillez utiliser un navigateur plus récent pour accéder au site. Cliquez sur le bouton mettre à jour pour obtenir de l'aide.<br>En attendant, vous pouvez également passer votre commande par téléphone en nous appellant au {contact_phone}."=>"Please use a modern browser to access this site. Click the 'Upgrade' button to get a list of compatible browsers.<br>You can also call us at {contact_phone} to order or obtain further assistance.",
 	"Mettre à jour"=>"Update",
+	"{number} poste {extension}"=>"{number} ext. {extension}",
+	"Tentez de reformuler votre requête. Vous pouvez chercher par nom de produit, marque ou catégorie (exemple: glucosamine ou santé des enfants)."=>"Try to rephrase your request. You can search by product name, category or brand (eg. glucosamine or children's vitamins.).",
+	"Vous n'arrivez pas à trouver? Contactez nous au {phone_number} pour passer une commande téléphonique!"=>"Still no luck? No problem! Call us at {phone_number} to order over the phone.",
+	"Incapable de trouver?"=>"Can't Find It?",
 );
 ?>

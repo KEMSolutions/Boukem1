@@ -82,7 +82,7 @@
 	                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo Yii::t("app", "Contact"); ?> <i class="fa fa-phone-square"></i> <i class="fa fa-envelope-square"></i></a>
 	                        <ul class="dropdown-menu">
 	                            <li>
-									<a href="tel:18442763434"><i class="fa fa-phone fa-fw"></i> +1-844-276-3434 p<?php echo Yii::app()->params['outbound_api_user']; ?></a>
+									<a href="tel:<?php echo $this->getSupportPhoneNumber(); ?>"><i class="fa fa-phone fa-fw"></i> <?php echo $this->getSupportPhoneNumber(); ?></a>
 	                            </li>
 	                            <li>
 									<a href="mailto:<?php echo Yii::app()->params['adminEmail']; ?>"><i class="fa fa-envelope fa-fw"></i> <?php echo Yii::app()->params['adminEmail']; ?></a>

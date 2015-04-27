@@ -94,6 +94,8 @@
 
 <div class="section">
 		<div class="container">
+			<div class="row">
+				<div class="col-sm-7">
 		<ul class="pagination">
 			<?php
 		
@@ -106,9 +108,32 @@
 			?>
 	  
 		</ul>
+		
+			</div><!--Col pagination-->
+			
+			<div class="col-sm-5">
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title"><?php echo Yii::t("app", "Incapable de trouver?"); ?><i class="fa fa-frown-o pull-right"></i></h3>
+				  </div>
+				  <div class="panel-body">
+		    
+					<?php echo Yii::t("app", "Vous n'arrivez pas à trouver? Contactez nous au {phone_number} pour passer une commande téléphonique!", array("{phone_number}"=>CHtml::link($this->getSupportPhoneNumber(), "tel:" . $this->getSupportPhoneNumber()))); ?>
+			
+				  </div>
+				</div>
+			</div><!-- col sm5-->
+			
+		</div><!--row-->
+		
+		
+		
+		
 	</div>
 	
-	</div>
+	
+	
+</div>
 
 	<?php if ($results->tag && count($results->tag->items)>0): ?>
     <span class="clearfix"></span>
@@ -136,7 +161,10 @@
 								                    	<h2><?php echo Yii::t("app", "Désolé, aucun résultat trouvé."); ?></h2>
 								                    	<h1 class="font-lg">
 								                        	<i class="fa fa-meh-o"></i>                        </h1>
-                        
+															
+															<p><?php echo Yii::t("app", "Tentez de reformuler votre requête. Vous pouvez chercher par nom de produit, marque ou catégorie (exemple: glucosamine ou santé des enfants)."); ?></p>
+															
+															<p><?php echo Yii::t("app", "Vous n'arrivez pas à trouver? Contactez nous au {phone_number} pour passer une commande téléphonique!", array("{phone_number}"=>CHtml::link($this->getSupportPhoneNumber(), "tel:" . $this->getSupportPhoneNumber()))); ?></p>
 								                        <span class="clearfix"></span>
 		    <form class="form-inline" method="get" action="<?php echo Yii::app()->createUrl("search"); ?>">
 		        <div class="input-group">
