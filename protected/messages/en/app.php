@@ -15,6 +15,7 @@ return array(
 	"Enlever du panier"=>"Remove from cart",
 	"Taxes et livraison"=>"Taxes and delivery",
 	"Pays"=>"Country",
+	"Page {page_number}"=>"Page {page_number}",
 	'Province/État/Région'=>'Province/State/Region',
 	"Provinces canadiennes"=>"Canadian provinces",
 	"États américains"=>"American states",

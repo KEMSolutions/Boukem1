@@ -1,24 +1,21 @@
 <?php if ($results->count > 0 || $results->tag): ?>
 		
-		<section class="slice color-one">
-			<div class="cta-wr">
-		        <div class="container">
-		            <div class="row">
-		                <div class="col-xs-12">
-							<form class="pull-right form-inline" method="get" action="<?php echo Yii::app()->createUrl("search"); ?>">
-								<div class="input-group">
-									<input type="text" name="q" class="form-control" value="<?php echo CHtml::encode($q); ?>" placeholder="<?php echo Yii::t("app", 'Nom du produit, marque ou usage'); ?>" />
-									<span class="input-group-btn">
-										<button class="btn btn-primary" type="submit"><i class="fa fa-search"></i> <?php echo Yii::t("app", "Rechercher"); ?></button>
-									</span>
-								</div>
-							</form>
-		                </div>
-		               
+		
+		<div class="pg-opt pin">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-6">
+		                <h2><?php echo Yii::t("app", "Rechercher"); ?></h2>
 		            </div>
-		        </div>
+			            				<div class="col-md-6">
+                
+								<ol class="breadcrumb">
+		<li><em><?php echo CHtml::encode($q); ?></em></li><li class="active"><?php echo Yii::t("app","Page {page_number}", array("{page_number}"=>$results->pagination->currentPage+1)); ?></li></ol></div>
+					        </div>
 		    </div>
-		</section>
+		</div>
+		
+		
 		
 <?php if ($results->tag && count($results->tag->items)>0): ?>
 <section class="slice color-two">
