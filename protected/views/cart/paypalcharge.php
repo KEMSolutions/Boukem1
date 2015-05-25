@@ -56,7 +56,7 @@ $.post( '$charge_url', function( data ) {
 
 	$('#progress_indicator').addClass('animated fadeOutLeftBig');
 	if (data.status == 'success'){
-		
+		mixpanel.track('Finished transaction success', {'hostname':window.location.hostname});
 		sendEcommerceTransactionToGoogleAnalytics();
 		
 		
@@ -74,7 +74,6 @@ $.post( '$charge_url', function( data ) {
 	} else {
 		
 		// Error
-		
 		var error_message = data.error;
 		if (data.error == 'expired'){
 			error_message = '$localized_expired_error';
@@ -90,6 +89,8 @@ $.post( '$charge_url', function( data ) {
 			});
 	
 		});
+		mixpanel.track('Finished transaction error', {'hostname':window.location.hostname, 'error':data.error});
+		
 		
 		
 	}

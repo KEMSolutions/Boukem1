@@ -85,6 +85,8 @@ function cartCheckoutFetchEstimateProgramatically(){
 
 function fetchEstimate(){
 	
+	
+	mixpanel.track("Get estimate");
 	$(".has-error").removeClass("has-error");
 	
 	var email_value = $("#customer_email").val();
@@ -133,6 +135,9 @@ function fetchEstimate(){
 	var estimateButtonText = $('#estimateButton').text();
 	$('#estimateButton').html('<i class="fa fa-spinner fa-spin"></i>');
 	
+	mixpanel.register({
+		"email": email_value
+	});
 	
 	$.ajax({
 	  type: 'POST',
@@ -211,6 +216,8 @@ $('#checkoutButton').click( function(event){
 		event.preventDefault();
 	}
 	
+	mixpanel.track("Clicked checkout", {"hostname":window.location.hostname});
+	
 	$(this).removeClass("btn-three");
 	$(this).addClass("btn-one");
 	$(this).html("<i class=\"fa fa-spinner fa-spin\"></i>");
@@ -228,6 +235,9 @@ $('#checkoutButton').click( function(event){
 		$(".btn").removeAttr("disabled");
 		window.location.href = data.paypal_url;
 		
+	  },
+	  error: function(jqXhr){
+	  	mixpanel.track("Checkout failed", {"hostname":window.location.hostname});
 	  },
 	  dataType: "json"
 	});
@@ -268,7 +278,7 @@ $('.cart_remove_button').click(function(){
 
 });
 
-$('#why_email').tooltip();
+//$('#why_email').tooltip();
 
 
 

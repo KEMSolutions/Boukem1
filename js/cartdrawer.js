@@ -90,8 +90,9 @@ var cartData = {
         $(document).on('click', ".close-button", function(e) {            
             $this = $(this);
             
-            
-            var product_id = $this.closest("li").data("product");
+			mixpanel.track("Deleted item from cart");
+			
+			var product_id = $this.closest("li").data("product");
             e.stopPropagation();
             $.post( cartData.$links.remove_url, { product: product_id })
             .done(function( data ) {
@@ -123,6 +124,9 @@ var cartData = {
         $("#cart-items").on("change", ".quantity", function() {
            $this = $(this);
            
+		   
+		   mixpanel.track("Updated item quantity");
+		   
 		   var container = $this.closest("li");
            var product_id = container.data("product");
 		   var quantity_group = $this.closest("div");
