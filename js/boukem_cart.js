@@ -126,6 +126,37 @@ function fetchEstimate(){
 	
 	}
 	
+	var americanZipcodeRegez = new RegExp(/(^\d{5}$)|(^\d{5}-\d{4}$)/);
+	if (country_value == "US" && !americanZipcodeRegez.test(postcode_value)) {
+		
+		$("#postcode").parent().addClass("has-error");
+		$('#postcode').addClass('animated shake');
+		$('#postcode').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$(this).removeClass("animated");
+			$(this).removeClass("shake");
+			$(this).unbind();
+		});
+		
+		shouldBlock = true;
+	
+	}
+	
+	
+	var canadianPostcodeRegex = new RegExp(/^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i);
+	if (country_value == "CA" && !canadianPostcodeRegex.test(postcode_value)) {
+		
+		$("#postcode").parent().addClass("has-error");
+		$('#postcode').addClass('animated shake');
+		$('#postcode').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$(this).removeClass("animated");
+			$(this).removeClass("shake");
+			$(this).unbind();
+		});
+		
+		shouldBlock = true;
+	
+	}
+	
 	
 	if (shouldBlock){
 		return;
