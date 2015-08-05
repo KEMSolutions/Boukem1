@@ -53,9 +53,7 @@
 	            <div class="navbar-header">
 	                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	                    <span class="sr-only"><?php echo Yii::t('app', 'Afficher le menu'); ?></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
+	                    <?php echo Yii::t('app', 'Menu'); ?>
 	                </button>
 	                <a class="navbar-brand" href="<?php echo $siteRoot; ?>">
 	                	<img src="/images/logo.png" class="img-responsive" alt="<?php echo Yii::app()->name; ?>">
@@ -78,9 +76,9 @@
 							echo $category_links_html;
 					        ?>
 						
-	                    <li class="dropdown">
+	                    <li class="dropdown hidden-xs">
 	                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo Yii::t("app", "Contact"); ?> <i class="fa fa-phone-square"></i> <i class="fa fa-envelope-square"></i></a>
-	                        <ul class="dropdown-menu">
+	                        <ul class="dropdown-menu ">
 	                            <li>
 									<a href="tel:<?php echo $this->getSupportPhoneNumber(); ?>"><i class="fa fa-phone fa-fw"></i> <?php echo $this->getSupportPhoneNumber(); ?></a>
 	                            </li>
@@ -89,9 +87,17 @@
 	                            </li>	
 	                        </ul>
 	                	</li>
-						
+                        <li class="visible-xs-block">
+							<a href="tel:<?php echo $this->getSupportPhoneNumber(); ?>"><i class="fa fa-phone fa-fw"></i> <?php echo $this->getSupportPhoneNumber(); ?></a>
+                        </li>
+                        <li class="visible-xs-block">
+							<a href="mailto:<?php echo Yii::app()->params['adminEmail']; ?>"><i class="fa fa-envelope fa-fw"></i> <?php echo Yii::app()->params['adminEmail']; ?></a>
+                        </li>
 						
 	                </ul>
 	            </div><!--/.nav-collapse -->
+			<?php if (isset(Yii::app()->params['adminPhone']) && Yii::app()->params['adminPhone'] !== null): ?>
+				<a class="btn btn-block visible-xs-block btn-one" href="tel:<?php echo $this->getSupportPhoneNumber(); ?>"><i class="fa fa-phone fa-fw"></i> <?php echo $this->getSupportPhoneNumber(); ?></a>
+			<?php endif; ?>
 	        </div>
 	    </div>
