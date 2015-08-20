@@ -264,7 +264,10 @@ $('#checkoutButton').click( function(event){
 		$("#checkoutButton").removeClass("btn-three");
 		$("#checkoutButton").addClass("btn-one");
 		$(".btn").removeAttr("disabled");
-		window.location.href = data.paypal_url;
+		if (data.paypal_url){
+			window.location.href = data.paypal_url;
+		}
+		
 		
 	  },
 	  error: function(jqXhr){

@@ -123,7 +123,7 @@ class Order extends CActiveRecord
 	 */
 	public function frontendData(){
 		
-		$orderDetails = $this->orderDetails;
+		$orderDetails = OrderDetails::model()->findByPk($this->id);
 		
 		// Only complete orders with order details can be processed.
 		if ($orderDetails === null){

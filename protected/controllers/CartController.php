@@ -933,9 +933,9 @@ class CartController extends WebController
 		$order_details = $cart->orderDetails;
 		if ($order_details === null){
 			$order_details = new OrderDetails;
-			$order_details->order_id = $cart->id;
 		}
 		
+		$order_details->order_id = $cart->id;
 		$order_details->shipping = $shiprate;
 		$order_details->shipping_type = $preferred_method;
 		
@@ -945,7 +945,6 @@ class CartController extends WebController
 		$order_details->balance = $order_details->total;
 		
 		$order_details->save();
-		
 		
 		// Transform the cart in order to avoid deleting it.
 		$cart->status = "pending";
