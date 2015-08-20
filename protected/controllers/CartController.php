@@ -488,7 +488,7 @@ class CartController extends WebController
 	
 	public function actionEstimate()
 	{
-
+		
 		$country = Yii::app()->request->getPost("country", null);
 		$province = Yii::app()->request->getPost("province", null);
 		
@@ -820,6 +820,153 @@ class CartController extends WebController
 		}
 		
 		$this->render('paypalcharge', array('model'=>$model, 'token'=>$token));
+		
+	}
+	
+	public function actionChargeMoneris() {
+		
+		
+		$country = Yii::app()->request->getPost("country", null);
+		$province = Yii::app()->request->getPost("province", null);
+		$postcode = Yii::app()->request->getPost("postalcode", null);
+		$shipment = Yii::app()->request->getPost("shipment", null);
+		
+		
+		// Temporary promocode stuff
+		/*
+		$promocode = strtoupper(Yii::app()->request->getPost("promocode", null));
+		if ($promocode === "FALL14"){
+			Yii::app()->session['applicable_rebate'] = 0.15;
+		}
+		// Temporary promocode stuff
+		*/
+		
+		if (!$country || !$postcode || !$shipment){
+			throw new CHttpException(400,'Invalid request: missing parameters.');
+		}
+		
+		// Set the shipment in the session
+		Yii::app()->session['shipment_method'] = $shipment;
+		
+		$cart = $this->getCart();
+		
+		
+		// Save every detail for the order total price and taxes based on the provided shipping address
+		$itemsInCart=new CActiveDataProvider('OrderHasProduct', array(
+		    'criteria'=>array(
+		        'condition'=>'order_id=' . $cart->id,
+		        'with'=>array('product'),
+		    ),
+		    'pagination'=>false
+		));
+		
+		$total_weight = 0.0;
+		$total_value = 0.0;
+		$total_item_qty = 0;
+		foreach ($itemsInCart->getData() as $relationship){
+			
+			/*
+			if ($promocode){
+				$relationship->price_paid = $relationship->product->getCurrentPrice();
+				$relationship->save();
+			}*/
+			
+			$total_weight += $relationship->quantity * $relationship->product->weight;
+			$total_value += $relationship->quantity * $relationship->price_paid;
+			$total_item_qty += $relationship->quantity;
+		}
+		
+		// Build the json request data we'll send to our server
+		$weight = $total_weight;
+		$handling = 0;
+		$postal_code = $postcode;
+		$country_code = $country;
+		$value = $total_value;
+		$qty = $total_item_qty;
+		
+		$orderData = array("weight"=>$weight, "handling"=>$handling, "postal_code"=>$postal_code, "country_code"=>$country_code, "value"=>$value, "qty"=>$qty);
+		
+		
+		$jsonpayload = json_encode($orderData);
+		
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL,            "https://kle-en-main.com/CloudServices/index.php/BoukemAPI/canadaPostEstimate/listServices?storeid=" . Yii::app()->params['outbound_api_user'] . "&storekey=" . Yii::app()->params['outbound_api_secret'] );
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
+		curl_setopt($ch, CURLOPT_POST,           1 );
+		curl_setopt($ch, CURLOPT_POSTFIELDS,     $jsonpayload ); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER,     array('Content-Type: application/json')); 
+		$result=curl_exec ($ch);
+		
+		curl_close($ch);
+		
+		$arr = json_decode($result);
+		
+		if (!isset($arr->services)){
+			throw new CHttpException(400,Yii::t("app", "Postes Canada ne peut fournir d'estimé en ce moment."));
+		}
+		$rates = $arr->services;
+		
+		if ($rates === null){
+			throw new CHttpException(400,Yii::t("app",'Une erreur est survenue.'));
+		}
+		
+		$preferred_method = Yii::app()->session['shipment_method'];
+		$shiprate = null;
+		foreach ($rates as $rate) {
+			
+			if ($rate->service_code === $preferred_method){
+				$shiprate = $rate->price_due;
+				break;
+			}
+			
+		}
+		
+		
+		if ($shiprate === null){
+			throw new CHttpException(400,'The delivery method specified in the cart is not available.');
+		}
+		
+		
+		
+		// TAXES
+		
+		$order_details = $cart->orderDetails;
+		if ($order_details === null){
+			$order_details = new OrderDetails;
+			$order_details->order_id = $cart->id;
+		}
+		
+		$order_details->shipping = $shiprate;
+		$order_details->shipping_type = $preferred_method;
+		
+		$order_details->taxes = round($this->taxesForProvinceCountryValue($province, $country, $total_value), 2);
+		$order_details->subtotal = round($total_value, 2);
+		$order_details->total = round(floatval($order_details->subtotal) + floatval($order_details->taxes) + floatval($order_details->shipping), 2);
+		$order_details->balance = $order_details->total;
+		
+		$order_details->save();
+		
+		
+		// Transform the cart in order to avoid deleting it.
+		$cart->status = "pending";
+		$cart->save();
+		
+		$model = $cart;
+		
+		$blob = $model->blobbedFrontendData();
+		
+		$output = Yii::app()->curl->post("https://kle-en-main.com/CloudServices/index.php/BoukemAPI/order/confirmMonerisOrder", array('order_id'=>$model->id, 'postcode'=>$postcode, 'locale'=>Yii::app()->language . "_CA", "blob"=>$blob, 'store_id'=>Yii::app()->params['outbound_api_user'], 'store_key'=>Yii::app()->params['outbound_api_secret']));
+		
+		$response_dict = json_decode($output);
+		
+		
+		if ($response_dict->status == "success") {
+			
+			$this->renderJSON(array("status"=>"success", "paypal_url"=>$response_dict->link));
+		} else {
+			$this->renderJSON(array("status"=>"error", 'error'=>$response_dict->error));
+		}
+		
 		
 	}
 	

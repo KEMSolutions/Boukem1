@@ -26,7 +26,7 @@ $this->layout = "//layouts/freestyle";
 			$estimate_url = $this->createUrl('cart/estimate');
 			$details_url = $this->createUrl('cart/details');
 			$redeem_url = $this->createUrl('cart/redeem');
-			$paypaltoken_url = $this->createUrl("cart/getPaypalToken");
+			$paypaltoken_url = $this->createUrl("cart/chargeMoneris");
 			Yii::app()->user->returnUrl = $this->createUrl('index');
 		
 		
