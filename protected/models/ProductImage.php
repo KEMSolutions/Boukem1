@@ -135,30 +135,13 @@ class ProductImage extends CActiveRecord
 	public function getImageURL($width, $height, $fit=self::FIT_AUTO){
 		
 		
-		
-		
-		if (rand(0, 1) || $fit != self::FIT_AUTO) {
-			
-			// OLD
-			
-			if ($width <= 300 && $height <= 280){
-				// We can display thumbnails without the store's watermark. Cleaner for end users and easier on the server.
-				$url = ProductImage::getImageGeneratorBaseUrl() . $width . "-" . $height . "-" . $this->identifier . ( $fit=== self::FIT_AUTO ? "" : "-" . $fit) . "." . $this->extension;
-			} else {
-				$url = ProductImage::getImageGeneratorBaseUrl() . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-" . $this->identifier . ( $fit=== self::FIT_AUTO ? "" : "-" . $fit) . "." . $this->extension;
-			}
-			
+		if ($width <= 300 && $height <= 280){
+			// We can display thumbnails without the store's watermark. Cleaner for end users and easier on the server.
+			$url = ProductImage::getImageGeneratorBaseUrl() . $width . "-" . $height . "-" . $this->identifier . ( $fit=== self::FIT_AUTO ? "" : "-" . $fit) . "." . $this->extension;
 		} else {
-			
-			$localization = $this->product->localizationForLanguage(Yii::app()->language, $accept_substitute=true);
-			
-			// NEW
-			$url = "https://img.kem.guru/product/" . Yii::app()->params['outbound_api_user'] . "/" . $width . "/" . $height . "/" . $this->identifier . "-" . ($localization ? $localization->slug : "product");
-			
+			$url = ProductImage::getImageGeneratorBaseUrl() . Yii::app()->params['outbound_api_user'] . "-" . $width . "-" . $height . "-" . $this->identifier . ( $fit=== self::FIT_AUTO ? "" : "-" . $fit) . "." . $this->extension;
 		}
-		
-		
-		
+	
 		return $url;
 		
 		
